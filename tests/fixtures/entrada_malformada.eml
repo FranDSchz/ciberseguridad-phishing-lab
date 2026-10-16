@@ -1,0 +1,10 @@
+Subject: =?UTF-8?B?VGVzdCBNYWxmb3JtYWRv?=
+From: <malformed-from
+To: sin-formato-valido
+Date: fecha-invalida-no-rfc
+Content-Type: text/plain; charset="utf-8"
+
+Este mensaje tiene encabezados From/To truncados y fecha no válida.
+El cuerpo de texto se conserva para comprobar extracción ante cabeceras malformadas.
+IP simulada: 203.0.113.19
+URL en texto roto: http://dominio-roto.example/incompleto
