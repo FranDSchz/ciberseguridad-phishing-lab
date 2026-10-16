@@ -38,6 +38,24 @@ class ConstructorReferencias:
                 estado="No aplicable",
             )
 
+        # No mostrar un enlace público para el hash del EML completo: aunque el
+        # hash se calculó localmente, abrir el enlace revelaría ese IOC al proveedor.
+        es_hash_eml = (
+            indicador.tipo == TipoIOC.SHA256
+            and any("Archivo .eml local" in proc for proc in indicador.procedencias)
+            and not any("Adjunto" in proc or "Archivo local (" in proc for proc in indicador.procedencias)
+        )
+        if es_hash_eml:
+            return ReferenciaConsulta(
+                servicio="VirusTotal",
+                pertinente="No aplicable (hash del correo completo)",
+                referencia_url="N/A",
+                observacion="Se conserva localmente para integridad; no se envía ni se ofrece un enlace de consulta pública.",
+                fuente=fuente_desc,
+                fecha=self.fecha_str,
+                estado="No aplicable",
+            )
+
         if indicador.es_reservado:
             pertinente = "No aplicable (Indicador reservado)"
             estado = "No aplicable"

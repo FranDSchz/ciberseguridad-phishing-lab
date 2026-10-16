@@ -1,13 +1,11 @@
 """
-Phishing Lab - Utilidad local forense y pasiva de preparación para análisis de phishing.
+Phishing Lab - Triage estático de correos, archivos e indicadores de phishing.
 
-Herramienta diseñada con la biblioteca estándar de Python para análisis seguro
-de correos electrónicos (.eml) e indicadores manuales (URLs, dominios, IPs),
-garantizando cero consultas de red, cero visitas activas y sin emisión de
-veredictos automáticos.
+El modo local no usa la red. Las consultas a APIs son optativas y se invocan
+explícitamente; las muestras nunca se ejecutan ni se suben.
 """
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __author__ = "Laboratorio de Ciberseguridad"
 
 from .models import (
@@ -16,8 +14,13 @@ from .models import (
     Indicador,
     MetadatosCorreo,
     ReferenciaConsulta,
+    ArchivoAnalizado,
+    EvaluacionRecurso,
     ResultadoLaboratorio,
 )
+from .artifacts import DescripcionArtefacto, describir_archivo
+from .online_lookups import LookupResult, LookupStatus, OnlineLookupClient
+from .verdict import evaluar_recursos
 from .timezone_utils import (
     TIMEZONE_NAME,
     obtener_zona_horaria_ba,
@@ -55,7 +58,15 @@ __all__ = [
     "Indicador",
     "MetadatosCorreo",
     "ReferenciaConsulta",
+    "ArchivoAnalizado",
+    "EvaluacionRecurso",
     "ResultadoLaboratorio",
+    "DescripcionArtefacto",
+    "describir_archivo",
+    "LookupResult",
+    "LookupStatus",
+    "OnlineLookupClient",
+    "evaluar_recursos",
     "TIMEZONE_NAME",
     "obtener_zona_horaria_ba",
     "formatear_fecha",

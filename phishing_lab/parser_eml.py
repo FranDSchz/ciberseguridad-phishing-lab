@@ -1,6 +1,7 @@
 """
 Módulo de parseo forense de archivos .eml con biblioteca estándar email.parser.
-Calcula el hash SHA-256 local sin transmisión externa, extrae encabezados MIME,
+Calcula los hashes SHA-256 locales del correo y sus adjuntos sin transmitirlos,
+identifica firmas básicas de adjuntos,
 recopila declaraciones de autenticación (SPF/DKIM/DMARC) sin verificarlas,
 advierte sobre la ausencia de DKIM-Signature y resume el contenido del cuerpo
 sin volcarlo completo al informe.
@@ -13,8 +14,9 @@ import os
 import re
 from typing import List, Optional, Tuple
 
+from .artifacts import describir_archivo
 from .extractor import ExtractorIOC
-from .models import MetadatosCorreo, Procedencia, TipoIOC
+from .models import ArchivoAnalizado, MetadatosCorreo, Procedencia, TipoIOC
 
 # Expresiones regulares para detección de patrones BEC / transferencias urgentes en el resumen
 PATRON_TRANSFERENCIA_BEC = re.compile(
@@ -28,6 +30,40 @@ def calcular_sha256_bytes(contenido: bytes) -> str:
     hasher = hashlib.sha256()
     hasher.update(contenido)
     return hasher.hexdigest()
+
+
+def _registrar_adjunto(parte, metadatos: MetadatosCorreo, extractor: ExtractorIOC) -> None:
+    """Calcula huella y firma del adjunto decodificado, sin guardarlo ni abrirlo."""
+    nombre = parte.get_filename() or f"archivo_sin_nombre_{len(metadatos.adjuntos_analizados) + 1}"
+    content_type = parte.get_content_type()
+    metadatos.archivos_adjuntos.append(f"{nombre} ({content_type})")
+
+    contenido = parte.get_payload(decode=True)
+    if not isinstance(contenido, bytes):
+        metadatos.errores_parseo.append(
+            f"No se pudo decodificar el contenido binario del adjunto {nombre!r}; no se calculó su hash."
+        )
+        return
+
+    descripcion = describir_archivo(contenido, nombre, content_type)
+    metadatos.adjuntos_analizados.append(
+        ArchivoAnalizado(
+            nombre=descripcion.identificador,
+            mime_declarado=descripcion.mime_declarado,
+            tamano_bytes=descripcion.tamano_bytes,
+            sha256=descripcion.sha256,
+            tipo_detectado=descripcion.tipo_detectado,
+            procedencia="Adjunto del archivo .eml",
+            mime_detectado=descripcion.mime_detectado,
+            firma_detectada=descripcion.firma_detectada,
+            nota=descripcion.nota,
+        )
+    )
+    extractor.registrar_ioc(
+        descripcion.sha256,
+        TipoIOC.SHA256,
+        f"Adjunto del .eml ({nombre})",
+    )
 
 
 class ParserEML:
@@ -165,9 +201,8 @@ class ParserEML:
                     content_type = parte.get_content_type()
                     content_disposition = str(parte.get("Content-Disposition", ""))
 
-                    if "attachment" in content_disposition.lower():
-                        nombre_adj = parte.get_filename() or "archivo_sin_nombre"
-                        metadatos.archivos_adjuntos.append(f"{nombre_adj} ({content_type})")
+                    if "attachment" in content_disposition.lower() or parte.get_filename():
+                        _registrar_adjunto(parte, metadatos, extractor)
                         continue
 
                     if content_type == "text/plain":
@@ -184,13 +219,17 @@ class ParserEML:
                         elif isinstance(payload, bytes):
                             textos_html.append(payload.decode("utf-8", errors="replace"))
             else:
-                c_type = mensaje.get_content_type()
-                payload = mensaje.get_content()
-                texto_str = payload if isinstance(payload, str) else payload.decode("utf-8", errors="replace") if isinstance(payload, bytes) else str(payload)
-                if c_type == "text/html":
-                    textos_html.append(texto_str)
+                content_disposition = str(mensaje.get("Content-Disposition", ""))
+                if "attachment" in content_disposition.lower() or mensaje.get_filename():
+                    _registrar_adjunto(mensaje, metadatos, extractor)
                 else:
-                    textos_planos.append(texto_str)
+                    c_type = mensaje.get_content_type()
+                    payload = mensaje.get_content()
+                    texto_str = payload if isinstance(payload, str) else payload.decode("utf-8", errors="replace") if isinstance(payload, bytes) else str(payload)
+                    if c_type == "text/html":
+                        textos_html.append(texto_str)
+                    else:
+                        textos_planos.append(texto_str)
 
         except Exception as e:
             metadatos.es_malformado = True

@@ -1,13 +1,12 @@
-"""
-Módulo de generación de informes forenses reproducibles en formato Markdown.
-Presenta los metadatos, IOCs con procedencia, declaraciones de autenticación
-(con advertencia explícita sobre DKIM) y las cuatro tablas de servicios externos
-(VirusTotal, urlscan.io, WHOIS/DNSChecker, crt.sh) en estado 'No consultado' / 'No aplicable'.
-Garantiza que el cuerpo completo no sea volcado y que no se emitan veredictos automáticos.
+"""Genera informes Markdown con evidencia local, consultas API y triage por recurso.
+
+No incluye el cuerpo completo del correo y separa los resultados API de las
+referencias para consulta manual.
 """
 
 import html
 import re
+from datetime import datetime, timezone
 from typing import Dict, List, Optional
 from .models import MetadatosCorreo, Indicador, ReferenciaConsulta, ResultadoLaboratorio, TipoIOC
 from .references import ConstructorReferencias
@@ -38,6 +37,108 @@ def _bloque_codigo(texto: Optional[str], lenguaje: str = "text") -> str:
     return f"{fence}{lenguaje}\n{valor}\n{fence}"
 
 
+def _obj(valor) -> Dict:
+    return valor if isinstance(valor, dict) else {}
+
+
+def _resumen_api(consulta: Dict) -> str:
+    """Reduce una respuesta API a hechos concretos, evitando imprimir endpoints activos."""
+    servicio = str(consulta.get("service", "Servicio externo"))
+    status = str(consulta.get("status", "unknown"))
+    datos = consulta.get("data")
+    hechos: List[str] = []
+
+    if servicio == "VirusTotal" and isinstance(datos, dict):
+        registro = _obj(datos.get("data"))
+        atributos = _obj(registro.get("attributes"))
+        stats = _obj(atributos.get("last_analysis_stats"))
+        if stats:
+            hechos.append(
+                "motores: "
+                + ", ".join(f"{key}={value}" for key, value in sorted(stats.items()))
+            )
+            results = _obj(atributos.get("last_analysis_results"))
+            detecciones = []
+            for engine, result in results.items():
+                result_row = _obj(result)
+                if result_row.get("category") in {"malicious", "suspicious"}:
+                    etiqueta = result_row.get("result") or result_row.get("category")
+                    detecciones.append(f"{engine}={etiqueta}")
+            if detecciones:
+                hechos.append("motores con alerta: " + ", ".join(detecciones[:5]))
+        analysis_date = atributos.get("last_analysis_date")
+        if isinstance(analysis_date, (int, float)):
+            try:
+                fecha = datetime.fromtimestamp(analysis_date, tz=timezone.utc).isoformat(timespec="seconds")
+            except (OverflowError, OSError, ValueError):
+                fecha = None
+            if fecha:
+                hechos.append(f"fecha del análisis informado: {fecha} UTC")
+
+    elif servicio == "urlscan.io" and isinstance(datos, dict):
+        resultados = datos.get("results", [])
+        if isinstance(resultados, list):
+            for resultado in resultados[:5]:
+                fila = _obj(resultado)
+                task = _obj(fila.get("task"))
+                page = _obj(fila.get("page"))
+                overall = _obj(_obj(fila.get("verdicts")).get("overall"))
+                hechos.append(
+                    "escaneo "
+                    + str(task.get("uuid") or fila.get("_id") or "sin ID")
+                    + f": fecha={task.get('time', 'N/D')}, malicioso={overall.get('malicious', 'sin veredicto')}, "
+                    + f"título={page.get('title', 'N/D')}"
+                )
+            total = datos.get("total")
+            if total is not None:
+                hechos.append(f"total informado por el servicio: {total}")
+
+    elif servicio == "DNS-over-HTTPS" and isinstance(datos, dict):
+        queries = _obj(datos.get("queries"))
+        for record_type, record in queries.items():
+            answers = _obj(record).get("Answer", [])
+            values = [str(_obj(answer).get("data", "")) for answer in answers if _obj(answer).get("data") is not None]
+            if values:
+                hechos.append(f"{record_type}: " + ", ".join(values[:6]))
+            else:
+                facts_code = _obj(record).get("Status")
+                hechos.append(f"{record_type}: sin respuesta (DNS status {facts_code})")
+
+    elif servicio == "RDAP" and isinstance(datos, dict):
+        event_rows = datos.get("events", [])
+        if not isinstance(event_rows, list):
+            event_rows = []
+        for event in event_rows:
+            fila = _obj(event)
+            if fila.get("eventAction") in {"registration", "last changed", "expiration"}:
+                hechos.append(f"{fila.get('eventAction')}={fila.get('eventDate', 'N/D')}")
+        nameservers = datos.get("nameservers", [])
+        if isinstance(nameservers, list):
+            names = [str(_obj(item).get("ldhName", "")) for item in nameservers if _obj(item).get("ldhName")]
+            if names:
+                hechos.append("servidores DNS: " + ", ".join(names[:6]))
+        network = _obj(datos.get("network"))
+        if network:
+            facts = [f"{key}={network[key]}" for key in ("name", "handle", "startAddress", "endAddress", "country") if network.get(key)]
+            hechos.extend(facts[:5])
+
+    elif servicio == "crt.sh" and isinstance(datos, list):
+        hechos.append(f"{len(datos)} entrada(s) CT devuelta(s)")
+        for fila in datos[:5]:
+            row = _obj(fila)
+            hechos.append(
+                f"certificado {row.get('id', 'N/D')}: nombre={row.get('name_value', 'N/D')}, "
+                f"emisor={row.get('issuer_name', 'N/D')}, vigencia={row.get('not_before', 'N/D')} a {row.get('not_after', 'N/D')}"
+            )
+
+    message = consulta.get("message")
+    if message:
+        hechos.append(str(message))
+    if not hechos:
+        hechos.append("sin datos resumibles")
+    return f"{servicio} [{status}]: " + "; ".join(hechos)
+
+
 class GeneradorInforme:
     """
     Construye informes forenses en formato Markdown estándar a partir
@@ -60,12 +161,12 @@ class GeneradorInforme:
 
         # Bloque de aviso legal y metodológico
         lineas.append("> [!IMPORTANT]")
-        lineas.append("> **Declaración de Entorno Pasivo y Ausencia de Veredicto Automático:**")
-        lineas.append("> - Esta herramienta opera de manera estrictamente local y pasiva.")
-        lineas.append("> - **CERO consultas de red realizadas:** No se enviaron peticiones HTTP/DNS ni se conectó con APIs o motores externos.")
-        lineas.append("> - **Sin apertura automática:** Los hipervínculos de consulta generados NO fueron ejecutados ni abiertos.")
-        lineas.append("> - **No veredicto automático:** La determinación de maliciosidad o fraude es de exclusiva competencia del analista forense.")
-        lineas.append("> - **Privacidad de artefactos:** Los binarios originales no se suben a ningún servicio público o privado.")
+        lineas.append("> **Alcance y privacidad:**")
+        lineas.append("> - Los correos y archivos se inspeccionan localmente; las muestras no se ejecutan ni se suben.")
+        lineas.append("> - Las consultas a APIs solo ocurren con `--consultar-apis`; en ese modo se envían indicadores (no binarios) a los proveedores.")
+        lineas.append("> - Las URLs extraídas no se visitan. Las referencias manuales de la sección 4 tampoco se abrieron desde el programa.")
+        lineas.append("> - El tipo de archivo y la ausencia de detecciones no prueban por sí solos que una muestra sea maliciosa o inocua.")
+        lineas.append("> - VirusTotal advierte que un IOC consultado puede quedar incorporado a su dataset comunitario; no consultar datos confidenciales o personales.")
         lineas.append("")
 
         # Sección 1: Fuentes y Datos de Entrada
@@ -83,11 +184,24 @@ class GeneradorInforme:
             lineas.append("### Archivo de Correo Electrónico (.eml)")
             lineas.append(f"- **Ruta local:** `{self.res.ruta_eml}`")
             lineas.append(f"- **Hash SHA-256 local:** `{self.res.sha256_eml}`")
-            lineas.append(
-                "- **Nota de integridad:** Hash calculado de forma 100% local; el archivo no fue transmitido a la red."
-            )
+            lineas.append("- **Nota de integridad:** Hash calculado de forma local. El hash del correo completo no se consulta en VirusTotal.")
             lineas.append("")
-        elif not self.res.entradas_manuales:
+
+        if self.res.archivos_analizados:
+            lineas.append("### Archivos y adjuntos analizados localmente")
+            lineas.append("| Nombre | Origen | Tamaño | SHA-256 | MIME declarado | Firma/tipo detectado |")
+            lineas.append("| :--- | :--- | ---: | :--- | :--- | :--- |")
+            for archivo in self.res.archivos_analizados:
+                firma = archivo.firma_detectada or archivo.tipo_detectado
+                lineas.append(
+                    f"| {_escapar_markdown(archivo.nombre)} | {_escapar_markdown(archivo.procedencia)} | "
+                    f"{archivo.tamano_bytes} bytes | {_codigo_inline(archivo.sha256)} | "
+                    f"{_escapar_markdown(archivo.mime_declarado or 'N/D')} | {_escapar_markdown(firma)} |"
+                )
+            lineas.append("")
+            lineas.append("La identificación por firma es una observación estática; no determina si el archivo contiene malware.")
+            lineas.append("")
+        elif not self.res.entradas_manuales and not self.res.ruta_eml:
             lineas.append("*No se proporcionaron entradas para el análisis.*")
             lineas.append("")
 
@@ -145,6 +259,13 @@ class GeneradorInforme:
             lineas.append(meta.resumen_cuerpo or "*Sin resumen disponible.*")
             lineas.append("")
 
+            if meta.archivos_adjuntos:
+                lineas.append("### Adjuntos detectados")
+                lineas.append("Los hashes SHA-256 se calcularon sobre los bytes decodificados en memoria; no se guardaron ni ejecutaron los adjuntos.")
+                for adjunto in meta.archivos_adjuntos:
+                    lineas.append(f"- {_codigo_inline(adjunto)}")
+                lineas.append("")
+
             # Errores o advertencias de parseo si los hubiera
             if meta.es_malformado or meta.errores_parseo:
                 lineas.append("### Advertencias de Parseo de Entrada")
@@ -156,7 +277,7 @@ class GeneradorInforme:
         lineas.append("## 3. Indicadores de Compromiso (IOCs) y Procedencia")
         lineas.append("")
         if not self.res.indicadores:
-            lineas.append("*No se encontraron indicadores de compromiso (URLs, dominios ni IPs).*")
+            lineas.append("*No se encontraron IOCs en el correo o las entradas suministradas.*")
             lineas.append("")
         else:
             lineas.append("| Tipo | Indicador (Sanitizado / Defanged) | Indicador Original | Procedencia / Origen | ¿Reservado / Doc? | Detalle / Punycode |")
@@ -180,11 +301,11 @@ class GeneradorInforme:
             lineas.append("")
 
         # Sección 4: Cuatro Secciones de Consulta Externa
-        lineas.append("## 4. Secciones de Consulta Externa (Referencias Pasivas Seguras)")
+        lineas.append("## 4. Referencias para consulta manual")
         lineas.append("")
         lineas.append(
-            "Se construyen referencias dirigidas hacia cuatro servicios clave para la labor manual del analista. "
-            "**Estado unificado: 'No consultado' / 'No aplicable'** (ninguna petición fue enviada)."
+            "Estos enlaces sirven para una revisión manual y el programa no los abre. Esta tabla conserva las referencias generadas; "
+            "los resultados de las APIs ejecutadas se muestran por separado en la sección 5."
         )
         lineas.append("")
 
@@ -242,16 +363,74 @@ class GeneradorInforme:
                 )
             lineas.append("")
 
-        # Veredicto y Conclusiones del Laboratorio
-        lineas.append("## 5. Veredicto y Dictamen del Laboratorio")
+        # Resultados obtenidos por consultas API
+        lineas.append("## 5. Resultados de consultas API")
         lineas.append("")
-        lineas.append("> [!NOTE]")
-        lineas.append("> **Veredicto Automático:** `NO EMITIDO (Requiere Análisis Humano)`  ")
-        lineas.append("> **Veredicto Humano Recomendado:**  ")
-        lineas.append("> [ ] Legítimo  ")
-        lineas.append("> [ ] Sospechoso  ")
-        lineas.append("> [ ] Malicioso (Phishing / BEC / Suplantación)  ")
-        lineas.append("> [ ] No Concluyente  ")
+        if not self.res.consultas_api:
+            lineas.append("No se ejecutaron consultas externas. El informe conserva el análisis local y clasifica el resultado como SOSPECHOSO cuando no hay cobertura suficiente para llamarlo limpio.")
+            lineas.append("")
+        else:
+            lineas.append("Cada respuesta se conserva en el JSON de salida si se solicitó `--salida-json`. `sin resultados`, error, límite de cuota y falta de clave son estados distintos; no equivalen a limpio.")
+            lineas.append("")
+            lineas.append("| Servicio | Tipo | Indicador | Estado | HTTP | Hora UTC | Resultado / evidencia |")
+            lineas.append("| :--- | :--- | :--- | :--- | ---: | :--- | :--- |")
+            for consulta in self.res.consultas_api:
+                service = _escapar_markdown(consulta.get("service", "N/D"))
+                kind = _escapar_markdown(consulta.get("indicator_type", "N/D"))
+                indicator = str(consulta.get("indicator", ""))
+                # Mostrar los IOCs de red defanged y sin convertirlos en enlaces activos.
+                for item in self.res.indicadores:
+                    if item.valor == indicator:
+                        indicator = item.defanged or indicator
+                        break
+                if indicator.startswith(("http://", "https://")):
+                    indicator = indicator.replace("https://", "hxxps://", 1).replace("http://", "hxxp://", 1)
+                status = _escapar_markdown(consulta.get("status", "unknown"))
+                http_status = _escapar_markdown(consulta.get("http_status") or "N/D")
+                queried_at = _escapar_markdown(consulta.get("queried_at", "N/D"))
+                summary = _escapar_markdown(_resumen_api(consulta))
+                lineas.append(
+                    f"| {service} | {kind} | {_codigo_inline(indicator)} | **{status}** | {http_status} | {queried_at} | {summary} |"
+                )
+            lineas.append("")
+            lineas.append("RDAP informa datos registrales; DNS y Certificate Transparency describen infraestructura. Esos datos aportan contexto, pero por sí solos no constituyen detección de malware.")
+            lineas.append("")
+
+        # Veredictos separados por recurso
+        lineas.append("## 6. Veredicto y recomendaciones por recurso")
+        lineas.append("")
+        if not self.res.evaluaciones:
+            lineas.append("No se generaron fichas de evaluación para esta entrada.")
+            lineas.append("")
+        else:
+            lineas.append("### Resumen")
+            lineas.append("| ID | Recurso | Identificador | Veredicto | Confianza | Cobertura |")
+            lineas.append("| :--- | :--- | :--- | :--- | :--- | :--- |")
+            for evaluacion in self.res.evaluaciones:
+                lineas.append(
+                    f"| {_escapar_markdown(evaluacion.recurso_id)} | {_escapar_markdown(evaluacion.tipo)} | "
+                    f"{_codigo_inline(evaluacion.identificador)} | **{_escapar_markdown(evaluacion.veredicto)}** | "
+                    f"{_escapar_markdown(evaluacion.confianza)} | {_escapar_markdown(evaluacion.cobertura)} |"
+                )
+            lineas.append("")
+
+            for evaluacion in self.res.evaluaciones:
+                lineas.append(f"### {evaluacion.recurso_id} — {evaluacion.tipo}: {_codigo_inline(evaluacion.identificador)}")
+                lineas.append(f"- **Veredicto:** {evaluacion.veredicto} ({evaluacion.confianza})")
+                lineas.append(f"- **Amenaza:** {_escapar_markdown(evaluacion.amenaza)}")
+                lineas.append(f"- **Cobertura:** {_escapar_markdown(evaluacion.cobertura)}")
+                lineas.append("- **Evidencia y observaciones:**")
+                for fundamento in evaluacion.fundamentos:
+                    lineas.append(f"  - {_escapar_markdown(fundamento)}")
+                lineas.append("- **Impacto potencial C-I-A:**")
+                for dimension, impacto in evaluacion.impacto_cia.items():
+                    lineas.append(f"  - **{_escapar_markdown(dimension)}:** {_escapar_markdown(impacto)}")
+                lineas.append(f"- **Medida para el usuario:** {_escapar_markdown(evaluacion.medida_usuario)}")
+                lineas.append(f"- **Control para la organización:** {_escapar_markdown(evaluacion.control_organizacion)}")
+                lineas.append("")
+
+        lineas.append("### Alcance de la clasificación")
+        lineas.append("`LIMPIO` significa que las consultas de reputación que se pudieron evaluar no informaron detecciones; no garantiza ausencia de malware. `SOSPECHOSO` puede indicar señales concretas que requieren corroboración o, con confianza baja, falta de evidencia para despejar el riesgo. `MALICIOSO/INFECTADO` se emite ante una detección externa explícita; no se infiere una familia de malware sin evidencia específica.")
         lineas.append("")
         lineas.append("---")
         lineas.append("*Informe forense generado por Phishing Lab.*")

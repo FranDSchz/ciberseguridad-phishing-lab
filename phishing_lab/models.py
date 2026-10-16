@@ -6,7 +6,7 @@ y resultados del laboratorio forense.
 
 from dataclasses import dataclass, field
 from enum import Enum
-from typing import Dict, List, Optional
+from typing import Any, Dict, List, Optional
 
 
 class TipoIOC(str, Enum):
@@ -72,6 +72,7 @@ class MetadatosCorreo:
     aviso_dkim: Optional[str] = None
     saltos_received: List[str] = field(default_factory=list)
     archivos_adjuntos: List[str] = field(default_factory=list)
+    adjuntos_analizados: List["ArchivoAnalizado"] = field(default_factory=list)
     es_malformado: bool = False
     errores_parseo: List[str] = field(default_factory=list)
 
@@ -92,6 +93,36 @@ class ReferenciaConsulta:
 
 
 @dataclass
+class ArchivoAnalizado:
+    """Metadatos estáticos de un archivo; nunca contiene ni ejecuta el binario."""
+    nombre: str
+    mime_declarado: Optional[str]
+    tamano_bytes: int
+    sha256: str
+    tipo_detectado: str
+    procedencia: str = "Archivo local"
+    mime_detectado: Optional[str] = None
+    firma_detectada: Optional[str] = None
+    nota: Optional[str] = None
+
+
+@dataclass
+class EvaluacionRecurso:
+    """Veredicto explicable ligado a un artefacto específico del caso."""
+    recurso_id: str
+    tipo: str
+    identificador: str
+    veredicto: str
+    confianza: str
+    fundamentos: List[str] = field(default_factory=list)
+    amenaza: str = "No determinada"
+    impacto_cia: Dict[str, str] = field(default_factory=dict)
+    medida_usuario: str = ""
+    control_organizacion: str = ""
+    cobertura: str = ""
+
+
+@dataclass
 class ResultadoLaboratorio:
     """
     Contenedor global de resultados del laboratorio de phishing.
@@ -104,6 +135,9 @@ class ResultadoLaboratorio:
     metadatos_eml: Optional[MetadatosCorreo] = None
     indicadores: List[Indicador] = field(default_factory=list)
     referencias_consulta: List[ReferenciaConsulta] = field(default_factory=list)
+    archivos_analizados: List[ArchivoAnalizado] = field(default_factory=list)
+    consultas_api: List[Dict[str, Any]] = field(default_factory=list)
+    evaluaciones: List[EvaluacionRecurso] = field(default_factory=list)
     fecha_analisis: str = ""
     zona_horaria: str = "America/Argentina/Buenos_Aires"
-    version_herramienta: str = "1.0.0"
+    version_herramienta: str = "1.1.0"

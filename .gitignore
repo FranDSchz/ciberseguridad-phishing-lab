@@ -27,6 +27,21 @@ env/
 .env/
 ENV/
 
+# API credentials and local configuration
+.env
+.env.*
+!.env.example
+
+# Local case material: emails, malware samples, reports, and evidence
+*.eml
+*.msg
+/samples/
+/muestras/
+/reports/
+/informes/
+/evidence/
+/evidencias/
+
 # Testing & Coverage
 .coverage
 .coverage.*
