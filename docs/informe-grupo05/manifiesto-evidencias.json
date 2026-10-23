@@ -1,12 +1,17 @@
 {
-  "version": 6,
-  "creado_utc": "2026-10-23T19:38:03.300222+00:00",
+  "version": 7,
+  "creado_utc": "2026-10-23T19:42:07.763341+00:00",
   "tipo": "Registro local de integridad, rutas relativas; no firmado",
   "archivos": [
     {
       "ruta": "BORRADOR-TP.md",
       "bytes": 43001,
       "sha256": "d0fdaaf958a4b0186daae458e0ad55d296d545a4d68ce55dbbf3a8ee6df6fc7d"
+    },
+    {
+      "ruta": "GUION-EXPOSICION.md",
+      "bytes": 6348,
+      "sha256": "9d4d9957b88386ebbbbccd47b963cf6990188001249a8e036268d40c96a627ed"
     },
     {
       "ruta": "INDICE-EVIDENCIAS.md",
@@ -275,8 +280,8 @@
     },
     {
       "ruta": "consolidacion/GUION-8-MINUTOS.md",
-      "bytes": 5643,
-      "sha256": "280cc073e39fc095ab84c364f4824a74e3e7a1be09c450f818c8017ebe574362"
+      "bytes": 6348,
+      "sha256": "9d4d9957b88386ebbbbccd47b963cf6990188001249a8e036268d40c96a627ed"
     },
     {
       "ruta": "consolidacion/NOTAS-CONSOLIDACION.md",
@@ -430,8 +435,8 @@
     },
     {
       "ruta": "entrega/Grupo_05_Presentacion_Consolidada.pptx",
-      "bytes": 424089,
-      "sha256": "10f74573e9e6d9d9f6acf8483426a9cd4408e87134459e459f5617c67963a5fd"
+      "bytes": 424812,
+      "sha256": "94bfcd014abdc65a823604f8eb73d27092573b1f69f4e1ac3c43e6c57fa10bb8"
     },
     {
       "ruta": "entrega/README.md",
