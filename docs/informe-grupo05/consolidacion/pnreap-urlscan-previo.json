@@ -1,0 +1,11 @@
+{
+  "service": "urlscan.io (reporte previo aportado por compa\u00f1ero)",
+  "indicator_type": "url",
+  "indicator": "pnreap.com (recurso de R004)",
+  "status": "response_too_large",
+  "queried_at": "2026-10-23T19:12:47+00:00",
+  "endpoint": "https://urlscan.io/api/v1/result/01a16708-599a-7175-b00c-e0adab33ac69/",
+  "http_status": 200,
+  "data": null,
+  "message": "La respuesta supera el l\u00edmite de 1000000 bytes."
+}

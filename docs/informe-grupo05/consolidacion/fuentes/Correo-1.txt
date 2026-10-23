@@ -1,0 +1,1350 @@
+﻿====================================================================================================
+ INFORME DE ANALISIS Y TRIAGE DE RECURSOS SOSPECHOSOS
+ Fundamentos de Ciberseguridad - UTN FRRe - Ciclo 2026 - Grupo 05
+====================================================================================================
+Identificador : Correo-1
+Tipo          : Correo electronico (.eml)
+Recurso       : sample-10070.eml
+Fecha/hora    : 2026-10-23 01:53:05 -0300
+Herramienta   : triage_recursos.py v1.0
+
+Documento de evidencia tecnica. NO abrir enlaces ni ejecutar archivos.
+====================================================================================================
+
+
+====================================================================================================
+ 1. FICHA DE ANALISIS (SECCION 7 DEL ENUNCIADO)
+====================================================================================================
+
+Identificador del recurso:        Correo-1
+Tipo:                             Correo electronico (.eml)
+Herramientas usadas:              Analisis local de cabeceras y contenido (.eml); VirusTotal API v3
+                                  (dominio, IP, URLs y adjuntos); urlscan.io API; WHOIS/RDAP;
+                                  crt.sh; MXToolbox (verificacion manual)
+Evidencia clave:                  DKIM valida pero no esta alineado con el dominio del From
+                                  (associationlienservices.com); Reply-To apunta a un dominio
+                                  distinto del From; 1 URL(s) del correo resultaron maliciosas:
+                                  pnreap.com (12 detecciones VT); 2 URL(s) del correo resultaron
+                                  sospechosas: shorturl.at (2 detecciones VT); SPF: pass; DKIM: pass
+Tipo de amenaza (si aplica):      Phishing / robo de credenciales
+Impacto C-I-A:                    Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+VEREDICTO:                        MALICIOSO
+Confianza:                        alta
+Medida usuario:                   No abrir enlaces ni adjuntos. No responder. Reportar el correo
+                                  como phishing y, si se interactuo, cambiar credenciales y cerrar
+                                  sesiones.
+Medida organizacion:              Bloquear remitente/dominio/IP y URLs en el filtro de correo;
+                                  publicar DMARC en reject; agregar IoCs a proxy/EDR/SIEM; capacitar
+                                  usuarios; revisar buzones que recibieron el mensaje.
+
+====================================================================================================
+ 2. DATOS DEL RECURSO
+====================================================================================================
+
+Archivo:                          sample-10070.eml
+Ruta:                             C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+                                  Ciberseguridad\Practica\tp1\Grupo_05\sample-10070.eml
+Tamano:                           12294 bytes
+SHA-256:                          511e3e59b9ca1947df591e15da12aed9813b811ace03e7a28aa70e116de878e4
+SHA-1:                            f3896d7ef15586eabc1d5f99e41104a6ff096e8f
+MD5:                              6f67d861f68328504fc8fe10859dde98
+From:                             Knee Relief Alert <renewzl429@ginnybedellphotography.com>
+Para:                             phishing@pot
+Asunto:                           Say goodbye to sharp, stabbing pains today!
+Fecha:                            Thu, 02 Jul 2026 17:08:05 +0000
+Message-ID:                       <8fa30eb7-9126-499c-88ac-90ff219b941d@BY1PEPF0001AE17.namprd04.pro
+                                  d.outlook.com>
+
+====================================================================================================
+ 3. HERRAMIENTAS UTILIZADAS
+====================================================================================================
+
+  - Analisis local de cabeceras completas, identidades, Received, cuerpo y adjuntos.
+  - VirusTotal API v3: dominio del From, IP de origen, URLs extraidas y adjuntos.
+  - urlscan.io API: comportamiento y captura de las URLs del correo.
+  - WHOIS/RDAP y crt.sh: antiguedad, registrador, name servers y certificados.
+  - MXToolbox: verificacion manual de cabeceras y blacklist de la IP de origen.
+
+====================================================================================================
+ 4. EVIDENCIA TECNICA (METODOLOGIA 5.1)
+====================================================================================================
+
+
+4.1 Cabeceras completas (paso 1: SPF, DKIM, DMARC)
+----------------------------------------------------------------------------------------------------
+From:                             Knee Relief Alert <renewzl429@ginnybedellphotography.com>
+Reply-To:                         replyto@brendamurphyrealestate.com
+Return-Path:                      renewlljwzs@ginnybedellphotography.com
+To:                               phishing@pot
+Subject:                          Say goodbye to sharp, stabbing pains today!
+Date:                             Thu, 02 Jul 2026 17:08:05 +0000
+Message-ID:                       <8fa30eb7-9126-499c-88ac-90ff219b941d@BY1PEPF0001AE17.namprd04.pro
+                                  d.outlook.com>
+X-Mailer:                         (no presente)
+X-Originating-IP:                 (no presente)
+List-Unsubscribe:                 (no presente)
+
+Resultado de autenticacion declarado en las cabeceras:
+  spf=pass (sender IP is 20.169.217.199) smtp.mailfrom=ginnybedellphotography.com; dkim=pass
+  (signature was verified) header.d=associationlienservices.com;dmarc=pass action=none
+  header.from=ginnybedellphotography.com;compauth=pass reason=100
+  Received-SPF: Pass (protection.outlook.com: domain of ginnybedellphotography.com designates 20.169.217.199 as permitted sender) receiver=protection.outlook.com; client-ip=20.169.217.199; helo=associationlienservices.com; pr=M
+
+Alineacion calculada (relaxed, dominio registrable):
+Mecanismo   | Resultado  | Dominio evaluado             | Alineado  | Observacion
+------------+------------+------------------------------+-----------+---------------------------------------
+SPF         | pass       | ginnybedellphotography.com   | SI        | IP 20.169.217.199; HELO
+            |            |                              |           | associationlienservices.com
+DKIM        | pass       | associationlienservices.com  | NO        | selectores: mail
+DMARC       | pass       | ginnybedellphotography.com   | SI        | compauth=pass
+
+SPF efectivo (pass + alineado):   SI
+DKIM efectivo (pass + alineado):  NO
+DMARC efectivo:                   SI
+
+4.2 Identidades y cadena Received (paso 2)
+----------------------------------------------------------------------------------------------------
+Identidad    | Direccion                            | Dominio                | Dominio registrable
+-------------+--------------------------------------+------------------------+-------------------------
+From         | renewzl429@ginnybedellphotography.co | ginnybedellphotography | ginnybedellphotography.c
+             | m                                    | .com                   | om
+Reply-To     | replyto@brendamurphyrealestate.com   | brendamurphyrealestate | brendamurphyrealestate.c
+             |                                      | .com                   | om
+Return-Path  | renewlljwzs@ginnybedellphotography.c | ginnybedellphotography | ginnybedellphotography.c
+             | om                                   | .com                   | om
+
+Nombre visible:                   Knee Relief Alert
+Saltos Received:                  4
+IP de origen (mas antigua):       20.169.217.199
+HELO/host de origen:              associationlienservices.com
+Fecha del salto de origen:        2026-07-06 07:26:39 -0300
+Demora total de la cadena:        2 segundos
+
+Recorrido de abajo hacia arriba (1 = salto mas antiguo):
+#    | Desde (from)                   | Por (by)                       | IP               | Fecha
+-----+--------------------------------+--------------------------------+------------------+-------------------
+1    | associationlienservices.com    | BY1PEPF0001AE17.mail.protectio | 20.169.217.199   | 2026-07-06
+     |                                | n.outlook.com                  |                  | 07:26:39 -0300
+2    | BY1PEPF0001AE17.namprd04.prod. | SJ0PR03CA0163.outlook.office36 | 2603:10b6:a03:33 | 2026-07-06
+     | outlook.com                    | 5.com                          | 8:cafe::1d       | 07:26:39 -0300
+3    | SJ0PR03CA0163.namprd03.prod.ou | BN0PR10MB4965.namprd10.prod.ou | 2603:10b6:a03:33 | 2026-07-06
+     | tlook.com                      | tlook.com                      | 8::18            | 07:26:40 -0300
+4    | BN0PR10MB4965.namprd10.prod.ou | MW4PR10MB5749.namprd10.prod.ou | -                | 2026-07-06
+     | tlook.com                      | tlook.com                      |                  | 07:26:41 -0300
+
+Anomalias detectadas automaticamente:
+  - Reply-To (brendamurphyrealestate.com) apunta a un dominio distinto del From
+    (ginnybedellphotography.com).
+  - DKIM valida pero el dominio firmante (d=associationlienservices.com) no esta alineado con el
+    From (ginnybedellphotography.com).
+  - El HELO/host de origen (associationlienservices.com) no pertenece al dominio del From.
+
+4.3 Reputacion de IP y dominio (paso 3)
+----------------------------------------------------------------------------------------------------
+IP de origen en VirusTotal
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=0, undetected=92, timeout=0
+Reputacion:                       0
+Pais / red (RDAP):                - / 20.160.0.0 - 20.175.255.255
+Blacklist (MXToolbox):            https://mxtoolbox.com/blacklists.aspx?host=20.169.217.199
+
+Dominio analizado: ginnybedellphotography.com
+
+VirusTotal (dominio)
+Detecciones:                      1/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=1, suspicious=0, harmless=53, undetected=38, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - Chong Lua Dao: malicious
+Creacion segun VirusTotal:        2007-07-14 10:05:31 -0300
+
+[WHOIS / RDAP]
+Estado:                           El registro RDAP no devolvio datos para el dominio.
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          230
+Subdominios unicos:               2
+Certificado mas antiguo:          2016-03-16T15:32:00
+Certificado mas reciente:         2026-07-20T21:30:25
+Emisores:                         E7, Go Daddy Secure Certificate Authority - G2, GoDaddy TLS
+                                  Intermediate CA DV - R1v1, Let's Encrypt Authority X1, Let's
+                                  Encrypt Authority X3, R10, R11, R3, Sectigo Public Server
+                                  Authentication CA DV E36, WE1
+Subdominios detectados (muestra):
+  - ginnybedellphotography.com
+  - www.ginnybedellphotography.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.ginnybedellphotography.com&output=json
+
+4.4 Contenido: URLs, dominios y adjuntos (paso 4)
+----------------------------------------------------------------------------------------------------
+4.4.1 URLs extraidas y resultado resumido
+#   | URL                              | VT URL      | VT dom.     | urlscan       | Edad dominio      | Veredicto
+----+----------------------------------+-------------+-------------+---------------+-------------------+-------------
+1   | https://shorturl.at/zEbf9        | 2/93 mal    | 2/92 mal    | sin veredicto | 3628 dias (~9.9   | SOSPECHOSO
+    |                                  |             |             |               | anos)             |
+2   | https://i.imgur.com/jZaxBnA.png  | 0/93 mal    | 0/92 mal    | no disponible | 6495 dias (~17.8  | LIMPIO
+    |                                  |             |             |               | anos)             |
+3   | https://shorturl.at/8IYrs        | 2/93 mal    | 2/92 mal    | sin veredicto | 3628 dias (~9.9   | SOSPECHOSO
+    |                                  |             |             |               | anos)             |
+4   | https://i.imgur.com/OOaNe2w.png  | 0/93 mal    | 0/92 mal    | no disponible | 6495 dias (~17.8  | LIMPIO
+    |                                  |             |             |               | anos)             |
+5   | http://pnreap.com/Z2jrS5FTfcnbCK | 12/93 mal   | 12/92 mal   | sin veredicto | 7294 dias (~20.0  | MALICIOSO
+    | AbmUkq/UX/SHKGfHGiCpwgO93nsMm0kO |             |             |               | anos)             |
+    | WM/MdrY5Bck/pCSQLaoBgck9KqKkojtz |             |             |               |                   |
+    | C9D/ree/hjf7OALq9A94N1XYW2s9Eht0 |             |             |               |                   |
+    | /rveed_M/uktIy1QMB41JR8ESxNeN5pN |             |             |               |                   |
+    | /7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY |             |             |               |                   |
+    | _M/IqhqRiXhDMshYqqovUjh/e5e_rx5/ |             |             |               |                   |
+    | 9BY0kT4W6PUjzOLK7u7vOMCp/        |             |             |               |                   |
+
+4.4.2 Dominios involucrados (detalle)
+
+4.4.2.1 Dominio: shorturl.at
+----------------------------------------------------------------------------------------------------
+
+VirusTotal (dominio)
+Detecciones:                      2/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=58, undetected=32, timeout=0
+Reputacion:                       -17
+Motores que detectan el recurso como malicioso:
+  - Chong Lua Dao: malicious
+  - SafeToOpen: phishing
+
+[WHOIS / RDAP]
+Estado:                           El registro RDAP no devolvio datos para el dominio.
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          505
+Subdominios unicos:               8
+Certificado mas antiguo:          2016-11-13T00:00:00
+Certificado mas reciente:         2026-08-16T18:25:36
+Emisores:                         "cPanel, COMODO ECC Domain Validation Secure Server CA 2,
+                                  CloudFlare Inc ECC CA-2, Cloudflare Inc ECC CA-3, E1, E5, E6, E7,
+                                  E8, GTS CA 1P5, R10, R11, R12, R13, R3, Sectigo ECC Domain
+                                  Validation Secure Server CA, WE1, WR1, YE1, YE2, YR1, YR2
+Subdominios detectados (muestra):
+  - cpanel.shorturl.at
+  - cpcalendars.shorturl.at
+  - cpcontacts.shorturl.at
+  - mail.shorturl.at
+  - shorturl.at
+  - webdisk.shorturl.at
+  - webmail.shorturl.at
+  - www.shorturl.at
+Consulta crt.sh:                  https://crt.sh/?q=%25.shorturl.at&output=json
+
+4.4.2.2 Dominio: imgur.com
+----------------------------------------------------------------------------------------------------
+
+VirusTotal (dominio)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=59, undetected=33, timeout=0
+Reputacion:                       4
+Creacion segun VirusTotal:        2009-01-09 17:30:53 -0300
+
+[WHOIS / RDAP]
+Fecha de creacion:                2009-01-09T20:30:53Z
+Antiguedad:                       6495 dias (~17.8 anos)
+Vencimiento:                      2028-01-09T20:30:53Z
+Ultimo cambio:                    2026-05-16T14:37:25Z
+Registrador:                      Amazon Registrar, Inc.
+Name servers:                     NS-1198.AWSDNS-21.ORG, NS-1677.AWSDNS-17.CO.UK,
+                                  NS-457.AWSDNS-57.COM, NS-577.AWSDNS-08.NET
+Estados:                          client transfer prohibited
+Consulta RDAP:                    https://rdap.org/domain/imgur.com
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          1097
+Subdominios unicos:               31
+Certificado mas antiguo:          2010-08-05T14:14:37
+Certificado mas reciente:         2026-10-05T23:32:36
+Emisores:                         Amazon, Amazon RSA 2048 M01, Amazon RSA 2048 M02, Amazon RSA 2048
+                                  M03, COMODO RSA Domain Validation Secure Server CA 2, DigiCert
+                                  High Assurance CA-3, DigiCert SHA2 Secure Server CA, DigiCert TLS
+                                  RSA SHA256 2020 CA1, GTS CA 1D4, GTS CA 1P5, GeoTrust DV SSL CA,
+                                  GlobalSign CloudSSL CA - SHA256 - G3, GlobalSign Domain Validation
+                                  CA - SHA256 - G3, GlobalSign Organization Validation CA - G2,
+                                  Let's Encrypt Authority X1, Let's Encrypt Authority X3, R10, R11,
+                                  R12, R13, R3, Sectigo ECC Domain Validation Secure Server CA,
+                                  Sectigo Public Server Authentication CA DV E36, Sectigo Public
+                                  Server Authentication CA DV R36, Sectigo RSA Domain Validation
+                                  Secure Server CA, StartCom Class 1 Primary Intermediate Server CA,
+                                  WE1, WR1, WR3, YE1, YR1, YR2, ZeroSSL ECC DV SSL CA 2, ZeroSSL ECC
+                                  Domain Secure Site CA
+Subdominios detectados (muestra):
+  - 8ybhy85kld9zp9xf84x6.imgur.com
+  - an.imgur.com
+  - and.imgur.com
+  - api.imgur.com
+  - api.stack.imgur.com
+  - apidocs.imgur.com
+  - browserevents.imgur.com
+  - community.imgur.com
+  - g00.imgur.com
+  - help.imgur.com
+  - helpold.imgur.com
+  - i.imgur.com
+  - i.stack.imgur.com
+  - imgur.com
+  - iob.imgur.com
+  - ios.imgur.com
+  - lilsnack.imgur.com
+  - links.msg.imgur.com
+  - press.imgur.com
+  - rt.imgur.com
+  - s.imgur.com
+  - sen.imgur.com
+  - sentry.imgur.com
+  - stack.imgur.com
+  - status.imgur.com
+  - store.imgur.com
+  - www.api.stack.imgur.com
+  - www.i.stack.imgur.com
+  - www.links.msg.imgur.com
+  - www.press.imgur.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.imgur.com&output=json
+
+4.4.2.3 Dominio: pnreap.com
+----------------------------------------------------------------------------------------------------
+
+VirusTotal (dominio)
+Detecciones:                      12/92 maliciosos, 1 sospechosos
+Conteo por categoria:             malicious=12, suspicious=1, harmless=47, undetected=32, timeout=0
+Reputacion:                       0
+Categorias:                       BitDefender: onlinephotos, Forcepoint ThreatSeeker: malicious web
+                                  sites, Sophos: phishing and fraud, Webroot: Phishing and Other
+                                  Frauds, alphaMountain.ai: Phishing (alphaMountain.ai)
+Motores que detectan el recurso como malicioso:
+  - ADMINUSLabs: malicious
+  - alphaMountain.ai: phishing
+  - BitDefender: malware
+  - Bkav: malicious
+  - Forcepoint ThreatSeeker: malicious
+  - Fortinet: phishing
+  - G-Data: malware
+  - Kaspersky: phishing
+  - Lionic: malicious
+  - Sophos: phishing
+  - VIPRE: malware
+  - Webroot: malicious
+Motores que lo marcan como sospechoso:
+  - Gridinsoft: suspicious
+Creacion segun VirusTotal:        2006-11-01 21:00:00 -0300
+
+[WHOIS / RDAP]
+Fecha de creacion:                2006-11-02T19:01:48Z
+Antiguedad:                       7294 dias (~20.0 anos)
+Vencimiento:                      2026-11-02T19:01:48Z
+Ultimo cambio:                    2025-12-12T11:09:20Z
+Registrador:                      GoDaddy.com, LLC
+Name servers:                     NS45.DOMAINCONTROL.COM, NS46.DOMAINCONTROL.COM
+Estados:                          client delete prohibited, client renew prohibited, client transfer
+                                  prohibited, client update prohibited
+Consulta RDAP:                    https://rdap.org/domain/pnreap.com
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          6
+Subdominios unicos:               2
+Certificado mas antiguo:          2025-11-05T05:55:38
+Certificado mas reciente:         2025-12-12T11:29:17
+Emisores:                         E7, Go Daddy Secure Certificate Authority - G2
+Subdominios detectados (muestra):
+  - pnreap.com
+  - www.pnreap.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.pnreap.com&output=json
+
+4.4.3 Detalle por URL
+
+4.4.3.1 URL: https://shorturl.at/zEbf9
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://shorturl.at/zEbf9
+Normalizada:                      https://shorturl.at/zEbf9
+Version defangada:                hxxps://shorturl[.]at/zEbf9
+Esquema / host / puerto:          https / shorturl.at / por defecto
+Ruta:                             /zEbf9
+
+VirusTotal (URL)
+Detecciones:                      2/93 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=60, undetected=31, timeout=0
+Reputacion:                       0
+Categorias:                       alphaMountain.ai: URL Redirect (alphaMountain.ai), BitDefender:
+                                  computersandsoftware, Dr.Web: not recommended site, Sophos:
+                                  information technology, Forcepoint ThreatSeeker: web hosting,
+                                  Google: technology
+Tags:                             external-resources, iframes
+Motores que detectan el recurso como malicioso:
+  - Chong Lua Dao: malicious
+  - SafeToOpen: phishing
+Cadena de redirecciones (VT):
+  - https://shorturl.at/zEbf9
+  - https://www.shorturl.at/zEbf9
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly9zaG9ydHVybC5hdC96RWJ
+                                  mOQ
+
+[Dominio]
+Dominio:                          shorturl.at
+VT:                               2/92 maliciosos, 0 sospechosos
+Antiguedad del dominio:           3628 dias (~9.9 anos)
+Registrador:                      No informado
+Consulta RDAP:                    https://rdap.org/domain/shorturl.at
+Consulta crt.sh:                  https://crt.sh/?q=%25.shorturl.at&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      1/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=1, suspicious=0, harmless=54, undetected=37, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - Gridinsoft: malicious
+Pais / red:                       - / 104.16.0.0 - 104.31.255.255
+Consulta RDAP:                    https://rdap.org/ip/104.26.8.129
+
+[urlscan.io]
+Origen del dato:                  escaneo nuevo (unlisted)
+Fecha del escaneo:                2026-10-23T04:30:08.483Z
+Visibilidad:                      unlisted
+URL enviada:                      https://shorturl.at/zEbf9
+URL final:                        https://www.shorturl.at/zEbf9
+Veredicto:                        Sin veredicto malicioso
+Score:                            0
+Categorias:                       Ninguna
+Marcas afectadas:                 Ninguna
+Tags:                             Ninguno
+Motor ML de urlscan:              Sin veredicto (score -95); tags: urlscan-ml, urlscan-ml-60c5e22
+Formulario de credenciales:       No informado
+IP:                               104.26.8.129
+PTR:                              No disponible
+Pais:                             No disponible
+Idioma:                           en
+ASN:                              AS13335 CLOUDFLARENET - Cloudflare, Inc., US
+Servidor:                         cloudflare
+Titulo:                           404 Page Not Found
+MIME:                             text/html
+HTTP status:                      200
+Antiguedad del dominio (urlscan): 3628 dias (~9.9 anos)
+Emisor TLS:                       WE1
+Antiguedad del certificado:       39 dias
+Solicitudes HTTP:                 12
+Redirecciones observadas:
+  - https://shorturl.at/zEbf9
+  - https://www.shorturl.at/cdn-cgi/challenge-platform/scripts/jsd/main.js
+  - https://www.shorturl.at/zEbf9
+Dominios contactados:
+  - www.shorturl.at (IPs: 104.26.8.129; pais: -; requests: 9)
+  - fonts.gstatic.com (IPs: 142.251.13.94; pais: US; requests: 3)
+  - fonts.googleapis.com (IPs: 142.250.154.95; pais: US; requests: 1)
+  - shorturl.at (IPs: 104.26.8.129; pais: -; requests: 1)
+IPs contactadas:
+  - 142.251.13.94 (ASN -; pais -; requests: -)
+  - 142.250.154.95 (ASN -; pais -; requests: -)
+  - 104.26.8.129 (ASN -; pais -; requests: -)
+Dominios enlazados desde la pagina:
+  - www.namesilo.com
+Captura:                          https://urlscan.io/screenshots/01a16705-e84d-748c-ba2b-a75cf9b4a40
+                                  1.png
+Reporte:                          https://urlscan.io/result/01a16705-e84d-748c-ba2b-a75cf9b4a401/
+
+[Analisis heuristico de la URL]
+  - El host es un acortador de URLs (oculta el destino real).
+
+Veredicto de esta URL:            SOSPECHOSO
+Confianza:                        baja
+  - VirusTotal: 2 motor(es) marcan la URL como maliciosa.
+  - VirusTotal: el dominio tiene 2 deteccion(es) maliciosa(s).
+  - urlscan.io no marca el sitio como malicioso.
+  - Antiguedad del dominio segun urlscan.io: 3628 dias (~9.9 anos).
+  - Dominio con antiguedad: 3628 dias (~9.9 anos).
+  - El host es un acortador de URLs (oculta el destino real).
+
+4.4.3.2 URL: https://i.imgur.com/jZaxBnA.png
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://i.imgur.com/jZaxBnA.png
+Normalizada:                      https://i.imgur.com/jZaxBnA.png
+Version defangada:                hxxps://i[.]imgur[.]com/jZaxBnA[.]png
+Esquema / host / puerto:          https / i.imgur.com / por defecto
+Ruta:                             /jZaxBnA.png
+
+VirusTotal (URL)
+Detecciones:                      0/93 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=59, undetected=34, timeout=0
+Reputacion:                       0
+Categorias:                       BitDefender: misc, Xcitium Verdict Cloud: computing & technology,
+                                  Sophos: photo galleries, Forcepoint ThreatSeeker: personal network
+                                  storage and backup, Google: social_media
+Tags:                             trackers, third-party-cookies, iframes, external-resources
+Cadena de redirecciones (VT):
+  - https://i.imgur.com/jZaxBnA.png
+  - https://imgur.com/jZaxBnA
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly9pLmltZ3VyLmNvbS9qWmF
+                                  4Qm5BLnBuZw
+
+[Dominio]
+Dominio:                          imgur.com
+VT:                               0/92 maliciosos, 0 sospechosos
+Antiguedad del dominio:           6495 dias (~17.8 anos)
+Registrador:                      Amazon Registrar, Inc.
+Consulta RDAP:                    https://rdap.org/domain/imgur.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.imgur.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=55, undetected=37, timeout=0
+Reputacion:                       -2
+Pais / red:                       - / 199.232.0.0 - 199.232.255.255
+Consulta RDAP:                    https://rdap.org/ip/199.232.192.193
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: Scan prevented ...
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+
+[Analisis heuristico de la URL]
+  - No se observaron patrones sospechosos en la URL.
+
+Veredicto de esta URL:            LIMPIO
+Confianza:                        media
+  - urlscan.io no disponible: envio HTTP 400: Scan prevented ...
+  - Dominio con antiguedad: 6495 dias (~17.8 anos).
+
+4.4.3.3 URL: https://shorturl.at/8IYrs
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://shorturl.at/8IYrs
+Normalizada:                      https://shorturl.at/8IYrs
+Version defangada:                hxxps://shorturl[.]at/8IYrs
+Esquema / host / puerto:          https / shorturl.at / por defecto
+Ruta:                             /8IYrs
+
+VirusTotal (URL)
+Detecciones:                      2/93 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=59, undetected=32, timeout=0
+Reputacion:                       0
+Categorias:                       alphaMountain.ai: URL Redirect (alphaMountain.ai), BitDefender:
+                                  computersandsoftware, Dr.Web: not recommended site, Sophos:
+                                  information technology, Forcepoint ThreatSeeker: web hosting,
+                                  Xcitium Verdict Cloud: web applications, Google: technology
+Tags:                             iframes, external-resources
+Motores que detectan el recurso como malicioso:
+  - Chong Lua Dao: malicious
+  - SafeToOpen: phishing
+Cadena de redirecciones (VT):
+  - https://shorturl.at/8IYrs
+  - https://www.shorturl.at/8IYrs
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly9zaG9ydHVybC5hdC84SVl
+                                  ycw
+
+[Dominio]
+Dominio:                          shorturl.at
+VT:                               2/92 maliciosos, 0 sospechosos
+Antiguedad del dominio:           3628 dias (~9.9 anos)
+Registrador:                      No informado
+Consulta RDAP:                    https://rdap.org/domain/shorturl.at
+Consulta crt.sh:                  https://crt.sh/?q=%25.shorturl.at&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      1/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=1, suspicious=0, harmless=55, undetected=36, timeout=0
+Reputacion:                       -2
+Motores que detectan el recurso como malicioso:
+  - Gridinsoft: malicious
+Pais / red:                       - / 104.16.0.0 - 104.31.255.255
+Consulta RDAP:                    https://rdap.org/ip/104.26.9.129
+
+[urlscan.io]
+Origen del dato:                  escaneo nuevo (unlisted)
+Fecha del escaneo:                2026-10-23T04:31:38.512Z
+Visibilidad:                      unlisted
+URL enviada:                      https://shorturl.at/8IYrs
+URL final:                        https://www.shorturl.at/8IYrs
+Veredicto:                        Sin veredicto malicioso
+Score:                            0
+Categorias:                       Ninguna
+Marcas afectadas:                 Ninguna
+Tags:                             Ninguno
+Motor ML de urlscan:              Sin veredicto (score -95); tags: urlscan-ml, urlscan-ml-60c5e22
+Formulario de credenciales:       No informado
+IP:                               104.26.9.129
+PTR:                              No disponible
+Pais:                             No disponible
+Idioma:                           en
+ASN:                              AS13335 CLOUDFLARENET - Cloudflare, Inc., US
+Servidor:                         cloudflare
+Titulo:                           404 Page Not Found
+MIME:                             text/html
+HTTP status:                      200
+Antiguedad del dominio (urlscan): 3628 dias (~9.9 anos)
+Emisor TLS:                       WE1
+Antiguedad del certificado:       39 dias
+Solicitudes HTTP:                 12
+Redirecciones observadas:
+  - https://shorturl.at/8IYrs
+  - https://www.shorturl.at/cdn-cgi/challenge-platform/scripts/jsd/main.js
+  - https://www.shorturl.at/8IYrs
+Dominios contactados:
+  - www.shorturl.at (IPs: 104.26.9.129; pais: -; requests: 9)
+  - fonts.gstatic.com (IPs: 142.251.20.94; pais: US; requests: 3)
+  - fonts.googleapis.com (IPs: 142.250.154.95; pais: US; requests: 1)
+  - shorturl.at (IPs: 104.26.9.129; pais: -; requests: 1)
+IPs contactadas:
+  - 142.251.20.94 (ASN -; pais -; requests: -)
+  - 142.250.154.95 (ASN -; pais -; requests: -)
+  - 104.26.9.129 (ASN -; pais -; requests: -)
+Dominios enlazados desde la pagina:
+  - www.namesilo.com
+Captura:                          https://urlscan.io/screenshots/01a16707-4603-714f-9700-a4cb564cd7b
+                                  f.png
+Reporte:                          https://urlscan.io/result/01a16707-4603-714f-9700-a4cb564cd7bf/
+
+[Analisis heuristico de la URL]
+  - El host es un acortador de URLs (oculta el destino real).
+
+Veredicto de esta URL:            SOSPECHOSO
+Confianza:                        baja
+  - VirusTotal: 2 motor(es) marcan la URL como maliciosa.
+  - VirusTotal: el dominio tiene 2 deteccion(es) maliciosa(s).
+  - urlscan.io no marca el sitio como malicioso.
+  - Antiguedad del dominio segun urlscan.io: 3628 dias (~9.9 anos).
+  - Dominio con antiguedad: 3628 dias (~9.9 anos).
+  - El host es un acortador de URLs (oculta el destino real).
+
+4.4.3.4 URL: https://i.imgur.com/OOaNe2w.png
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://i.imgur.com/OOaNe2w.png
+Normalizada:                      https://i.imgur.com/OOaNe2w.png
+Version defangada:                hxxps://i[.]imgur[.]com/OOaNe2w[.]png
+Esquema / host / puerto:          https / i.imgur.com / por defecto
+Ruta:                             /OOaNe2w.png
+
+VirusTotal (URL)
+Detecciones:                      0/93 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=59, undetected=34, timeout=0
+Reputacion:                       0
+Categorias:                       BitDefender: misc, Sophos: photo galleries, Forcepoint
+                                  ThreatSeeker: personal network storage and backup, Google:
+                                  social_media
+Tags:                             trackers, third-party-cookies, external-resources, iframes
+Cadena de redirecciones (VT):
+  - https://i.imgur.com/OOaNe2w.png
+  - https://btloader.com/trustedIframe.html?o=6282837909569536&upapi=true
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly9pLmltZ3VyLmNvbS9PT2F
+                                  OZTJ3LnBuZw
+
+[Dominio]
+Dominio:                          imgur.com
+VT:                               0/92 maliciosos, 0 sospechosos
+Antiguedad del dominio:           6495 dias (~17.8 anos)
+Registrador:                      Amazon Registrar, Inc.
+Consulta RDAP:                    https://rdap.org/domain/imgur.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.imgur.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=55, undetected=37, timeout=0
+Reputacion:                       -2
+Pais / red:                       - / 199.232.0.0 - 199.232.255.255
+Consulta RDAP:                    https://rdap.org/ip/199.232.192.193
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: Scan prevented ...
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+
+[Analisis heuristico de la URL]
+  - No se observaron patrones sospechosos en la URL.
+
+Veredicto de esta URL:            LIMPIO
+Confianza:                        media
+  - urlscan.io no disponible: envio HTTP 400: Scan prevented ...
+  - Dominio con antiguedad: 6495 dias (~17.8 anos).
+
+4.4.3.5 URL: http://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM/MdrY5Bck...
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       http://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM
+                                  /MdrY5Bck/pCSQLaoBgck9KqKkojtzC9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rve
+                                  ed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY_M/Iqh
+                                  qRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+Normalizada:                      http://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM
+                                  /MdrY5Bck/pCSQLaoBgck9KqKkojtzC9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rve
+                                  ed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY_M/Iqh
+                                  qRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+Version defangada:                hxxp://pnreap[.]com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kO
+                                  WM/MdrY5Bck/pCSQLaoBgck9KqKkojtzC9D/ree/hjf7OALq9A94N1XYW2s9Eht0/r
+                                  veed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY_M/I
+                                  qhqRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+Esquema / host / puerto:          http / pnreap.com / por defecto
+Ruta:                             /Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM/MdrY5Bck/pCSQLao
+                                  Bgck9KqKkojtzC9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rveed_M/uktIy1QMB41J
+                                  R8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY_M/IqhqRiXhDMshYqqovUjh
+                                  /e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+
+VirusTotal (URL)
+Detecciones:                      12/93 maliciosos, 1 sospechosos
+Conteo por categoria:             malicious=12, suspicious=1, harmless=48, undetected=32, timeout=0
+Reputacion:                       0
+Categorias:                       alphaMountain.ai: Phishing (alphaMountain.ai), BitDefender:
+                                  onlinephotos, Sophos: phishing and fraud, Webroot: Phishing and
+                                  Other Frauds, Forcepoint ThreatSeeker: malicious web sites,
+                                  Google: technology
+Tags:                             multiple-redirects, external-resources
+Motores que detectan el recurso como malicioso:
+  - ADMINUSLabs: malicious
+  - alphaMountain.ai: phishing
+  - BitDefender: malware
+  - Forcepoint ThreatSeeker: malicious
+  - Fortinet: phishing
+  - G-Data: malware
+  - Kaspersky: phishing
+  - LevelBlue: phishing
+  - Lionic: malicious
+  - Sophos: phishing
+  - VIPRE: malware
+  - Webroot: malicious
+Motores que lo marcan como sospechoso:
+  - Gridinsoft: suspicious
+Cadena de redirecciones (VT):
+  - http://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM/MdrY5Bck/pCSQLaoBgck9KqKkojtz
+    C9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rveed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY
+    _M/IqhqRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+  - https://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM/MdrY5Bck/pCSQLaoBgck9KqKkojt
+    zC9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rveed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/v
+    Y_M/IqhqRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+  - http://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM/MdrY5Bck/pCSQLaoBgck9KqKkojtz
+    C9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rveed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY
+    _M/IqhqRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+  - https://www.google.com/
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cDovL3BucmVhcC5jb20vWjJqclM
+                                  1RlRmY25iQ0tBYm1Va3EvVVgvU0hLR2ZIR2lDcHdnTzkzbnNNbTBrT1dNL01kclk1Q
+                                  mNrL3BDU1FMYW9CZ2NrOUtxS2tvanR6QzlEL3JlZS9oamY3T0FMcTlBOTROMVhZVzJ
+                                  zOUVodDAvcnZlZWRfTS91a3RJeTFRTUI0MUpSOEVTeE5lTjVwTi83TXJlNS9yNFkyN
+                                  1dtV1VhV0lQVUZUM29PTGU2L3ZZX00vSXFocVJpWGhETXNoWXFxb3ZVamgvZTVlX3J
+                                  4NS85Qlkwa1Q0VzZQVWp6T0xLN3U3dk9NQ3Av
+
+[Dominio]
+Dominio:                          pnreap.com
+VT:                               12/92 maliciosos, 1 sospechosos
+Antiguedad del dominio:           7294 dias (~20.0 anos)
+Registrador:                      GoDaddy.com, LLC
+Consulta RDAP:                    https://rdap.org/domain/pnreap.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.pnreap.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=55, undetected=37, timeout=0
+Reputacion:                       0
+Tags:                             self-signed
+Pais / red:                       - / 142.250.0.0 - 142.251.255.255
+Consulta RDAP:                    https://rdap.org/ip/142.251.156.119
+
+[urlscan.io]
+Origen del dato:                  escaneo nuevo (unlisted)
+Fecha del escaneo:                2026-10-23T04:32:49.672Z
+Visibilidad:                      unlisted
+URL enviada:                      http://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM
+                                  /MdrY5Bck/pCSQLaoBgck9KqKkojtzC9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rve
+                                  ed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY_M/Iqh
+                                  qRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+URL final:                        https://www.google.com/
+  - La URL final esta en otro dominio (www.google.com vs pnreap.com). Puede ser una redireccion
+    legitima o una tecnica de ocultamiento/cloaking; comparar con la captura y el destino real.
+Veredicto:                        Sin veredicto malicioso
+Score:                            0
+Categorias:                       Ninguna
+Marcas afectadas:                 Ninguna
+Tags:                             Ninguno
+Motor ML de urlscan:              Sin veredicto (score -97); tags: urlscan-ml, urlscan-ml-60c5e22
+Formulario de credenciales:       No informado
+IP:                               142.251.156.119
+PTR:                              No disponible
+Pais:                             US
+Idioma:                           No informado
+ASN:                              AS15169 GOOGLE - Google LLC, US
+Servidor:                         gws
+Titulo:                           Google
+MIME:                             text/html
+HTTP status:                      200
+Antiguedad final (urlscan):       4958 dias (~13.6 anos)
+  - El escaneo de urlscan termino en www.google.com; la antiguedad anterior corresponde al dominio
+    final. La antiguedad del dominio original se informa en 4.3.
+Emisor TLS:                       WE2
+Antiguedad del certificado:       24 dias
+Solicitudes HTTP:                 47
+Redirecciones observadas:
+  - http://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM/MdrY5Bck/pCSQLaoBgck9KqKkojtz
+    C9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rveed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/vY
+    _M/IqhqRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+  - https://pnreap.com/Z2jrS5FTfcnbCKAbmUkq/UX/SHKGfHGiCpwgO93nsMm0kOWM/MdrY5Bck/pCSQLaoBgck9KqKkojt
+    zC9D/ree/hjf7OALq9A94N1XYW2s9Eht0/rveed_M/uktIy1QMB41JR8ESxNeN5pN/7Mre5/r4Y27WmWUaWIPUFT3oOLe6/v
+    Y_M/IqhqRiXhDMshYqqovUjh/e5e_rx5/9BY0kT4W6PUjzOLK7u7vOMCp/
+  - https://www.google.com/
+Dominios contactados:
+  - www.google.com (IPs: 142.251.156.119; pais: US; requests: 30)
+  - www.gstatic.com (IPs: 142.251.156.119; pais: US; requests: 3)
+  - play.google.com (IPs: 142.251.156.119, 142.251.155.7; pais: US; requests: 2)
+  - ogads-pa.clients6.google.com (IPs: 142.251.20.95; pais: US; requests: 2)
+  - fonts.gstatic.com (IPs: 142.251.156.119, 142.250.154.94; pais: US; requests: 2)
+  - pnreap.com (IPs: 187.102.245.20; pais: BR; requests: 1)
+  - csp.withgoogle.com (IPs: ; pais: -; requests: -)
+IPs contactadas:
+  - 142.251.155.7 (ASN -; pais -; requests: -)
+  - 142.251.20.95 (ASN -; pais -; requests: -)
+  - 142.250.154.94 (ASN -; pais -; requests: -)
+  - 142.251.156.119 (ASN -; pais -; requests: -)
+  - 187.102.245.20 (ASN -; pais -; requests: -)
+Dominios enlazados desde la pagina:
+  - about.google
+  - store.google.com
+  - mail.google.com
+  - www.google.se
+  - accounts.google.com
+  - google.com
+  - sustainability.google
+  - policies.google.com
+  - consent.google.com
+  - support.google.com
+Captura:                          https://urlscan.io/screenshots/01a16708-599a-7175-b00c-e0adab33ac6
+                                  9.png
+Reporte:                          https://urlscan.io/result/01a16708-599a-7175-b00c-e0adab33ac69/
+
+[Analisis heuristico de la URL]
+  - La URL usa HTTP sin cifrar (no HTTPS).
+  - URL inusualmente larga.
+
+Veredicto de esta URL:            MALICIOSO
+Confianza:                        alta
+  - VirusTotal: 12/93 maliciosos, 1 sospechosos para la URL.
+  - VirusTotal: el dominio acumula 12 detecciones maliciosas.
+  - urlscan.io no marca el sitio como malicioso.
+  - urlscan.io: la URL final (www.google.com) esta en un dominio distinto del original (pnreap.com);
+    puede ser una redireccion legitima o una tecnica de ocultamiento/cloaking. Revisar la captura.
+  - Dominio con antiguedad: 7294 dias (~20.0 anos).
+  - La URL usa HTTP sin cifrar (no HTTPS).
+  - URL inusualmente larga.
+
+4.4.4 Adjuntos
+  (el correo no contiene adjuntos)
+
+4.4.5 Contenido ofuscado / codificado
+  (no se detectaron bloques Base64/URL-encoding relevantes)
+
+4.4.6 Extracto del cuerpo (sin abrir enlaces)
+  Texto plano:
+    (sin cuerpo text/plain)
+  HTML convertido a texto:
+    Harvard Researcher Reveals the Simple Recipe That's Saving Americans From Knee Surgery
+    Unsubscribe from all email list by replying to this email
+
+====================================================================================================
+ 5. TIPO DE AMENAZA
+====================================================================================================
+
+Clasificacion:                    Phishing / robo de credenciales
+
+
+====================================================================================================
+ 6. IMPACTO C-I-A
+====================================================================================================
+
+Resumen:                          Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+
+Dimension          | Impacto      | Justificacion
+-------------------+--------------+-----------------------------------------------------------------
+Confidencialidad   | Alto         | Robo de credenciales y datos sensibles.
+Integridad         | Alto         | Uso de la cuenta para acciones no autorizadas.
+Disponibilidad     | Bajo         | Normalmente no interrumpe el servicio.
+
+====================================================================================================
+ 7. VEREDICTO Y JUSTIFICACION
+====================================================================================================
+
+VEREDICTO:                        MALICIOSO
+Confianza:                        alta
+Puntaje heuristico:               12
+
+Evidencia que sostiene el veredicto:
+  - SPF: pass.
+  - DKIM: pass.
+  - DMARC: pass.
+  - DKIM valida pero no esta alineado con el dominio del From (associationlienservices.com).
+  - Reply-To apunta a un dominio distinto del From.
+  - 1 URL(s) del correo resultaron maliciosas: pnreap.com (12 detecciones VT).
+  - 2 URL(s) del correo resultaron sospechosas: shorturl.at (2 detecciones VT).
+
+Criterio aplicado (anexo del enunciado):
+  - LIMPIO: autenticacion correcta y alineada, dominio con antiguedad y reputacion sanas, sin
+    detecciones ni comportamiento anormal.
+  - SOSPECHOSO: senales mixtas o insuficientes (pocas detecciones, dominio nuevo, cabecera
+    incoherente, sin confirmacion de payload).
+  - MALICIOSO: evidencia concluyente (multiples detecciones coincidentes, comportamiento malicioso,
+    phishing confirmado, hash en bases de malware).
+  - Recordatorio: la ausencia de senal no es prueba de inocencia; el veredicto surge de cruzar
+    herramientas.
+
+====================================================================================================
+ 8. MEDIDAS RECOMENDADAS
+====================================================================================================
+
+Accion inmediata del usuario:     No abrir enlaces ni adjuntos. No responder. Reportar el correo
+                                  como phishing y, si se interactuo, cambiar credenciales y cerrar
+                                  sesiones.
+Control organizacional:           Bloquear remitente/dominio/IP y URLs en el filtro de correo;
+                                  publicar DMARC en reject; agregar IoCs a proxy/EDR/SIEM; capacitar
+                                  usuarios; revisar buzones que recibieron el mensaje.
+
+====================================================================================================
+ 9. PASOS MANUALES Y CAPTURAS SUGERIDAS
+====================================================================================================
+
+  - Pegar las cabeceras completas en MXToolbox Email Header Analyzer y capturar el resultado:
+    https://mxtoolbox.com/EmailHeaders.aspx
+  - Verificar la IP de origen en blacklists:
+    https://mxtoolbox.com/blacklists.aspx?host=20.169.217.199
+  - Capturar el informe de VirusTotal del dominio del From y de la IP de origen.
+  - Capturar cada reporte de urlscan.io (incluida la screenshot) de las URLs.
+  - No abrir los enlaces ni los adjuntos fuera de una VM aislada.
+  - Si el correo tenia adjuntos, analizar su hash en sandbox antes de abrirlos.
+
+====================================================================================================
+ 10. ANEXO: REPRODUCIBILIDAD Y LIMITACIONES
+====================================================================================================
+
+Enlaces para capturas y verificacion manual:
+  - MXToolbox - analizador de cabeceras: https://mxtoolbox.com/EmailHeaders.aspx
+  - MXToolbox - blacklist de IP: https://mxtoolbox.com/blacklists.aspx?host=20.169.217.199
+  - VirusTotal - dominio del From: https://www.virustotal.com/gui/domain/ginnybedellphotography.com
+  - VirusTotal - IP de origen: https://www.virustotal.com/gui/ip-address/20.169.217.199
+  - crt.sh - dominio del From: https://crt.sh/?q=%25.ginnybedellphotography.com
+  - RDAP - dominio del From: https://rdap.org/domain/ginnybedellphotography.com
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly9zaG9ydHVybC5hdC96RWJmOQ
+  - urlscan - reporte: https://urlscan.io/result/01a16705-e84d-748c-ba2b-a75cf9b4a401/
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly9pLmltZ3VyLmNvbS9qWmF4Qm5BLnBuZw
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly9zaG9ydHVybC5hdC84SVlycw
+  - urlscan - reporte: https://urlscan.io/result/01a16707-4603-714f-9700-a4cb564cd7bf/
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly9pLmltZ3VyLmNvbS9PT2FOZTJ3LnBuZw
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cDovL3BucmVhcC5jb20vWjJqclM1RlRmY25iQ0t
+    BYm1Va3EvVVgvU0hLR2ZIR2lDcHdnTzkzbnNNbTBrT1dNL01kclk1QmNrL3BDU1FMYW9CZ2NrOUtxS2tvanR6QzlEL3JlZS9
+    oamY3T0FMcTlBOTROMVhZVzJzOUVodDAvcnZlZWRfTS91a3RJeTFRTUI0MUpSOEVTeE5lTjVwTi83TXJlNS9yNFkyN1dtV1V
+    hV0lQVUZUM29PTGU2L3ZZX00vSXFocVJpWGhETXNoWXFxb3ZVamgvZTVlX3J4NS85Qlkwa1Q0VzZQVWp6T0xLN3U3dk9NQ3A
+    v
+  - urlscan - reporte: https://urlscan.io/result/01a16708-599a-7175-b00c-e0adab33ac69/
+  - crt.sh - ginnybedellphotography.com: https://crt.sh/?q=%25.ginnybedellphotography.com
+  - crt.sh - imgur.com: https://crt.sh/?q=%25.imgur.com
+  - crt.sh - pnreap.com: https://crt.sh/?q=%25.pnreap.com
+  - crt.sh - shorturl.at: https://crt.sh/?q=%25.shorturl.at
+
+Notas de ejecucion:
+  - urlscan.io: la verificacion TLS local fallo (certificate has expired); se reintento la conexion
+    sin validar el certificado. Verificar el store de certificados del equipo.
+  - Consultas realizadas en esta ejecucion: VirusTotal=0, urlscan.io=6.
+  - Cache local: C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+    Ciberseguridad\Practica\tp1\.triage_cache (evita repetir consultas).
+  - Los resultados de reputacion son una foto del momento de la consulta y pueden cambiar; los
+    enlaces permiten reproducirlos.
+
+  - Las consultas a VirusTotal y urlscan.io pueden variar con el tiempo; los enlaces permiten
+    reproducir el estado observado.
+  - urlscan.io: los escaneos nuevos se enviaron con visibilidad 'unlisted'.
+  - No se abrieron enlaces, no se descargaron payloads y no se ejecutaron archivos.
+
+Anexo A - Evidencia estructurada (JSON resumido)
+----------------------------------------------------------------------------------------------------
+  {
+    "cabeceras": {
+      "From": "Knee Relief Alert <renewzl429@ginnybedellphotography.com>",
+      "from_addr": "renewzl429@ginnybedellphotography.com",
+      "from_domain": "ginnybedellphotography.com",
+      "display_name": "Knee Relief Alert",
+      "To": "phishing@pot",
+      "Subject": "Say goodbye to sharp, stabbing pains today!",
+      "Date": "Thu, 02 Jul 2026 17:08:05 +0000",
+      "Reply-To": "replyto@brendamurphyrealestate.com",
+      "reply_to_domain": "brendamurphyrealestate.com",
+      "Return-Path": "renewlljwzs@ginnybedellphotography.com",
+      "return_path_domain": "ginnybedellphotography.com",
+      "Message-ID": "<8fa30eb7-9126-499c-88ac-90ff219b941d@BY1PEPF0001AE17.namprd04.prod.outlook.com>",
+      "X-Mailer": "",
+      "X-Originating-IP": "",
+      "List-Unsubscribe": ""
+    },
+    "autenticacion": {
+      "raw": "spf=pass (sender IP is 20.169.217.199) smtp.mailfrom=ginnybedellphotography.com; dkim=pass (signature was verified) header.d=associationlienservices.com;dmarc=pass action=none header.from=ginnybedellphotography.com;compauth=pass reason=100",
+      "raw_received_spf": "Pass (protection.outlook.com: domain of ginnybedellphotography.com designates 20.169.217.199 as permitted sender) receiver=protection.outlook.com; client-ip=20.169.217.199; helo=associationlienservices.com; pr=M",
+      "spf_result": "pass",
+      "spf_domain": "ginnybedellphotography.com",
+      "spf_ip": "20.169.217.199",
+      "spf_helo": "associationlienservices.com",
+      "dkim_result": "pass",
+      "dkim_domains": [
+        "associationlienservices.com"
+      ],
+      "dkim_selectors": [
+        "mail"
+      ],
+      "dmarc_result": "pass",
+      "dmarc_from": "ginnybedellphotography.com",
+      "compauth": "pass",
+      "from_org": "ginnybedellphotography.com",
+      "spf_aligned": true,
+      "dkim_aligned": false,
+      "dmarc_aligned": true,
+      "spf_effective": true,
+      "dkim_effective": false,
+      "dmarc_effective": true
+    },
+    "received": {
+      "hop_count": 4,
+      "origin_ip": "20.169.217.199",
+      "origin_host": "associationlienservices.com",
+      "origin_date": "2026-07-06 10:26:39+00:00",
+      "total_delay": 2.0,
+      "hops": [
+        {
+          "n": 1,
+          "from_host": "associationlienservices.com",
+          "by_host": "BY1PEPF0001AE17.mail.protection.outlook.com",
+          "protocol": "Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384)",
+          "ips": [
+            "20.169.217.199"
+          ],
+          "public_ips": [
+            "20.169.217.199"
+          ],
+          "date_text": "Mon, 6 Jul 2026 10:26:39 +0000"
+        },
+        {
+          "n": 2,
+          "from_host": "BY1PEPF0001AE17.namprd04.prod.outlook.com",
+          "by_host": "SJ0PR03CA0163.outlook.office365.com",
+          "protocol": "Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384)",
+          "ips": [
+            "2603:10b6:a03:338:cafe::1d"
+          ],
+          "public_ips": [
+            "2603:10b6:a03:338:cafe::1d"
+          ],
+          "date_text": "Mon, 6 Jul 2026 10:26:39 +0000"
+        },
+        {
+          "n": 3,
+          "from_host": "SJ0PR03CA0163.namprd03.prod.outlook.com",
+          "by_host": "BN0PR10MB4965.namprd10.prod.outlook.com",
+          "protocol": "Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384)",
+          "ips": [
+            "2603:10b6:a03:338::18"
+          ],
+          "public_ips": [
+            "2603:10b6:a03:338::18"
+          ],
+          "date_text": "Mon, 6 Jul 2026 10:26:40 +0000"
+        },
+        {
+          "n": 4,
+          "from_host": "BN0PR10MB4965.namprd10.prod.outlook.com",
+          "by_host": "MW4PR10MB5749.namprd10.prod.outlook.com",
+          "protocol": "HTTPS",
+          "ips": [],
+          "public_ips": [],
+          "date_text": "Mon, 6 Jul 2026 10:26:41 +0000"
+        }
+      ]
+    },
+    "anomalias": [
+      "Reply-To (brendamurphyrealestate.com) apunta a un dominio distinto del From (ginnybedellphotography.com).",
+      "DKIM valida pero el dominio firmante (d=associationlienservices.com) no esta alineado con el From (ginnybedellphotography.com).",
+      "El HELO/host de origen (associationlienservices.com) no pertenece al dominio del From."
+    ],
+    "urls": [
+      {
+        "url": "https://shorturl.at/zEbf9",
+        "vt_url": {
+          "stats": {
+            "malicious": 2,
+            "suspicious": 0,
+            "undetected": 31,
+            "harmless": 60,
+            "timeout": 0
+          },
+          "reputation": 0,
+          "tags": [
+            "external-resources",
+            "iframes"
+          ],
+          "categories": {
+            "alphaMountain.ai": "URL Redirect (alphaMountain.ai)",
+            "BitDefender": "computersandsoftware",
+            "Dr.Web": "not recommended site",
+            "Sophos": "information technology",
+            "Forcepoint ThreatSeeker": "web hosting",
+            "Google": "technology"
+          },
+          "type_description": null,
+          "type_tag": null,
+          "size": null,
+          "names": [],
+          "creation_date": null,
+          "first_submission_date": 1792191681,
+          "last_analysis_date": 1792191681,
+          "threat": null,
+          "detections": [
+            [
+              "Chong Lua Dao",
+              "malicious"
+            ],
+            [
+              "SafeToOpen",
+              "phishing"
+            ]
+          ],
+          "sandbox": null,
+          "final_url": null,
+          "title": "404 Page Not Found",
+          "last_dns_records": []
+        },
+        "dominio": "shorturl.at",
+        "vt_dominio": {
+          "stats": {
+            "malicious": 2,
+            "suspicious": 0,
+            "undetected": 32,
+            "harmless": 58,
+            "timeout": 0
+          },
+          "reputation": -17,
+          "tags": [],
+          "categories": {},
+          "type_description": null,
+          "type_tag": null,
+          "size": null,
+          "names": [],
+          "creation_date": null,
+          "first_submission_date": null,
+          "last_analysis_date": 1792710518,
+          "threat": null,
+          "detections": [
+            [
+              "Chong Lua Dao",
+              "malicious"
+            ],
+            [
+              "SafeToOpen",
+              "phishing"
+            ]
+          ],
+          "sandbox": null,
+          "final_url": null,
+          "title": null,
+          "last_dns_records": [
+            {
+              "type": "TXT",
+              "ttl": 300,
+              "value": "v=DKIM1; k=rsa; p=MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA6Fx9hNe/TB3KKopOar7v1N+jF2zmVkmMrayVbW2Za5aga2k1mRqIOWWKpFt6M4b/DLM/QwmJfBc2hImvqhiCVyymkrl4uL5+88MONeF0k3T8E/NB28nhVeRFbyxWgUmemtMqYTKUdZUGBMf0A/8vkl82CjHhmBRGC9Zua3OOT49VeGAzhdwmvB2Hl6TL1fEl+"
+            },
+            {
+              "type": "AAAA",
+              "ttl": 300,
+              "value": "2606:4700:20::ac43:4558"
+            },
+            {
+              "type": "AAAA",
+              "ttl": 300,
+              "value": "2606:4700:20::681a:981"
+            },
+            {
+              "type": "AAAA",
+              "ttl": 300,
+              "value": "2606:4700:20::681a:881"
+            },
+            {
+              "type": "TXT",
+              "ttl": 300,
+              "value": "v=spf1 +a +mx +ip4:64.20.54.34 ~all"
+            },
+            {
+              "type": "MX",
+              "ttl": 300,
+              "priority": 0,
+              "value": "mail.shorturl.at"
+            },
+            {
+              "type": "NS",
+              "ttl": 21600,
+              "value": "mia.ns.cloudflare.com"
+            },
+            {
+              "type": "A",
+              "ttl": 300,
+              "value": "172.67.69.88"
+            },
+            {
+              "type": "A",
+              "ttl": 300,
+              "value": "104.26.8.129"
+            },
+            {
+              "type": "NS",
+              "ttl": 21600,
+              "value": "jason.ns.cloudflare.com"
+            },
+            {
+              "type": "A",
+              "ttl": 300,
+              "value": "104.26.9.129"
+            },
+            {
+              "type": "TXT",
+              "ttl": 300,
+              "value": "v=spf1 include:spf.zoho.com include:transmail.net ~all"
+            },
+            {
+              "type": "SOA",
+              "ttl": 1800,
+              "value": "jason.ns.cloudflare.com",
+              "rname": "dns.cloudflare.com",
+              "serial": 2416927240,
+              "refresh": 10000,
+              "retry": 2400,
+              "expire": 604800,
+              "minimum": 1800
+            },
+            {
+              "type": "TXT",
+              "ttl": 300,
+              "value": "ahrefs-site-verification_aa4f51688f2dfd5b08e15adc3accf6e45d325651bd2f74ca0637f2865e247b8c"
+            }
+          ]
+        },
+        "rdap": {
+          "ok": true,
+          "notfound": true,
+          "status": 404,
+          "url": "https://rdap.org/domain/shorturl.at",
+          "cached": true
+        },
+        "crtsh": {
+          "ok": true,
+          "url": "https://crt.sh/?q=%25.shorturl.at&output=json",
+          "entries": 505,
+          "subdomains": [
+            "cpanel.shorturl.at",
+            "cpcalendars.shorturl.at",
+            "cpcontacts.shorturl.at",
+            "mail.shorturl.at",
+            "shorturl.at",
+            "webdisk.shorturl.at",
+            "webmail.shorturl.at",
+            "www.shorturl.at"
+          ],
+          "subdomain_count": 8,
+          "issuers": [
+            "\"cPanel",
+            "COMODO ECC Domain Validation Secure Server CA 2",
+            "CloudFlare Inc ECC CA-2",
+            "Cloudflare Inc ECC CA-3",
+            "E1",
+            "E5",
+            "E6",
+            "E7",
+            "E8",
+            "GTS CA 1P5",
+            "R10",
+            "R11",
+            "R12",
+            "R13",
+            "R3",
+            "Sectigo ECC Domain Validation Secure Server CA",
+            "WE1",
+            "WR1",
+            "YE1",
+            "YE2",
+            "YR1",
+            "YR2"
+          ],
+          "earliest_cert": "2016-11-13T00:00:00",
+          "latest_cert": "2026-08-16T18:25:36",
+          "cached": true
+        },
+        "urlscan": {
+          "ok": true,
+          "uuid": "01a16705-e84d-748c-ba2b-a75cf9b4a401",
+          "report_url": "https://urlscan.io/result/01a16705-e84d-748c-ba2b-a75cf9b4a401/",
+          "screenshot_url": "https://urlscan.io/screenshots/01a16705-e84d-748c-ba2b-a75cf9b4a401.png",
+          "visibility": "unlisted",
+          "scan_time": "2026-10-23T04:30:08.483Z",
+          "submitted_url": "https://shorturl.at/zEbf9",
+          "final_url": "https://www.shorturl.at/zEbf9",
+          "domain": "www.shorturl.at",
+          "ip": "104.26.8.129",
+          "asn": "AS13335",
+          "asn_name": "CLOUDFLARENET - Cloudflare, Inc., US",
+          "country": "",
+          "city": "",
+          "server": "cloudflare",
+          "title": "404 Page Not Found",
+          "mime_type": "text/html",
+          "http_status": "200",
+          "apex_domain_age_days": 3628,
+          "tls_valid_days": 90,
+          "tls_age_days": 39,
+          "tls_issuer": "WE1",
+          "has_credentials": null,
+          "language": "en",
+          "ptr": null,
+          "malicious": false,
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "tags": [],
+          "engines_malicious": false,
+          "engines_score": -95,
+          "engines_tags": [
+            "urlscan-ml",
+            "urlscan-ml-60c5e22"
+          ],
+          "community_malicious": false,
+          "stats": {
+            "malicious": 0,
+            "secure": null,
+            "unresponsive": null,
+            "requests": 12
+          },
+          "redirects": [
+            "https://shorturl.at/zEbf9",
+            "https://www.shorturl.at/cdn-cgi/challenge-platform/scripts/jsd/main.js",
+            "https://www.shorturl.at/zEbf9"
+          ],
+          "link_domains": [
+            "www.namesilo.com"
+          ],
+          "domains": [
+            {
+              "domain": "www.shorturl.at",
+              "country": "",
+              "ips": [
+                "104.26.8.129"
+              ],
+              "count": 9
+            },
+            {
+              "domain": "fonts.gstatic.com",
+              "country": "US",
+              "ips": [
+                "142.251.13.94"
+              ],
+              "count": 3
+            },
+            {
+              "domain": "fonts.googleapis.com",
+              "country": "US",
+              "ips": [
+                "142.250.154.95"
+              ],
+              "count": 1
+            },
+            {
+          
+  ... (salida truncada; ver enlaces de la seccion 10)
+

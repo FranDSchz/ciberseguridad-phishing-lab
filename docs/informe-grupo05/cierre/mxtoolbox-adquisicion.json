@@ -1,0 +1,26 @@
+{
+  "fecha_registro_utc": "2026-10-23T18:27:12.022Z",
+  "metodo": "Lectura de resultados de MXToolbox mediante navegador; capturas sin edición y extracción de árbol accesible, omitiendo pie Your IP. Sin consultas SMTP ni acceso a URLs sospechosas.",
+  "resultados": [
+    {
+      "correo": "R004",
+      "ip": "20.169.217.199",
+      "listas": 60,
+      "listados": 0,
+      "timeouts": 1,
+      "url_fuente": "https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a20.169.217.199&run=toolpage",
+      "texto": "cierre/R004-mxtoolbox-texto.txt",
+      "captura": "capturas/R004-mxtoolbox-blacklist.jpg"
+    },
+    {
+      "correo": "R005",
+      "ip": "209.85.167.46",
+      "listas": 60,
+      "listados": 0,
+      "timeouts": 0,
+      "url_fuente": "https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a209.85.167.46&run=toolpage",
+      "texto": "cierre/R005-mxtoolbox-texto.txt",
+      "captura": "capturas/R005-mxtoolbox-blacklist.jpg"
+    }
+  ]
+}

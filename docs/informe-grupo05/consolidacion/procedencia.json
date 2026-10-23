@@ -1,0 +1,46 @@
+{
+  "pdf": {
+    "archivo": "consolidacion/fuentes/TP2-Grupo5.pdf",
+    "sha256": "5006ccb8455a9b77b517324e5e9e0789b6f8f1c98d641807a266873146bcc35c",
+    "paginas": 18,
+    "metodo": "Copia byte a byte del PDF aportado. Texto e imágenes inspeccionados."
+  },
+  "txt": [
+    {
+      "archivo": "consolidacion/fuentes/Correo-1.txt",
+      "url_fuente": "https://drive.google.com/file/d/13tAHRajcjZfzhdGXWZW2NwFhNLpsGeDC/view",
+      "sha256_texto_guardado": "5a04b418e56fd5abb89b921e809bf6c0447970c2ec2bdf2d2897830ebeb1f18b"
+    },
+    {
+      "archivo": "consolidacion/fuentes/Correo-2.txt",
+      "url_fuente": "https://drive.google.com/file/d/1s2hc0b4j7aEYeO7jtOT-dngDj3Tvl1Jo/view",
+      "sha256_texto_guardado": "f490b5117f80988f2b16cd88f6e45a7a8fee9a4bf9dcf414d8882e86c7ddadf9"
+    },
+    {
+      "archivo": "consolidacion/fuentes/Archivo-1.txt",
+      "url_fuente": "https://drive.google.com/file/d/1H7dbt6CynB7zcjEGSasqu2NmbPgEyIdz/view",
+      "sha256_texto_guardado": "5bd8b791e4d74afc04aa7dd28e088f046b937b7b96cee49f6693b872c867763a"
+    },
+    {
+      "archivo": "consolidacion/fuentes/Archivo-2.txt",
+      "url_fuente": "https://drive.google.com/file/d/1RL5edyJ7ChA_cYsiLzuYwq6Dy3T1S81W/view",
+      "sha256_texto_guardado": "4ef7b690c40cc6036386bcd7431953bc00d0e7bbfe4cbe7efab11af57cc964d5"
+    },
+    {
+      "archivo": "consolidacion/fuentes/Enlace-1.txt",
+      "url_fuente": "https://drive.google.com/file/d/10jb66H2e_oeb6uj_iNFT5nBBjujXTG8K/view",
+      "sha256_texto_guardado": "4c2dea989809a4c48b16fcb8c025264bbded40e387bfd03fb718975b412849b1"
+    },
+    {
+      "archivo": "consolidacion/fuentes/Enlace-2.txt",
+      "url_fuente": "https://drive.google.com/file/d/1jPHIiiXG_5q1ttJi3U58ym0OR5R1xOvj/view",
+      "sha256_texto_guardado": "5c23c78c0ed3b5f3f4b2d2620251fd33d8a0fe6cd4f47051c8e10a0b4054b0b3"
+    },
+    {
+      "archivo": "consolidacion/fuentes/Enlace-3.txt",
+      "url_fuente": "https://drive.google.com/file/d/1J8m57ZCMI7Gv3gI0oVEIuZm2BU80nHuH/view",
+      "sha256_texto_guardado": "ac9fc604b94bd47004e2224aad5963d17795da3fdecba8899e8c5974d13d480f"
+    }
+  ],
+  "nota": "Los TXT se obtuvieron mediante lectura del conector Google Drive y se normalizaron a LF. Son informes de la herramienta del compañero; algunos ya incluyen JSON resumido/truncado, no respuestas brutas completas."
+}

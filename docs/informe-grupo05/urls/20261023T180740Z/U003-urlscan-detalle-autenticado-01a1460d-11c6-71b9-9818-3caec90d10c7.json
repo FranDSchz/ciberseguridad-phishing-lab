@@ -1,0 +1,3716 @@
+{
+  "service": "urlscan.io (detalle existente con clave)",
+  "indicator_type": "url",
+  "indicator": "https://www.pneustorebr.cfd/",
+  "status": "found",
+  "queried_at": "2026-10-23T18:10:14+00:00",
+  "endpoint": "https://urlscan.io/api/v1/result/01a1460d-11c6-71b9-9818-3caec90d10c7/",
+  "http_status": 200,
+  "data": {
+    "data": {
+      "requests": [
+        {
+          "request": {
+            "requestId": "A5612241A2AFB252840EB1B350F59DC4",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://www.pneustorebr.cfd/",
+              "method": "GET",
+              "headers": {
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": true
+            },
+            "timestamp": 9178466.771169,
+            "wallTime": 1792176624.192983,
+            "initiator": {
+              "type": "other"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Document",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false,
+            "primaryRequest": true
+          },
+          "response": {
+            "encodedDataLength": 26150,
+            "dataLength": 131072,
+            "requestId": "A5612241A2AFB252840EB1B350F59DC4",
+            "type": "Document",
+            "response": {
+              "url": "https://www.pneustorebr.cfd/",
+              "status": 404,
+              "statusText": "",
+              "headers": {
+                "cache-control": "private, no-cache, no-store, max-age=0",
+                "content-encoding": "gzip",
+                "content-length": "25948",
+                "content-type": "text/html",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "expires": "Mon, 01 Jan 1990 0:00:00 GMT",
+                "strict-transport-security": "max-age=2592000",
+                "x-frame-options": "SAMEORIGIN"
+              },
+              "mimeType": "text/html",
+              "charset": "",
+              "remoteIPAddress": "54.215.31.113",
+              "remotePort": 443,
+              "encodedDataLength": 16367,
+              "timing": {
+                "requestTime": 9178466.771757,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0,
+                "dnsEnd": 493.717,
+                "connectStart": 493.783,
+                "connectEnd": 816.519,
+                "sslStart": 645.297,
+                "sslEnd": 816.508,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 816.901,
+                "sendEnd": 817.037,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 1123.07,
+                "receiveHeadersEnd": 1123.395
+              },
+              "responseTime": 1792176625316.647,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "insecure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.dynadot.com",
+                "sanList": [
+                  "*.dynadot.com",
+                  "dynadot.com"
+                ],
+                "issuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+                "validFrom": 1760745600,
+                "validTo": 1795046399,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "DigiCert 'Sphinx2026h2'",
+                    "logId": "944E4387FAECC1EF81F3192426A8186501C7D35F3802013F72677D55372E19D8",
+                    "timestamp": 1760745604345,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502210081AC1DB666D612ACA26451AA811415F19C7B0699F8156D7E7B30834184DBDDDB02204F07A2B6454E7701E0F2D5B1615904E742AA0245AF34EF47B471270D1790EEF4"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2026'",
+                    "logId": "CB38F715897C84A1445F5BC1DDFBC96EF29A59CD470A690585B0CB14C31458E7",
+                    "timestamp": 1760745604287,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502205A2CD8BAF280B7AD213405F494A5A60A82D837668B6EDE6FBA30E51100ABE1A302210094E5AE42F2C33C182B03818D877E41A50C8FBC189F498E89D11A524952E62595"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "DigiCert 'Wyvern2026h2'",
+                    "logId": "C2317E574519A345EE7F38DEB29041EBC7C2215A22BF7FD5B5AD769AD90E52CD",
+                    "timestamp": 1760745604274,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502210088CF613583FE8F9880F92781FA7FCA0DE367F9952B5A815BF5B663E08A6DB2130220083A17190908AD2EDD0A81F5CAB4743C584FC6661D1F75582BD71E6C75A8B760"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=2592000"
+                },
+                {
+                  "name": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "70b76da37a7b28f8c93f0c7d0e08f5529b19f01872c3479e6f03b922242ee2a6",
+            "size": 174764,
+            "asn": {
+              "ip": "54.215.31.113",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "54.212.0.0/14"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "CA",
+              "timezone": "America/Los_Angeles",
+              "city": "San Jose",
+              "ll": [
+                37.3388,
+                -121.8916
+              ],
+              "country_name": "United States",
+              "metro": 807
+            },
+            "rdns": {
+              "ip": "54.215.31.113",
+              "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com"
+            }
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.2",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://fonts.cdnfonts.com/css/switzer",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://www.pneustorebr.cfd/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.906603,
+            "wallTime": 1792176625.328443,
+            "initiator": {
+              "type": "parser",
+              "url": "https://www.pneustorebr.cfd/",
+              "lineNumber": 3,
+              "columnNumber": 271
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Stylesheet",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "Blocking"
+          },
+          "response": {
+            "encodedDataLength": 753,
+            "dataLength": 3549,
+            "requestId": "2038153.2",
+            "type": "Stylesheet",
+            "response": {
+              "url": "https://fonts.cdnfonts.com/css/switzer",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "content-encoding": "br",
+                "cf-cache-status": "HIT",
+                "age": "1974125",
+                "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=vaUc53bkWpa44rhZSmKKx%2FHhkl%2BjbcCMC%2Bic8YHjefPf9%2FdZPIki69kFmGdPQ%2FLjvOTjVqvW85tRyFTIsnczsRIgLN1mpLIprrjId2rA7XKepaE6pkgl1VfyBQ48Q0O%2F2DAVXsI%3D\"}]}",
+                "alt-svc": "h3=\":443\"; ma=86400",
+                "server-timing": "cfExtPri",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "content-type": "text/css;charset=UTF-8",
+                "vary": "Accept-Encoding",
+                "last-modified": "Wed, 23 Sep 2026 22:28:19 GMT",
+                "priority": "u=0,i=?0",
+                "cache-control": "max-age=31536000",
+                "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+                "cf-ray": "a4b93fc48cb69760-FRA",
+                "access-control-allow-origin": "*",
+                "server": "cloudflare"
+              },
+              "mimeType": "text/css",
+              "charset": "utf-8",
+              "remoteIPAddress": "172.67.184.158",
+              "remotePort": 443,
+              "encodedDataLength": 487,
+              "timing": {
+                "requestTime": 9178467.910033,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0.1,
+                "dnsEnd": 13.233,
+                "connectStart": 13.334,
+                "connectEnd": 24.566,
+                "sslStart": 13.334,
+                "sslEnd": 24.566,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 24.635,
+                "sendEnd": 24.698,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 53.684,
+                "receiveHeadersEnd": 53.858
+              },
+              "responseTime": 1792176625385.541,
+              "protocol": "h3",
+              "alternateProtocolUsage": "dnsAlpnH3JobWonRace",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "QUIC",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "cdnfonts.com",
+                "sanList": [
+                  "cdnfonts.com",
+                  "*.cdnfonts.com"
+                ],
+                "issuer": "WE1",
+                "validFrom": 1788030031,
+                "validTo": 1795809533,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2026h2'",
+                    "logId": "C8A3C47FC7B3ADB9356B013F6A7A126DE33A4E43A5C646F997AD3975991DCF9A",
+                    "timestamp": 1788033631919,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A792971AF1C578F4A9F1413CDCDEDCC35F824341420C9B3685245EF967E3EE84022100D907A1B78468934A2202729A4607E4AC1B4B13B028C2D2BC6190CEC72BEA8C3F"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2026h2' log",
+                    "logId": "D809553B944F7AFFC816196F944F85ABB0F8FC5E8755260F15D12E72BB454B14",
+                    "timestamp": 1788033631920,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3044022009AD1B2CF2F2CEB69FC372966410906124DD98D4AAC9486FA9BE66E9B6EDC7C202201B2059069281947361E1EE00DD335DBE9B4A2E73E6537002B629F9192F84D275"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": true
+              }
+            },
+            "hasExtraInfo": true,
+            "hash": "80da5c183c14104a1d95f437962cf86ff2a035e099d379fee186894eb74fe9bb",
+            "size": 3549,
+            "asn": {
+              "ip": "172.67.184.158",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "172.67.128.0/17"
+            },
+            "geoip": {
+              "country": "",
+              "region": "",
+              "timezone": "",
+              "city": "",
+              "ll": [
+                null,
+                null
+              ],
+              "country_name": "Ascension Island"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://www.pneustorebr.cfd/",
+            "host": "www.pneustorebr.cfd",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.3",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://fonts.cdnfonts.com/css/swansea",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://www.pneustorebr.cfd/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.906821,
+            "wallTime": 1792176625.328635,
+            "initiator": {
+              "type": "parser",
+              "url": "https://www.pneustorebr.cfd/",
+              "lineNumber": 3,
+              "columnNumber": 340
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Stylesheet",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "Blocking"
+          },
+          "response": {
+            "encodedDataLength": 686,
+            "dataLength": 754,
+            "requestId": "2038153.3",
+            "type": "Stylesheet",
+            "response": {
+              "url": "https://fonts.cdnfonts.com/css/swansea",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "content-encoding": "br",
+                "cf-cache-status": "HIT",
+                "age": "520762",
+                "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=0o7WewpFmlq7jbOsagTMnR8js6BkSMDpBSYjmPRcAo26zCTFg6H%2FClzYCPyPQ7DZsUF8SwCayDQXrb5CM1jfngE39HQ6vcF%2FanmInNkJP9pnRW5a%2BRqcWnhRWP2k%2BANeLcs1cKo%3D\"}]}",
+                "alt-svc": "h3=\":443\"; ma=86400",
+                "server-timing": "cfExtPri",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "content-type": "text/css;charset=UTF-8",
+                "vary": "Accept-Encoding",
+                "last-modified": "Sat, 10 Oct 2026 18:11:02 GMT",
+                "priority": "u=0,i=?0",
+                "cache-control": "max-age=31536000",
+                "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+                "cf-ray": "a4b93fc48cb79760-FRA",
+                "access-control-allow-origin": "*",
+                "server": "cloudflare"
+              },
+              "mimeType": "text/css",
+              "charset": "utf-8",
+              "remoteIPAddress": "172.67.184.158",
+              "remotePort": 443,
+              "encodedDataLength": 520,
+              "timing": {
+                "requestTime": 9178467.910464,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 24.396,
+                "sendEnd": 24.447,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 48.548,
+                "receiveHeadersEnd": 48.786
+              },
+              "responseTime": 1792176625380.834,
+              "protocol": "h3",
+              "alternateProtocolUsage": "dnsAlpnH3JobWonRace",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "QUIC",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "cdnfonts.com",
+                "sanList": [
+                  "cdnfonts.com",
+                  "*.cdnfonts.com"
+                ],
+                "issuer": "WE1",
+                "validFrom": 1788030031,
+                "validTo": 1795809533,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2026h2'",
+                    "logId": "C8A3C47FC7B3ADB9356B013F6A7A126DE33A4E43A5C646F997AD3975991DCF9A",
+                    "timestamp": 1788033631919,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A792971AF1C578F4A9F1413CDCDEDCC35F824341420C9B3685245EF967E3EE84022100D907A1B78468934A2202729A4607E4AC1B4B13B028C2D2BC6190CEC72BEA8C3F"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2026h2' log",
+                    "logId": "D809553B944F7AFFC816196F944F85ABB0F8FC5E8755260F15D12E72BB454B14",
+                    "timestamp": 1788033631920,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3044022009AD1B2CF2F2CEB69FC372966410906124DD98D4AAC9486FA9BE66E9B6EDC7C202201B2059069281947361E1EE00DD335DBE9B4A2E73E6537002B629F9192F84D275"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": true
+              }
+            },
+            "hasExtraInfo": true,
+            "hash": "933cc051d547d5efa796737bb0819616768794ea74743cb3556d18c5be70fbc4",
+            "size": 754,
+            "asn": {
+              "ip": "172.67.184.158",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "172.67.128.0/17"
+            },
+            "geoip": {
+              "country": "",
+              "region": "",
+              "timezone": "",
+              "city": "",
+              "ll": [
+                null,
+                null
+              ],
+              "country_name": "Ascension Island"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://www.pneustorebr.cfd/",
+            "host": "www.pneustorebr.cfd",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.4",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://www.pneustorebr.cfd/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "Low",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.906882,
+            "wallTime": 1792176625.328695,
+            "initiator": {
+              "type": "parser",
+              "url": "https://www.pneustorebr.cfd/",
+              "lineNumber": 3,
+              "columnNumber": 447
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Script",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "PotentiallyBlocking"
+          },
+          "response": {
+            "encodedDataLength": 8288,
+            "dataLength": 24994,
+            "requestId": "2038153.4",
+            "type": "Script",
+            "response": {
+              "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "content-encoding": "gzip",
+                "etag": "\"adb7f9858519c5c2fd80378ed33c46f7\"",
+                "age": "67578",
+                "x-content-type-options": "nosniff",
+                "x-cache": "Hit from cloudfront",
+                "x-amz-cf-id": "eVGs-lm3XBvJW0cr1kLguWfVXCsHfyeL_baiGM3g2HfFFJAKNC4g3Q==",
+                "date": "Fri, 16 Oct 2026 00:04:08 GMT",
+                "content-type": "text/javascript",
+                "last-modified": "Thu, 30 Jul 2026 14:01:47 GMT",
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "max-age=86400",
+                "via": "1.1 2ffde5fadc46cbcc3a678e8713ed76b0.cloudfront.net (CloudFront)",
+                "accept-ranges": "bytes",
+                "content-length": "7817",
+                "x-xss-protection": "1; mode=block",
+                "x-amz-cf-pop": "FRA56-P4",
+                "server": "AmazonS3",
+                "x-amz-server-side-encryption": "AES256"
+              },
+              "mimeType": "text/javascript",
+              "charset": "",
+              "remoteIPAddress": "52.222.236.60",
+              "remotePort": 443,
+              "encodedDataLength": 8288,
+              "timing": {
+                "requestTime": 9178467.910645,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0.076,
+                "dnsEnd": 11.607,
+                "connectStart": 11.699,
+                "connectEnd": 26.894,
+                "sslStart": 17.6,
+                "sslEnd": 26.887,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 27.039,
+                "sendEnd": 27.11,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 33.933,
+                "receiveHeadersEnd": 34.196
+              },
+              "responseTime": 1792176625366.399,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.trustpilot.com",
+                "sanList": [
+                  "*.trustpilot.com",
+                  "trustpilot.com"
+                ],
+                "issuer": "Amazon RSA 2048 M01",
+                "validFrom": 1790985600,
+                "validTo": 1808092799,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2027'",
+                    "logId": "4C63DC98E59C1DAB88F61E8A3DDEAE8FAB44A3377B5F9B94C3FBA19CFCC1BE26",
+                    "timestamp": 1791021501258,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100E225ADD158F7718AB43BDB5FC154908862F5F8F803FD2E59E22F3B3113F25B9F022100B09DB50A1F6059E4A612F5A36010CA989FF6860533AC8B50AACF0EDB2BF468C8"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Argon2027h1'",
+                    "logId": "D6D58DA9D01753F36A4AA0C7574902AFEBC7DC2CD38CD9F764C80C89191E9F02",
+                    "timestamp": 1791021501259,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502200B8ACB927E6892092964592FA9A159155D34F569A2709C4BAE701E2FCD67B3F8022100E5041D1A819A3A0D4ECCB8799219770D7548E1BA4A39A9E4693E9EC06CE2817D"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2027h1'",
+                    "logId": "1C9F682CE9FAF0456950F81B968A87DDDB3210D84CE6C8B2E382524AC4CF599F",
+                    "timestamp": 1791021501381,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "30440220725C3EE6984C34A6944974B727F843C959D3AF2F96C1A1A883CC80F8E0CC85FC02207E13B97C151D61985EEB8083D9AE40378DFF479C498B77CB96AEEC5BB1667BA8"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "990f92f505fce1eee9296b418261d0f0f6a4aa9c09349682eb4798a5be9277fb",
+            "size": 24961,
+            "asn": {
+              "ip": "52.222.236.60",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "52.222.236.60",
+              "ptr": "server-52-222-236-60.fra56.r.cloudfront.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://www.pneustorebr.cfd/",
+            "host": "www.pneustorebr.cfd",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.8",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://oss.dynadot.com/public/parkcloud/web-bg.webp",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://www.pneustorebr.cfd/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "Low",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.910229,
+            "wallTime": 1792176625.332045,
+            "initiator": {
+              "type": "parser",
+              "url": "https://www.pneustorebr.cfd/",
+              "lineNumber": 699,
+              "columnNumber": 52563
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Image",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 190290,
+            "dataLength": 189882,
+            "requestId": "2038153.8",
+            "type": "Image",
+            "response": {
+              "url": "https://oss.dynadot.com/public/parkcloud/web-bg.webp",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "etag": "\"4c34a7211991d77de227c55e6d045d91\"",
+                "age": "32208",
+                "x-content-type-options": "nosniff",
+                "alt-svc": "h3=\":443\"; ma=86400",
+                "x-cache": "Hit from cloudfront",
+                "x-amz-cf-id": "2INEHbaXvXuC-RmX3LCBUNxI3tcwtEeN2D-bAqHmX-MR-wFclRslJw==",
+                "date": "Fri, 16 Oct 2026 09:54:58 GMT",
+                "content-type": "image/webp",
+                "vary": "Accept-Encoding, Origin",
+                "last-modified": "Mon, 12 Oct 2026 03:30:42 GMT",
+                "x-frame-options": "SAMEORIGIN",
+                "strict-transport-security": "max-age=31536000",
+                "referrer-policy": "strict-origin-when-cross-origin",
+                "via": "1.1 387adc951beb5181d840dfb5d1f09488.cloudfront.net (CloudFront)",
+                "accept-ranges": "bytes",
+                "content-length": "189882",
+                "x-xss-protection": "1; mode=block",
+                "x-amz-cf-pop": "FRA56-P4",
+                "server": "AmazonS3",
+                "x-amz-server-side-encryption": "AES256"
+              },
+              "mimeType": "image/webp",
+              "charset": "",
+              "remoteIPAddress": "52.222.236.112",
+              "remotePort": 443,
+              "encodedDataLength": 388,
+              "timing": {
+                "requestTime": 9178467.910951,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0.076,
+                "dnsEnd": 11.758,
+                "connectStart": 11.906,
+                "connectEnd": 22.976,
+                "sslStart": 11.906,
+                "sslEnd": 22.976,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 23.051,
+                "sendEnd": 23.137,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 30.863,
+                "receiveHeadersEnd": 31.175
+              },
+              "responseTime": 1792176625363.637,
+              "protocol": "h3",
+              "alternateProtocolUsage": "dnsAlpnH3JobWonRace",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "QUIC",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "oss.dynadot.com",
+                "sanList": [
+                  "oss.dynadot.com"
+                ],
+                "issuer": "Amazon RSA 2048 M04",
+                "validFrom": 1791849600,
+                "validTo": 1808956799,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2027'",
+                    "logId": "4C63DC98E59C1DAB88F61E8A3DDEAE8FAB44A3377B5F9B94C3FBA19CFCC1BE26",
+                    "timestamp": 1791909803754,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "30460221008D1985BC7030F1013BC769F4E7B065D4455A15C379454DD2E95DDD0F35FFFEAD02210088542C32E682799C20C9235C163A11343D70BE0AE962D865E76653A878C5C3E3"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Argon2027h1'",
+                    "logId": "D6D58DA9D01753F36A4AA0C7574902AFEBC7DC2CD38CD9F764C80C89191E9F02",
+                    "timestamp": 1791909803737,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022100AE36A3488EDCDE646B5D2FA4262167AB1B4DD5E990C497B0F3DF53D6C676C12E02203FB41B7E56DA7206990600FCE4A33B6DB8159FFFAE9041CD073D96982E82718E"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2027h1'",
+                    "logId": "44C2BD0CE9140E64A5C94A01930A5AA1BB35970E00EE111689682A1C44D7B566",
+                    "timestamp": 1791909803802,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022009F9BDE00740F7CC575F1F952FEE7B2C9255A8283CCE493477F224F7A4A2A11C022100969F3E49CB69FA219CDFDE7308AE6895E587D37B8BED370BF142D94B24559250"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "e641709d7646448209217c41d078a2d7615f06d871dd15f8eabff83d1a3aecbe",
+            "size": 253176,
+            "asn": {
+              "ip": "52.222.236.112",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "52.222.236.112",
+              "ptr": "server-52-222-236-112.fra56.r.cloudfront.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://www.pneustorebr.cfd/",
+            "host": "www.pneustorebr.cfd",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "E1DC028D99CA51135F80C57FF44D9CE6",
+            "loaderId": "E1DC028D99CA51135F80C57FF44D9CE6",
+            "documentURL": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+            "request": {
+              "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+              "urlFragment": "#locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021",
+              "method": "GET",
+              "headers": {
+                "Referer": "https://www.pneustorebr.cfd/",
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.95271,
+            "wallTime": 1792176625.37454,
+            "initiator": {
+              "type": "script",
+              "stack": {
+                "callFrames": [
+                  {
+                    "functionName": "value",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 10352
+                  },
+                  {
+                    "functionName": "value",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 16522
+                  },
+                  {
+                    "functionName": "value",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 14995
+                  },
+                  {
+                    "functionName": "value",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 6593
+                  },
+                  {
+                    "functionName": "value",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 6134
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 6402
+                  },
+                  {
+                    "functionName": "value",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 6373
+                  },
+                  {
+                    "functionName": "value",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 5739
+                  },
+                  {
+                    "functionName": "11../lib/widget-management.js",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 24061
+                  },
+                  {
+                    "functionName": "a",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 244
+                  },
+                  {
+                    "functionName": "n",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 402
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "7",
+                    "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+                    "lineNumber": 0,
+                    "columnNumber": 419
+                  }
+                ]
+              }
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Document",
+            "frameId": "466E18FF6E53B6FFF4690D23B827FF79",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 3106,
+            "dataLength": 15148,
+            "requestId": "E1DC028D99CA51135F80C57FF44D9CE6",
+            "type": "Document",
+            "response": {
+              "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "age": "54458",
+                "cache-control": "max-age=86400",
+                "content-encoding": "br",
+                "content-type": "text/html",
+                "date": "Fri, 16 Oct 2026 03:42:47 GMT",
+                "etag": "W/\"86ffb7abe62a24587c9b43d59f0eba69\"",
+                "last-modified": "Mon, 15 Sep 2025 15:25:05 GMT",
+                "server": "AmazonS3",
+                "strict-transport-security": "max-age=31536000",
+                "vary": "Accept-Encoding",
+                "via": "1.1 71c4b07776e0b6812900664940c9d7a6.cloudfront.net (CloudFront)",
+                "x-amz-cf-id": "7vxC0b5E5puX8agTHB08WXiiZrfKUkaFU4IDnoSdBCLXiRlvLcWGDw==",
+                "x-amz-cf-pop": "FRA56-P4",
+                "x-amz-server-side-encryption": "AES256",
+                "x-amz-version-id": "null",
+                "x-cache": "Hit from cloudfront",
+                "x-content-type-options": "nosniff",
+                "x-xss-protection": "1; mode=block"
+              },
+              "mimeType": "text/html",
+              "charset": "",
+              "remoteIPAddress": "52.222.236.94",
+              "remotePort": 443,
+              "encodedDataLength": 3106,
+              "timing": {
+                "requestTime": 9178467.95323,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0,
+                "dnsEnd": 0,
+                "connectStart": 0,
+                "connectEnd": 13.843,
+                "sslStart": 5.186,
+                "sslEnd": 13.828,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 14.073,
+                "sendEnd": 14.372,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 21.873,
+                "receiveHeadersEnd": 22.212
+              },
+              "responseTime": 1792176625396.924,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.trustpilot.com",
+                "sanList": [
+                  "*.trustpilot.com",
+                  "trustpilot.com"
+                ],
+                "issuer": "Amazon RSA 2048 M01",
+                "validFrom": 1790985600,
+                "validTo": 1808092799,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2027'",
+                    "logId": "4C63DC98E59C1DAB88F61E8A3DDEAE8FAB44A3377B5F9B94C3FBA19CFCC1BE26",
+                    "timestamp": 1791021501258,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100E225ADD158F7718AB43BDB5FC154908862F5F8F803FD2E59E22F3B3113F25B9F022100B09DB50A1F6059E4A612F5A36010CA989FF6860533AC8B50AACF0EDB2BF468C8"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Argon2027h1'",
+                    "logId": "D6D58DA9D01753F36A4AA0C7574902AFEBC7DC2CD38CD9F764C80C89191E9F02",
+                    "timestamp": 1791021501259,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502200B8ACB927E6892092964592FA9A159155D34F569A2709C4BAE701E2FCD67B3F8022100E5041D1A819A3A0D4ECCB8799219770D7548E1BA4A39A9E4693E9EC06CE2817D"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2027h1'",
+                    "logId": "1C9F682CE9FAF0456950F81B968A87DDDB3210D84CE6C8B2E382524AC4CF599F",
+                    "timestamp": 1791021501381,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "30440220725C3EE6984C34A6944974B727F843C959D3AF2F96C1A1A883CC80F8E0CC85FC02207E13B97C151D61985EEB8083D9AE40378DFF479C498B77CB96AEEC5BB1667BA8"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "52672acd8fc0856c55cb467658201eaca31c578d130a54f618b951911aae2bb4",
+            "size": 15148,
+            "asn": {
+              "ip": "52.222.236.94",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "52.222.236.94",
+              "ptr": "server-52-222-236-94.fra56.r.cloudfront.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+            "host": "widget.trustpilot.com",
+            "type": "script"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.29",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://fonts.cdnfonts.com/s/20678/SWANSE_B.woff",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Origin": "https://www.pneustorebr.cfd",
+                "Referer": "https://fonts.cdnfonts.com/css/swansea"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.966314,
+            "wallTime": 1792176625.388134,
+            "initiator": {
+              "type": "parser",
+              "url": "https://fonts.cdnfonts.com/css/swansea"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Font",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "NonBlocking"
+          },
+          "response": {
+            "encodedDataLength": 26161,
+            "dataLength": 25664,
+            "requestId": "2038153.29",
+            "type": "Font",
+            "response": {
+              "url": "https://fonts.cdnfonts.com/s/20678/SWANSE_B.woff",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "cf-cache-status": "HIT",
+                "etag": "\"6440-5d73bbc073748\"",
+                "age": "31",
+                "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=okjCPF3tUIXzEe0FaO5wpwF3nj10IRUFw8cfgwq2WlV%2FIRzW%2FnCm97XZXkjC3lDgXaHrIxiXUG6MV%2F4ymKA4uz8%2FsEIGMpLr2PMnn9OMHd4HcvR1FnZYDXbGwpDrnwbmBP%2FFu%2Bc%3D\"}]}",
+                "server-timing": "cfExtPri",
+                "alt-svc": "h3=\":443\"; ma=86400",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "content-type": "font/woff",
+                "last-modified": "Sat, 05 Feb 2022 02:00:41 GMT",
+                "priority": "u=0,i=?0",
+                "cache-control": "max-age=31536000",
+                "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+                "cf-ray": "a4b93fc4ce1bf721-FRA",
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "content-length": "25664",
+                "server": "cloudflare"
+              },
+              "mimeType": "font/woff",
+              "charset": "",
+              "remoteIPAddress": "172.67.184.158",
+              "remotePort": 443,
+              "encodedDataLength": 484,
+              "timing": {
+                "requestTime": 9178467.97422,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0.091,
+                "dnsEnd": 0.11,
+                "connectStart": 0.226,
+                "connectEnd": 8.724,
+                "sslStart": 0.226,
+                "sslEnd": 8.724,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 8.866,
+                "sendEnd": 8.934,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 29.461,
+                "receiveHeadersEnd": 29.758
+              },
+              "responseTime": 1792176625425.498,
+              "protocol": "h3",
+              "alternateProtocolUsage": "alternativeJobWonRace",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "QUIC",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "cdnfonts.com",
+                "sanList": [
+                  "cdnfonts.com",
+                  "*.cdnfonts.com"
+                ],
+                "issuer": "WE1",
+                "validFrom": 1788030031,
+                "validTo": 1795809533,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2026h2'",
+                    "logId": "C8A3C47FC7B3ADB9356B013F6A7A126DE33A4E43A5C646F997AD3975991DCF9A",
+                    "timestamp": 1788033631919,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A792971AF1C578F4A9F1413CDCDEDCC35F824341420C9B3685245EF967E3EE84022100D907A1B78468934A2202729A4607E4AC1B4B13B028C2D2BC6190CEC72BEA8C3F"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2026h2' log",
+                    "logId": "D809553B944F7AFFC816196F944F85ABB0F8FC5E8755260F15D12E72BB454B14",
+                    "timestamp": 1788033631920,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3044022009AD1B2CF2F2CEB69FC372966410906124DD98D4AAC9486FA9BE66E9B6EDC7C202201B2059069281947361E1EE00DD335DBE9B4A2E73E6537002B629F9192F84D275"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": true
+              }
+            },
+            "hasExtraInfo": true,
+            "hash": "2136c60f9fc5305c1fde1d1d43c4ae58ae584c395bd271224962c081764613b6",
+            "size": 34220,
+            "asn": {
+              "ip": "172.67.184.158",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "172.67.128.0/17"
+            },
+            "geoip": {
+              "country": "",
+              "region": "",
+              "timezone": "",
+              "city": "",
+              "ll": [
+                null,
+                null
+              ],
+              "country_name": "Ascension Island"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://fonts.cdnfonts.com/css/swansea",
+            "host": "fonts.cdnfonts.com",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.9",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://fonts.cdnfonts.com/s/85792/Switzer-Regular.woff",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Origin": "https://www.pneustorebr.cfd",
+                "Referer": "https://fonts.cdnfonts.com/css/switzer"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.967999,
+            "wallTime": 1792176625.389835,
+            "initiator": {
+              "type": "parser",
+              "url": "https://fonts.cdnfonts.com/css/switzer"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Font",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "NonBlocking"
+          },
+          "response": {
+            "encodedDataLength": 19766,
+            "dataLength": 19240,
+            "requestId": "2038153.9",
+            "type": "Font",
+            "response": {
+              "url": "https://fonts.cdnfonts.com/s/85792/Switzer-Regular.woff",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "cf-cache-status": "HIT",
+                "etag": "\"4b28-5e4c5c2e46b0b\"",
+                "age": "31",
+                "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=741PbVa6JT%2Fe5Bwn9LDTiei%2BMyzNvjXBpECamBwdxtkgnp3p9WyJX4BX58ZV6V4%2FQF33Jww8BW3nWpFAkFg6pKTj8n%2BcjrtZQzHAaQqYJ6nDTDfWkrHRaa9p6faoglVz9%2FhCU8Y%3D\"}]}",
+                "server-timing": "cfExtPri",
+                "alt-svc": "h3=\":443\"; ma=86400",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "content-type": "font/woff",
+                "last-modified": "Wed, 27 Jul 2022 09:08:32 GMT",
+                "priority": "u=0,i=?0",
+                "cache-control": "max-age=31536000",
+                "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+                "cf-ray": "a4b93fc4ce1df721-FRA",
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "content-length": "19240",
+                "server": "cloudflare"
+              },
+              "mimeType": "font/woff",
+              "charset": "",
+              "remoteIPAddress": "172.67.184.158",
+              "remotePort": 443,
+              "encodedDataLength": 521,
+              "timing": {
+                "requestTime": 9178467.97484,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 8.504,
+                "sendEnd": 8.548,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 25.027,
+                "receiveHeadersEnd": 25.371
+              },
+              "responseTime": 1792176625421.685,
+              "protocol": "h3",
+              "alternateProtocolUsage": "alternativeJobWonRace",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "QUIC",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "cdnfonts.com",
+                "sanList": [
+                  "cdnfonts.com",
+                  "*.cdnfonts.com"
+                ],
+                "issuer": "WE1",
+                "validFrom": 1788030031,
+                "validTo": 1795809533,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2026h2'",
+                    "logId": "C8A3C47FC7B3ADB9356B013F6A7A126DE33A4E43A5C646F997AD3975991DCF9A",
+                    "timestamp": 1788033631919,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A792971AF1C578F4A9F1413CDCDEDCC35F824341420C9B3685245EF967E3EE84022100D907A1B78468934A2202729A4607E4AC1B4B13B028C2D2BC6190CEC72BEA8C3F"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2026h2' log",
+                    "logId": "D809553B944F7AFFC816196F944F85ABB0F8FC5E8755260F15D12E72BB454B14",
+                    "timestamp": 1788033631920,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3044022009AD1B2CF2F2CEB69FC372966410906124DD98D4AAC9486FA9BE66E9B6EDC7C202201B2059069281947361E1EE00DD335DBE9B4A2E73E6537002B629F9192F84D275"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": true
+              }
+            },
+            "hasExtraInfo": true,
+            "hash": "64a2f7892b785eb83aae65f0f4985b2ab6805e235771f5fb55a8d27052c8da5e",
+            "size": 25656,
+            "asn": {
+              "ip": "172.67.184.158",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "172.67.128.0/17"
+            },
+            "geoip": {
+              "country": "",
+              "region": "",
+              "timezone": "",
+              "city": "",
+              "ll": [
+                null,
+                null
+              ],
+              "country_name": "Ascension Island"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://fonts.cdnfonts.com/css/switzer",
+            "host": "fonts.cdnfonts.com",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.17",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://fonts.cdnfonts.com/s/85792/Switzer-Medium.woff",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Origin": "https://www.pneustorebr.cfd",
+                "Referer": "https://fonts.cdnfonts.com/css/switzer"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.968718,
+            "wallTime": 1792176625.390539,
+            "initiator": {
+              "type": "parser",
+              "url": "https://fonts.cdnfonts.com/css/switzer"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Font",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "NonBlocking"
+          },
+          "response": {
+            "encodedDataLength": 23952,
+            "dataLength": 23464,
+            "requestId": "2038153.17",
+            "type": "Font",
+            "response": {
+              "url": "https://fonts.cdnfonts.com/s/85792/Switzer-Medium.woff",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "cf-cache-status": "HIT",
+                "etag": "\"5ba8-5e4c5c2ec621f\"",
+                "age": "31",
+                "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=353I6tE8MmHNZ0FUxEPkYBgBibUjGTdFFEyg5aaZEWKY%2Bt8tO10TATElkw%2FaEh4Xqu7HzF29aFZfLSsVOz9ATX%2F9gpxbdU5D0pR%2FTLfdB5Ki6tuZdrUgbJWEZL7Zb51WqGIuNU8%3D\"}]}",
+                "server-timing": "cfExtPri",
+                "alt-svc": "h3=\":443\"; ma=86400",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "content-type": "font/woff",
+                "last-modified": "Wed, 27 Jul 2022 09:08:33 GMT",
+                "priority": "u=0,i=?0",
+                "cache-control": "max-age=31536000",
+                "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+                "cf-ray": "a4b93fc4ce1cf721-FRA",
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "content-length": "23464",
+                "server": "cloudflare"
+              },
+              "mimeType": "font/woff",
+              "charset": "",
+              "remoteIPAddress": "172.67.184.158",
+              "remotePort": 443,
+              "encodedDataLength": 483,
+              "timing": {
+                "requestTime": 9178467.974992,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 8.251,
+                "sendEnd": 8.317,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 25.117,
+                "receiveHeadersEnd": 25.553
+              },
+              "responseTime": 1792176625421.924,
+              "protocol": "h3",
+              "alternateProtocolUsage": "alternativeJobWonRace",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "QUIC",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "cdnfonts.com",
+                "sanList": [
+                  "cdnfonts.com",
+                  "*.cdnfonts.com"
+                ],
+                "issuer": "WE1",
+                "validFrom": 1788030031,
+                "validTo": 1795809533,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2026h2'",
+                    "logId": "C8A3C47FC7B3ADB9356B013F6A7A126DE33A4E43A5C646F997AD3975991DCF9A",
+                    "timestamp": 1788033631919,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A792971AF1C578F4A9F1413CDCDEDCC35F824341420C9B3685245EF967E3EE84022100D907A1B78468934A2202729A4607E4AC1B4B13B028C2D2BC6190CEC72BEA8C3F"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2026h2' log",
+                    "logId": "D809553B944F7AFFC816196F944F85ABB0F8FC5E8755260F15D12E72BB454B14",
+                    "timestamp": 1788033631920,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3044022009AD1B2CF2F2CEB69FC372966410906124DD98D4AAC9486FA9BE66E9B6EDC7C202201B2059069281947361E1EE00DD335DBE9B4A2E73E6537002B629F9192F84D275"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": true
+              }
+            },
+            "hasExtraInfo": true,
+            "hash": "53e36497cf29b9252502af2fc9628526d0a226f4704f36749911de4d227a43b8",
+            "size": 31288,
+            "asn": {
+              "ip": "172.67.184.158",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "172.67.128.0/17"
+            },
+            "geoip": {
+              "country": "",
+              "region": "",
+              "timezone": "",
+              "city": "",
+              "ll": [
+                null,
+                null
+              ],
+              "country_name": "Ascension Island"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://fonts.cdnfonts.com/css/switzer",
+            "host": "fonts.cdnfonts.com",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.32",
+            "loaderId": "E1DC028D99CA51135F80C57FF44D9CE6",
+            "documentURL": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+            "request": {
+              "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "Low",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178467.981655,
+            "wallTime": 1792176625.403475,
+            "initiator": {
+              "type": "parser",
+              "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+              "lineNumber": 43,
+              "columnNumber": 38
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Script",
+            "frameId": "466E18FF6E53B6FFF4690D23B827FF79",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "PotentiallyBlocking"
+          },
+          "response": {
+            "encodedDataLength": 26681,
+            "dataLength": 91974,
+            "requestId": "2038153.32",
+            "type": "Script",
+            "response": {
+              "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "content-encoding": "gzip",
+                "x-amz-version-id": "null",
+                "etag": "W/\"02bf90f5cff09c702b1a8287d30675e1\"",
+                "age": "64021",
+                "x-content-type-options": "nosniff",
+                "x-cache": "Hit from cloudfront",
+                "x-amz-cf-id": "SfsvG5Lux_jBtHEpHkmWaKnkw2q4YSbeqndFSr4epXts2I6R7sraaA==",
+                "date": "Fri, 16 Oct 2026 01:03:25 GMT",
+                "content-type": "application/javascript;charset=utf-8",
+                "vary": "Accept-Encoding",
+                "last-modified": "Mon, 15 Sep 2025 15:25:11 GMT",
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "max-age=86400",
+                "via": "1.1 71c4b07776e0b6812900664940c9d7a6.cloudfront.net (CloudFront)",
+                "x-xss-protection": "1; mode=block",
+                "x-amz-cf-pop": "FRA56-P4",
+                "server": "AmazonS3",
+                "x-amz-server-side-encryption": "AES256"
+              },
+              "mimeType": "application/javascript",
+              "charset": "utf-8",
+              "remoteIPAddress": "52.222.236.94",
+              "remotePort": 443,
+              "encodedDataLength": 26681,
+              "timing": {
+                "requestTime": 9178467.982188,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 0.297,
+                "sendEnd": 1.207,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 7.496,
+                "receiveHeadersEnd": 7.643
+              },
+              "responseTime": 1792176625411.509,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.trustpilot.com",
+                "sanList": [
+                  "*.trustpilot.com",
+                  "trustpilot.com"
+                ],
+                "issuer": "Amazon RSA 2048 M01",
+                "validFrom": 1790985600,
+                "validTo": 1808092799,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2027'",
+                    "logId": "4C63DC98E59C1DAB88F61E8A3DDEAE8FAB44A3377B5F9B94C3FBA19CFCC1BE26",
+                    "timestamp": 1791021501258,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100E225ADD158F7718AB43BDB5FC154908862F5F8F803FD2E59E22F3B3113F25B9F022100B09DB50A1F6059E4A612F5A36010CA989FF6860533AC8B50AACF0EDB2BF468C8"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Argon2027h1'",
+                    "logId": "D6D58DA9D01753F36A4AA0C7574902AFEBC7DC2CD38CD9F764C80C89191E9F02",
+                    "timestamp": 1791021501259,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502200B8ACB927E6892092964592FA9A159155D34F569A2709C4BAE701E2FCD67B3F8022100E5041D1A819A3A0D4ECCB8799219770D7548E1BA4A39A9E4693E9EC06CE2817D"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2027h1'",
+                    "logId": "1C9F682CE9FAF0456950F81B968A87DDDB3210D84CE6C8B2E382524AC4CF599F",
+                    "timestamp": 1791021501381,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "30440220725C3EE6984C34A6944974B727F843C959D3AF2F96C1A1A883CC80F8E0CC85FC02207E13B97C151D61985EEB8083D9AE40378DFF479C498B77CB96AEEC5BB1667BA8"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "4096dad954f7f40cd081eac1232967d65fa2606d549220460cb2669306d023e3",
+            "size": 90384,
+            "asn": {
+              "ip": "52.222.236.94",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "52.222.236.94",
+              "ptr": "server-52-222-236-94.fra56.r.cloudfront.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+            "host": "widget.trustpilot.com",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.34",
+            "loaderId": "E1DC028D99CA51135F80C57FF44D9CE6",
+            "documentURL": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+            "request": {
+              "url": "https://widget.trustpilot.com/trustbox-data/5419b637fa0340045cd0c936?businessUnitId=5a73801679def00001e7f7d2&locale=en-US&random=UQ8pcntljVFQrXlq8E4z",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Content-type": "application/x-www-form-urlencoded",
+                "Referer": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "High",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178468.009884,
+            "wallTime": 1792176625.43191,
+            "initiator": {
+              "type": "script",
+              "stack": {
+                "callFrames": [
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 38667
+                  },
+                  {
+                    "functionName": "r.xhr",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 38681
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 36689
+                  },
+                  {
+                    "functionName": "r.apiCall",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 36272
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 40004
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 41634
+                  },
+                  {
+                    "functionName": "r.mapObject",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 41609
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 39869
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 40325
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 29,
+                    "columnNumber": 2353
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 113,
+                    "columnNumber": 11830
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 113,
+                    "columnNumber": 6094
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 41006
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 41280
+                  }
+                ]
+              }
+            },
+            "redirectHasExtraInfo": false,
+            "type": "XHR",
+            "frameId": "466E18FF6E53B6FFF4690D23B827FF79",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 844,
+            "dataLength": 993,
+            "requestId": "2038153.34",
+            "type": "XHR",
+            "response": {
+              "url": "https://widget.trustpilot.com/trustbox-data/5419b637fa0340045cd0c936?businessUnitId=5a73801679def00001e7f7d2&locale=en-US&random=UQ8pcntljVFQrXlq8E4z",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "public,max-age=1800",
+                "content-encoding": "gzip",
+                "etag": "\"95381c4a0280d6383ced5edc6226615d\"",
+                "age": "1733",
+                "x-content-type-options": "nosniff",
+                "via": "1.1 71c4b07776e0b6812900664940c9d7a6.cloudfront.net (CloudFront)",
+                "x-cache": "Hit from cloudfront",
+                "x-amz-cf-id": "ClK_uCj70UWa3p4YR01AKa2zBcrmU4BFHB0iVRw5iQqOH5ifLeUVpA==",
+                "date": "Fri, 16 Oct 2026 18:21:32 GMT",
+                "x-xss-protection": "1; mode=block",
+                "content-type": "application/json; charset=utf-8",
+                "vary": "Accept-Encoding",
+                "server": "Kestrel",
+                "x-amz-cf-pop": "FRA56-P4"
+              },
+              "mimeType": "application/json",
+              "charset": "utf-8",
+              "remoteIPAddress": "52.222.236.94",
+              "remotePort": 443,
+              "encodedDataLength": 844,
+              "timing": {
+                "requestTime": 9178468.010309,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 0.787,
+                "sendEnd": 1.332,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 10.845,
+                "receiveHeadersEnd": 11.016
+              },
+              "responseTime": 1792176625442.973,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.trustpilot.com",
+                "sanList": [
+                  "*.trustpilot.com",
+                  "trustpilot.com"
+                ],
+                "issuer": "Amazon RSA 2048 M01",
+                "validFrom": 1790985600,
+                "validTo": 1808092799,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2027'",
+                    "logId": "4C63DC98E59C1DAB88F61E8A3DDEAE8FAB44A3377B5F9B94C3FBA19CFCC1BE26",
+                    "timestamp": 1791021501258,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100E225ADD158F7718AB43BDB5FC154908862F5F8F803FD2E59E22F3B3113F25B9F022100B09DB50A1F6059E4A612F5A36010CA989FF6860533AC8B50AACF0EDB2BF468C8"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Argon2027h1'",
+                    "logId": "D6D58DA9D01753F36A4AA0C7574902AFEBC7DC2CD38CD9F764C80C89191E9F02",
+                    "timestamp": 1791021501259,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502200B8ACB927E6892092964592FA9A159155D34F569A2709C4BAE701E2FCD67B3F8022100E5041D1A819A3A0D4ECCB8799219770D7548E1BA4A39A9E4693E9EC06CE2817D"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2027h1'",
+                    "logId": "1C9F682CE9FAF0456950F81B968A87DDDB3210D84CE6C8B2E382524AC4CF599F",
+                    "timestamp": 1791021501381,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "30440220725C3EE6984C34A6944974B727F843C959D3AF2F96C1A1A883CC80F8E0CC85FC02207E13B97C151D61985EEB8083D9AE40378DFF479C498B77CB96AEEC5BB1667BA8"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "88f862ade644f33a3c3121a61df19d023e5b8f8ebe64f4032dc7c72ad5cdeb69",
+            "size": 993,
+            "asn": {
+              "ip": "52.222.236.94",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "52.222.236.94",
+              "ptr": "server-52-222-236-94.fra56.r.cloudfront.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+            "host": "widget.trustpilot.com",
+            "type": "script"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.35",
+            "loaderId": "E1DC028D99CA51135F80C57FF44D9CE6",
+            "documentURL": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+            "request": {
+              "url": "https://widget.trustpilot.com/stats/TrustboxImpression?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Content-type": "application/x-www-form-urlencoded",
+                "Referer": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "High",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178468.010517,
+            "wallTime": 1792176625.432358,
+            "initiator": {
+              "type": "script",
+              "stack": {
+                "callFrames": [
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 38667
+                  },
+                  {
+                    "functionName": "r.xhr",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 38681
+                  },
+                  {
+                    "functionName": "n",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 113,
+                    "columnNumber": 5283
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 113,
+                    "columnNumber": 5683
+                  }
+                ]
+              }
+            },
+            "redirectHasExtraInfo": false,
+            "type": "XHR",
+            "frameId": "466E18FF6E53B6FFF4690D23B827FF79",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 309,
+            "dataLength": 0,
+            "requestId": "2038153.35",
+            "type": "XHR",
+            "response": {
+              "url": "https://widget.trustpilot.com/stats/TrustboxImpression?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+              "status": 204,
+              "statusText": "",
+              "headers": {
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "no-store,no-cache",
+                "pragma": "no-cache",
+                "x-content-type-options": "nosniff",
+                "via": "1.1 71c4b07776e0b6812900664940c9d7a6.cloudfront.net (CloudFront)",
+                "x-cache": "Miss from cloudfront",
+                "x-amz-cf-id": "tcfHYeNv5Fjo53pmdyHsj_UrAwttJjMlv1ZrPfDkx0hZgEf_7xgl3w==",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "x-xss-protection": "1; mode=block",
+                "x-amz-cf-pop": "FRA56-P4"
+              },
+              "mimeType": "text/plain",
+              "charset": "",
+              "remoteIPAddress": "52.222.236.94",
+              "remotePort": 443,
+              "encodedDataLength": 309,
+              "timing": {
+                "requestTime": 9178468.010765,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 0.637,
+                "sendEnd": 0.882,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 33.401,
+                "receiveHeadersEnd": 33.555
+              },
+              "responseTime": 1792176625465.982,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.trustpilot.com",
+                "sanList": [
+                  "*.trustpilot.com",
+                  "trustpilot.com"
+                ],
+                "issuer": "Amazon RSA 2048 M01",
+                "validFrom": 1790985600,
+                "validTo": 1808092799,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2027'",
+                    "logId": "4C63DC98E59C1DAB88F61E8A3DDEAE8FAB44A3377B5F9B94C3FBA19CFCC1BE26",
+                    "timestamp": 1791021501258,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100E225ADD158F7718AB43BDB5FC154908862F5F8F803FD2E59E22F3B3113F25B9F022100B09DB50A1F6059E4A612F5A36010CA989FF6860533AC8B50AACF0EDB2BF468C8"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Argon2027h1'",
+                    "logId": "D6D58DA9D01753F36A4AA0C7574902AFEBC7DC2CD38CD9F764C80C89191E9F02",
+                    "timestamp": 1791021501259,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502200B8ACB927E6892092964592FA9A159155D34F569A2709C4BAE701E2FCD67B3F8022100E5041D1A819A3A0D4ECCB8799219770D7548E1BA4A39A9E4693E9EC06CE2817D"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2027h1'",
+                    "logId": "1C9F682CE9FAF0456950F81B968A87DDDB3210D84CE6C8B2E382524AC4CF599F",
+                    "timestamp": 1791021501381,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "30440220725C3EE6984C34A6944974B727F843C959D3AF2F96C1A1A883CC80F8E0CC85FC02207E13B97C151D61985EEB8083D9AE40378DFF479C498B77CB96AEEC5BB1667BA8"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0,
+            "asn": {
+              "ip": "52.222.236.94",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "52.222.236.94",
+              "ptr": "server-52-222-236-94.fra56.r.cloudfront.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+            "host": "widget.trustpilot.com",
+            "type": "script"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.36",
+            "loaderId": "E1DC028D99CA51135F80C57FF44D9CE6",
+            "documentURL": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+            "request": {
+              "url": "https://widget.trustpilot.com/stats/TrustboxView?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Content-type": "application/x-www-form-urlencoded",
+                "Referer": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "High",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 9178468.010721,
+            "wallTime": 1792176625.432538,
+            "initiator": {
+              "type": "script",
+              "stack": {
+                "callFrames": [
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 38667
+                  },
+                  {
+                    "functionName": "r.xhr",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 0,
+                    "columnNumber": 38681
+                  },
+                  {
+                    "functionName": "n",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 113,
+                    "columnNumber": 5283
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "8",
+                    "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+                    "lineNumber": 113,
+                    "columnNumber": 5779
+                  }
+                ]
+              }
+            },
+            "redirectHasExtraInfo": false,
+            "type": "XHR",
+            "frameId": "466E18FF6E53B6FFF4690D23B827FF79",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 310,
+            "dataLength": 0,
+            "requestId": "2038153.36",
+            "type": "XHR",
+            "response": {
+              "url": "https://widget.trustpilot.com/stats/TrustboxView?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+              "status": 204,
+              "statusText": "",
+              "headers": {
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "no-store,no-cache",
+                "pragma": "no-cache",
+                "x-content-type-options": "nosniff",
+                "via": "1.1 71c4b07776e0b6812900664940c9d7a6.cloudfront.net (CloudFront)",
+                "x-cache": "Miss from cloudfront",
+                "x-amz-cf-id": "vY3T3lFTNvXzPwz0lYdNqSFCfL5XFOUbT7IXfOaqNt9rgFI761m0hg==",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "x-xss-protection": "1; mode=block",
+                "x-amz-cf-pop": "FRA56-P4"
+              },
+              "mimeType": "text/plain",
+              "charset": "",
+              "remoteIPAddress": "52.222.236.94",
+              "remotePort": 443,
+              "encodedDataLength": 310,
+              "timing": {
+                "requestTime": 9178468.01095,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 0.556,
+                "sendEnd": 0.703,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 37.79,
+                "receiveHeadersEnd": 38.671
+              },
+              "responseTime": 1792176625470.556,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.trustpilot.com",
+                "sanList": [
+                  "*.trustpilot.com",
+                  "trustpilot.com"
+                ],
+                "issuer": "Amazon RSA 2048 M01",
+                "validFrom": 1790985600,
+                "validTo": 1808092799,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2027'",
+                    "logId": "4C63DC98E59C1DAB88F61E8A3DDEAE8FAB44A3377B5F9B94C3FBA19CFCC1BE26",
+                    "timestamp": 1791021501258,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100E225ADD158F7718AB43BDB5FC154908862F5F8F803FD2E59E22F3B3113F25B9F022100B09DB50A1F6059E4A612F5A36010CA989FF6860533AC8B50AACF0EDB2BF468C8"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Argon2027h1'",
+                    "logId": "D6D58DA9D01753F36A4AA0C7574902AFEBC7DC2CD38CD9F764C80C89191E9F02",
+                    "timestamp": 1791021501259,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502200B8ACB927E6892092964592FA9A159155D34F569A2709C4BAE701E2FCD67B3F8022100E5041D1A819A3A0D4ECCB8799219770D7548E1BA4A39A9E4693E9EC06CE2817D"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Tiger2027h1'",
+                    "logId": "1C9F682CE9FAF0456950F81B968A87DDDB3210D84CE6C8B2E382524AC4CF599F",
+                    "timestamp": 1791021501381,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "30440220725C3EE6984C34A6944974B727F843C959D3AF2F96C1A1A883CC80F8E0CC85FC02207E13B97C151D61985EEB8083D9AE40378DFF479C498B77CB96AEEC5BB1667BA8"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "1; mode=block"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "size": 0,
+            "asn": {
+              "ip": "52.222.236.94",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "52.222.236.94",
+              "ptr": "server-52-222-236-94.fra56.r.cloudfront.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+            "host": "widget.trustpilot.com",
+            "type": "script"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2038153.37",
+            "loaderId": "A5612241A2AFB252840EB1B350F59DC4",
+            "documentURL": "https://www.pneustorebr.cfd/",
+            "request": {
+              "url": "https://www.pneustorebr.cfd/favicon.ico",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://www.pneustorebr.cfd/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "High",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": true
+            },
+            "timestamp": 9178468.055782,
+            "wallTime": 1792176625.477597,
+            "initiator": {
+              "type": "other"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Other",
+            "frameId": "0CEF618D6A9C380AA8A1C0D83569013A",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 25984,
+            "dataLength": 131072,
+            "requestId": "2038153.37",
+            "type": "Other",
+            "response": {
+              "url": "https://www.pneustorebr.cfd/favicon.ico",
+              "status": 404,
+              "statusText": "",
+              "headers": {
+                "strict-transport-security": "max-age=2592000",
+                "cache-control": "private, no-cache, no-store, max-age=0",
+                "content-encoding": "gzip",
+                "expires": "Mon, 01 Jan 1990 0:00:00 GMT",
+                "content-length": "25948",
+                "date": "Fri, 16 Oct 2026 18:50:25 GMT",
+                "content-type": "text/html",
+                "x-frame-options": "SAMEORIGIN"
+              },
+              "mimeType": "text/html",
+              "charset": "",
+              "remoteIPAddress": "54.215.31.113",
+              "remotePort": 443,
+              "encodedDataLength": 25984,
+              "timing": {
+                "requestTime": 9178468.055999,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 0.333,
+                "sendEnd": 0.431,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 158.544,
+                "receiveHeadersEnd": 158.709
+              },
+              "responseTime": 1792176625636.358,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "insecure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.dynadot.com",
+                "sanList": [
+                  "*.dynadot.com",
+                  "dynadot.com"
+                ],
+                "issuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+                "validFrom": 1760745600,
+                "validTo": 1795046399,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "DigiCert 'Sphinx2026h2'",
+                    "logId": "944E4387FAECC1EF81F3192426A8186501C7D35F3802013F72677D55372E19D8",
+                    "timestamp": 1760745604345,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502210081AC1DB666D612ACA26451AA811415F19C7B0699F8156D7E7B30834184DBDDDB02204F07A2B6454E7701E0F2D5B1615904E742AA0245AF34EF47B471270D1790EEF4"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Cloudflare 'Nimbus2026'",
+                    "logId": "CB38F715897C84A1445F5BC1DDFBC96EF29A59CD470A690585B0CB14C31458E7",
+                    "timestamp": 1760745604287,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502205A2CD8BAF280B7AD213405F494A5A60A82D837668B6EDE6FBA30E51100ABE1A302210094E5AE42F2C33C182B03818D877E41A50C8FBC189F498E89D11A524952E62595"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "DigiCert 'Wyvern2026h2'",
+                    "logId": "C2317E574519A345EE7F38DEB29041EBC7C2215A22BF7FD5B5AD769AD90E52CD",
+                    "timestamp": 1760745604274,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304502210088CF613583FE8F9880F92781FA7FCA0DE367F9952B5A815BF5B663E08A6DB2130220083A17190908AD2EDD0A81F5CAB4743C584FC6661D1F75582BD71E6C75A8B760"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=2592000"
+                },
+                {
+                  "name": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "70b76da37a7b28f8c93f0c7d0e08f5529b19f01872c3479e6f03b922242ee2a6",
+            "size": 174764,
+            "asn": {
+              "ip": "54.215.31.113",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "54.212.0.0/14"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "CA",
+              "timezone": "America/Los_Angeles",
+              "city": "San Jose",
+              "ll": [
+                37.3388,
+                -121.8916
+              ],
+              "country_name": "United States",
+              "metro": 807
+            },
+            "rdns": {
+              "ip": "54.215.31.113",
+              "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com"
+            }
+          }
+        }
+      ],
+      "cookies": [],
+      "console": [
+        {
+          "message": {
+            "source": "network",
+            "level": "error",
+            "text": "Failed to load resource: the server responded with a status of 404 ()",
+            "timestamp": 1792176625323.207,
+            "url": "https://www.pneustorebr.cfd/"
+          }
+        },
+        {
+          "message": {
+            "source": "network",
+            "level": "error",
+            "text": "Failed to load resource: the server responded with a status of 404 ()",
+            "timestamp": 1792176625636.904,
+            "url": "https://www.pneustorebr.cfd/favicon.ico"
+          }
+        }
+      ],
+      "links": [
+        {
+          "href": "https://www.dynadot.com/",
+          "text": "",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/domain/search?domain=pneustorebr.cfd",
+          "text": "Get this domain",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/community/contact",
+          "text": "Customer Support team",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/privacy",
+          "text": "Privacy Policy",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/terms",
+          "text": "Terms of Use",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.icann.org/resources/pages/benefits-2013-09-16-en",
+          "text": "Registrant Educational Information",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en#registrant",
+          "text": "Registrant Benefits and Responsibilities",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.namepros.com/",
+          "text": "",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.domaining.com/",
+          "text": "",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.trustpilot.com/review/dynadot.com?utm_medium=trustbox&utm_source=MicroTrustScore",
+          "text": "Excellent 4.5 out of 5 Trustpilot",
+          "frameId": "466E18FF6E53B6FFF4690D23B827FF79"
+        }
+      ],
+      "timing": {
+        "beginNavigation": "2026-10-16T18:50:24.188Z",
+        "frameStartedLoading": "2026-10-16T18:50:24.192Z",
+        "frameNavigated": "2026-10-16T18:50:25.401Z",
+        "domContentEventFired": "2026-10-16T18:50:25.346Z",
+        "frameStoppedLoading": "2026-10-16T18:50:25.459Z"
+      },
+      "globals": [
+        {
+          "prop": "0",
+          "type": "object"
+        },
+        {
+          "prop": "Trustpilot",
+          "type": "object"
+        }
+      ],
+      "storages": [],
+      "websockets": [],
+      "clipboard": [],
+      "redirects": [],
+      "identifiers": [
+        "html-id",
+        "html-id.clip0_21_5",
+        "html-id.clip0_37_44",
+        "html-id.domain-name",
+        "html-id.get-domain",
+        "html-id.mask0_1_2105",
+        "html-id.clip0_1_2157"
+      ]
+    },
+    "labels": [],
+    "lists": {
+      "ips": [
+        "52.222.236.94",
+        "52.222.236.112",
+        "52.222.236.60",
+        "172.67.184.158",
+        "54.215.31.113"
+      ],
+      "countries": [
+        "US"
+      ],
+      "asns": [
+        "16509",
+        "13335"
+      ],
+      "domains": [
+        "widget.trustpilot.com",
+        "fonts.cdnfonts.com",
+        "www.pneustorebr.cfd",
+        "oss.dynadot.com"
+      ],
+      "servers": [
+        "cloudflare",
+        "AmazonS3",
+        "Kestrel"
+      ],
+      "urls": [
+        "https://www.pneustorebr.cfd/",
+        "https://fonts.cdnfonts.com/css/switzer",
+        "https://fonts.cdnfonts.com/css/swansea",
+        "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+        "https://oss.dynadot.com/public/parkcloud/web-bg.webp",
+        "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+        "https://fonts.cdnfonts.com/s/20678/SWANSE_B.woff",
+        "https://fonts.cdnfonts.com/s/85792/Switzer-Regular.woff",
+        "https://fonts.cdnfonts.com/s/85792/Switzer-Medium.woff",
+        "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+        "https://widget.trustpilot.com/trustbox-data/5419b637fa0340045cd0c936?businessUnitId=5a73801679def00001e7f7d2&locale=en-US&random=UQ8pcntljVFQrXlq8E4z",
+        "https://widget.trustpilot.com/stats/TrustboxImpression?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+        "https://widget.trustpilot.com/stats/TrustboxView?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+        "https://www.pneustorebr.cfd/favicon.ico"
+      ],
+      "linkDomains": [
+        "www.dynadot.com",
+        "www.icann.org",
+        "www.namepros.com",
+        "www.domaining.com",
+        "www.trustpilot.com"
+      ],
+      "certificates": [
+        {
+          "subjectName": "*.dynadot.com",
+          "issuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+          "validFrom": 1760745600,
+          "validTo": 1795046399
+        },
+        {
+          "subjectName": "cdnfonts.com",
+          "issuer": "WE1",
+          "validFrom": 1788030031,
+          "validTo": 1795809533
+        },
+        {
+          "subjectName": "*.trustpilot.com",
+          "issuer": "Amazon RSA 2048 M01",
+          "validFrom": 1790985600,
+          "validTo": 1808092799
+        },
+        {
+          "subjectName": "oss.dynadot.com",
+          "issuer": "Amazon RSA 2048 M04",
+          "validFrom": 1791849600,
+          "validTo": 1808956799
+        }
+      ],
+      "hashes": [
+        "70b76da37a7b28f8c93f0c7d0e08f5529b19f01872c3479e6f03b922242ee2a6",
+        "80da5c183c14104a1d95f437962cf86ff2a035e099d379fee186894eb74fe9bb",
+        "933cc051d547d5efa796737bb0819616768794ea74743cb3556d18c5be70fbc4",
+        "990f92f505fce1eee9296b418261d0f0f6a4aa9c09349682eb4798a5be9277fb",
+        "e641709d7646448209217c41d078a2d7615f06d871dd15f8eabff83d1a3aecbe",
+        "52672acd8fc0856c55cb467658201eaca31c578d130a54f618b951911aae2bb4",
+        "2136c60f9fc5305c1fde1d1d43c4ae58ae584c395bd271224962c081764613b6",
+        "64a2f7892b785eb83aae65f0f4985b2ab6805e235771f5fb55a8d27052c8da5e",
+        "53e36497cf29b9252502af2fc9628526d0a226f4704f36749911de4d227a43b8",
+        "4096dad954f7f40cd081eac1232967d65fa2606d549220460cb2669306d023e3",
+        "88f862ade644f33a3c3121a61df19d023e5b8f8ebe64f4032dc7c72ad5cdeb69",
+        "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      ]
+    },
+    "meta": {
+      "processors": {
+        "umbrella": {
+          "data": [
+            {
+              "hostname": "fonts.cdnfonts.com",
+              "rank": 6768
+            },
+            {
+              "hostname": "widget.trustpilot.com",
+              "rank": 5894
+            }
+          ]
+        },
+        "geoip": {
+          "data": [
+            {
+              "ip": "54.215.31.113",
+              "geoip": {
+                "country": "US",
+                "region": "CA",
+                "timezone": "America/Los_Angeles",
+                "city": "San Jose",
+                "ll": [
+                  37.3388,
+                  -121.8916
+                ],
+                "country_name": "United States",
+                "metro": 807
+              }
+            },
+            {
+              "ip": "172.67.184.158",
+              "geoip": {
+                "country": "",
+                "region": "",
+                "timezone": "",
+                "city": "",
+                "ll": [
+                  null,
+                  null
+                ],
+                "country_name": "Ascension Island"
+              }
+            },
+            {
+              "ip": "52.222.236.60",
+              "geoip": {
+                "country": "US",
+                "region": "",
+                "timezone": "America/Chicago",
+                "city": "",
+                "ll": [
+                  37.751,
+                  -97.822
+                ],
+                "country_name": "United States",
+                "metro": 0
+              }
+            },
+            {
+              "ip": "52.222.236.112",
+              "geoip": {
+                "country": "US",
+                "region": "",
+                "timezone": "America/Chicago",
+                "city": "",
+                "ll": [
+                  37.751,
+                  -97.822
+                ],
+                "country_name": "United States",
+                "metro": 0
+              }
+            },
+            {
+              "ip": "52.222.236.94",
+              "geoip": {
+                "country": "US",
+                "region": "",
+                "timezone": "America/Chicago",
+                "city": "",
+                "ll": [
+                  37.751,
+                  -97.822
+                ],
+                "country_name": "United States",
+                "metro": 0
+              }
+            }
+          ]
+        },
+        "asn": {
+          "data": [
+            {
+              "ip": "54.215.31.113",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "54.212.0.0/14"
+            },
+            {
+              "ip": "172.67.184.158",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "172.67.128.0/17"
+            },
+            {
+              "ip": "52.222.236.60",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            {
+              "ip": "52.222.236.112",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            },
+            {
+              "ip": "52.222.236.94",
+              "asn": "16509",
+              "country": "US",
+              "description": "AMAZON-02 - Amazon.com, Inc., US",
+              "name": "Amazon.com",
+              "route": "52.222.128.0/17"
+            }
+          ]
+        },
+        "rdns": {
+          "data": [
+            {
+              "ip": "54.215.31.113",
+              "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com"
+            },
+            {
+              "ip": "52.222.236.60",
+              "ptr": "server-52-222-236-60.fra56.r.cloudfront.net"
+            },
+            {
+              "ip": "52.222.236.112",
+              "ptr": "server-52-222-236-112.fra56.r.cloudfront.net"
+            },
+            {
+              "ip": "52.222.236.94",
+              "ptr": "server-52-222-236-94.fra56.r.cloudfront.net"
+            }
+          ]
+        },
+        "wappa": {
+          "data": [
+            {
+              "confidence": [
+                {
+                  "confidence": 100,
+                  "pattern": "\\.trustpilot\\.com"
+                }
+              ],
+              "confidenceTotal": 100,
+              "app": "Trustpilot",
+              "icon": "Trustpilot.svg",
+              "website": "https://business.trustpilot.com",
+              "categories": [
+                {
+                  "groups": [
+                    2,
+                    18
+                  ],
+                  "name": "Reviews",
+                  "priority": 9
+                }
+              ]
+            }
+          ]
+        }
+      }
+    },
+    "page": {
+      "asn": "AS16509",
+      "asnname": "AMAZON-02 - Amazon.com, Inc., US",
+      "city": "San Jose",
+      "country": "US",
+      "domain": "www.pneustorebr.cfd",
+      "ip": "54.215.31.113",
+      "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com",
+      "url": "https://www.pneustorebr.cfd/",
+      "apexDomainAgeDays": 42,
+      "language": "en",
+      "mimeType": "text/html",
+      "title": "Domain registered | Dynadot",
+      "tlsValidDays": 396,
+      "tlsAgeDays": 363,
+      "domainAgeDays": 42,
+      "tlsValidFrom": "2025-10-18T00:00:00.000Z",
+      "apexDomain": "pneustorebr.cfd",
+      "tlsIssuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+      "status": "404"
+    },
+    "scanner": {
+      "country": "de"
+    },
+    "stats": {
+      "IPv6Percentage": 0,
+      "adBlocked": 0,
+      "domainStats": [
+        {
+          "count": 6,
+          "ips": [
+            "52.222.236.60",
+            "52.222.236.94"
+          ],
+          "domain": "widget.trustpilot.com",
+          "size": 133109,
+          "encodedSize": 39538,
+          "countries": [
+            "US"
+          ],
+          "index": 3,
+          "initiators": [
+            "www.pneustorebr.cfd",
+            "widget.trustpilot.com"
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 5,
+          "ips": [
+            "172.67.184.158"
+          ],
+          "domain": "fonts.cdnfonts.com",
+          "size": 72671,
+          "encodedSize": 71318,
+          "countries": [],
+          "index": 1,
+          "initiators": [
+            "www.pneustorebr.cfd",
+            "fonts.cdnfonts.com"
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 2,
+          "ips": [
+            "54.215.31.113"
+          ],
+          "domain": "www.pneustorebr.cfd",
+          "size": 262144,
+          "encodedSize": 52134,
+          "countries": [
+            "US"
+          ],
+          "index": 0,
+          "initiators": [],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "52.222.236.112"
+          ],
+          "domain": "oss.dynadot.com",
+          "size": 189882,
+          "encodedSize": 190290,
+          "countries": [
+            "US"
+          ],
+          "index": 4,
+          "initiators": [
+            "www.pneustorebr.cfd"
+          ],
+          "redirects": 0
+        }
+      ],
+      "ipStats": [
+        {
+          "requests": 2,
+          "domains": [
+            "www.pneustorebr.cfd"
+          ],
+          "ip": "54.215.31.113",
+          "asn": {
+            "ip": "54.215.31.113",
+            "asn": "16509",
+            "country": "US",
+            "description": "AMAZON-02 - Amazon.com, Inc., US",
+            "name": "Amazon.com",
+            "route": "54.212.0.0/14"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "US",
+            "region": "CA",
+            "timezone": "America/Los_Angeles",
+            "city": "San Jose",
+            "ll": [
+              37.3388,
+              -121.8916
+            ],
+            "country_name": "United States",
+            "metro": 807
+          },
+          "size": 262144,
+          "encodedSize": 52134,
+          "countries": [
+            "US"
+          ],
+          "index": 0,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null,
+          "rdns": {
+            "ip": "54.215.31.113",
+            "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com"
+          }
+        },
+        {
+          "requests": 5,
+          "domains": [
+            "fonts.cdnfonts.com"
+          ],
+          "ip": "172.67.184.158",
+          "asn": {
+            "ip": "172.67.184.158",
+            "asn": "13335",
+            "country": "US",
+            "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+            "name": "Cloudflare",
+            "route": "172.67.128.0/17"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "",
+            "region": "",
+            "timezone": "",
+            "city": "",
+            "ll": [
+              null,
+              null
+            ],
+            "country_name": "Ascension Island"
+          },
+          "size": 72671,
+          "encodedSize": 71318,
+          "countries": [],
+          "index": 1,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null
+        },
+        {
+          "requests": 1,
+          "domains": [
+            "widget.trustpilot.com"
+          ],
+          "ip": "52.222.236.60",
+          "asn": {
+            "ip": "52.222.236.60",
+            "asn": "16509",
+            "country": "US",
+            "description": "AMAZON-02 - Amazon.com, Inc., US",
+            "name": "Amazon.com",
+            "route": "52.222.128.0/17"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "US",
+            "region": "",
+            "timezone": "America/Chicago",
+            "city": "",
+            "ll": [
+              37.751,
+              -97.822
+            ],
+            "country_name": "United States",
+            "metro": 0
+          },
+          "size": 24994,
+          "encodedSize": 8288,
+          "countries": [
+            "US"
+          ],
+          "index": 3,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null,
+          "rdns": {
+            "ip": "52.222.236.60",
+            "ptr": "server-52-222-236-60.fra56.r.cloudfront.net"
+          }
+        },
+        {
+          "requests": 1,
+          "domains": [
+            "oss.dynadot.com"
+          ],
+          "ip": "52.222.236.112",
+          "asn": {
+            "ip": "52.222.236.112",
+            "asn": "16509",
+            "country": "US",
+            "description": "AMAZON-02 - Amazon.com, Inc., US",
+            "name": "Amazon.com",
+            "route": "52.222.128.0/17"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "US",
+            "region": "",
+            "timezone": "America/Chicago",
+            "city": "",
+            "ll": [
+              37.751,
+              -97.822
+            ],
+            "country_name": "United States",
+            "metro": 0
+          },
+          "size": 189882,
+          "encodedSize": 190290,
+          "countries": [
+            "US"
+          ],
+          "index": 4,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null,
+          "rdns": {
+            "ip": "52.222.236.112",
+            "ptr": "server-52-222-236-112.fra56.r.cloudfront.net"
+          }
+        },
+        {
+          "requests": 5,
+          "domains": [
+            "widget.trustpilot.com"
+          ],
+          "ip": "52.222.236.94",
+          "asn": {
+            "ip": "52.222.236.94",
+            "asn": "16509",
+            "country": "US",
+            "description": "AMAZON-02 - Amazon.com, Inc., US",
+            "name": "Amazon.com",
+            "route": "52.222.128.0/17"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "US",
+            "region": "",
+            "timezone": "America/Chicago",
+            "city": "",
+            "ll": [
+              37.751,
+              -97.822
+            ],
+            "country_name": "United States",
+            "metro": 0
+          },
+          "size": 108115,
+          "encodedSize": 31250,
+          "countries": [
+            "US"
+          ],
+          "index": 5,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null,
+          "rdns": {
+            "ip": "52.222.236.94",
+            "ptr": "server-52-222-236-94.fra56.r.cloudfront.net"
+          }
+        }
+      ],
+      "malicious": 0,
+      "protocolStats": [
+        {
+          "count": 8,
+          "size": 395253,
+          "encodedSize": 91672,
+          "ips": [
+            "54.215.31.113",
+            "52.222.236.60",
+            "52.222.236.94"
+          ],
+          "countries": [
+            "US"
+          ],
+          "securityState": {},
+          "protocol": "h2"
+        },
+        {
+          "count": 6,
+          "size": 262553,
+          "encodedSize": 261608,
+          "ips": [
+            "172.67.184.158",
+            "52.222.236.112"
+          ],
+          "countries": [
+            "US"
+          ],
+          "securityState": {},
+          "protocol": "h3"
+        }
+      ],
+      "regDomainStats": [
+        {
+          "count": 6,
+          "ips": [
+            "52.222.236.60",
+            "52.222.236.94"
+          ],
+          "regDomain": "trustpilot.com",
+          "size": 133109,
+          "encodedSize": 39538,
+          "countries": [],
+          "index": 3,
+          "subDomains": [
+            {
+              "domain": "widget",
+              "country": "US"
+            }
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 5,
+          "ips": [
+            "172.67.184.158"
+          ],
+          "regDomain": "cdnfonts.com",
+          "size": 72671,
+          "encodedSize": 71318,
+          "countries": [],
+          "index": 1,
+          "subDomains": [
+            {
+              "domain": "fonts",
+              "country": ""
+            }
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 2,
+          "ips": [
+            "54.215.31.113"
+          ],
+          "regDomain": "pneustorebr.cfd",
+          "size": 262144,
+          "encodedSize": 52134,
+          "countries": [],
+          "index": 0,
+          "subDomains": [
+            {
+              "domain": "www",
+              "country": "US"
+            }
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "52.222.236.112"
+          ],
+          "regDomain": "dynadot.com",
+          "size": 189882,
+          "encodedSize": 190290,
+          "countries": [],
+          "index": 4,
+          "subDomains": [
+            {
+              "domain": "oss",
+              "country": "US"
+            }
+          ],
+          "redirects": 0
+        }
+      ],
+      "resourceStats": [
+        {
+          "count": 3,
+          "size": 993,
+          "encodedSize": 1463,
+          "latency": 0,
+          "countries": [
+            "US"
+          ],
+          "ips": [
+            "52.222.236.94"
+          ],
+          "type": "XHR",
+          "compression": "0.7",
+          "percentage": 21
+        },
+        {
+          "count": 3,
+          "size": 68368,
+          "encodedSize": 69879,
+          "latency": 0,
+          "countries": [],
+          "ips": [
+            "172.67.184.158"
+          ],
+          "type": "Font",
+          "compression": "1.0",
+          "percentage": 21
+        },
+        {
+          "count": 2,
+          "size": 116968,
+          "encodedSize": 34969,
+          "latency": 0,
+          "countries": [
+            "US"
+          ],
+          "ips": [
+            "52.222.236.60",
+            "52.222.236.94"
+          ],
+          "type": "Script",
+          "compression": "3.3",
+          "percentage": 14
+        },
+        {
+          "count": 2,
+          "size": 4303,
+          "encodedSize": 1439,
+          "latency": 0,
+          "countries": [],
+          "ips": [
+            "172.67.184.158"
+          ],
+          "type": "Stylesheet",
+          "compression": "3.0",
+          "percentage": 14
+        },
+        {
+          "count": 2,
+          "size": 146220,
+          "encodedSize": 29256,
+          "latency": 0,
+          "countries": [
+            "US"
+          ],
+          "ips": [
+            "54.215.31.113",
+            "52.222.236.94"
+          ],
+          "type": "Document",
+          "compression": "5.0",
+          "percentage": 14
+        },
+        {
+          "count": 1,
+          "size": 131072,
+          "encodedSize": 25984,
+          "latency": 0,
+          "countries": [
+            "US"
+          ],
+          "ips": [
+            "54.215.31.113"
+          ],
+          "type": "Other",
+          "compression": "5.0",
+          "percentage": 7
+        },
+        {
+          "count": 1,
+          "size": 189882,
+          "encodedSize": 190290,
+          "latency": 0,
+          "countries": [
+            "US"
+          ],
+          "ips": [
+            "52.222.236.112"
+          ],
+          "type": "Image",
+          "compression": "1.0",
+          "percentage": 7
+        }
+      ],
+      "securePercentage": 86,
+      "secureRequests": 12,
+      "serverStats": [
+        {
+          "count": 5,
+          "size": 72671,
+          "encodedSize": 71318,
+          "ips": [
+            "172.67.184.158"
+          ],
+          "countries": [],
+          "server": "cloudflare"
+        },
+        {
+          "count": 4,
+          "size": 321998,
+          "encodedSize": 228365,
+          "ips": [
+            "52.222.236.60",
+            "52.222.236.112",
+            "52.222.236.94"
+          ],
+          "countries": [
+            "US"
+          ],
+          "server": "AmazonS3"
+        },
+        {
+          "count": 1,
+          "size": 993,
+          "encodedSize": 844,
+          "ips": [
+            "52.222.236.94"
+          ],
+          "countries": [
+            "US"
+          ],
+          "server": "Kestrel"
+        }
+      ],
+      "tlsStats": [
+        {
+          "count": 12,
+          "size": 395662,
+          "encodedSize": 301146,
+          "ips": [
+            "172.67.184.158",
+            "52.222.236.60",
+            "52.222.236.112",
+            "52.222.236.94"
+          ],
+          "countries": [
+            "US"
+          ],
+          "protocols": {
+            "QUIC /  / AES_128_GCM": 6,
+            "TLS 1.3 /  / AES_128_GCM": 6
+          },
+          "securityState": "secure"
+        },
+        {
+          "count": 2,
+          "size": 262144,
+          "encodedSize": 52134,
+          "ips": [
+            "54.215.31.113"
+          ],
+          "countries": [
+            "US"
+          ],
+          "protocols": {},
+          "securityState": "insecure"
+        }
+      ],
+      "totalLinks": 10,
+      "uniqCountries": 2
+    },
+    "submitter": {
+      "country": "NO"
+    },
+    "task": {
+      "method": "api",
+      "source": "75a4b351",
+      "tags": [],
+      "time": "2026-10-16T18:50:34.640Z",
+      "url": "https://www.pneustorebr.cfd/",
+      "uuid": "01a1460d-11c6-71b9-9818-3caec90d10c7",
+      "visibility": "public",
+      "reportURL": "https://urlscan.io/result/01a1460d-11c6-71b9-9818-3caec90d10c7/",
+      "screenshotURL": "https://urlscan.io/screenshots/01a1460d-11c6-71b9-9818-3caec90d10c7.png",
+      "domURL": "https://urlscan.io/dom/01a1460d-11c6-71b9-9818-3caec90d10c7/",
+      "domain": "www.pneustorebr.cfd",
+      "apexDomain": "pneustorebr.cfd"
+    },
+    "verdicts": {
+      "overall": {
+        "score": 0,
+        "categories": [],
+        "brands": [],
+        "tags": [],
+        "malicious": false,
+        "hasVerdicts": true
+      },
+      "urlscan": {
+        "score": 0,
+        "categories": [],
+        "brands": [],
+        "tags": [],
+        "malicious": false,
+        "hasVerdicts": false
+      },
+      "engines": {
+        "score": 73,
+        "malicious": true,
+        "categories": [],
+        "enginesTotal": 0,
+        "maliciousTotal": 0,
+        "benignTotal": 0,
+        "maliciousVerdicts": [],
+        "benignVerdicts": [],
+        "hasVerdicts": true,
+        "tags": [
+          "urlscan-ml",
+          "urlscan-ml-60c5e22"
+        ]
+      },
+      "community": {
+        "score": 0,
+        "categories": [],
+        "brands": [],
+        "votesTotal": 0,
+        "votesMalicious": 0,
+        "votesBenign": 0,
+        "malicious": false,
+        "hasVerdicts": false
+      }
+    },
+    "visible": {
+      "brandname": "Dynadot"
+    }
+  },
+  "message": null
+}

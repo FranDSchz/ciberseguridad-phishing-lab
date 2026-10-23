@@ -1,0 +1,3728 @@
+[
+  {
+    "correo_id": "R004",
+    "consulta": {
+      "service": "VirusTotal",
+      "indicator_type": "domain",
+      "indicator": "ginnybedellphotography.com",
+      "status": "found",
+      "queried_at": "2026-10-23T17:36:30+00:00",
+      "endpoint": "https://www.virustotal.com/api/v3/domains/ginnybedellphotography.com",
+      "http_status": 200,
+      "data": {
+        "data": {
+          "id": "ginnybedellphotography.com",
+          "type": "domain",
+          "links": {
+            "self": "https://www.virustotal.com/api/v3/domains/ginnybedellphotography.com"
+          },
+          "attributes": {
+            "registrar": "GoDaddy.com, LLC",
+            "categories": {},
+            "expiration_date": 1784034331,
+            "tld": "com",
+            "popularity_ranks": {},
+            "last_https_certificate": {
+              "cert_signature": {
+                "signature_algorithm": "sha256RSA",
+                "signature": "a7633cf6edbef42cd47639a3ee56ff86d65e2d740430552045f55e5016d5fa096117598b5bea7ba6682948a6b92024d559d6d8ba74c12e27cbd17c2bfdbb9f967c5523a23245176aa183019f5cbf4a7058daefe6748a393eb629251223ffa25c4163b0f166e05de48703ca15b8f7c012e28f0428876d2b8bf23342a2f9b3542f884db8bcccf2ad02e2cac54589818a74d1b1fd88f940f45b9933def9ac24e44477d09d35f0c0eff51080263319664c7141ec5651ad996a7fc628abffe388fc5cbbd34454e88c7e50e63ce78e723de419a320ba62b55727b549459fa7cc7e53e4b9061b78c1b3852706c3670659ddd46b087cea424b3a851902afc1223ed57097ecde16c18dc812312ec059de1a3655e371edc9dba46b10b8d05404f63f1af542a2b79d6a8e4e7941263a04b01a01ed33f2541c960cb4ea9ac34af1db1723efe5a4a7c56ec326a2cdc1928f8d59d582a12efb6628c6a1ab9d53e0c038dd5fbb45a309cbae2c160ca416b9485ddc496edef2a29f4498ddb63e2ad75155aab84a6ea4a8d448523e0cb45ffab3226a4c7691212b4f6c51f5d0fb2475eba77839ba7678648eacc819fe000d2e6841c969d90e907e157f9499650a2afc9afcb03fdc2605d801e2064065fe8e51daa10c75b8546a0d06d1c38ffe1bef1bfccda0ecc6ffc49de91e7f3cea00488e528377c1715ae00273828e996a6aba958d24658342ac"
+              },
+              "extensions": {
+                "CA": false,
+                "extended_key_usage": [
+                  "serverAuth"
+                ],
+                "key_usage": [
+                  "digitalSignature",
+                  "keyEncipherment"
+                ],
+                "crl_distribution_points": [
+                  "http://crl.godaddy.com/gdr1v1dv_s1-10.crl"
+                ],
+                "certificate_policies": [
+                  "2.23.140.1.2.1",
+                  "2.16.840.1.114413.1.7.23.1"
+                ],
+                "ca_information_access": {
+                  "CA Issuers": "http://certificates.godaddy.com/repository/gd_tls_issuing_dv-r1v1.crt"
+                },
+                "authority_key_identifier": {
+                  "keyid": "89ebe71d79c3bedb3fdc8e20b0fbe41e7c39f62b"
+                },
+                "subject_alternative_name": [
+                  "ginnybedellphotography.com"
+                ],
+                "subject_key_identifier": "7592adda97296e9a90748bbaa01bb920c08e77ff",
+                "1.3.6.1.4.1.11129.2.4.2": "0482016b0169007700d6d58da9d01753f36a4aa0c7574902afebc7dc2cd38cd9"
+              },
+              "validity": {
+                "not_after": "2027-02-02 17:45:07",
+                "not_before": "2026-07-19 17:45:07"
+              },
+              "size": 1823,
+              "version": "V3",
+              "public_key": {
+                "algorithm": "RSA",
+                "rsa": {
+                  "modulus": "adef9b664b8a9f88a8d25efc3b54f4cbcfe0bb4e50cf3e055d9d9c5c01caf984250e9de10932f52ed17ed3a5f0c5182fc7fd740e5fa6b024cdbb824e3373e52dd19a130f3f7fcdb6b00e7e099b3959f83d65157e2ee21ac005910608aa06fd797940648407572d92a05e41aca48cc094c91c030f84c465f76caea60eb37632037dc66bb3acf511fde91434c7a061a52f94e357672301451d5693b4072ac8730bd5847f83f2915a5e7580374d2319f0c2a86b3eac9a8fa39703053358dc752a47260c97894ef22f7c4258c7b98e8d7069d7ca0448632d85ea54f71b784be02122ca77959034c1272ae1b898e9ab5abe2c674cb909e5ed9d7df62faac0aaefdfbd",
+                  "exponent": "10001",
+                  "key_size": 2048
+                }
+              },
+              "thumbprint_sha256": "7467245627883bd1898d93f7563b73be485fb6d6730530b93c022ca6b5b290a7",
+              "thumbprint": "1abb4ba16872c93097b0e91586d16754cf48edaa",
+              "serial_number": "3887b8c7348f71b1",
+              "issuer": {
+                "C": "US",
+                "O": "GoDaddy.com",
+                "CN": "GoDaddy TLS Intermediate CA DV - R1v1"
+              },
+              "subject": {
+                "CN": "ginnybedellphotography.com"
+              }
+            },
+            "last_analysis_results": {
+              "Acronis": {
+                "method": "blacklist",
+                "engine_name": "Acronis",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "0xSI_f33d": {
+                "method": "blacklist",
+                "engine_name": "0xSI_f33d",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Abusix": {
+                "method": "blacklist",
+                "engine_name": "Abusix",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ADMINUSLabs": {
+                "method": "blacklist",
+                "engine_name": "ADMINUSLabs",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Axur": {
+                "method": "blacklist",
+                "engine_name": "Axur",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ChainPatrol": {
+                "method": "blacklist",
+                "engine_name": "ChainPatrol",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Criminal IP": {
+                "method": "blacklist",
+                "engine_name": "Criminal IP",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AILabs (MONITORAPP)": {
+                "method": "blacklist",
+                "engine_name": "AILabs (MONITORAPP)",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "AlienVault": {
+                "method": "blacklist",
+                "engine_name": "AlienVault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "alphaMountain.ai": {
+                "method": "blacklist",
+                "engine_name": "alphaMountain.ai",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "AlphaSOC": {
+                "method": "blacklist",
+                "engine_name": "AlphaSOC",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Antiy-AVL": {
+                "method": "blacklist",
+                "engine_name": "Antiy-AVL",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ArcSight Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "ArcSight Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AutoShun": {
+                "method": "blacklist",
+                "engine_name": "AutoShun",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Bfore.Ai PreCrime": {
+                "method": "blacklist",
+                "engine_name": "Bfore.Ai PreCrime",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "BitDefender": {
+                "method": "blacklist",
+                "engine_name": "BitDefender",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Bkav": {
+                "method": "blacklist",
+                "engine_name": "Bkav",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Blueliv": {
+                "method": "blacklist",
+                "engine_name": "Blueliv",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Certego": {
+                "method": "blacklist",
+                "engine_name": "Certego",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Chong Lua Dao": {
+                "method": "blacklist",
+                "engine_name": "Chong Lua Dao",
+                "category": "malicious",
+                "result": "malicious"
+              },
+              "CINS Army": {
+                "method": "blacklist",
+                "engine_name": "CINS Army",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CRDF": {
+                "method": "blacklist",
+                "engine_name": "CRDF",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CSIS Security Group": {
+                "method": "blacklist",
+                "engine_name": "CSIS Security Group",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Snort IP sample list": {
+                "method": "blacklist",
+                "engine_name": "Snort IP sample list",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CMC Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "CMC Threat Intelligence",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CTX AI": {
+                "method": "blacklist",
+                "engine_name": "CTX AI",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Cyan": {
+                "method": "blacklist",
+                "engine_name": "Cyan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Cyble": {
+                "method": "blacklist",
+                "engine_name": "Cyble",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CyRadar": {
+                "method": "blacklist",
+                "engine_name": "CyRadar",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "DNS8": {
+                "method": "blacklist",
+                "engine_name": "DNS8",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Dr.Web": {
+                "method": "blacklist",
+                "engine_name": "Dr.Web",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Ermes": {
+                "method": "blacklist",
+                "engine_name": "Ermes",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ESET": {
+                "method": "blacklist",
+                "engine_name": "ESET",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ESTsecurity": {
+                "method": "blacklist",
+                "engine_name": "ESTsecurity",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "EmergingThreats": {
+                "method": "blacklist",
+                "engine_name": "EmergingThreats",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Emsisoft": {
+                "method": "blacklist",
+                "engine_name": "Emsisoft",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Forcepoint ThreatSeeker": {
+                "method": "blacklist",
+                "engine_name": "Forcepoint ThreatSeeker",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Fortinet": {
+                "method": "blacklist",
+                "engine_name": "Fortinet",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Fortra": {
+                "method": "blacklist",
+                "engine_name": "Fortra",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "G-Data": {
+                "method": "blacklist",
+                "engine_name": "G-Data",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GCP Abuse Intelligence": {
+                "method": "blacklist",
+                "engine_name": "GCP Abuse Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Google Safe Browsing": {
+                "method": "blacklist",
+                "engine_name": "Google Safe Browsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GreenSnow": {
+                "method": "blacklist",
+                "engine_name": "GreenSnow",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GreyNoise": {
+                "method": "blacklist",
+                "engine_name": "GreyNoise",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Gridinsoft": {
+                "method": "blacklist",
+                "engine_name": "Gridinsoft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Guardpot": {
+                "method": "blacklist",
+                "engine_name": "Guardpot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Heimdal Security": {
+                "method": "blacklist",
+                "engine_name": "Heimdal Security",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Hunt.io Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Hunt.io Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "IPsum": {
+                "method": "blacklist",
+                "engine_name": "IPsum",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Juniper Networks": {
+                "method": "blacklist",
+                "engine_name": "Juniper Networks",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Kaspersky": {
+                "method": "blacklist",
+                "engine_name": "Kaspersky",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "LevelBlue": {
+                "method": "blacklist",
+                "engine_name": "LevelBlue",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Lionic": {
+                "method": "blacklist",
+                "engine_name": "Lionic",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Lumu": {
+                "method": "blacklist",
+                "engine_name": "Lumu",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "MalwarePatrol": {
+                "method": "blacklist",
+                "engine_name": "MalwarePatrol",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "MalwareURL": {
+                "method": "blacklist",
+                "engine_name": "MalwareURL",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Malwared": {
+                "method": "blacklist",
+                "engine_name": "Malwared",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Mimecast": {
+                "method": "blacklist",
+                "engine_name": "Mimecast",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Netcraft": {
+                "method": "blacklist",
+                "engine_name": "Netcraft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "OpenPhish": {
+                "method": "blacklist",
+                "engine_name": "OpenPhish",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Orcapot": {
+                "method": "blacklist",
+                "engine_name": "Orcapot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishing Database": {
+                "method": "blacklist",
+                "engine_name": "Phishing Database",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PhishFort": {
+                "method": "blacklist",
+                "engine_name": "PhishFort",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishtank": {
+                "method": "blacklist",
+                "engine_name": "Phishtank",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PREBYTES": {
+                "method": "blacklist",
+                "engine_name": "PREBYTES",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PrecisionSec": {
+                "method": "blacklist",
+                "engine_name": "PrecisionSec",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Quick Heal": {
+                "method": "blacklist",
+                "engine_name": "Quick Heal",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Quttera": {
+                "method": "blacklist",
+                "engine_name": "Quttera",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SafeToOpen": {
+                "method": "blacklist",
+                "engine_name": "SafeToOpen",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sansec eComscan": {
+                "method": "blacklist",
+                "engine_name": "Sansec eComscan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Scantitan": {
+                "method": "blacklist",
+                "engine_name": "Scantitan",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SCUMWARE.org": {
+                "method": "blacklist",
+                "engine_name": "SCUMWARE.org",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Seclookup": {
+                "method": "blacklist",
+                "engine_name": "Seclookup",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SecureBrain": {
+                "method": "blacklist",
+                "engine_name": "SecureBrain",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "SOCRadar": {
+                "method": "blacklist",
+                "engine_name": "SOCRadar",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sophos": {
+                "method": "blacklist",
+                "engine_name": "Sophos",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "StopForumSpam": {
+                "method": "blacklist",
+                "engine_name": "StopForumSpam",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Sucuri SiteCheck": {
+                "method": "blacklist",
+                "engine_name": "Sucuri SiteCheck",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Synthient": {
+                "method": "blacklist",
+                "engine_name": "Synthient",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ThreatHive": {
+                "method": "blacklist",
+                "engine_name": "ThreatHive",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLhaus": {
+                "method": "blacklist",
+                "engine_name": "URLhaus",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLQuery": {
+                "method": "blacklist",
+                "engine_name": "URLQuery",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Viettel Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Viettel Threat Intelligence",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "VIPRE": {
+                "method": "blacklist",
+                "engine_name": "VIPRE",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "VX Vault": {
+                "method": "blacklist",
+                "engine_name": "VX Vault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ViriBack": {
+                "method": "blacklist",
+                "engine_name": "ViriBack",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Webroot": {
+                "method": "blacklist",
+                "engine_name": "Webroot",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Yandex Safebrowsing": {
+                "method": "blacklist",
+                "engine_name": "Yandex Safebrowsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroCERT": {
+                "method": "blacklist",
+                "engine_name": "ZeroCERT",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "desenmascara.me": {
+                "method": "blacklist",
+                "engine_name": "desenmascara.me",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Xcitium Verdict Cloud": {
+                "method": "blacklist",
+                "engine_name": "Xcitium Verdict Cloud",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroFox": {
+                "method": "blacklist",
+                "engine_name": "ZeroFox",
+                "category": "undetected",
+                "result": "unrated"
+              }
+            },
+            "jarm": "3fd3fd00000000000043d43d00043d32c43d8acf7f98719049050401317871",
+            "last_https_certificate_date": 1784487930,
+            "rdap": {
+              "handle": "1085715780_DOMAIN_COM-VRSN",
+              "ldh_name": "GINNYBEDELLPHOTOGRAPHY.COM",
+              "events": [
+                {
+                  "event_action": "registration",
+                  "event_date": "2007-07-14T13:05:31Z",
+                  "event_actor": "",
+                  "links": []
+                },
+                {
+                  "event_action": "expiration",
+                  "event_date": "2026-07-14T13:05:31Z",
+                  "event_actor": "",
+                  "links": []
+                },
+                {
+                  "event_action": "last changed",
+                  "event_date": "2026-08-25T07:36:48Z",
+                  "event_actor": "",
+                  "links": []
+                },
+                {
+                  "event_action": "last update of RDAP database",
+                  "event_date": "2026-09-17T22:23:14Z",
+                  "event_actor": "",
+                  "links": []
+                }
+              ],
+              "links": [
+                {
+                  "href": "https://rdap.verisign.com/com/v1/domain/ginnybedellphotography.com",
+                  "rel": "self",
+                  "type": "application/rdap+json",
+                  "value": "https://rdap.verisign.com/com/v1/domain/ginnybedellphotography.com",
+                  "title": "",
+                  "media": "",
+                  "href_lang": []
+                },
+                {
+                  "href": "https://rdap.godaddy.com/v1/domain/GINNYBEDELLPHOTOGRAPHY.COM",
+                  "rel": "related",
+                  "type": "application/rdap+json",
+                  "value": "https://rdap.verisign.com/com/v1/domain/ginnybedellphotography.com",
+                  "title": "",
+                  "media": "",
+                  "href_lang": []
+                }
+              ],
+              "notices": [
+                {
+                  "title": "Terms of Service",
+                  "description": [
+                    "Service subject to Terms of Use."
+                  ],
+                  "links": [
+                    {
+                      "href": "https://www.verisign.com/domain-names/registration-data-access-protocol/terms-service/index.xhtml",
+                      "rel": "terms-of-service",
+                      "type": "text/html",
+                      "value": "https://rdap.verisign.com/com/v1/domain/ginnybedellphotography.com",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "type": ""
+                },
+                {
+                  "title": "Status Codes",
+                  "description": [
+                    "For more information on domain status codes, please visit https://icann.org/epp"
+                  ],
+                  "links": [
+                    {
+                      "href": "https://icann.org/epp",
+                      "rel": "glossary",
+                      "type": "text/html",
+                      "value": "https://rdap.verisign.com/com/v1/domain/ginnybedellphotography.com",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "type": ""
+                },
+                {
+                  "title": "RDDS Inaccuracy Complaint Form",
+                  "description": [
+                    "URL of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf"
+                  ],
+                  "links": [
+                    {
+                      "href": "https://icann.org/wicf",
+                      "rel": "help",
+                      "type": "text/html",
+                      "value": "https://rdap.verisign.com/com/v1/domain/ginnybedellphotography.com",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "type": ""
+                }
+              ],
+              "rdap_conformance": [
+                "rdap_level_0",
+                "icann_rdap_technical_implementation_guide_1",
+                "icann_rdap_response_profile_1"
+              ],
+              "entities": [
+                {
+                  "object_class_name": "entity",
+                  "handle": "146",
+                  "vcard_array": [
+                    {
+                      "name": "version",
+                      "type": "text",
+                      "values": [
+                        "4.0"
+                      ],
+                      "parameters": {}
+                    },
+                    {
+                      "name": "fn",
+                      "type": "text",
+                      "values": [
+                        "GoDaddy.com, LLC"
+                      ],
+                      "parameters": {}
+                    }
+                  ],
+                  "roles": [
+                    "registrar"
+                  ],
+                  "public_ids": [
+                    {
+                      "type": "IANA Registrar ID",
+                      "identifier": "146"
+                    }
+                  ],
+                  "entities": [
+                    {
+                      "object_class_name": "entity",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            ""
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "voice"
+                            ]
+                          },
+                          "type": "uri",
+                          "values": [
+                            "tel:480-624-2505"
+                          ]
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "abuse@godaddy.com"
+                          ],
+                          "parameters": {}
+                        }
+                      ],
+                      "roles": [
+                        "abuse"
+                      ],
+                      "handle": "",
+                      "public_ids": [],
+                      "entities": [],
+                      "remarks": [],
+                      "links": [],
+                      "events": [],
+                      "as_event_actor": [],
+                      "status": [],
+                      "port43": "",
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    }
+                  ],
+                  "links": [
+                    {
+                      "href": "http://www.godaddy.com",
+                      "rel": "about",
+                      "type": "text/html",
+                      "value": "https://rdap.godaddy.com/v1/",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "remarks": [],
+                  "events": [],
+                  "as_event_actor": [],
+                  "status": [],
+                  "port43": "",
+                  "networks": [],
+                  "autnums": [],
+                  "url": "",
+                  "lang": "",
+                  "rdap_conformance": []
+                }
+              ],
+              "object_class_name": "domain",
+              "status": [
+                "redemption period"
+              ],
+              "secure_dns": {
+                "delegation_signed": false,
+                "zone_signed": false,
+                "max_sig_life": 0,
+                "ds_data": [],
+                "key_data": []
+              },
+              "unicode_name": "",
+              "punycode": "",
+              "type": "",
+              "nameservers": [],
+              "port43": "",
+              "switch_name": "",
+              "public_ids": [],
+              "lang": "",
+              "remarks": [],
+              "nask0_state": "",
+              "variants": []
+            },
+            "total_votes": {
+              "harmless": 0,
+              "malicious": 0
+            },
+            "last_update_date": 1787643408,
+            "whois": "Creation Date: 2007-07-14T13:05:31Z\nDNSSEC: unsigned\nDomain Name: GINNYBEDELLPHOTOGRAPHY.COM\nDomain Status: redemptionPeriod https://icann.org/epp#redemptionPeriod\nRegistrar Abuse Contact Email: abuse@godaddy.com\nRegistrar Abuse Contact Phone: 480-624-2505\nRegistrar IANA ID: 146\nRegistrar URL: http://www.godaddy.com\nRegistrar WHOIS Server: whois.godaddy.com\nRegistrar: GoDaddy.com, LLC\nRegistry Domain ID: 1085715780_DOMAIN_COM-VRSN\nRegistry Expiry Date: 2026-07-14T13:05:31Z\nUpdated Date: 2026-08-25T07:36:48Z",
+            "whois_date": 1789188264,
+            "tags": [],
+            "reputation": 0,
+            "last_modification_date": 1791823748,
+            "last_analysis_stats": {
+              "malicious": 1,
+              "suspicious": 0,
+              "undetected": 38,
+              "harmless": 53,
+              "timeout": 0
+            },
+            "last_dns_records_date": 1784487930,
+            "first_seen_date": 1753373126,
+            "last_dns_records": [
+              {
+                "type": "A",
+                "ttl": 600,
+                "value": "76.223.67.189"
+              },
+              {
+                "type": "SOA",
+                "ttl": 3600,
+                "value": "ns61.domaincontrol.com",
+                "rname": "dns.jomax.net",
+                "serial": 2026071900,
+                "refresh": 28800,
+                "retry": 7200,
+                "expire": 604800,
+                "minimum": 600
+              },
+              {
+                "type": "NS",
+                "ttl": 3600,
+                "value": "ns61.domaincontrol.com"
+              },
+              {
+                "type": "NS",
+                "ttl": 3600,
+                "value": "ns62.domaincontrol.com"
+              },
+              {
+                "type": "A",
+                "ttl": 600,
+                "value": "13.248.213.45"
+              },
+              {
+                "type": "TXT",
+                "ttl": 600,
+                "value": "v=spf1 ip4:10.0.0.4 ip4:10.0.0.6 ip4:10.0.0.7 ip4:10.0.0.8 ip4:10.0.0.9 ip4:10.0.0.10 ip4:10.0.0.11 ip4:10.0.0.12 ip4:10.0.0.13 ip4:10.0.0.14 ip4:10.0.0.15 ip4:10.0.0.16 ip4:10.0.0.17 ip4:10.0.0.18 ip4:10.0.0.19 ip4:10.0.0.20 ip4:10.0.0.21 ip4:10.0.0.22 i"
+              }
+            ],
+            "last_analysis_date": 1791795871,
+            "creation_date": 1184418331
+          }
+        }
+      },
+      "message": null
+    }
+  },
+  {
+    "correo_id": "R004",
+    "consulta": {
+      "service": "VirusTotal",
+      "indicator_type": "ip",
+      "indicator": "20.169.217.199",
+      "status": "found",
+      "queried_at": "2026-10-23T17:36:47+00:00",
+      "endpoint": "https://www.virustotal.com/api/v3/ip_addresses/20.169.217.199",
+      "http_status": 200,
+      "data": {
+        "data": {
+          "id": "20.169.217.199",
+          "type": "ip_address",
+          "links": {
+            "self": "https://www.virustotal.com/api/v3/ip_addresses/20.169.217.199"
+          },
+          "attributes": {
+            "last_analysis_stats": {
+              "malicious": 0,
+              "suspicious": 0,
+              "undetected": 92,
+              "harmless": 0,
+              "timeout": 0
+            },
+            "last_modification_date": 1792192313,
+            "last_analysis_results": {
+              "Acronis": {
+                "method": "blacklist",
+                "engine_name": "Acronis",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "0xSI_f33d": {
+                "method": "blacklist",
+                "engine_name": "0xSI_f33d",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Abusix": {
+                "method": "blacklist",
+                "engine_name": "Abusix",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ADMINUSLabs": {
+                "method": "blacklist",
+                "engine_name": "ADMINUSLabs",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Axur": {
+                "method": "blacklist",
+                "engine_name": "Axur",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ChainPatrol": {
+                "method": "blacklist",
+                "engine_name": "ChainPatrol",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Criminal IP": {
+                "method": "blacklist",
+                "engine_name": "Criminal IP",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AILabs (MONITORAPP)": {
+                "method": "blacklist",
+                "engine_name": "AILabs (MONITORAPP)",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AlienVault": {
+                "method": "blacklist",
+                "engine_name": "AlienVault",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "alphaMountain.ai": {
+                "method": "blacklist",
+                "engine_name": "alphaMountain.ai",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AlphaSOC": {
+                "method": "blacklist",
+                "engine_name": "AlphaSOC",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Antiy-AVL": {
+                "method": "blacklist",
+                "engine_name": "Antiy-AVL",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ArcSight Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "ArcSight Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AutoShun": {
+                "method": "blacklist",
+                "engine_name": "AutoShun",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Bfore.Ai PreCrime": {
+                "method": "blacklist",
+                "engine_name": "Bfore.Ai PreCrime",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "BitDefender": {
+                "method": "blacklist",
+                "engine_name": "BitDefender",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Bkav": {
+                "method": "blacklist",
+                "engine_name": "Bkav",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Blueliv": {
+                "method": "blacklist",
+                "engine_name": "Blueliv",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Certego": {
+                "method": "blacklist",
+                "engine_name": "Certego",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Chong Lua Dao": {
+                "method": "blacklist",
+                "engine_name": "Chong Lua Dao",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CINS Army": {
+                "method": "blacklist",
+                "engine_name": "CINS Army",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CRDF": {
+                "method": "blacklist",
+                "engine_name": "CRDF",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CSIS Security Group": {
+                "method": "blacklist",
+                "engine_name": "CSIS Security Group",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Snort IP sample list": {
+                "method": "blacklist",
+                "engine_name": "Snort IP sample list",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CMC Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "CMC Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CTX AI": {
+                "method": "blacklist",
+                "engine_name": "CTX AI",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Cyan": {
+                "method": "blacklist",
+                "engine_name": "Cyan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Cyble": {
+                "method": "blacklist",
+                "engine_name": "Cyble",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CyRadar": {
+                "method": "blacklist",
+                "engine_name": "CyRadar",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "DNS8": {
+                "method": "blacklist",
+                "engine_name": "DNS8",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Dr.Web": {
+                "method": "blacklist",
+                "engine_name": "Dr.Web",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Ermes": {
+                "method": "blacklist",
+                "engine_name": "Ermes",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ESET": {
+                "method": "blacklist",
+                "engine_name": "ESET",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ESTsecurity": {
+                "method": "blacklist",
+                "engine_name": "ESTsecurity",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "EmergingThreats": {
+                "method": "blacklist",
+                "engine_name": "EmergingThreats",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Emsisoft": {
+                "method": "blacklist",
+                "engine_name": "Emsisoft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Forcepoint ThreatSeeker": {
+                "method": "blacklist",
+                "engine_name": "Forcepoint ThreatSeeker",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Fortinet": {
+                "method": "blacklist",
+                "engine_name": "Fortinet",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Fortra": {
+                "method": "blacklist",
+                "engine_name": "Fortra",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "G-Data": {
+                "method": "blacklist",
+                "engine_name": "G-Data",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "GCP Abuse Intelligence": {
+                "method": "blacklist",
+                "engine_name": "GCP Abuse Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Google Safe Browsing": {
+                "method": "blacklist",
+                "engine_name": "Google Safe Browsing",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "GreenSnow": {
+                "method": "blacklist",
+                "engine_name": "GreenSnow",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "GreyNoise": {
+                "method": "blacklist",
+                "engine_name": "GreyNoise",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Gridinsoft": {
+                "method": "blacklist",
+                "engine_name": "Gridinsoft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Guardpot": {
+                "method": "blacklist",
+                "engine_name": "Guardpot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Heimdal Security": {
+                "method": "blacklist",
+                "engine_name": "Heimdal Security",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Hunt.io Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Hunt.io Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "IPsum": {
+                "method": "blacklist",
+                "engine_name": "IPsum",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Juniper Networks": {
+                "method": "blacklist",
+                "engine_name": "Juniper Networks",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Kaspersky": {
+                "method": "blacklist",
+                "engine_name": "Kaspersky",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "LevelBlue": {
+                "method": "blacklist",
+                "engine_name": "LevelBlue",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Lionic": {
+                "method": "blacklist",
+                "engine_name": "Lionic",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Lumu": {
+                "method": "blacklist",
+                "engine_name": "Lumu",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "MalwarePatrol": {
+                "method": "blacklist",
+                "engine_name": "MalwarePatrol",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "MalwareURL": {
+                "method": "blacklist",
+                "engine_name": "MalwareURL",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Malwared": {
+                "method": "blacklist",
+                "engine_name": "Malwared",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Mimecast": {
+                "method": "blacklist",
+                "engine_name": "Mimecast",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Netcraft": {
+                "method": "blacklist",
+                "engine_name": "Netcraft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "OpenPhish": {
+                "method": "blacklist",
+                "engine_name": "OpenPhish",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Orcapot": {
+                "method": "blacklist",
+                "engine_name": "Orcapot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishing Database": {
+                "method": "blacklist",
+                "engine_name": "Phishing Database",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "PhishFort": {
+                "method": "blacklist",
+                "engine_name": "PhishFort",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishtank": {
+                "method": "blacklist",
+                "engine_name": "Phishtank",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "PREBYTES": {
+                "method": "blacklist",
+                "engine_name": "PREBYTES",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "PrecisionSec": {
+                "method": "blacklist",
+                "engine_name": "PrecisionSec",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Quick Heal": {
+                "method": "blacklist",
+                "engine_name": "Quick Heal",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Quttera": {
+                "method": "blacklist",
+                "engine_name": "Quttera",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "SafeToOpen": {
+                "method": "blacklist",
+                "engine_name": "SafeToOpen",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sansec eComscan": {
+                "method": "blacklist",
+                "engine_name": "Sansec eComscan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Scantitan": {
+                "method": "blacklist",
+                "engine_name": "Scantitan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "SCUMWARE.org": {
+                "method": "blacklist",
+                "engine_name": "SCUMWARE.org",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Seclookup": {
+                "method": "blacklist",
+                "engine_name": "Seclookup",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "SecureBrain": {
+                "method": "blacklist",
+                "engine_name": "SecureBrain",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "SOCRadar": {
+                "method": "blacklist",
+                "engine_name": "SOCRadar",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sophos": {
+                "method": "blacklist",
+                "engine_name": "Sophos",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "StopForumSpam": {
+                "method": "blacklist",
+                "engine_name": "StopForumSpam",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sucuri SiteCheck": {
+                "method": "blacklist",
+                "engine_name": "Sucuri SiteCheck",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Synthient": {
+                "method": "blacklist",
+                "engine_name": "Synthient",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ThreatHive": {
+                "method": "blacklist",
+                "engine_name": "ThreatHive",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "URLhaus": {
+                "method": "blacklist",
+                "engine_name": "URLhaus",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "URLQuery": {
+                "method": "blacklist",
+                "engine_name": "URLQuery",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Viettel Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Viettel Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "VIPRE": {
+                "method": "blacklist",
+                "engine_name": "VIPRE",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "VX Vault": {
+                "method": "blacklist",
+                "engine_name": "VX Vault",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ViriBack": {
+                "method": "blacklist",
+                "engine_name": "ViriBack",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Webroot": {
+                "method": "blacklist",
+                "engine_name": "Webroot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Yandex Safebrowsing": {
+                "method": "blacklist",
+                "engine_name": "Yandex Safebrowsing",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ZeroCERT": {
+                "method": "blacklist",
+                "engine_name": "ZeroCERT",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "desenmascara.me": {
+                "method": "blacklist",
+                "engine_name": "desenmascara.me",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Xcitium Verdict Cloud": {
+                "method": "blacklist",
+                "engine_name": "Xcitium Verdict Cloud",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ZeroFox": {
+                "method": "blacklist",
+                "engine_name": "ZeroFox",
+                "category": "undetected",
+                "result": "unrated"
+              }
+            },
+            "as_owner": "Microsoft Corporation",
+            "reputation": 0,
+            "total_votes": {
+              "harmless": 0,
+              "malicious": 0
+            },
+            "first_seen_date": 1753113157,
+            "whois_date": 1789941499,
+            "asn": 8075,
+            "network": "20.160.0.0/12",
+            "country": "US",
+            "whois": "NetRange: 20.160.0.0 - 20.175.255.255\nCIDR: 20.160.0.0/12\nNetName: MSFT\nNetHandle: NET-20-160-0-0-1\nParent: NET20 (NET-20-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Microsoft Corporation (MSFT)\nRegDate: 2017-02-22\nUpdated: 2017-02-22\nRef: https://rdap.arin.net/registry/ip/20.160.0.0\nOrgName: Microsoft Corporation\nOrgId: MSFT\nAddress: One Microsoft Way\nCity: Redmond\nStateProv: WA\nPostalCode: 98052\nCountry: US\nRegDate: 1998-07-10\nUpdated: 2025-06-10\nComment: To report suspected security issues specific to traffic emanating from Microsoft online services, including the distribution of malicious content or other illicit or illegal material through a Microsoft online service, please submit reports to:\r\nComment: * https://cert.microsoft.com. \r\nComment: \r\nComment: For SPAM and other abuse issues, such as Microsoft Accounts, please contact:\r\nComment: * abuse@microsoft.com. \r\nComment: \r\nComment: To report security vulnerabilities in Microsoft products and services, please contact:\r\nComment: * secure@microsoft.com. \r\nComment: \r\nComment: For legal and law enforcement-related requests, please contact:\r\nComment: * msndcc@microsoft.com\r\nComment: \r\nComment: For routing, peering or DNS issues, please \r\nComment: contact:\r\nComment: * IOC@microsoft.com\nRef: https://rdap.arin.net/registry/entity/MSFT\nOrgTechHandle: BEDAR6-ARIN\nOrgTechName: Bedard, Dawn \nOrgTechPhone: +1-425-538-6637 \nOrgTechEmail: dabedard@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/BEDAR6-ARIN\nOrgTechHandle: MRPD-ARIN\nOrgTechName: Microsoft Routing, Peering, and DNS\nOrgTechPhone: +1-425-882-8080 \nOrgTechEmail: IOC@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/MRPD-ARIN\nOrgAbuseHandle: MAC74-ARIN\nOrgAbuseName: Microsoft Abuse Contact\nOrgAbusePhone: +1-425-882-8080 \nOrgAbuseEmail: abuse@microsoft.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/MAC74-ARIN\nOrgTechHandle: SINGH683-ARIN\nOrgTechName: Singh, Prachi \nOrgTechPhone: +1-425-707-5601 \nOrgTechEmail: pracsin@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/SINGH683-ARIN\nOrgTechHandle: IPHOS5-ARIN\nOrgTechName: IPHostmaster, IPHostmaster \nOrgTechPhone: +1-425-538-6637 \nOrgTechEmail: iphostmaster@microsoft.com\nOrgTechRef: https://rdap.arin.net/registry/entity/IPHOS5-ARIN\nOrgRoutingHandle: CHATU3-ARIN\nOrgRoutingName: Chaturmohta, Somesh \nOrgRoutingPhone: +1-425-882-8080 \nOrgRoutingEmail: someshch@microsoft.com\nOrgRoutingRef: https://rdap.arin.net/registry/entity/CHATU3-ARIN\n",
+            "last_analysis_date": 1792191711,
+            "continent": "NA",
+            "rdap": {
+              "object_class_name": "ip network",
+              "handle": "NET-20-160-0-0-1",
+              "start_address": "20.160.0.0",
+              "end_address": "20.175.255.255",
+              "ip_version": "v4",
+              "name": "MSFT",
+              "type": "DIRECT ALLOCATION",
+              "parent_handle": "NET-20-0-0-0-0",
+              "status": [
+                "active"
+              ],
+              "links": [
+                {
+                  "href": "https://rdap.arin.net/registry/ip/20.160.0.0",
+                  "rel": "self",
+                  "type": "application/rdap+json",
+                  "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                  "title": "",
+                  "media": "",
+                  "href_lang": []
+                },
+                {
+                  "href": "https://whois.arin.net/rest/net/NET-20-160-0-0-1",
+                  "rel": "alternate",
+                  "type": "application/xml",
+                  "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                  "title": "",
+                  "media": "",
+                  "href_lang": []
+                }
+              ],
+              "notices": [
+                {
+                  "title": "Terms of Service",
+                  "description": [
+                    "By using the ARIN RDAP/Whois service, you are agreeing to the RDAP/Whois Terms of Use"
+                  ],
+                  "links": [
+                    {
+                      "href": "https://www.arin.net/resources/registry/whois/tou/",
+                      "rel": "terms-of-service",
+                      "type": "text/html",
+                      "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "type": ""
+                },
+                {
+                  "title": "Whois Inaccuracy Reporting",
+                  "description": [
+                    "If you see inaccuracies in the results, please visit: "
+                  ],
+                  "links": [
+                    {
+                      "href": "https://www.arin.net/resources/registry/whois/inaccuracy_reporting/",
+                      "rel": "inaccuracy-report",
+                      "type": "text/html",
+                      "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "type": ""
+                },
+                {
+                  "title": "Copyright Notice",
+                  "description": [
+                    "Copyright 1997-2026, American Registry for Internet Numbers, Ltd."
+                  ],
+                  "links": [],
+                  "type": ""
+                }
+              ],
+              "events": [
+                {
+                  "event_action": "last changed",
+                  "event_date": "2017-02-22T10:27:12-05:00",
+                  "event_actor": "",
+                  "links": []
+                },
+                {
+                  "event_action": "registration",
+                  "event_date": "2017-02-22T10:27:12-05:00",
+                  "event_actor": "",
+                  "links": []
+                }
+              ],
+              "rdap_conformance": [
+                "nro_rdap_profile_0",
+                "rdap_level_0",
+                "cidr0",
+                "arin_originas0"
+              ],
+              "entities": [
+                {
+                  "object_class_name": "entity",
+                  "handle": "MSFT",
+                  "vcard_array": [
+                    {
+                      "name": "version",
+                      "type": "text",
+                      "values": [
+                        "4.0"
+                      ],
+                      "parameters": {}
+                    },
+                    {
+                      "name": "fn",
+                      "type": "text",
+                      "values": [
+                        "Microsoft Corporation"
+                      ],
+                      "parameters": {}
+                    },
+                    {
+                      "name": "adr",
+                      "parameters": {
+                        "label": [
+                          "One Microsoft Way\nRedmond\nWA\n98052\nUnited States"
+                        ]
+                      },
+                      "type": "text",
+                      "values": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "name": "kind",
+                      "type": "text",
+                      "values": [
+                        "org"
+                      ],
+                      "parameters": {}
+                    }
+                  ],
+                  "roles": [
+                    "registrant"
+                  ],
+                  "entities": [
+                    {
+                      "object_class_name": "entity",
+                      "handle": "MRPD-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "One Microsoft Way\nRedmond\nWA\n98052\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "Microsoft Routing, Peering, and DNS"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "org",
+                          "type": "text",
+                          "values": [
+                            "Microsoft Corporation"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "group"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "IOC@microsoft.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-425-882-8080"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "technical"
+                      ],
+                      "remarks": [
+                        {
+                          "title": "Registration Comments",
+                          "description": [
+                            "To report suspected security issues specific to \r",
+                            "traffic emanating from Microsoft online services, \r",
+                            "including the distribution of malicious content \r",
+                            "or other illicit or illegal material through a \r",
+                            "Microsoft online service, please submit reports \r",
+                            "to:\r",
+                            "* https://cert.microsoft.com.  \r",
+                            "\r",
+                            "For SPAM and other abuse issues, such as Microsoft \r",
+                            "Accounts, please contact:\r",
+                            "* abuse@microsoft.com.  \r",
+                            "\r",
+                            "To report security vulnerabilities in Microsoft \r",
+                            "products and services, please contact:\r",
+                            "* secure@microsoft.com.  \r",
+                            "\r",
+                            "For legal and law enforcement-related requests, \r",
+                            "please contact:\r",
+                            "* msndcc@microsoft.com\r",
+                            "\r",
+                            "For routing, peering or DNS issues, please \r",
+                            "contact:\r",
+                            "* IOC@microsoft.com"
+                          ],
+                          "links": [],
+                          "type": ""
+                        }
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/MRPD-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/MRPD-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2025-10-16T14:01:14-04:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2013-08-20T19:26:59-04:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "status": [
+                        "validated"
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "as_event_actor": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    },
+                    {
+                      "object_class_name": "entity",
+                      "handle": "SINGH683-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "1 Microsoft Way\nRedmond\nWA\n98052\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "Prachi Singh"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "n",
+                          "type": "text",
+                          "values": [
+                            "Singh",
+                            "Prachi",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "individual"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "pracsin@microsoft.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-425-707-5601"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "technical"
+                      ],
+                      "remarks": [
+                        {
+                          "title": "Unvalidated POC",
+                          "description": [
+                            "ARIN has attempted to validate the data for this POC, but has received no response from the POC since 2024-07-10"
+                          ],
+                          "links": [],
+                          "type": ""
+                        }
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/SINGH683-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/SINGH683-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2023-07-11T19:59:19-04:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2023-06-13T16:28:52-04:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "as_event_actor": [],
+                      "status": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    },
+                    {
+                      "object_class_name": "entity",
+                      "handle": "IPHOS5-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "One Microsoft Way\nRedmond\nWA\n20147\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "IPHostmaster IPHostmaster"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "n",
+                          "type": "text",
+                          "values": [
+                            "IPHostmaster",
+                            "IPHostmaster",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "individual"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "iphostmaster@microsoft.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-425-538-6637"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "administrative",
+                        "technical"
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/IPHOS5-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/IPHOS5-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2025-10-21T16:47:32-04:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2021-10-13T17:30:13-04:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "status": [
+                        "validated"
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "remarks": [],
+                      "as_event_actor": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    },
+                    {
+                      "object_class_name": "entity",
+                      "handle": "BEDAR6-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "1 Redmond Way\nRedmond\nWA\n98052\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "Dawn Bedard"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "n",
+                          "type": "text",
+                          "values": [
+                            "Bedard",
+                            "Dawn",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "individual"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "dabedard@microsoft.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-425-538-6637"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "technical"
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/BEDAR6-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/BEDAR6-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2025-08-19T10:44:04-04:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2016-10-20T15:51:33-04:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "status": [
+                        "validated"
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "remarks": [],
+                      "as_event_actor": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    },
+                    {
+                      "object_class_name": "entity",
+                      "handle": "MAC74-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "One Microsoft Way\nRedmond\nWA\n98052\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "Microsoft Abuse Contact"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "org",
+                          "type": "text",
+                          "values": [
+                            "Microsoft Corporation"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "group"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "abuse@microsoft.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-425-882-8080"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "abuse"
+                      ],
+                      "remarks": [
+                        {
+                          "title": "Registration Comments",
+                          "description": [
+                            "To report suspected security issues specific to traffic emanating from Microsoft Online Services, including the distribution of malicious content or other illicit or illegal material through a Microsoft Online Service, please submit reports to https://cert.microsoft.com.  \r",
+                            "For SPAM and other abuse issues, such as Microsoft Accounts, please contact abuse@microsoft.com.  \r",
+                            "To report security vulnerabilities in Microsoft products and services, please contact secure@microsoft.com.  \r",
+                            "For legal and law enforcement-related requests, please contact msndcc@microsoft.com\r",
+                            "For routing, peering or DNS issues, please contact IOC@microsoft.com"
+                          ],
+                          "links": [],
+                          "type": ""
+                        }
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/MAC74-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/MAC74-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2025-06-10T13:18:57-04:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2013-08-20T19:24:57-04:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "status": [
+                        "validated"
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "as_event_actor": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    },
+                    {
+                      "object_class_name": "entity",
+                      "handle": "CHATU3-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "One Microsoft way\nRedmond\nWA\n98052\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "Somesh Chaturmohta"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "n",
+                          "type": "text",
+                          "values": [
+                            "Chaturmohta",
+                            "Somesh",
+                            "",
+                            "",
+                            ""
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "individual"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "someshch@microsoft.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-425-882-8080"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "routing"
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/CHATU3-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/CHATU3-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2026-04-10T19:08:09-04:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2023-06-13T16:26:16-04:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "status": [
+                        "validated"
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "remarks": [],
+                      "as_event_actor": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    }
+                  ],
+                  "remarks": [
+                    {
+                      "title": "Registration Comments",
+                      "description": [
+                        "To report suspected security issues specific to traffic emanating from Microsoft online services, including the distribution of malicious content or other illicit or illegal material through a Microsoft online service, please submit reports to:\r",
+                        "* https://cert.microsoft.com.  \r",
+                        "\r",
+                        "For SPAM and other abuse issues, such as Microsoft Accounts, please contact:\r",
+                        "* abuse@microsoft.com.  \r",
+                        "\r",
+                        "To report security vulnerabilities in Microsoft products and services, please contact:\r",
+                        "* secure@microsoft.com.  \r",
+                        "\r",
+                        "For legal and law enforcement-related requests, please contact:\r",
+                        "* msndcc@microsoft.com\r",
+                        "\r",
+                        "For routing, peering or DNS issues, please \r",
+                        "contact:\r",
+                        "* IOC@microsoft.com"
+                      ],
+                      "links": [],
+                      "type": ""
+                    }
+                  ],
+                  "links": [
+                    {
+                      "href": "https://rdap.arin.net/registry/entity/MSFT",
+                      "rel": "self",
+                      "type": "application/rdap+json",
+                      "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    },
+                    {
+                      "href": "https://whois.arin.net/rest/org/MSFT",
+                      "rel": "alternate",
+                      "type": "application/xml",
+                      "value": "https://rdap.arin.net/registry/ip/20.169.217.199",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "event_action": "last changed",
+                      "event_date": "2025-06-10T13:41:34-04:00",
+                      "event_actor": "",
+                      "links": []
+                    },
+                    {
+                      "event_action": "registration",
+                      "event_date": "1998-07-10T00:00:00-04:00",
+                      "event_actor": "",
+                      "links": []
+                    }
+                  ],
+                  "port43": "whois.arin.net",
+                  "public_ids": [],
+                  "as_event_actor": [],
+                  "status": [],
+                  "networks": [],
+                  "autnums": [],
+                  "url": "",
+                  "lang": "",
+                  "rdap_conformance": []
+                }
+              ],
+              "port43": "whois.arin.net",
+              "cidr0_cidrs": [
+                {
+                  "v4prefix": "20.160.0.0",
+                  "length": 12,
+                  "v6prefix": ""
+                }
+              ],
+              "country": "",
+              "arin_originas0_originautnums": [],
+              "remarks": []
+            },
+            "tags": [],
+            "regional_internet_registry": "ARIN"
+          }
+        }
+      },
+      "message": null
+    }
+  },
+  {
+    "correo_id": "R005",
+    "consulta": {
+      "service": "VirusTotal",
+      "indicator_type": "domain",
+      "indicator": "ezagameroasin02.onmicrosoft.com",
+      "status": "no_results",
+      "queried_at": "2026-10-23T17:37:04+00:00",
+      "endpoint": "https://www.virustotal.com/api/v3/domains/ezagameroasin02.onmicrosoft.com",
+      "http_status": 404,
+      "data": null,
+      "message": "VirusTotal no devolvi\u00f3 un reporte existente (HTTP 404); no se solicit\u00f3 escaneo."
+    }
+  },
+  {
+    "correo_id": "R005",
+    "consulta": {
+      "service": "VirusTotal",
+      "indicator_type": "ip",
+      "indicator": "209.85.167.46",
+      "status": "found",
+      "queried_at": "2026-10-23T17:37:21+00:00",
+      "endpoint": "https://www.virustotal.com/api/v3/ip_addresses/209.85.167.46",
+      "http_status": 200,
+      "data": {
+        "data": {
+          "id": "209.85.167.46",
+          "type": "ip_address",
+          "links": {
+            "self": "https://www.virustotal.com/api/v3/ip_addresses/209.85.167.46"
+          },
+          "attributes": {
+            "asn": 15169,
+            "first_seen_date": 1695920250,
+            "whois_date": 1791391505,
+            "last_analysis_stats": {
+              "malicious": 0,
+              "suspicious": 0,
+              "undetected": 36,
+              "harmless": 56,
+              "timeout": 0
+            },
+            "whois": "NetRange: 209.85.128.0 - 209.85.255.255\nCIDR: 209.85.128.0/17\nNetName: GOOGLE\nNetHandle: NET-209-85-128-0-1\nParent: NET209 (NET-209-0-0-0-0)\nNetType: Direct Allocation\nOriginAS: \nOrganization: Google LLC (GOGL)\nRegDate: 2006-01-13\nUpdated: 2012-02-24\nRef: https://rdap.arin.net/registry/ip/209.85.128.0\nOrgName: Google LLC\nOrgId: GOGL\nAddress: 1600 Amphitheatre Parkway\nCity: Mountain View\nStateProv: CA\nPostalCode: 94043\nCountry: US\nRegDate: 2000-03-30\nUpdated: 2019-10-31\nComment: Please note that the recommended way to file abuse complaints are located in the following links. \nComment: \nComment: To report abuse and illegal activity: https://www.google.com/contact/\nComment: \nComment: For legal requests: http://support.google.com/legal \nComment: \nComment: Regards, \nComment: The Google Team\nRef: https://rdap.arin.net/registry/entity/GOGL\nOrgTechHandle: ZG39-ARIN\nOrgTechName: Google LLC\nOrgTechPhone: +1-650-253-0000 \nOrgTechEmail: arin-contact@google.com\nOrgTechRef: https://rdap.arin.net/registry/entity/ZG39-ARIN\nOrgAbuseHandle: ABUSE5250-ARIN\nOrgAbuseName: Abuse\nOrgAbusePhone: +1-650-253-0000 \nOrgAbuseEmail: network-abuse@google.com\nOrgAbuseRef: https://rdap.arin.net/registry/entity/ABUSE5250-ARIN\n",
+            "total_votes": {
+              "harmless": 0,
+              "malicious": 4
+            },
+            "reputation": -4,
+            "country": "US",
+            "last_analysis_results": {
+              "Acronis": {
+                "method": "blacklist",
+                "engine_name": "Acronis",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "0xSI_f33d": {
+                "method": "blacklist",
+                "engine_name": "0xSI_f33d",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Abusix": {
+                "method": "blacklist",
+                "engine_name": "Abusix",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ADMINUSLabs": {
+                "method": "blacklist",
+                "engine_name": "ADMINUSLabs",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Axur": {
+                "method": "blacklist",
+                "engine_name": "Axur",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ChainPatrol": {
+                "method": "blacklist",
+                "engine_name": "ChainPatrol",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Criminal IP": {
+                "method": "blacklist",
+                "engine_name": "Criminal IP",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AILabs (MONITORAPP)": {
+                "method": "blacklist",
+                "engine_name": "AILabs (MONITORAPP)",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "AlienVault": {
+                "method": "blacklist",
+                "engine_name": "AlienVault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "alphaMountain.ai": {
+                "method": "blacklist",
+                "engine_name": "alphaMountain.ai",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AlphaSOC": {
+                "method": "blacklist",
+                "engine_name": "AlphaSOC",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Antiy-AVL": {
+                "method": "blacklist",
+                "engine_name": "Antiy-AVL",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ArcSight Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "ArcSight Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AutoShun": {
+                "method": "blacklist",
+                "engine_name": "AutoShun",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Bfore.Ai PreCrime": {
+                "method": "blacklist",
+                "engine_name": "Bfore.Ai PreCrime",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "BitDefender": {
+                "method": "blacklist",
+                "engine_name": "BitDefender",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Bkav": {
+                "method": "blacklist",
+                "engine_name": "Bkav",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Blueliv": {
+                "method": "blacklist",
+                "engine_name": "Blueliv",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Certego": {
+                "method": "blacklist",
+                "engine_name": "Certego",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Chong Lua Dao": {
+                "method": "blacklist",
+                "engine_name": "Chong Lua Dao",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CINS Army": {
+                "method": "blacklist",
+                "engine_name": "CINS Army",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CRDF": {
+                "method": "blacklist",
+                "engine_name": "CRDF",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CSIS Security Group": {
+                "method": "blacklist",
+                "engine_name": "CSIS Security Group",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Snort IP sample list": {
+                "method": "blacklist",
+                "engine_name": "Snort IP sample list",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CMC Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "CMC Threat Intelligence",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CTX AI": {
+                "method": "blacklist",
+                "engine_name": "CTX AI",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Cyan": {
+                "method": "blacklist",
+                "engine_name": "Cyan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Cyble": {
+                "method": "blacklist",
+                "engine_name": "Cyble",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CyRadar": {
+                "method": "blacklist",
+                "engine_name": "CyRadar",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "DNS8": {
+                "method": "blacklist",
+                "engine_name": "DNS8",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Dr.Web": {
+                "method": "blacklist",
+                "engine_name": "Dr.Web",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Ermes": {
+                "method": "blacklist",
+                "engine_name": "Ermes",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ESET": {
+                "method": "blacklist",
+                "engine_name": "ESET",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ESTsecurity": {
+                "method": "blacklist",
+                "engine_name": "ESTsecurity",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "EmergingThreats": {
+                "method": "blacklist",
+                "engine_name": "EmergingThreats",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Emsisoft": {
+                "method": "blacklist",
+                "engine_name": "Emsisoft",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Forcepoint ThreatSeeker": {
+                "method": "blacklist",
+                "engine_name": "Forcepoint ThreatSeeker",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Fortinet": {
+                "method": "blacklist",
+                "engine_name": "Fortinet",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Fortra": {
+                "method": "blacklist",
+                "engine_name": "Fortra",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "G-Data": {
+                "method": "blacklist",
+                "engine_name": "G-Data",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GCP Abuse Intelligence": {
+                "method": "blacklist",
+                "engine_name": "GCP Abuse Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Google Safe Browsing": {
+                "method": "blacklist",
+                "engine_name": "Google Safe Browsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GreenSnow": {
+                "method": "blacklist",
+                "engine_name": "GreenSnow",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GreyNoise": {
+                "method": "blacklist",
+                "engine_name": "GreyNoise",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Gridinsoft": {
+                "method": "blacklist",
+                "engine_name": "Gridinsoft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Guardpot": {
+                "method": "blacklist",
+                "engine_name": "Guardpot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Heimdal Security": {
+                "method": "blacklist",
+                "engine_name": "Heimdal Security",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Hunt.io Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Hunt.io Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "IPsum": {
+                "method": "blacklist",
+                "engine_name": "IPsum",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Juniper Networks": {
+                "method": "blacklist",
+                "engine_name": "Juniper Networks",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Kaspersky": {
+                "method": "blacklist",
+                "engine_name": "Kaspersky",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "LevelBlue": {
+                "method": "blacklist",
+                "engine_name": "LevelBlue",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Lionic": {
+                "method": "blacklist",
+                "engine_name": "Lionic",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Lumu": {
+                "method": "blacklist",
+                "engine_name": "Lumu",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "MalwarePatrol": {
+                "method": "blacklist",
+                "engine_name": "MalwarePatrol",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "MalwareURL": {
+                "method": "blacklist",
+                "engine_name": "MalwareURL",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Malwared": {
+                "method": "blacklist",
+                "engine_name": "Malwared",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Mimecast": {
+                "method": "blacklist",
+                "engine_name": "Mimecast",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Netcraft": {
+                "method": "blacklist",
+                "engine_name": "Netcraft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "OpenPhish": {
+                "method": "blacklist",
+                "engine_name": "OpenPhish",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Orcapot": {
+                "method": "blacklist",
+                "engine_name": "Orcapot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishing Database": {
+                "method": "blacklist",
+                "engine_name": "Phishing Database",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PhishFort": {
+                "method": "blacklist",
+                "engine_name": "PhishFort",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishtank": {
+                "method": "blacklist",
+                "engine_name": "Phishtank",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PREBYTES": {
+                "method": "blacklist",
+                "engine_name": "PREBYTES",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PrecisionSec": {
+                "method": "blacklist",
+                "engine_name": "PrecisionSec",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Quick Heal": {
+                "method": "blacklist",
+                "engine_name": "Quick Heal",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Quttera": {
+                "method": "blacklist",
+                "engine_name": "Quttera",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SafeToOpen": {
+                "method": "blacklist",
+                "engine_name": "SafeToOpen",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sansec eComscan": {
+                "method": "blacklist",
+                "engine_name": "Sansec eComscan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Scantitan": {
+                "method": "blacklist",
+                "engine_name": "Scantitan",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SCUMWARE.org": {
+                "method": "blacklist",
+                "engine_name": "SCUMWARE.org",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Seclookup": {
+                "method": "blacklist",
+                "engine_name": "Seclookup",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SecureBrain": {
+                "method": "blacklist",
+                "engine_name": "SecureBrain",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "SOCRadar": {
+                "method": "blacklist",
+                "engine_name": "SOCRadar",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sophos": {
+                "method": "blacklist",
+                "engine_name": "Sophos",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "StopForumSpam": {
+                "method": "blacklist",
+                "engine_name": "StopForumSpam",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Sucuri SiteCheck": {
+                "method": "blacklist",
+                "engine_name": "Sucuri SiteCheck",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Synthient": {
+                "method": "blacklist",
+                "engine_name": "Synthient",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ThreatHive": {
+                "method": "blacklist",
+                "engine_name": "ThreatHive",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLhaus": {
+                "method": "blacklist",
+                "engine_name": "URLhaus",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLQuery": {
+                "method": "blacklist",
+                "engine_name": "URLQuery",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Viettel Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Viettel Threat Intelligence",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "VIPRE": {
+                "method": "blacklist",
+                "engine_name": "VIPRE",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "VX Vault": {
+                "method": "blacklist",
+                "engine_name": "VX Vault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ViriBack": {
+                "method": "blacklist",
+                "engine_name": "ViriBack",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Webroot": {
+                "method": "blacklist",
+                "engine_name": "Webroot",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Yandex Safebrowsing": {
+                "method": "blacklist",
+                "engine_name": "Yandex Safebrowsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroCERT": {
+                "method": "blacklist",
+                "engine_name": "ZeroCERT",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "desenmascara.me": {
+                "method": "blacklist",
+                "engine_name": "desenmascara.me",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Xcitium Verdict Cloud": {
+                "method": "blacklist",
+                "engine_name": "Xcitium Verdict Cloud",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroFox": {
+                "method": "blacklist",
+                "engine_name": "ZeroFox",
+                "category": "undetected",
+                "result": "unrated"
+              }
+            },
+            "regional_internet_registry": "ARIN",
+            "last_modification_date": 1792768049,
+            "continent": "NA",
+            "last_analysis_date": 1792767412,
+            "network": "209.85.128.0/17",
+            "tags": [],
+            "as_owner": "Google LLC",
+            "rdap": {
+              "object_class_name": "ip network",
+              "handle": "NET-209-85-128-0-1",
+              "start_address": "209.85.128.0",
+              "end_address": "209.85.255.255",
+              "ip_version": "v4",
+              "name": "GOOGLE",
+              "type": "DIRECT ALLOCATION",
+              "parent_handle": "NET-209-0-0-0-0",
+              "status": [
+                "active"
+              ],
+              "links": [
+                {
+                  "href": "https://rdap.arin.net/registry/ip/209.85.128.0",
+                  "rel": "self",
+                  "type": "application/rdap+json",
+                  "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                  "title": "",
+                  "media": "",
+                  "href_lang": []
+                },
+                {
+                  "href": "https://whois.arin.net/rest/net/NET-209-85-128-0-1",
+                  "rel": "alternate",
+                  "type": "application/xml",
+                  "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                  "title": "",
+                  "media": "",
+                  "href_lang": []
+                }
+              ],
+              "notices": [
+                {
+                  "title": "Terms of Service",
+                  "description": [
+                    "By using the ARIN RDAP/Whois service, you are agreeing to the RDAP/Whois Terms of Use"
+                  ],
+                  "links": [
+                    {
+                      "href": "https://www.arin.net/resources/registry/whois/tou/",
+                      "rel": "terms-of-service",
+                      "type": "text/html",
+                      "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "type": ""
+                },
+                {
+                  "title": "Whois Inaccuracy Reporting",
+                  "description": [
+                    "If you see inaccuracies in the results, please visit: "
+                  ],
+                  "links": [
+                    {
+                      "href": "https://www.arin.net/resources/registry/whois/inaccuracy_reporting/",
+                      "rel": "inaccuracy-report",
+                      "type": "text/html",
+                      "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "type": ""
+                },
+                {
+                  "title": "Copyright Notice",
+                  "description": [
+                    "Copyright 1997-2026, American Registry for Internet Numbers, Ltd."
+                  ],
+                  "links": [],
+                  "type": ""
+                }
+              ],
+              "events": [
+                {
+                  "event_action": "last changed",
+                  "event_date": "2012-02-24T09:44:34-05:00",
+                  "event_actor": "",
+                  "links": []
+                },
+                {
+                  "event_action": "registration",
+                  "event_date": "2006-01-13T13:42:45-05:00",
+                  "event_actor": "",
+                  "links": []
+                }
+              ],
+              "rdap_conformance": [
+                "nro_rdap_profile_0",
+                "rdap_level_0",
+                "cidr0",
+                "arin_originas0"
+              ],
+              "entities": [
+                {
+                  "object_class_name": "entity",
+                  "handle": "GOGL",
+                  "vcard_array": [
+                    {
+                      "name": "version",
+                      "type": "text",
+                      "values": [
+                        "4.0"
+                      ],
+                      "parameters": {}
+                    },
+                    {
+                      "name": "fn",
+                      "type": "text",
+                      "values": [
+                        "Google LLC"
+                      ],
+                      "parameters": {}
+                    },
+                    {
+                      "name": "adr",
+                      "parameters": {
+                        "label": [
+                          "1600 Amphitheatre Parkway\nMountain View\nCA\n94043\nUnited States"
+                        ]
+                      },
+                      "type": "text",
+                      "values": [
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "name": "kind",
+                      "type": "text",
+                      "values": [
+                        "org"
+                      ],
+                      "parameters": {}
+                    }
+                  ],
+                  "roles": [
+                    "registrant"
+                  ],
+                  "entities": [
+                    {
+                      "object_class_name": "entity",
+                      "handle": "ABUSE5250-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "1600 Amphitheatre Parkway\nMountain View\nCA\n94043\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "Abuse"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "org",
+                          "type": "text",
+                          "values": [
+                            "Google Inc."
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "group"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "network-abuse@google.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-650-253-0000"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "abuse"
+                      ],
+                      "remarks": [
+                        {
+                          "title": "Registration Comments",
+                          "description": [
+                            "Please note that the recommended way to file abuse complaints are located in the following links.",
+                            "",
+                            "To report abuse and illegal activity: https://www.google.com/contact/",
+                            "",
+                            "For legal requests: http://support.google.com/legal ",
+                            "",
+                            "Regards,",
+                            "The Google Team"
+                          ],
+                          "links": [],
+                          "type": ""
+                        }
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/ABUSE5250-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/ABUSE5250-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2026-08-19T14:34:18-04:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2015-11-06T15:36:35-05:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "status": [
+                        "validated"
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "as_event_actor": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    },
+                    {
+                      "object_class_name": "entity",
+                      "handle": "ZG39-ARIN",
+                      "vcard_array": [
+                        {
+                          "name": "version",
+                          "type": "text",
+                          "values": [
+                            "4.0"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "adr",
+                          "parameters": {
+                            "label": [
+                              "1600 Amphitheatre Parkway\nMountain View\nCA\n94043\nUnited States"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            "",
+                            ""
+                          ]
+                        },
+                        {
+                          "name": "fn",
+                          "type": "text",
+                          "values": [
+                            "Google LLC"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "org",
+                          "type": "text",
+                          "values": [
+                            "Google LLC"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "kind",
+                          "type": "text",
+                          "values": [
+                            "group"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "email",
+                          "type": "text",
+                          "values": [
+                            "arin-contact@google.com"
+                          ],
+                          "parameters": {}
+                        },
+                        {
+                          "name": "tel",
+                          "parameters": {
+                            "type": [
+                              "work",
+                              "voice"
+                            ]
+                          },
+                          "type": "text",
+                          "values": [
+                            "+1-650-253-0000"
+                          ]
+                        }
+                      ],
+                      "roles": [
+                        "technical",
+                        "administrative"
+                      ],
+                      "links": [
+                        {
+                          "href": "https://rdap.arin.net/registry/entity/ZG39-ARIN",
+                          "rel": "self",
+                          "type": "application/rdap+json",
+                          "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        },
+                        {
+                          "href": "https://whois.arin.net/rest/poc/ZG39-ARIN",
+                          "rel": "alternate",
+                          "type": "application/xml",
+                          "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                          "title": "",
+                          "media": "",
+                          "href_lang": []
+                        }
+                      ],
+                      "events": [
+                        {
+                          "event_action": "last changed",
+                          "event_date": "2025-11-10T07:10:31-05:00",
+                          "event_actor": "",
+                          "links": []
+                        },
+                        {
+                          "event_action": "registration",
+                          "event_date": "2000-11-30T13:54:08-05:00",
+                          "event_actor": "",
+                          "links": []
+                        }
+                      ],
+                      "status": [
+                        "validated"
+                      ],
+                      "port43": "whois.arin.net",
+                      "public_ids": [],
+                      "entities": [],
+                      "remarks": [],
+                      "as_event_actor": [],
+                      "networks": [],
+                      "autnums": [],
+                      "url": "",
+                      "lang": "",
+                      "rdap_conformance": []
+                    }
+                  ],
+                  "remarks": [
+                    {
+                      "title": "Registration Comments",
+                      "description": [
+                        "Please note that the recommended way to file abuse complaints are located in the following links. ",
+                        "",
+                        "To report abuse and illegal activity: https://www.google.com/contact/",
+                        "",
+                        "For legal requests: http://support.google.com/legal ",
+                        "",
+                        "Regards, ",
+                        "The Google Team"
+                      ],
+                      "links": [],
+                      "type": ""
+                    }
+                  ],
+                  "links": [
+                    {
+                      "href": "https://rdap.arin.net/registry/entity/GOGL",
+                      "rel": "self",
+                      "type": "application/rdap+json",
+                      "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    },
+                    {
+                      "href": "https://whois.arin.net/rest/org/GOGL",
+                      "rel": "alternate",
+                      "type": "application/xml",
+                      "value": "https://rdap.arin.net/registry/ip/209.85.167.46",
+                      "title": "",
+                      "media": "",
+                      "href_lang": []
+                    }
+                  ],
+                  "events": [
+                    {
+                      "event_action": "last changed",
+                      "event_date": "2019-10-31T15:45:45-04:00",
+                      "event_actor": "",
+                      "links": []
+                    },
+                    {
+                      "event_action": "registration",
+                      "event_date": "2000-03-30T00:00:00-05:00",
+                      "event_actor": "",
+                      "links": []
+                    }
+                  ],
+                  "port43": "whois.arin.net",
+                  "public_ids": [],
+                  "as_event_actor": [],
+                  "status": [],
+                  "networks": [],
+                  "autnums": [],
+                  "url": "",
+                  "lang": "",
+                  "rdap_conformance": []
+                }
+              ],
+              "port43": "whois.arin.net",
+              "cidr0_cidrs": [
+                {
+                  "v4prefix": "209.85.128.0",
+                  "length": 17,
+                  "v6prefix": ""
+                }
+              ],
+              "country": "",
+              "arin_originas0_originautnums": [],
+              "remarks": []
+            }
+          }
+        }
+      },
+      "message": null
+    }
+  }
+]

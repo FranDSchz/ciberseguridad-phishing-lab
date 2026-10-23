@@ -1,0 +1,197 @@
+[
+  {
+    "id": "E001",
+    "archivo": "capturas/F001-virustotal-detecciones.jpg",
+    "pagina_pdf": 21
+  },
+  {
+    "id": "E002",
+    "archivo": "capturas/F001-virustotal-propiedades.jpg",
+    "pagina_pdf": 22
+  },
+  {
+    "id": "E003",
+    "archivo": "capturas/F002-virustotal-detecciones.jpg",
+    "pagina_pdf": 23
+  },
+  {
+    "id": "E004",
+    "archivo": "capturas/F002-virustotal-historial.jpg",
+    "pagina_pdf": 24
+  },
+  {
+    "id": "E005",
+    "archivo": "capturas/F002-virustotal-propiedades.jpg",
+    "pagina_pdf": 25
+  },
+  {
+    "id": "E006",
+    "archivo": "capturas/R004-pnreap-verificado.jpg",
+    "pagina_pdf": 26
+  },
+  {
+    "id": "E007",
+    "archivo": "capturas/R004-cabeceras-local.jpg",
+    "pagina_pdf": 27
+  },
+  {
+    "id": "E008",
+    "archivo": "capturas/R004-consultas-local-continuacion.jpg",
+    "pagina_pdf": 28
+  },
+  {
+    "id": "E009",
+    "archivo": "capturas/R004-consultas-local.jpg",
+    "pagina_pdf": 29
+  },
+  {
+    "id": "E010",
+    "archivo": "capturas/R004-enlace-1-virustotal.jpg",
+    "pagina_pdf": 30
+  },
+  {
+    "id": "E011",
+    "archivo": "capturas/R004-enlace-2-virustotal.jpg",
+    "pagina_pdf": 31
+  },
+  {
+    "id": "E012",
+    "archivo": "capturas/R004-ip-entrega-virustotal.jpg",
+    "pagina_pdf": 32
+  },
+  {
+    "id": "E013",
+    "archivo": "capturas/R004-mime-enlaces-local.jpg",
+    "pagina_pdf": 33
+  },
+  {
+    "id": "E014",
+    "archivo": "capturas/R004-remitente-virustotal.jpg",
+    "pagina_pdf": 34
+  },
+  {
+    "id": "E015",
+    "archivo": "capturas/R005-cabeceras-local.jpg",
+    "pagina_pdf": 35
+  },
+  {
+    "id": "E016",
+    "archivo": "capturas/R005-consultas-local.jpg",
+    "pagina_pdf": 36
+  },
+  {
+    "id": "E017",
+    "archivo": "capturas/R005-dominio-enlaces-virustotal.jpg",
+    "pagina_pdf": 37
+  },
+  {
+    "id": "E018",
+    "archivo": "capturas/R005-ip-entrega-virustotal.jpg",
+    "pagina_pdf": 38
+  },
+  {
+    "id": "E019",
+    "archivo": "capturas/R005-mime-enlaces-local.jpg",
+    "pagina_pdf": 39
+  },
+  {
+    "id": "E020",
+    "archivo": "capturas/R004-mxtoolbox-blacklist.jpg",
+    "pagina_pdf": 40
+  },
+  {
+    "id": "E021",
+    "archivo": "capturas/R005-mxtoolbox-blacklist.jpg",
+    "pagina_pdf": 41
+  },
+  {
+    "id": "E022",
+    "archivo": "capturas/U001-certificados-local.jpg",
+    "pagina_pdf": 42
+  },
+  {
+    "id": "E023",
+    "archivo": "capturas/U001-registro-dns-local.jpg",
+    "pagina_pdf": 43
+  },
+  {
+    "id": "E024",
+    "archivo": "capturas/U001-urlscan-imagen-archivada.jpg",
+    "pagina_pdf": 44
+  },
+  {
+    "id": "E025",
+    "archivo": "capturas/U001-urlscan-resumen.jpg",
+    "pagina_pdf": 45
+  },
+  {
+    "id": "E026",
+    "archivo": "capturas/U001-virustotal-url.jpg",
+    "pagina_pdf": 46
+  },
+  {
+    "id": "E027",
+    "archivo": "capturas/U002-registro-ip-local.jpg",
+    "pagina_pdf": 47
+  },
+  {
+    "id": "E028",
+    "archivo": "capturas/U002-urlscan-descarga-detalle.jpg",
+    "pagina_pdf": 48
+  },
+  {
+    "id": "E029",
+    "archivo": "capturas/U002-urlscan-descarga.jpg",
+    "pagina_pdf": 49
+  },
+  {
+    "id": "E030",
+    "archivo": "capturas/U002-virustotal-hash-descarga.jpg",
+    "pagina_pdf": 50
+  },
+  {
+    "id": "E031",
+    "archivo": "capturas/U002-virustotal-url.jpg",
+    "pagina_pdf": 51
+  },
+  {
+    "id": "E032",
+    "archivo": "capturas/U003-certificados-local.jpg",
+    "pagina_pdf": 52
+  },
+  {
+    "id": "E033",
+    "archivo": "capturas/U003-registro-dns-local.jpg",
+    "pagina_pdf": 53
+  },
+  {
+    "id": "E034",
+    "archivo": "capturas/U003-urlscan-imagen-archivada.jpg",
+    "pagina_pdf": 54
+  },
+  {
+    "id": "E035",
+    "archivo": "capturas/U003-urlscan-resumen.jpg",
+    "pagina_pdf": 55
+  },
+  {
+    "id": "E036",
+    "archivo": "capturas/U003-virustotal-dominio.jpg",
+    "pagina_pdf": 56
+  },
+  {
+    "id": "E037",
+    "archivo": "capturas/U003-virustotal-url.jpg",
+    "pagina_pdf": 57
+  },
+  {
+    "id": "E038",
+    "archivo": "consolidacion/fuentes/companero-p16-imagen01-X53.png",
+    "pagina_pdf": 58
+  },
+  {
+    "id": "E039",
+    "archivo": "consolidacion/fuentes/companero-p16-imagen02-X54.png",
+    "pagina_pdf": 59
+  }
+]

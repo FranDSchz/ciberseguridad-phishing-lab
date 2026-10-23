@@ -1,0 +1,1285 @@
+﻿====================================================================================================
+ INFORME DE ANALISIS Y TRIAGE DE RECURSOS SOSPECHOSOS
+ Fundamentos de Ciberseguridad - UTN FRRe - Ciclo 2026 - Grupo 05
+====================================================================================================
+Identificador : Correo-2
+Tipo          : Correo electronico (.eml)
+Recurso       : sample-10071.eml
+Fecha/hora    : 2026-10-23 01:52:33 -0300
+Herramienta   : triage_recursos.py v1.0
+
+Documento de evidencia tecnica. NO abrir enlaces ni ejecutar archivos.
+====================================================================================================
+
+
+====================================================================================================
+ 1. FICHA DE ANALISIS (SECCION 7 DEL ENUNCIADO)
+====================================================================================================
+
+Identificador del recurso:        Correo-2
+Tipo:                             Correo electronico (.eml)
+Herramientas usadas:              Analisis local de cabeceras y contenido (.eml); VirusTotal API v3
+                                  (dominio, IP, URLs y adjuntos); urlscan.io API; WHOIS/RDAP;
+                                  crt.sh; MXToolbox (verificacion manual)
+Evidencia clave:                  DKIM valida pero no esta alineado con el dominio del From
+                                  (ezagameroasin02-onmicrosoft-com.20251104.gappssmtp.com); 4 URL(s)
+                                  del correo resultaron sospechosas: woondsplay.com (7 detecciones
+                                  VT); SPF: no definido o sin resultado; DKIM: pass; DMARC: no
+                                  definido o sin resultado; Asunto con terminos de spam/phishing: no
+                                  deposit
+Tipo de amenaza (si aplica):      Spam / phishing con redireccion a contenido malicioso
+Impacto C-I-A:                    Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+VEREDICTO:                        MALICIOSO
+Confianza:                        media
+Medida usuario:                   No abrir enlaces ni adjuntos. No responder. Reportar el correo
+                                  como phishing y, si se interactuo, cambiar credenciales y cerrar
+                                  sesiones.
+Medida organizacion:              Bloquear remitente/dominio/IP y URLs en el filtro de correo;
+                                  publicar DMARC en reject; agregar IoCs a proxy/EDR/SIEM; capacitar
+                                  usuarios; revisar buzones que recibieron el mensaje.
+
+====================================================================================================
+ 2. DATOS DEL RECURSO
+====================================================================================================
+
+Archivo:                          sample-10071.eml
+Ruta:                             C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+                                  Ciberseguridad\Practica\tp1\Grupo_05\sample-10071.eml
+Tamano:                           465737 bytes
+SHA-256:                          43cbe639b7ce04294b5f11ef5daf2a5acf8d7b5e2a057fe699e071251a4f0fb8
+SHA-1:                            114537dded5d8ada673a8efef5de874a846064a1
+MD5:                              09831e7fb7b600104d0c3a6aae054379
+From:                             free spin <taylor.flores@ezagameroasin02.onmicrosoft.com>
+Para:                             phishing@pot
+Asunto:                           100 Balls. $5 No Deposit Required !
+Fecha:                            Mon, 06 Jul 2026 15:53:28 -0700
+Message-ID:                       <CALxrQXbC8XJNNNs=awmrsc0OgvPxE52LOS-OPLb2xZ4Vm+GxRQ@mail.gmail.co
+                                  m>
+
+====================================================================================================
+ 3. HERRAMIENTAS UTILIZADAS
+====================================================================================================
+
+  - Analisis local de cabeceras completas, identidades, Received, cuerpo y adjuntos.
+  - VirusTotal API v3: dominio del From, IP de origen, URLs extraidas y adjuntos.
+  - urlscan.io API: comportamiento y captura de las URLs del correo.
+  - WHOIS/RDAP y crt.sh: antiguedad, registrador, name servers y certificados.
+  - MXToolbox: verificacion manual de cabeceras y blacklist de la IP de origen.
+
+====================================================================================================
+ 4. EVIDENCIA TECNICA (METODOLOGIA 5.1)
+====================================================================================================
+
+
+4.1 Cabeceras completas (paso 1: SPF, DKIM, DMARC)
+----------------------------------------------------------------------------------------------------
+From:                             free spin <taylor.flores@ezagameroasin02.onmicrosoft.com>
+Reply-To:                         (no presente)
+Return-Path:                      taylor.flores@ezagameroasin02.onmicrosoft.com
+To:                               phishing@pot
+Subject:                          100 Balls. $5 No Deposit Required !
+Date:                             Mon, 06 Jul 2026 15:53:28 -0700
+Message-ID:                       <CALxrQXbC8XJNNNs=awmrsc0OgvPxE52LOS-OPLb2xZ4Vm+GxRQ@mail.gmail.co
+                                  m>
+X-Mailer:                         (no presente)
+X-Originating-IP:                 (no presente)
+List-Unsubscribe:                 (no presente)
+
+Resultado de autenticacion declarado en las cabeceras:
+  spf=none (sender IP is 209.85.167.46) smtp.mailfrom=ezagameroasin02.onmicrosoft.com; dkim=pass
+  (signature was verified) header.d=ezagameroasin02-onmicrosoft-
+  com.20251104.gappssmtp.com;dmarc=none action=none header.from=ezagameroasin02.onmicrosoft.com;
+  Received-SPF: None (protection.outlook.com: ezagameroasin02.onmicrosoft.com does not designate permitted sender hosts)
+
+Alineacion calculada (relaxed, dominio registrable):
+Mecanismo   | Resultado  | Dominio evaluado             | Alineado  | Observacion
+------------+------------+------------------------------+-----------+---------------------------------------
+SPF         | none       | ezagameroasin02.onmicrosoft. | SI        | IP 209.85.167.46; HELO -
+            |            | com                          |           |
+DKIM        | pass       | ezagameroasin02-onmicrosoft- | NO        | selectores: 20251104
+            |            | com.20251104.gappssmtp.com   |           |
+DMARC       | none       | ezagameroasin02.onmicrosoft. | SI        | compauth=-
+            |            | com                          |           |
+
+SPF efectivo (pass + alineado):   NO
+DKIM efectivo (pass + alineado):  NO
+DMARC efectivo:                   NO
+
+4.2 Identidades y cadena Received (paso 2)
+----------------------------------------------------------------------------------------------------
+Identidad    | Direccion                            | Dominio                | Dominio registrable
+-------------+--------------------------------------+------------------------+-------------------------
+From         | taylor.flores@ezagameroasin02.onmicr | ezagameroasin02.onmicr | onmicrosoft.com
+             | osoft.com                            | osoft.com              |
+Reply-To     | (no presente)                        | -                      | -
+Return-Path  | taylor.flores@ezagameroasin02.onmicr | ezagameroasin02.onmicr | onmicrosoft.com
+             | osoft.com                            | osoft.com              |
+
+Nombre visible:                   free spin
+Saltos Received:                  7
+IP de origen (mas antigua):       209.85.167.46
+HELO/host de origen:              mail-lf1-f46.google.com
+Fecha del salto de origen:        2026-07-06 19:53:32 -0300
+Demora total de la cadena:        8 segundos
+
+Recorrido de abajo hacia arriba (1 = salto mas antiguo):
+#    | Desde (from)                   | Por (by)                       | IP               | Fecha
+-----+--------------------------------+--------------------------------+------------------+-------------------
+1    | 288239414919                   | gmailapi.google.com            | -                | 2026-07-06
+     |                                |                                |                  | 19:53:28 -0300
+2    | 288239414919                   | gmailapi.google.com            | -                | 2026-07-06
+     |                                |                                |                  | 19:53:28 -0300
+3    | -                              | mail-lf1-f46.google.com        | -                | 2026-07-06
+     |                                |                                |                  | 19:53:32 -0300
+4    | mail-lf1-f46.google.com        | SN1PEPF0002BA4D.mail.protectio | 209.85.167.46    | 2026-07-06
+     |                                | n.outlook.com                  |                  | 19:53:32 -0300
+5    | SN1PEPF0002BA4D.namprd03.prod. | DS3P221CA0013.outlook.office36 | 2603:10b6:8:45e: | 2026-07-06
+     | outlook.com                    | 5.com                          | cafe::50         | 19:53:32 -0300
+6    | DS3P221CA0013.NAMP221.PROD.OUT | IA0PR10MB6723.namprd10.prod.ou | 2603:10b6:8:45e: | 2026-07-06
+     | LOOK.COM                       | tlook.com                      | :12              | 19:53:32 -0300
+7    | IA0PR10MB6723.namprd10.prod.ou | MW4PR10MB5749.namprd10.prod.ou | -                | 2026-07-06
+     | tlook.com                      | tlook.com                      |                  | 19:53:36 -0300
+
+Anomalias detectadas automaticamente:
+  - DKIM valida pero el dominio firmante (d=ezagameroasin02-onmicrosoft-com.20251104.gappssmtp.com)
+    no esta alineado con el From (ezagameroasin02.onmicrosoft.com).
+  - SPF no definido para el dominio remitente.
+  - DMARC no definido para el dominio remitente.
+  - El asunto contiene terminos tipicos de spam/phishing: no deposit.
+
+4.3 Reputacion de IP y dominio (paso 3)
+----------------------------------------------------------------------------------------------------
+IP de origen en VirusTotal
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=56, undetected=36, timeout=0
+Reputacion:                       -4
+Pais / red (RDAP):                - / 209.85.128.0 - 209.85.255.255
+Blacklist (MXToolbox):            https://mxtoolbox.com/blacklists.aspx?host=209.85.167.46
+
+Dominio analizado: onmicrosoft.com
+
+VirusTotal (dominio)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=57, undetected=35, timeout=0
+Reputacion:                       -7
+Categorias:                       Sophos: information technology, Forcepoint ThreatSeeker:
+                                  collaboration - office
+Creacion segun VirusTotal:        2005-02-02 21:00:00 -0300
+
+[WHOIS / RDAP]
+Fecha de creacion:                2005-02-03T05:15:04Z
+Antiguedad:                       7931 dias (~21.7 anos)
+Vencimiento:                      2027-02-03T05:15:04Z
+Ultimo cambio:                    2026-01-02T12:06:39Z
+Registrador:                      MarkMonitor Inc.
+Name servers:                     NS1.BDM.MICROSOFTONLINE.COM, NS2.BDM.MICROSOFTONLINE.COM,
+                                  NS3.BDM.MICROSOFTONLINE.COM, NS4.BDM.MICROSOFTONLINE.COM
+Estados:                          client delete prohibited, client transfer prohibited, client
+                                  update prohibited, server delete prohibited, server transfer
+                                  prohibited, server update prohibited
+Consulta RDAP:                    https://rdap.org/domain/onmicrosoft.com
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          4250
+Subdominios unicos:               413
+Certificado mas antiguo:          2012-06-11T13:54:41
+Certificado mas reciente:         2025-11-13T02:30:31
+Emisores:                         Amazon, CA 沃通免费SSL证书 G2, COMODO High-Assurance Secure Server CA,
+                                  COMODO RSA Domain Validation Secure Server CA, Certum Domain
+                                  Validation CA SHA2, Certyfikat SSL, DigiCert Cloud Services CA-1,
+                                  DigiCert Global G2 TLS RSA SHA256 2020 CA1, DigiCert SHA2 Extended
+                                  Validation Server CA, DigiCert SHA2 High Assurance Server CA,
+                                  DigiCert SHA2 Secure Server CA, DigiCert TLS Hybrid ECC SHA384
+                                  2020 CA1, DigiCert TLS RSA SHA256 2020 CA1, DigiCert Verified Mark
+                                  RSA4096 SHA256 2021 CA1, Entrust Certification Authority - L1K,
+                                  GeoTrust Global TLS RSA4096 SHA256 2022 CA1, GeoTrust RSA CA 2018,
+                                  GeoTrust SSL CA - G3, GeoTrust TLS DV RSA Mixed SHA256 2020 CA-1,
+                                  GeoTrust TLS RSA CA G1, GlobalSign Atlas ECCR5 DV TLS CA 2025 Q1,
+                                  GlobalSign Atlas ECCR5 DV TLS CA 2025 Q2, GlobalSign GCC R3 DV TLS
+                                  CA 2020, GlobalSign GCC R6 AlphaSSL CA 2023, GlobalSign
+                                  Organization Validation CA - SHA256 - G2, GlobalSign Organization
+                                  Validation CA - SHA256 - G3, GlobalSign RSA OV SSL CA 2018, Go
+                                  Daddy Secure Certificate Authority - G2, Let's Encrypt Authority
+                                  X3, MSIT Machine Auth CA 2, Microsoft Azure RSA TLS Issuing CA 03,
+                                  Microsoft Azure RSA TLS Issuing CA 04, Microsoft Azure RSA TLS
+                                  Issuing CA 07, Microsoft Azure RSA TLS Issuing CA 08, Microsoft
+                                  Azure TLS Issuing CA 01, Microsoft Azure TLS Issuing CA 02,
+                                  Microsoft Azure TLS Issuing CA 05, Microsoft Azure TLS Issuing CA
+                                  06, Microsoft IT SSL SHA2, Microsoft IT TLS CA 1, Microsoft IT TLS
+                                  CA 2, Microsoft IT TLS CA 4, Microsoft IT TLS CA 5, Microsoft RSA
+                                  TLS CA 01, Microsoft RSA TLS CA 02, PostSignum Public CA 5,
+                                  PostSignum Qualified CA 2, RapidSSL RSA CA 2018, SSL.com RSA SSL
+                                  subCA, Sectigo RSA Extended Validation Secure Server CA, StartCom
+                                  BR SSL ICA, StartCom Class 1 Primary Intermediate Server CA,
+                                  StartCom Class 3 Primary Intermediate Server CA, TERENA SSL CA 2,
+                                  TERENA SSL CA 3, Thawte RSA CA 2018
+Subdominios detectados (muestra):
+  - 365engineer.onmicrosoft.com
+  - aadapcanary.onmicrosoft.com
+  - aaddeployment.m365fusebot.copperstonetrs.onmicrosoft.com
+  - abilityemp.mail.onmicrosoft.com
+  - accenture.mail.onmicrosoft.com
+  - actionsam.oauth.onmicrosoft.com
+  - addstest.fdtest1.onmicrosoft.com
+  - adient.mail.onmicrosoft.com
+  - adminapi.onmicrosoft.com
+  - administrator@pinnacleld.onmicrosoft.com
+  - aig.mail.onmicrosoft.com
+  - aliefisd.mail.onmicrosoft.com
+  - anywhere.sml1902.onmicrosoft.com
+  - ap.nakasamba.onmicrosoft.com
+  - ap.nakateste.onmicrosoft.com
+  - apixppe.fastrca.m365fusebot.copperstonetrs.onmicrosoft.com
+  - apixppe.m365fusebot.copperstonetrs.onmicrosoft.com
+  - apixppe.slowrca.m365fusebot.copperstonetrs.onmicrosoft.com
+  - aps.service.gsgotrs.onmicrosoft.com
+  - armurro.onmicrosoft.com
+  - autodiscover.abilityemp.mail.onmicrosoft.com
+  - autodiscover.accenture.mail.onmicrosoft.com
+  - autodiscover.accenture.onmicrosoft.com
+  - autodiscover.adient.mail.onmicrosoft.com
+  - autodiscover.adient.onmicrosoft.com
+  - autodiscover.aexp.mail.onmicrosoft.com
+  - autodiscover.aexp.onmicrosoft.com
+  - autodiscover.aig.mail.onmicrosoft.com
+  - autodiscover.aig.onmicrosoft.com
+  - autodiscover.alderhook.mail.onmicrosoft.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.onmicrosoft.com&output=json
+
+4.4 Contenido: URLs, dominios y adjuntos (paso 4)
+----------------------------------------------------------------------------------------------------
+4.4.1 URLs extraidas y resultado resumido
+#   | URL                              | VT URL      | VT dom.     | urlscan       | Edad dominio      | Veredicto
+----+----------------------------------+-------------+-------------+---------------+-------------------+-------------
+1   | https://woondsplay.com/4IUDzk371 | sin         | 7/92 mal    | no disponible | 636 dias (~20.9   | SOSPECHOSO
+    | 60FhgK603hilnvxbkml205KDOCSQFWCG | registro    |             |               | meses)            |
+    | UOKVN164627KZZL1612137Z5         |             |             |               |                   |
+2   | https://woondsplay.com/4vDQaH371 | sin         | 7/92 mal    | no disponible | 636 dias (~20.9   | SOSPECHOSO
+    | 60PziR603tasvuvcjhf205XXZESOQVAW | registro    |             |               | meses)            |
+    | PQENN164627TBQU1612137E5         |             |             |               |                   |
+3   | http://woondsplay.com/rd/5ZQTpy3 | sin         | 7/92 mal    | no disponible | 636 dias (~20.9   | SOSPECHOSO
+    | 7160YuYr603hjzjpooxqx205YLIXVNUP | registro    |             |               | meses)            |
+    | ZVSGGKP164627LZKH1612137L5       |             |             |               |                   |
+4   | https://phishing@pot.efuserasset | sin         | 0/92 mal    | no disponible | 2400 dias (~6.6   | LIMPIO
+    | s.com/686/offers/19447/c/57942/a | registro    |             |               | anos)             |
+    | ssets/logo.png                   |             |             |               |                   |
+5   | https://i.imgur.com/l5706eG.png  | 0/91 mal    | 0/92 mal    | no disponible | 6495 dias (~17.8  | LIMPIO
+    |                                  |             |             |               | anos)             |
+6   | https://woondsplay.com/track/3yv | sin         | 7/92 mal    | no disponible | 636 dias (~20.9   | SOSPECHOSO
+    | gKf37160ZirY603pcghemnfed205ZHLN | registro    |             |               | meses)            |
+    | GTBYFDAHPYR164627CMYZ1612137f5   |             |             |               |                   |
+
+4.4.2 Dominios involucrados (detalle)
+
+4.4.2.1 Dominio: woondsplay.com
+----------------------------------------------------------------------------------------------------
+
+VirusTotal (dominio)
+Detecciones:                      7/92 maliciosos, 2 sospechosos
+Conteo por categoria:             malicious=7, suspicious=2, harmless=50, undetected=33, timeout=0
+Reputacion:                       0
+Categorias:                       alphaMountain.ai: Phishing (alphaMountain.ai)
+Motores que detectan el recurso como malicioso:
+  - alphaMountain.ai: phishing
+  - Bkav: malicious
+  - CRDF: malicious
+  - Fortinet: phishing
+  - Seclookup: malicious
+  - SOCRadar: malicious
+  - Webroot: malicious
+Motores que lo marcan como sospechoso:
+  - ESET: suspicious
+  - Forcepoint ThreatSeeker: spam
+Creacion segun VirusTotal:        2025-01-23 21:00:00 -0300
+
+[WHOIS / RDAP]
+Fecha de creacion:                2025-01-24T07:00:43Z
+Antiguedad:                       636 dias (~20.9 meses)
+Vencimiento:                      2028-01-24T07:00:43Z
+Ultimo cambio:                    2026-07-16T03:37:32Z
+Registrador:                      NameCheap, Inc.
+Name servers:                     DNS1.REGISTRAR-SERVERS.COM, DNS2.REGISTRAR-SERVERS.COM
+Estados:                          client hold, client transfer prohibited
+Consulta RDAP:                    https://rdap.org/domain/woondsplay.com
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          140
+Subdominios unicos:               1
+Certificado mas antiguo:          2025-01-24T10:45:59
+Certificado mas reciente:         2026-07-09T08:43:21
+Emisores:                         Cloudflare TLS Issuing ECC CA 1, Cloudflare TLS Issuing RSA CA 1,
+                                  E7, E8, R12, R13, Sectigo Public Server Authentication CA DV E36,
+                                  WE1, YE1, YE2, YR1, YR2
+Subdominios detectados (muestra):
+  - woondsplay.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.woondsplay.com&output=json
+
+4.4.2.2 Dominio: efuserassets.com
+----------------------------------------------------------------------------------------------------
+
+VirusTotal (dominio)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=56, undetected=36, timeout=0
+Reputacion:                       -1
+Creacion segun VirusTotal:        2020-03-27 12:11:27 -0300
+
+[WHOIS / RDAP]
+Fecha de creacion:                2020-03-27T15:11:27Z
+Antiguedad:                       2400 dias (~6.6 anos)
+Vencimiento:                      2027-03-27T15:11:27Z
+Ultimo cambio:                    2026-03-12T16:03:18Z
+Registrador:                      Squarespace Domains II LLC
+Name servers:                     NS-CLOUD-A1.GOOGLEDOMAINS.COM, NS-CLOUD-A2.GOOGLEDOMAINS.COM,
+                                  NS-CLOUD-A3.GOOGLEDOMAINS.COM, NS-CLOUD-A4.GOOGLEDOMAINS.COM
+Estados:                          client delete prohibited, client transfer prohibited
+Consulta RDAP:                    https://rdap.org/domain/efuserassets.com
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          8
+Subdominios unicos:               3
+Certificado mas antiguo:          2020-03-27T18:49:52
+Certificado mas reciente:         2026-02-19T15:36:05
+Emisores:                         Go Daddy Secure Certificate Authority - G2, Starfield Secure
+                                  Certificate Authority - G2
+Subdominios detectados (muestra):
+  - efuserassets.com
+  - files.efuserassets.com
+  - www.files.efuserassets.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.efuserassets.com&output=json
+
+4.4.2.3 Dominio: imgur.com
+----------------------------------------------------------------------------------------------------
+
+VirusTotal (dominio)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=59, undetected=33, timeout=0
+Reputacion:                       4
+Creacion segun VirusTotal:        2009-01-09 17:30:53 -0300
+
+[WHOIS / RDAP]
+Fecha de creacion:                2009-01-09T20:30:53Z
+Antiguedad:                       6495 dias (~17.8 anos)
+Vencimiento:                      2028-01-09T20:30:53Z
+Ultimo cambio:                    2026-05-16T14:37:25Z
+Registrador:                      Amazon Registrar, Inc.
+Name servers:                     NS-1198.AWSDNS-21.ORG, NS-1677.AWSDNS-17.CO.UK,
+                                  NS-457.AWSDNS-57.COM, NS-577.AWSDNS-08.NET
+Estados:                          client transfer prohibited
+Consulta RDAP:                    https://rdap.org/domain/imgur.com
+
+[crt.sh - Certificate Transparency]
+Certificados observados:          1097
+Subdominios unicos:               31
+Certificado mas antiguo:          2010-08-05T14:14:37
+Certificado mas reciente:         2026-10-05T23:32:36
+Emisores:                         Amazon, Amazon RSA 2048 M01, Amazon RSA 2048 M02, Amazon RSA 2048
+                                  M03, COMODO RSA Domain Validation Secure Server CA 2, DigiCert
+                                  High Assurance CA-3, DigiCert SHA2 Secure Server CA, DigiCert TLS
+                                  RSA SHA256 2020 CA1, GTS CA 1D4, GTS CA 1P5, GeoTrust DV SSL CA,
+                                  GlobalSign CloudSSL CA - SHA256 - G3, GlobalSign Domain Validation
+                                  CA - SHA256 - G3, GlobalSign Organization Validation CA - G2,
+                                  Let's Encrypt Authority X1, Let's Encrypt Authority X3, R10, R11,
+                                  R12, R13, R3, Sectigo ECC Domain Validation Secure Server CA,
+                                  Sectigo Public Server Authentication CA DV E36, Sectigo Public
+                                  Server Authentication CA DV R36, Sectigo RSA Domain Validation
+                                  Secure Server CA, StartCom Class 1 Primary Intermediate Server CA,
+                                  WE1, WR1, WR3, YE1, YR1, YR2, ZeroSSL ECC DV SSL CA 2, ZeroSSL ECC
+                                  Domain Secure Site CA
+Subdominios detectados (muestra):
+  - 8ybhy85kld9zp9xf84x6.imgur.com
+  - an.imgur.com
+  - and.imgur.com
+  - api.imgur.com
+  - api.stack.imgur.com
+  - apidocs.imgur.com
+  - browserevents.imgur.com
+  - community.imgur.com
+  - g00.imgur.com
+  - help.imgur.com
+  - helpold.imgur.com
+  - i.imgur.com
+  - i.stack.imgur.com
+  - imgur.com
+  - iob.imgur.com
+  - ios.imgur.com
+  - lilsnack.imgur.com
+  - links.msg.imgur.com
+  - press.imgur.com
+  - rt.imgur.com
+  - s.imgur.com
+  - sen.imgur.com
+  - sentry.imgur.com
+  - stack.imgur.com
+  - status.imgur.com
+  - store.imgur.com
+  - www.api.stack.imgur.com
+  - www.i.stack.imgur.com
+  - www.links.msg.imgur.com
+  - www.press.imgur.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.imgur.com&output=json
+
+4.4.3 Detalle por URL
+
+4.4.3.1 URL: https://woondsplay.com/4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCGUOKVN164627...
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://woondsplay.com/4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCGUO
+                                  KVN164627KZZL1612137Z5
+Normalizada:                      https://woondsplay.com/4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCGUO
+                                  KVN164627KZZL1612137Z5
+Version defangada:                hxxps://woondsplay[.]com/4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCG
+                                  UOKVN164627KZZL1612137Z5
+Esquema / host / puerto:          https / woondsplay.com / por defecto
+Ruta:                             /4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCGUOKVN164627KZZL1612137Z5
+
+VirusTotal (URL)
+Estado:                           Sin registros previos en VirusTotal
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly93b29uZHNwbGF5LmNvbS8
+                                  0SVVEemszNzE2MEZoZ0s2MDNoaWxudnhia21sMjA1S0RPQ1NRRldDR1VPS1ZOMTY0N
+                                  jI3S1paTDE2MTIxMzdaNQ
+
+[Dominio]
+Dominio:                          woondsplay.com
+VT:                               7/92 maliciosos, 2 sospechosos
+Antiguedad del dominio:           636 dias (~20.9 meses)
+Registrador:                      NameCheap, Inc.
+Consulta RDAP:                    https://rdap.org/domain/woondsplay.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.woondsplay.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      2/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=56, undetected=34, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - MalwareURL: malware
+  - SOCRadar: malicious
+Pais / red:                       - / 97.107.128.0 - 97.107.143.255
+Consulta RDAP:                    https://rdap.org/ip/97.107.140.250
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: DNS Error - Could not resolve
+                                  domain
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+  - El sandbox de urlscan.io no pudo resolver el dominio. Puede estar dado de baja, bloqueado por el
+    resolver o filtrado; no es prueba de limpieza.
+
+[Analisis heuristico de la URL]
+  - No se observaron patrones sospechosos en la URL.
+
+Veredicto de esta URL:            SOSPECHOSO
+Confianza:                        media
+  - La URL no tiene analisis previo en VirusTotal (sin reputacion).
+  - VirusTotal: el dominio acumula 7 detecciones maliciosas.
+  - urlscan.io no disponible: envio HTTP 400: DNS Error - Could not resolve domain
+  - Dominio con antiguedad: 636 dias (~20.9 meses).
+
+4.4.3.2 URL: https://woondsplay.com/4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAWPQENN164627...
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://woondsplay.com/4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAWPQ
+                                  ENN164627TBQU1612137E5
+Normalizada:                      https://woondsplay.com/4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAWPQ
+                                  ENN164627TBQU1612137E5
+Version defangada:                hxxps://woondsplay[.]com/4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAW
+                                  PQENN164627TBQU1612137E5
+Esquema / host / puerto:          https / woondsplay.com / por defecto
+Ruta:                             /4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAWPQENN164627TBQU1612137E5
+
+VirusTotal (URL)
+Estado:                           Sin registros previos en VirusTotal
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly93b29uZHNwbGF5LmNvbS8
+                                  0dkRRYUgzNzE2MFB6aVI2MDN0YXN2dXZjamhmMjA1WFhaRVNPUVZBV1BRRU5OMTY0N
+                                  jI3VEJRVTE2MTIxMzdFNQ
+
+[Dominio]
+Dominio:                          woondsplay.com
+VT:                               7/92 maliciosos, 2 sospechosos
+Antiguedad del dominio:           636 dias (~20.9 meses)
+Registrador:                      NameCheap, Inc.
+Consulta RDAP:                    https://rdap.org/domain/woondsplay.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.woondsplay.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      2/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=56, undetected=34, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - MalwareURL: malware
+  - SOCRadar: malicious
+Pais / red:                       - / 97.107.128.0 - 97.107.143.255
+Consulta RDAP:                    https://rdap.org/ip/97.107.140.250
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: DNS Error - Could not resolve
+                                  domain
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+  - El sandbox de urlscan.io no pudo resolver el dominio. Puede estar dado de baja, bloqueado por el
+    resolver o filtrado; no es prueba de limpieza.
+
+[Analisis heuristico de la URL]
+  - No se observaron patrones sospechosos en la URL.
+
+Veredicto de esta URL:            SOSPECHOSO
+Confianza:                        media
+  - La URL no tiene analisis previo en VirusTotal (sin reputacion).
+  - VirusTotal: el dominio acumula 7 detecciones maliciosas.
+  - urlscan.io no disponible: envio HTTP 400: DNS Error - Could not resolve domain
+  - Dominio con antiguedad: 636 dias (~20.9 meses).
+
+4.4.3.3 URL: http://woondsplay.com/rd/5ZQTpy37160YuYr603hjzjpooxqx205YLIXVNUPZVSGGKP1646...
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       http://woondsplay.com/rd/5ZQTpy37160YuYr603hjzjpooxqx205YLIXVNUPZV
+                                  SGGKP164627LZKH1612137L5
+Normalizada:                      http://woondsplay.com/rd/5ZQTpy37160YuYr603hjzjpooxqx205YLIXVNUPZV
+                                  SGGKP164627LZKH1612137L5
+Version defangada:                hxxp://woondsplay[.]com/rd/5ZQTpy37160YuYr603hjzjpooxqx205YLIXVNUP
+                                  ZVSGGKP164627LZKH1612137L5
+Esquema / host / puerto:          http / woondsplay.com / por defecto
+Ruta:                             /rd/5ZQTpy37160YuYr603hjzjpooxqx205YLIXVNUPZVSGGKP164627LZKH161213
+                                  7L5
+
+VirusTotal (URL)
+Estado:                           Sin registros previos en VirusTotal
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cDovL3dvb25kc3BsYXkuY29tL3J
+                                  kLzVaUVRweTM3MTYwWXVZcjYwM2hqempwb294cXgyMDVZTElYVk5VUFpWU0dHS1AxN
+                                  jQ2MjdMWktIMTYxMjEzN0w1
+
+[Dominio]
+Dominio:                          woondsplay.com
+VT:                               7/92 maliciosos, 2 sospechosos
+Antiguedad del dominio:           636 dias (~20.9 meses)
+Registrador:                      NameCheap, Inc.
+Consulta RDAP:                    https://rdap.org/domain/woondsplay.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.woondsplay.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      2/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=56, undetected=34, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - MalwareURL: malware
+  - SOCRadar: malicious
+Pais / red:                       - / 97.107.128.0 - 97.107.143.255
+Consulta RDAP:                    https://rdap.org/ip/97.107.140.250
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: DNS Error - Could not resolve
+                                  domain
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+  - El sandbox de urlscan.io no pudo resolver el dominio. Puede estar dado de baja, bloqueado por el
+    resolver o filtrado; no es prueba de limpieza.
+
+[Analisis heuristico de la URL]
+  - La URL usa HTTP sin cifrar (no HTTPS).
+
+Veredicto de esta URL:            SOSPECHOSO
+Confianza:                        media
+  - La URL no tiene analisis previo en VirusTotal (sin reputacion).
+  - VirusTotal: el dominio acumula 7 detecciones maliciosas.
+  - urlscan.io no disponible: envio HTTP 400: DNS Error - Could not resolve domain
+  - Dominio con antiguedad: 636 dias (~20.9 meses).
+  - La URL usa HTTP sin cifrar (no HTTPS).
+
+4.4.3.4 URL: https://phishing@pot.efuserassets.com/686/offers/19447/c/57942/assets/logo.png
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://phishing@pot.efuserassets.com/686/offers/19447/c/57942/ass
+                                  ets/logo.png
+Normalizada:                      https://phishing@pot.efuserassets.com/686/offers/19447/c/57942/ass
+                                  ets/logo.png
+Version defangada:                hxxps://phishing@pot[.]efuserassets[.]com/686/offers/19447/c/57942
+                                  /assets/logo[.]png
+Esquema / host / puerto:          https / pot.efuserassets.com / por defecto
+Ruta:                             /686/offers/19447/c/57942/assets/logo.png
+
+VirusTotal (URL)
+Estado:                           Sin registros previos en VirusTotal
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly9waGlzaGluZ0Bwb3QuZWZ
+                                  1c2VyYXNzZXRzLmNvbS82ODYvb2ZmZXJzLzE5NDQ3L2MvNTc5NDIvYXNzZXRzL2xvZ
+                                  28ucG5n
+
+[Dominio]
+Dominio:                          efuserassets.com
+VT:                               0/92 maliciosos, 0 sospechosos
+Antiguedad del dominio:           2400 dias (~6.6 anos)
+Registrador:                      Squarespace Domains II LLC
+Consulta RDAP:                    https://rdap.org/domain/efuserassets.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.efuserassets.com&output=json
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: DNS Error - Could not resolve
+                                  domain
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+  - El sandbox de urlscan.io no pudo resolver el dominio. Puede estar dado de baja, bloqueado por el
+    resolver o filtrado; no es prueba de limpieza.
+
+[Analisis heuristico de la URL]
+  - La URL contiene '@' en el netloc (tecnica de confusion).
+
+Veredicto de esta URL:            LIMPIO
+Confianza:                        media
+  - La URL no tiene analisis previo en VirusTotal (sin reputacion).
+  - urlscan.io no disponible: envio HTTP 400: DNS Error - Could not resolve domain
+  - Dominio con antiguedad: 2400 dias (~6.6 anos).
+  - La URL contiene '@' en el netloc (tecnica de confusion).
+
+4.4.3.5 URL: https://i.imgur.com/l5706eG.png
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://i.imgur.com/l5706eG.png
+Normalizada:                      https://i.imgur.com/l5706eG.png
+Version defangada:                hxxps://i[.]imgur[.]com/l5706eG[.]png
+Esquema / host / puerto:          https / i.imgur.com / por defecto
+Ruta:                             /l5706eG.png
+
+VirusTotal (URL)
+Detecciones:                      0/91 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=60, undetected=31, timeout=0
+Reputacion:                       -1
+Categorias:                       BitDefender: misc, Sophos: photo galleries, Forcepoint
+                                  ThreatSeeker: personal network storage and backup, Google:
+                                  social_media
+Tags:                             third-party-cookies, iframes, external-resources, trackers
+Cadena de redirecciones (VT):
+  - https://i.imgur.com/l5706eG.png
+  - https://imgur.com/l5706eG
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly9pLmltZ3VyLmNvbS9sNTc
+                                  wNmVHLnBuZw
+
+[Dominio]
+Dominio:                          imgur.com
+VT:                               0/92 maliciosos, 0 sospechosos
+Antiguedad del dominio:           6495 dias (~17.8 anos)
+Registrador:                      Amazon Registrar, Inc.
+Consulta RDAP:                    https://rdap.org/domain/imgur.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.imgur.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      0/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=0, suspicious=0, harmless=55, undetected=37, timeout=0
+Reputacion:                       -2
+Pais / red:                       - / 199.232.0.0 - 199.232.255.255
+Consulta RDAP:                    https://rdap.org/ip/199.232.192.193
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: Scan prevented ...
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+
+[Analisis heuristico de la URL]
+  - No se observaron patrones sospechosos en la URL.
+
+Veredicto de esta URL:            LIMPIO
+Confianza:                        media
+  - urlscan.io no disponible: envio HTTP 400: Scan prevented ...
+  - Dominio con antiguedad: 6495 dias (~17.8 anos).
+
+4.4.3.6 URL: https://woondsplay.com/track/3yvgKf37160ZirY603pcghemnfed205ZHLNGTBYFDAHPYR...
+----------------------------------------------------------------------------------------------------
+Original (como se recibio):       https://woondsplay.com/track/3yvgKf37160ZirY603pcghemnfed205ZHLNGT
+                                  BYFDAHPYR164627CMYZ1612137f5
+Normalizada:                      https://woondsplay.com/track/3yvgKf37160ZirY603pcghemnfed205ZHLNGT
+                                  BYFDAHPYR164627CMYZ1612137f5
+Version defangada:                hxxps://woondsplay[.]com/track/3yvgKf37160ZirY603pcghemnfed205ZHLN
+                                  GTBYFDAHPYR164627CMYZ1612137f5
+Esquema / host / puerto:          https / woondsplay.com / por defecto
+Ruta:                             /track/3yvgKf37160ZirY603pcghemnfed205ZHLNGTBYFDAHPYR164627CMYZ161
+                                  2137f5
+
+VirusTotal (URL)
+Estado:                           Sin registros previos en VirusTotal
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly93b29uZHNwbGF5LmNvbS9
+                                  0cmFjay8zeXZnS2YzNzE2MFppclk2MDNwY2doZW1uZmVkMjA1WkhMTkdUQllGREFIU
+                                  FlSMTY0NjI3Q01ZWjE2MTIxMzdmNQ
+
+[Dominio]
+Dominio:                          woondsplay.com
+VT:                               7/92 maliciosos, 2 sospechosos
+Antiguedad del dominio:           636 dias (~20.9 meses)
+Registrador:                      NameCheap, Inc.
+Consulta RDAP:                    https://rdap.org/domain/woondsplay.com
+Consulta crt.sh:                  https://crt.sh/?q=%25.woondsplay.com&output=json
+
+[Direccion IP]
+VirusTotal (IP)
+Detecciones:                      2/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=56, undetected=34, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - MalwareURL: malware
+  - SOCRadar: malicious
+Pais / red:                       - / 97.107.128.0 - 97.107.143.255
+Consulta RDAP:                    https://rdap.org/ip/97.107.140.250
+
+[urlscan.io]
+Estado:                           No disponible: envio HTTP 400: DNS Error - Could not resolve
+                                  domain
+  - urlscan.io rechazo el escaneo (HTTP 400). Puede ocurrir con imagenes, archivos o por politica
+    del servicio; no implica que el recurso sea limpio ni malicioso.
+  - El sandbox de urlscan.io no pudo resolver el dominio. Puede estar dado de baja, bloqueado por el
+    resolver o filtrado; no es prueba de limpieza.
+
+[Analisis heuristico de la URL]
+  - No se observaron patrones sospechosos en la URL.
+
+Veredicto de esta URL:            SOSPECHOSO
+Confianza:                        media
+  - La URL no tiene analisis previo en VirusTotal (sin reputacion).
+  - VirusTotal: el dominio acumula 7 detecciones maliciosas.
+  - urlscan.io no disponible: envio HTTP 400: DNS Error - Could not resolve domain
+  - Dominio con antiguedad: 636 dias (~20.9 meses).
+
+4.4.4 Adjuntos
+  (el correo no contiene adjuntos)
+
+4.4.5 Contenido ofuscado / codificado
+  (no se detectaron bloques Base64/URL-encoding relevantes)
+
+4.4.6 Extracto del cuerpo (sin abrir enlaces)
+  Texto plano:
+    wR6EkT0XRwlhmy9mtZM4eZhpQfvIjlI2ob7EunMW0dgHNudgYC7pkwwT7QtNvc6dCfiv5ENWvroO19trUJQqnsyn6KrnvDSl
+    i4RiEQm3QFJk49iXMwjfvOilxbWmZvYLVXvXpqSf8hRAgkdSaXEtKsej76YCQS4A0MYjJ8DYPDAZPOjuK55RCvdp1upEPMQN
+    85cFv3FX5DcMknpLZOfxZ4NAn8U3HHClLnOIB7iOPKFZ6hEEXbXAQceDUTD2KaVJ8GlJRoiXwwqQwIPgAVdr4p8nmmeJ0VOl
+    8gqCpWKU3eEMD9isgpiBOTOdnc0m9USpewekRexncJEFSkIqWuWBBpWKqVI5c4SCrCLRVMIUQVzehrVZGX5fe2o88DNRxEUY
+    Qk520nQMTwoH5CZK bvamDnkgv2oTBOIiaugu7oLIGwChtHw6ARqSB6N5xij457IalqaIHnKkH8ZlQ9zL3SCxlcfYGMcLAMf
+    8HYLENyi0sngE8yglCtFKPlWalK6cjZtZe8s8AQ5lSdLPlBCpXVtIjxGAM4ejlRFgYDGivN5sY5QDjxgNTyouzUeYl6QtLv4
+    OnfczuKPlU071KQJ5jUnrn8JUWC8x5z1SlggALIVmUX47HdZNDBmXwzMnvgKDsyHMZFhhTQa5Bt5o7x1JbAs3B8PXHWS9JLb
+    rJANxHvecxOxBVoHmEPLLoGGz...
+  HTML convertido a texto:
+    wR6EkT0XRwlhmy9mtZM4eZhpQfvIjlI2ob7EunMW0dgHNudgYC7pkwwT7QtNvc6dCfiv5ENWvroO19trUJQqnsyn6KrnvDSl
+    i4RiEQm3QFJk49iXMwjfvOilxbWmZvYLVXvXpqSf8hRAgkdSaXEtKsej76YCQS4A0MYjJ8DYPDAZPOjuK55RCvdp1upEPMQN
+    85cFv3FX5DcMknpLZOfxZ4NAn8U3HHClLnOIB7iOPKFZ6hEEXbXAQceDUTD2KaVJ8GlJRoiXwwqQwIPgAVdr4p8nmmeJ0VOl
+    8gqCpWKU3eEMD9isgpiBOTOdnc0m9USpewekRexncJEFSkIqWuWBBpWKqVI5c4SCrCLRVMIUQVzehrVZGX5fe2o88DNRxEUY
+    Qk520nQMTwoH5CZK bvamDnkgv2oTBOIiaugu7oLIGwChtHw6ARqSB6N5xij457IalqaIHnKkH8ZlQ9zL3SCxlcfYGMcLAMf
+    8HYLENyi0sngE8ygl...
+
+====================================================================================================
+ 5. TIPO DE AMENAZA
+====================================================================================================
+
+Clasificacion:                    Spam / phishing con redireccion a contenido malicioso
+
+
+====================================================================================================
+ 6. IMPACTO C-I-A
+====================================================================================================
+
+Resumen:                          Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+
+Dimension          | Impacto      | Justificacion
+-------------------+--------------+-----------------------------------------------------------------
+Confidencialidad   | Alto         | Robo de credenciales y datos sensibles.
+Integridad         | Alto         | Uso de la cuenta para acciones no autorizadas.
+Disponibilidad     | Bajo         | Normalmente no interrumpe el servicio.
+
+====================================================================================================
+ 7. VEREDICTO Y JUSTIFICACION
+====================================================================================================
+
+VEREDICTO:                        MALICIOSO
+Confianza:                        media
+Puntaje heuristico:               9
+
+Evidencia que sostiene el veredicto:
+  - SPF: no definido o sin resultado.
+  - DKIM: pass.
+  - DMARC: no definido o sin resultado.
+  - DKIM valida pero no esta alineado con el dominio del From
+    (ezagameroasin02-onmicrosoft-com.20251104.gappssmtp.com).
+  - Asunto con terminos de spam/phishing: no deposit.
+  - 4 URL(s) del correo resultaron sospechosas: woondsplay.com (7 detecciones VT).
+
+Criterio aplicado (anexo del enunciado):
+  - LIMPIO: autenticacion correcta y alineada, dominio con antiguedad y reputacion sanas, sin
+    detecciones ni comportamiento anormal.
+  - SOSPECHOSO: senales mixtas o insuficientes (pocas detecciones, dominio nuevo, cabecera
+    incoherente, sin confirmacion de payload).
+  - MALICIOSO: evidencia concluyente (multiples detecciones coincidentes, comportamiento malicioso,
+    phishing confirmado, hash en bases de malware).
+  - Recordatorio: la ausencia de senal no es prueba de inocencia; el veredicto surge de cruzar
+    herramientas.
+
+====================================================================================================
+ 8. MEDIDAS RECOMENDADAS
+====================================================================================================
+
+Accion inmediata del usuario:     No abrir enlaces ni adjuntos. No responder. Reportar el correo
+                                  como phishing y, si se interactuo, cambiar credenciales y cerrar
+                                  sesiones.
+Control organizacional:           Bloquear remitente/dominio/IP y URLs en el filtro de correo;
+                                  publicar DMARC en reject; agregar IoCs a proxy/EDR/SIEM; capacitar
+                                  usuarios; revisar buzones que recibieron el mensaje.
+
+====================================================================================================
+ 9. PASOS MANUALES Y CAPTURAS SUGERIDAS
+====================================================================================================
+
+  - Pegar las cabeceras completas en MXToolbox Email Header Analyzer y capturar el resultado:
+    https://mxtoolbox.com/EmailHeaders.aspx
+  - Verificar la IP de origen en blacklists:
+    https://mxtoolbox.com/blacklists.aspx?host=209.85.167.46
+  - Capturar el informe de VirusTotal del dominio del From y de la IP de origen.
+  - Capturar cada reporte de urlscan.io (incluida la screenshot) de las URLs.
+  - No abrir los enlaces ni los adjuntos fuera de una VM aislada.
+  - Si el correo tenia adjuntos, analizar su hash en sandbox antes de abrirlos.
+
+====================================================================================================
+ 10. ANEXO: REPRODUCIBILIDAD Y LIMITACIONES
+====================================================================================================
+
+Enlaces para capturas y verificacion manual:
+  - MXToolbox - analizador de cabeceras: https://mxtoolbox.com/EmailHeaders.aspx
+  - MXToolbox - blacklist de IP: https://mxtoolbox.com/blacklists.aspx?host=209.85.167.46
+  - VirusTotal - dominio del From: https://www.virustotal.com/gui/domain/onmicrosoft.com
+  - VirusTotal - IP de origen: https://www.virustotal.com/gui/ip-address/209.85.167.46
+  - crt.sh - dominio del From: https://crt.sh/?q=%25.onmicrosoft.com
+  - RDAP - dominio del From: https://rdap.org/domain/onmicrosoft.com
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly93b29uZHNwbGF5LmNvbS80SVVEemszNzE
+    2MEZoZ0s2MDNoaWxudnhia21sMjA1S0RPQ1NRRldDR1VPS1ZOMTY0NjI3S1paTDE2MTIxMzdaNQ
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly93b29uZHNwbGF5LmNvbS80dkRRYUgzNzE
+    2MFB6aVI2MDN0YXN2dXZjamhmMjA1WFhaRVNPUVZBV1BRRU5OMTY0NjI3VEJRVTE2MTIxMzdFNQ
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cDovL3dvb25kc3BsYXkuY29tL3JkLzVaUVRweTM
+    3MTYwWXVZcjYwM2hqempwb294cXgyMDVZTElYVk5VUFpWU0dHS1AxNjQ2MjdMWktIMTYxMjEzN0w1
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly9waGlzaGluZ0Bwb3QuZWZ1c2VyYXNzZXR
+    zLmNvbS82ODYvb2ZmZXJzLzE5NDQ3L2MvNTc5NDIvYXNzZXRzL2xvZ28ucG5n
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly9pLmltZ3VyLmNvbS9sNTcwNmVHLnBuZw
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly93b29uZHNwbGF5LmNvbS90cmFjay8zeXZ
+    nS2YzNzE2MFppclk2MDNwY2doZW1uZmVkMjA1WkhMTkdUQllGREFIUFlSMTY0NjI3Q01ZWjE2MTIxMzdmNQ
+  - crt.sh - efuserassets.com: https://crt.sh/?q=%25.efuserassets.com
+  - crt.sh - imgur.com: https://crt.sh/?q=%25.imgur.com
+  - crt.sh - onmicrosoft.com: https://crt.sh/?q=%25.onmicrosoft.com
+  - crt.sh - woondsplay.com: https://crt.sh/?q=%25.woondsplay.com
+
+Notas de ejecucion:
+  - urlscan.io: la verificacion TLS local fallo (certificate has expired); se reintento la conexion
+    sin validar el certificado. Verificar el store de certificados del equipo.
+  - Consultas realizadas en esta ejecucion: VirusTotal=0, urlscan.io=24.
+  - Cache local: C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+    Ciberseguridad\Practica\tp1\.triage_cache (evita repetir consultas).
+  - Los resultados de reputacion son una foto del momento de la consulta y pueden cambiar; los
+    enlaces permiten reproducirlos.
+
+  - Las consultas a VirusTotal y urlscan.io pueden variar con el tiempo; los enlaces permiten
+    reproducir el estado observado.
+  - urlscan.io: los escaneos nuevos se enviaron con visibilidad 'unlisted'.
+  - No se abrieron enlaces, no se descargaron payloads y no se ejecutaron archivos.
+
+Anexo A - Evidencia estructurada (JSON resumido)
+----------------------------------------------------------------------------------------------------
+  {
+    "cabeceras": {
+      "From": "free spin <taylor.flores@ezagameroasin02.onmicrosoft.com>",
+      "from_addr": "taylor.flores@ezagameroasin02.onmicrosoft.com",
+      "from_domain": "ezagameroasin02.onmicrosoft.com",
+      "display_name": "free spin",
+      "To": "phishing@pot",
+      "Subject": "100 Balls. $5 No Deposit Required !",
+      "Date": "Mon, 06 Jul 2026 15:53:28 -0700",
+      "Reply-To": "",
+      "reply_to_domain": "",
+      "Return-Path": "taylor.flores@ezagameroasin02.onmicrosoft.com",
+      "return_path_domain": "ezagameroasin02.onmicrosoft.com",
+      "Message-ID": "<CALxrQXbC8XJNNNs=awmrsc0OgvPxE52LOS-OPLb2xZ4Vm+GxRQ@mail.gmail.com>",
+      "X-Mailer": "",
+      "X-Originating-IP": "",
+      "List-Unsubscribe": ""
+    },
+    "autenticacion": {
+      "raw": "spf=none (sender IP is 209.85.167.46) smtp.mailfrom=ezagameroasin02.onmicrosoft.com; dkim=pass (signature was verified) header.d=ezagameroasin02-onmicrosoft-com.20251104.gappssmtp.com;dmarc=none action=none header.from=ezagameroasin02.onmicrosoft.com;",
+      "raw_received_spf": "None (protection.outlook.com: ezagameroasin02.onmicrosoft.com does not designate permitted sender hosts)",
+      "spf_result": "none",
+      "spf_domain": "ezagameroasin02.onmicrosoft.com",
+      "spf_ip": "209.85.167.46",
+      "spf_helo": "",
+      "dkim_result": "pass",
+      "dkim_domains": [
+        "ezagameroasin02-onmicrosoft-com.20251104.gappssmtp.com"
+      ],
+      "dkim_selectors": [
+        "20251104"
+      ],
+      "dmarc_result": "none",
+      "dmarc_from": "ezagameroasin02.onmicrosoft.com",
+      "compauth": "",
+      "from_org": "onmicrosoft.com",
+      "spf_aligned": true,
+      "dkim_aligned": false,
+      "dmarc_aligned": true,
+      "spf_effective": false,
+      "dkim_effective": false,
+      "dmarc_effective": false
+    },
+    "received": {
+      "hop_count": 7,
+      "origin_ip": "209.85.167.46",
+      "origin_host": "mail-lf1-f46.google.com",
+      "origin_date": "2026-07-06 22:53:32+00:00",
+      "total_delay": 8.0,
+      "hops": [
+        {
+          "n": 1,
+          "from_host": "288239414919",
+          "by_host": "gmailapi.google.com",
+          "protocol": "HTTPREST",
+          "ips": [],
+          "public_ips": [],
+          "date_text": "Mon, 6 Jul 2026 15:53:28 -0700"
+        },
+        {
+          "n": 2,
+          "from_host": "288239414919",
+          "by_host": "gmailapi.google.com",
+          "protocol": "HTTPREST",
+          "ips": [],
+          "public_ips": [],
+          "date_text": "Mon, 6 Jul 2026 15:53:28 -0700"
+        },
+        {
+          "n": 3,
+          "from_host": "",
+          "by_host": "mail-lf1-f46.google.com",
+          "protocol": "SMTP",
+          "ips": [],
+          "public_ips": [],
+          "date_text": "Mon, 06 Jul 2026 15:53:32 -0700 (PDT)"
+        },
+        {
+          "n": 4,
+          "from_host": "mail-lf1-f46.google.com",
+          "by_host": "SN1PEPF0002BA4D.mail.protection.outlook.com",
+          "protocol": "Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384)",
+          "ips": [
+            "209.85.167.46"
+          ],
+          "public_ips": [
+            "209.85.167.46"
+          ],
+          "date_text": "Mon, 6 Jul 2026 22:53:32 +0000"
+        },
+        {
+          "n": 5,
+          "from_host": "SN1PEPF0002BA4D.namprd03.prod.outlook.com",
+          "by_host": "DS3P221CA0013.outlook.office365.com",
+          "protocol": "Microsoft SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384)",
+          "ips": [
+            "2603:10b6:8:45e:cafe::50"
+          ],
+          "public_ips": [
+            "2603:10b6:8:45e:cafe::50"
+          ],
+          "date_text": "Mon, 6 Jul 2026 22:53:32 +0000"
+        },
+        {
+          "n": 6,
+          "from_host": "DS3P221CA0013.NAMP221.PROD.OUTLOOK.COM",
+          "by_host": "IA0PR10MB6723.namprd10.prod.outlook.com",
+          "protocol": "Microsoft SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384)",
+          "ips": [
+            "2603:10b6:8:45e::12"
+          ],
+          "public_ips": [
+            "2603:10b6:8:45e::12"
+          ],
+          "date_text": "Mon, 6 Jul 2026 22:53:32 +0000"
+        },
+        {
+          "n": 7,
+          "from_host": "IA0PR10MB6723.namprd10.prod.outlook.com",
+          "by_host": "MW4PR10MB5749.namprd10.prod.outlook.com",
+          "protocol": "HTTPS",
+          "ips": [],
+          "public_ips": [],
+          "date_text": "Mon, 6 Jul 2026 22:53:36 +0000"
+        }
+      ]
+    },
+    "anomalias": [
+      "DKIM valida pero el dominio firmante (d=ezagameroasin02-onmicrosoft-com.20251104.gappssmtp.com) no esta alineado con el From (ezagameroasin02.onmicrosoft.com).",
+      "SPF no definido para el dominio remitente.",
+      "DMARC no definido para el dominio remitente.",
+      "El asunto contiene terminos tipicos de spam/phishing: no deposit."
+    ],
+    "urls": [
+      {
+        "url": "https://woondsplay.com/4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCGUOKVN164627KZZL1612137Z5",
+        "vt_url": {
+          "ok": true,
+          "notfound": true
+        },
+        "dominio": "woondsplay.com",
+        "vt_dominio": {
+          "stats": {
+            "malicious": 7,
+            "suspicious": 2,
+            "undetected": 33,
+            "harmless": 50,
+            "timeout": 0
+          },
+          "reputation": 0,
+          "tags": [],
+          "categories": {
+            "alphaMountain.ai": "Phishing (alphaMountain.ai)"
+          },
+          "type_description": null,
+          "type_tag": null,
+          "size": null,
+          "names": [],
+          "creation_date": 1737676800,
+          "first_submission_date": null,
+          "last_analysis_date": 1792206889,
+          "threat": null,
+          "detections": [
+            [
+              "alphaMountain.ai",
+              "phishing"
+            ],
+            [
+              "Bkav",
+              "malicious"
+            ],
+            [
+              "CRDF",
+              "malicious"
+            ],
+            [
+              "Fortinet",
+              "phishing"
+            ],
+            [
+              "Seclookup",
+              "malicious"
+            ],
+            [
+              "SOCRadar",
+              "malicious"
+            ],
+            [
+              "Webroot",
+              "malicious"
+            ]
+          ],
+          "sandbox": null,
+          "final_url": null,
+          "title": null,
+          "last_dns_records": [
+            {
+              "type": "NS",
+              "ttl": 1800,
+              "value": "dns2.registrar-servers.com"
+            },
+            {
+              "type": "TXT",
+              "ttl": 3600,
+              "value": "v=spf1 a mx ip4:97.107.140.250 -all"
+            },
+            {
+              "type": "SOA",
+              "ttl": 3601,
+              "value": "dns1.registrar-servers.com",
+              "rname": "hostmaster.registrar-servers.com",
+              "serial": 1783479544,
+              "refresh": 43200,
+              "retry": 3600,
+              "expire": 604800,
+              "minimum": 3601
+            },
+            {
+              "type": "MX",
+              "ttl": 3600,
+              "priority": 10,
+              "value": "mail.woondsplay.com"
+            },
+            {
+              "type": "NS",
+              "ttl": 1800,
+              "value": "dns1.registrar-servers.com"
+            },
+            {
+              "type": "A",
+              "ttl": 3600,
+              "value": "97.107.140.250"
+            }
+          ]
+        },
+        "rdap": {
+          "ok": true,
+          "url": "https://rdap.org/domain/woondsplay.com",
+          "handle": "2953290665_DOMAIN_COM-VRSN",
+          "name": "WOONDSPLAY.COM",
+          "status": [
+            "client hold",
+            "client transfer prohibited"
+          ],
+          "creation": "2025-01-24T07:00:43Z",
+          "expiration": "2028-01-24T07:00:43Z",
+          "last_changed": "2026-07-16T03:37:32Z",
+          "registrar": "NameCheap, Inc.",
+          "registrars": [
+            "NameCheap, Inc."
+          ],
+          "registrant": "",
+          "nameservers": [
+            "DNS1.REGISTRAR-SERVERS.COM",
+            "DNS2.REGISTRAR-SERVERS.COM"
+          ],
+          "secure_dns": {
+            "delegationSigned": false
+          },
+          "country": null,
+          "start_address": null,
+          "end_address": null,
+          "cached": true
+        },
+        "crtsh": {
+          "ok": true,
+          "url": "https://crt.sh/?q=%25.woondsplay.com&output=json",
+          "entries": 140,
+          "subdomains": [
+            "woondsplay.com"
+          ],
+          "subdomain_count": 1,
+          "issuers": [
+            "Cloudflare TLS Issuing ECC CA 1",
+            "Cloudflare TLS Issuing RSA CA 1",
+            "E7",
+            "E8",
+            "R12",
+            "R13",
+            "Sectigo Public Server Authentication CA DV E36",
+            "WE1",
+            "YE1",
+            "YE2",
+            "YR1",
+            "YR2"
+          ],
+          "earliest_cert": "2025-01-24T10:45:59",
+          "latest_cert": "2026-07-09T08:43:21",
+          "cached": true
+        },
+        "urlscan": {
+          "ok": false,
+          "error": "envio HTTP 400: DNS Error - Could not resolve domain"
+        },
+        "heuristicas": [],
+        "veredicto": {
+          "verdict": "SOSPECHOSO",
+          "confidence": "media",
+          "score": 3,
+          "reasons": [
+            "La URL no tiene analisis previo en VirusTotal (sin reputacion).",
+            "VirusTotal: el dominio acumula 7 detecciones maliciosas.",
+            "urlscan.io no disponible: envio HTTP 400: DNS Error - Could not resolve domain",
+            "Dominio con antiguedad: 636 dias (~20.9 meses)."
+          ],
+          "threat": "Sitio sospechoso con reputacion insuficiente",
+          "cia_summary": "Sin impacto identificado con la evidencia disponible.",
+          "cia_rows": [
+            [
+              "Confidencialidad",
+              "Bajo",
+              "No se observaron acciones sobre datos."
+            ],
+            [
+              "Integridad",
+              "Bajo",
+              "No se observaron modificaciones."
+            ],
+            [
+              "Disponibilidad",
+              "Bajo",
+              "No se observaron interrupciones."
+            ]
+          ],
+          "user_action": "Evitar interactuar con el enlace hasta confirmar el destino; verificar el dominio por un canal oficial y no ingresar credenciales.",
+          "org_control": "Analizar en sandbox y con urlscan antes de bloquear; aplicar cuarentena preventiva y monitorear DNS/proxy para ese dominio."
+        }
+      },
+      {
+        "url": "https://woondsplay.com/4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAWPQENN164627TBQU1612137E5",
+        "vt_url": {
+          "ok": true,
+          "notfound": true
+        },
+        "dominio": "woondsplay.com",
+        "vt_dominio": {
+          "stats": {
+            "malicious": 7,
+            "suspicious": 2,
+            "undetected": 33,
+            "harmless": 50,
+            "timeout": 0
+          },
+          "reputation": 0,
+          "tags": [],
+          "categories": {
+            "alphaMountain.ai": "Phishing (alphaMountain.ai)"
+          },
+          "type_description": null,
+          "type_tag": null,
+          "size": null,
+          "names": [],
+          "creation_date": 1737676800,
+          "first_submission_date": null,
+          "last_analysis_date": 1792206889,
+          "threat": null,
+          "detections": [
+            [
+              "alphaMountain.ai",
+              "phishing"
+            ],
+            [
+              "Bkav",
+              "malicious"
+            ],
+            [
+              "CRDF",
+              "malicious"
+            ],
+            [
+              "Fortinet",
+              "phishing"
+            ],
+            [
+              "Seclookup",
+              "malicious"
+            ],
+            [
+              "SOCRadar",
+              "malicious"
+            ],
+            [
+              "Webroot",
+              "malicious"
+            ]
+          ],
+          "sandbox": null,
+          "final_url": null,
+          "title": null,
+          "last_dns_records": [
+            {
+              "type": "NS",
+              "ttl": 1800,
+              "value": "dns2.registrar-servers.com"
+            },
+            {
+              "type": "TXT",
+              "ttl": 3600,
+              "value": "v=spf1 a mx ip4:97.107.140.250 -all"
+            },
+            {
+              "type": "SOA",
+              "ttl": 3601,
+              "value": "dns1.registrar-servers.com",
+              "rname": "hostmaster.registrar-servers.com",
+              "serial": 1783479544,
+              "refresh": 43200,
+              "retry": 3600,
+       
+  ... (salida truncada; ver enlaces de la seccion 10)
+

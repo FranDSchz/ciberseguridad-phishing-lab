@@ -1,0 +1,2211 @@
+{
+  "id": "U003",
+  "url": "https://www.pneustorebr.cfd/",
+  "host": "www.pneustorebr.cfd",
+  "dominio_registrable": "pneustorebr.cfd",
+  "origen": "R006 / Grupo_05/url.txt",
+  "sha256_contenedor_texto": "972f6f2322a6bce4e1adfdfea8fde8d0d76f357a8855c064e8cc0c734cd91125",
+  "adquisicion_utc": "2026-10-23T18:08:38.818631+00:00",
+  "metodo": "Solo GET de informes existentes y datos p\u00fablicos; sin visitar el destino ni enviar escaneos",
+  "consultas": [
+    {
+      "service": "VirusTotal",
+      "indicator_type": "url",
+      "indicator": "https://www.pneustorebr.cfd/",
+      "status": "found",
+      "queried_at": "2026-10-23T18:08:55+00:00",
+      "endpoint": "https://www.virustotal.com/api/v3/urls/aHR0cHM6Ly93d3cucG5ldXN0b3JlYnIuY2ZkLw",
+      "http_status": 200,
+      "data": {
+        "data": {
+          "id": "830e581ef5afdf890eeda034a2f8c8855700caede3d222765fc02423043b7c1f",
+          "type": "url",
+          "links": {
+            "self": "https://www.virustotal.com/api/v3/urls/830e581ef5afdf890eeda034a2f8c8855700caede3d222765fc02423043b7c1f"
+          },
+          "attributes": {
+            "last_analysis_date": 1792183636,
+            "console_messages": [],
+            "last_http_response_cookies": {
+              "_gcl_au": "1.1.22588150.1792183642"
+            },
+            "last_analysis_results": {
+              "Acronis": {
+                "method": "blacklist",
+                "engine_name": "Acronis",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Abusix": {
+                "method": "blacklist",
+                "engine_name": "Abusix",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ADMINUSLabs": {
+                "method": "blacklist",
+                "engine_name": "ADMINUSLabs",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Lionic": {
+                "method": "blacklist",
+                "engine_name": "Lionic",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Criminal IP": {
+                "method": "blacklist",
+                "engine_name": "Criminal IP",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AILabs (MONITORAPP)": {
+                "method": "blacklist",
+                "engine_name": "AILabs (MONITORAPP)",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "AlienVault": {
+                "method": "blacklist",
+                "engine_name": "AlienVault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "alphaMountain.ai": {
+                "method": "blacklist",
+                "engine_name": "alphaMountain.ai",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AlphaSOC": {
+                "method": "blacklist",
+                "engine_name": "AlphaSOC",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Antiy-AVL": {
+                "method": "blacklist",
+                "engine_name": "Antiy-AVL",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ArcSight Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "ArcSight Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AutoShun": {
+                "method": "blacklist",
+                "engine_name": "AutoShun",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Bfore.Ai PreCrime": {
+                "method": "blacklist",
+                "engine_name": "Bfore.Ai PreCrime",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "BitDefender": {
+                "method": "blacklist",
+                "engine_name": "BitDefender",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Bkav": {
+                "method": "blacklist",
+                "engine_name": "Bkav",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "BlockList": {
+                "method": "blacklist",
+                "engine_name": "BlockList",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Blueliv": {
+                "method": "blacklist",
+                "engine_name": "Blueliv",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Certego": {
+                "method": "blacklist",
+                "engine_name": "Certego",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ChainPatrol": {
+                "method": "blacklist",
+                "engine_name": "ChainPatrol",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Chong Lua Dao": {
+                "method": "blacklist",
+                "engine_name": "Chong Lua Dao",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CINS Army": {
+                "method": "blacklist",
+                "engine_name": "CINS Army",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Snort IP sample list": {
+                "method": "blacklist",
+                "engine_name": "Snort IP sample list",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Xcitium Verdict Cloud": {
+                "method": "blacklist",
+                "engine_name": "Xcitium Verdict Cloud",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CRDF": {
+                "method": "blacklist",
+                "engine_name": "CRDF",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CSIS Security Group": {
+                "method": "blacklist",
+                "engine_name": "CSIS Security Group",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Cyan": {
+                "method": "blacklist",
+                "engine_name": "Cyan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Cyble": {
+                "method": "blacklist",
+                "engine_name": "Cyble",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CyRadar": {
+                "method": "blacklist",
+                "engine_name": "CyRadar",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "desenmascara.me": {
+                "method": "blacklist",
+                "engine_name": "desenmascara.me",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "DNS8": {
+                "method": "blacklist",
+                "engine_name": "DNS8",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Dr.Web": {
+                "method": "blacklist",
+                "engine_name": "Dr.Web",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Emsisoft": {
+                "method": "blacklist",
+                "engine_name": "Emsisoft",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Ermes": {
+                "method": "blacklist",
+                "engine_name": "Ermes",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ESET": {
+                "method": "blacklist",
+                "engine_name": "ESET",
+                "category": "malicious",
+                "result": "phishing"
+              },
+              "ESTsecurity": {
+                "method": "blacklist",
+                "engine_name": "ESTsecurity",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "EmergingThreats": {
+                "method": "blacklist",
+                "engine_name": "EmergingThreats",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Fortinet": {
+                "method": "blacklist",
+                "engine_name": "Fortinet",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "G-Data": {
+                "method": "blacklist",
+                "engine_name": "G-Data",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Google Safe Browsing": {
+                "method": "blacklist",
+                "engine_name": "Google Safe Browsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GCP Abuse Intelligence": {
+                "method": "blacklist",
+                "engine_name": "GCP Abuse Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "GreenSnow": {
+                "method": "blacklist",
+                "engine_name": "GreenSnow",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GreyNoise": {
+                "method": "blacklist",
+                "engine_name": "GreyNoise",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Gridinsoft": {
+                "method": "blacklist",
+                "engine_name": "Gridinsoft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Guardpot": {
+                "method": "blacklist",
+                "engine_name": "Guardpot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Heimdal Security": {
+                "method": "blacklist",
+                "engine_name": "Heimdal Security",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Hunt.io Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Hunt.io Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "IPsum": {
+                "method": "blacklist",
+                "engine_name": "IPsum",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Juniper Networks": {
+                "method": "blacklist",
+                "engine_name": "Juniper Networks",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "K7AntiVirus": {
+                "method": "blacklist",
+                "engine_name": "K7AntiVirus",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Kaspersky": {
+                "method": "blacklist",
+                "engine_name": "Kaspersky",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Lumu": {
+                "method": "blacklist",
+                "engine_name": "Lumu",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Malwared": {
+                "method": "blacklist",
+                "engine_name": "Malwared",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "MalwareURL": {
+                "method": "blacklist",
+                "engine_name": "MalwareURL",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "MalwarePatrol": {
+                "method": "blacklist",
+                "engine_name": "MalwarePatrol",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CTX AI": {
+                "method": "blacklist",
+                "engine_name": "CTX AI",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Mimecast": {
+                "method": "blacklist",
+                "engine_name": "Mimecast",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Netcraft": {
+                "method": "blacklist",
+                "engine_name": "Netcraft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "OpenPhish": {
+                "method": "blacklist",
+                "engine_name": "OpenPhish",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Orcapot": {
+                "method": "blacklist",
+                "engine_name": "Orcapot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "0xSI_f33d": {
+                "method": "blacklist",
+                "engine_name": "0xSI_f33d",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishing Database": {
+                "method": "blacklist",
+                "engine_name": "Phishing Database",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PhishFort": {
+                "method": "blacklist",
+                "engine_name": "PhishFort",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Fortra": {
+                "method": "blacklist",
+                "engine_name": "Fortra",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishtank": {
+                "method": "blacklist",
+                "engine_name": "Phishtank",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PREBYTES": {
+                "method": "blacklist",
+                "engine_name": "PREBYTES",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PrecisionSec": {
+                "method": "blacklist",
+                "engine_name": "PrecisionSec",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Quick Heal": {
+                "method": "blacklist",
+                "engine_name": "Quick Heal",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Quttera": {
+                "method": "blacklist",
+                "engine_name": "Quttera",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Rising": {
+                "method": "blacklist",
+                "engine_name": "Rising",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SafeToOpen": {
+                "method": "blacklist",
+                "engine_name": "SafeToOpen",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sangfor": {
+                "method": "blacklist",
+                "engine_name": "Sangfor",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Sansec eComscan": {
+                "method": "blacklist",
+                "engine_name": "Sansec eComscan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Scantitan": {
+                "method": "blacklist",
+                "engine_name": "Scantitan",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SCUMWARE.org": {
+                "method": "blacklist",
+                "engine_name": "SCUMWARE.org",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Seclookup": {
+                "method": "blacklist",
+                "engine_name": "Seclookup",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SOCRadar": {
+                "method": "blacklist",
+                "engine_name": "SOCRadar",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sophos": {
+                "method": "blacklist",
+                "engine_name": "Sophos",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "StopForumSpam": {
+                "method": "blacklist",
+                "engine_name": "StopForumSpam",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Sucuri SiteCheck": {
+                "method": "blacklist",
+                "engine_name": "Sucuri SiteCheck",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Synthient": {
+                "method": "blacklist",
+                "engine_name": "Synthient",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ThreatHive": {
+                "method": "blacklist",
+                "engine_name": "ThreatHive",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "LevelBlue": {
+                "method": "blacklist",
+                "engine_name": "LevelBlue",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLhaus": {
+                "method": "blacklist",
+                "engine_name": "URLhaus",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLQuery": {
+                "method": "blacklist",
+                "engine_name": "URLQuery",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Viettel Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Viettel Threat Intelligence",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "VIPRE": {
+                "method": "blacklist",
+                "engine_name": "VIPRE",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ViriBack": {
+                "method": "blacklist",
+                "engine_name": "ViriBack",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "VX Vault": {
+                "method": "blacklist",
+                "engine_name": "VX Vault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Webroot": {
+                "method": "blacklist",
+                "engine_name": "Webroot",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Forcepoint ThreatSeeker": {
+                "method": "blacklist",
+                "engine_name": "Forcepoint ThreatSeeker",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Yandex Safebrowsing": {
+                "method": "blacklist",
+                "engine_name": "Yandex Safebrowsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroCERT": {
+                "method": "blacklist",
+                "engine_name": "ZeroCERT",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroFox": {
+                "method": "blacklist",
+                "engine_name": "ZeroFox",
+                "category": "undetected",
+                "result": "unrated"
+              }
+            },
+            "last_http_response_headers": {
+              "age": "85046",
+              "cache-control": "public, max-age=0, must-revalidate",
+              "last-modified": "Thu, 15 Oct 2026 21:09:52 GMT",
+              "access-control-allow-origin": "*",
+              "server": "Vercel",
+              "x-vercel-cache": "HIT",
+              "accept-ranges": "bytes",
+              "strict-transport-security": "max-age=63072000",
+              "x-vercel-id": "cle1::4x4jm-1792183639311-402b89a92468",
+              "content-type": "text/html; charset=utf-8",
+              "date": "Fri, 16 Oct 2026 20:47:19 GMT",
+              "content-disposition": "inline",
+              "etag": "\"32c7b5c83403e94f8824875f62975cd6\"",
+              "content-length": "790"
+            },
+            "tags": [
+              "trackers",
+              "external-resources"
+            ],
+            "javascript_variables": [
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "onpagereveal",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": null,
+                "value": null,
+                "name": "event",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "oncommand",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "onanimationcancel",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "crashReport",
+                "sha256": "52133ddfcd583280388a8bbfb67a417b6b660f75bc63ec1b01beec811d4498ef"
+              },
+              {
+                "type": "JS_TYPE_FUNCTION",
+                "value": null,
+                "name": "fetchLater",
+                "sha256": "52133ddfcd583280388a8bbfb67a417b6b660f75bc63ec1b01beec811d4498ef"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "viewport",
+                "sha256": "52133ddfcd583280388a8bbfb67a417b6b660f75bc63ec1b01beec811d4498ef"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "onpageswap",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "fence",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "onscrollsnapchange",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "onscrollsnapchanging",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "ongamepadconnected",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "ongamepaddisconnected",
+                "sha256": "a9dc16a7a3875d174c1af4f923f261cafc124357f2322493a59ee0d14fcd10db"
+              },
+              {
+                "type": "JS_TYPE_FUNCTION",
+                "value": null,
+                "name": "requestResize",
+                "sha256": "52133ddfcd583280388a8bbfb67a417b6b660f75bc63ec1b01beec811d4498ef"
+              },
+              {
+                "type": "JS_TYPE_FUNCTION",
+                "value": null,
+                "name": "gtag",
+                "sha256": "52133ddfcd583280388a8bbfb67a417b6b660f75bc63ec1b01beec811d4498ef"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "dataLayer",
+                "sha256": "bf951fe74ddc311e34960d17ed6222b214fc2c14fb6a1e556944cb2ed7da1bb6"
+              },
+              {
+                "type": "JS_TYPE_STRING",
+                "value": "6",
+                "name": "__reactRouterVersion",
+                "sha256": "e7f6c011776e8db7cd330b54174fd76f7d0216b612387a5ffcfb81e6f0919683"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "google_tag_data",
+                "sha256": "32d11414261e3a7da24ec526caa7c278a6ef1d7ac89ad9fcd035945b726d190f"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "google_tag_manager",
+                "sha256": "277df678b494abbb8713db3e8afcde91e20180d7c5c7004c8d59450acb615c83"
+              },
+              {
+                "type": "JS_TYPE_OBJECT",
+                "value": null,
+                "name": "GooglebQhCsO",
+                "sha256": "52133ddfcd583280388a8bbfb67a417b6b660f75bc63ec1b01beec811d4498ef"
+              }
+            ],
+            "last_http_response_content_length": 790,
+            "last_http_response_content_sha256": "e9d3f9218639e0ba4f126c4cc0f8f571fdd9ee66edf8faa55face8217d5c377e",
+            "threat_names": [],
+            "times_submitted": 1,
+            "tld": "cfd",
+            "web_category": "shopping",
+            "reputation": 0,
+            "categories": {
+              "Forcepoint ThreatSeeker": "newly registered websites",
+              "Google": "shopping"
+            },
+            "last_http_response_code": 200,
+            "html_meta": {
+              "viewport": [
+                "width=device-width, initial-scale=1.0, maximum-scale=5.0"
+              ]
+            },
+            "last_http_response_cookies_extended": [
+              {
+                "size": 30,
+                "http_only": false,
+                "domain": ".pneustorebr.cfd",
+                "expires": 1799959642,
+                "session": false,
+                "priority": "COOKIE_PRIORITY_MEDIUM",
+                "value": "1.1.22588150.1792183642",
+                "secure": false,
+                "name": "_gcl_au"
+              }
+            ],
+            "url": "https://www.pneustorebr.cfd/",
+            "proxy_country": "US",
+            "last_final_url": "https://www.pneustorebr.cfd/",
+            "first_submission_date": 1792183636,
+            "outgoing_links": [
+              "https://www.googletagmanager.com/gtag/js?id=AW-18425905341&cx=c&gtm=4e6ae1",
+              "https://www.googletagmanager.com/gtag/js?id=AW-18307303339&cx=c&gtm=4e6ae1",
+              "https://www.googletagmanager.com/gtag/js?id=AW-18292056298",
+              "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/18292056298/?random=1792183642227&cv=11&fst=1792183642227&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6ae1v9258133691za208zd9258133691xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616985~115938465~115938469~118897920~118897930~120213116~120385422~120469145~120469153~121246026~121246034&u_w=800&u_h=600&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&rcb=17&frm=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=22588150.1792183642&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+              "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/18307303339/?random=1792183643226&cv=11&fst=1792183643226&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6ae1v9258137714za208zb9258133691zd9258133691xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&u_w=800&u_h=600&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&rcb=6&frm=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=22588150.1792183642&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+              "https://googleads.g.doubleclick.net/pagead/viewthroughconversion/18425905341/?random=1792183643742&cv=11&fst=1792183643742&bg=ffffff&guid=ON&async=1&en=gtag.config&gtm=45be6ae1v9263166886za208zb9258133691zd9258133691xecxf1&gcd=13l3l3l3l1l1&dma=0&tag_exp=115616986~115938465~115938468~118897920~118897930~120213116~120385423~120469145~120469153~121246026~121246034&u_w=800&u_h=600&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&rcb=7&frm=0&hn=www.googleadservices.com&npa=0&pscdl=noapi&auid=22588150.1792183642&uaa=&uab=&uafvl=&uamb=0&uam=&uap=&uapv=&uaw=0&data=event%3Dgtag.config&ept=9&rfmt=3&fmt=4",
+              "https://static.verumcommerce.com.br/product/Pneustore/db1545342720b448c499.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/mini-banner-pneustore-maggion.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/0d21503bfdb7b1601669.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/ITARO-2-1-.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/a1bf6d6206b7323eb5da.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/244cb3da7e4b265f0440.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/Ceat_banner.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/d11a349b8919f7dc283e.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/4cae149c8696a829dfee.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/Continental_banner_teste.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/056e88c2ffe7da03ba1a.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/97e907a3b742e31f08a5.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/mini-banner-pneustore-rinaldi.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/e02805ffbad25e3fec99.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/banners/marca_BridgeStoneBanner.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/12f794a7807000a45cfe.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/Dynamo_banner.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/4e136557490567c032af.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/616c8994078eb912ad0b.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/PirelliBanner.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/aafe895cdd4666246d9c.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/69996e50ccd42d33de09.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/Barum_banner.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/db0d18dd4564a67d98e7.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/46b89b5f7ebcc90c1760.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/banners/marca_MichelinBanner.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/9f7d4762d62875a51d9f.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/mini-banner-pneustore-kumho.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/4e60be3494072c35a598.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/d180ac99279befd3fc35.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/6e7df31d0117b02007ae.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/f9b2394e01b50bde5608.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/mini-banner-pneustore-michelin.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/e0239c03bd333c318619.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/2e0baa8f64ce390c6fc5.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/fcd9ae44fba02dbe12d2.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/bdce52a7821625fefa17.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/4445b77913bbd8252850.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/daa2bd7cd9873fb23918.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/f3a49488401e6e0700f2.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/716c999d60dc5a58777f.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/6eacd341-f757-4f5b-8eb8-39847bbec863.jpg",
+              "https://static.verumcommerce.com.br/product/Pneustore/9dee925ddfd0f3422344.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/6cea36810a04559bd360.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/eece5b06717c3cc1c5af.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/c79478455da4150c9412.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/ae66baf2b550dbd7a2d9.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/410e0c51717b0e53b244.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/mini-banner-pneustore-maggion.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/c9422694027c66ded817.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/934473958ac1601fde49.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/c88d26e20f64e64a753d.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/a536434984af13ae4521.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/92e03308b3229687f4cc.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/cc82a6d29b6be2c755b0.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/mini-banner-pneustore-rinaldi.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/c6fd7b2cca55df0242d0.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/a8b462b88d1f8c2aa2f7.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/c7ee6b5e66619f04ddd9.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/9ec6009bed82d21454e3.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/48574dc67016fb5a0674.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/8aeea17b0ed3e1910587.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/fcb80e3152b94780bbeb.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/322a497c5f3341d57e1c.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/30f15c10fd117ddb9279.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/6e6db0c0a1f1b280f66d.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/070febce2c758e97a18f.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/25a75661f761a2ee5321.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/e7034e03a351beec5dbc.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/dc29fa0a6db82f204e2e.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/mini-banner-pneustore-aeolus.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/4f196b91369f13faecbd.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/821fbf765ca7fa92ccee.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/banners/marca_SpeedmaxBanner.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/a53ef0e960b19b793336.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/mini-banner-pneustore-drc.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/a291d7ad1011a8834019.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/a129a06f6d19b83b7178.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/b008510702b224d2c3f3.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/543902933f825d1b9dda.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/mini-banner-pneustore-anteo.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/ccdac76cd9248bd45280.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/brands/Westlake_banner_1.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/ad3934dd692d3fc98e39.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/d1a75f4fb5197084b466.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/MINI-BANNER-SPEEDMAX-NOVO.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/73374cede175be095d1d.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/mini-banner-pneustore-anteo.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/9330e8f6226c02500327.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/c00f818f60329411a4c8.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/ae69d1a625192d831b64.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/2c637dc52c8f4851220a.webp",
+              "https://static.verumcommerce.com.br/other/Pneustore/mini-banner-pneustore-tornel.png",
+              "https://static.verumcommerce.com.br/product/Pneustore/cfd64adaf7fb665776f3.webp",
+              "https://static.verumcommerce.com.br/product/Pneustore/b1f85b0cadeb2e9e7dbd.webp"
+            ],
+            "total_votes": {
+              "harmless": 0,
+              "malicious": 0
+            },
+            "last_analysis_stats": {
+              "malicious": 1,
+              "suspicious": 0,
+              "undetected": 35,
+              "harmless": 57,
+              "timeout": 0
+            },
+            "last_submission_date": 1792183636,
+            "last_modification_date": 1792197326,
+            "user_agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:156.0) Gecko/20100101 Firefox/156.0",
+            "title": "",
+            "trackers": {
+              "Google Tag Manager": [
+                {
+                  "id": "AW-18425905341",
+                  "url": "https://www.googletagmanager.com/gtag/js?id=AW-18425905341&cx=c&gtm=4e6ae1",
+                  "timestamp": 1792183636
+                },
+                {
+                  "id": "AW-18307303339",
+                  "url": "https://www.googletagmanager.com/gtag/js?id=AW-18307303339&cx=c&gtm=4e6ae1",
+                  "timestamp": 1792183636
+                },
+                {
+                  "id": "AW-18292056298",
+                  "url": "https://www.googletagmanager.com/gtag/js?id=AW-18292056298",
+                  "timestamp": 1792183636
+                }
+              ]
+            }
+          }
+        }
+      },
+      "message": null
+    },
+    {
+      "service": "urlscan.io",
+      "indicator_type": "url",
+      "indicator": "https://www.pneustorebr.cfd/",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:08:56+00:00",
+      "endpoint": "https://urlscan.io/api/v1/search/?q=canonical.page.url%3A%22https%5C%3A%5C%2F%5C%2Fwww.pneustorebr.cfd%5C%2F%22&size=10",
+      "http_status": 200,
+      "data": {
+        "results": [],
+        "total": 0,
+        "took": 42,
+        "has_more": false,
+        "search_date_limit_days": 90
+      },
+      "message": "No se encontraron escaneos archivados para el indicador."
+    },
+    {
+      "service": "RDAP",
+      "indicator_type": "domain",
+      "indicator": "pneustorebr.cfd",
+      "status": "found",
+      "queried_at": "2026-10-23T18:08:59+00:00",
+      "endpoint": "https://rdap.org/domain/pneustorebr.cfd",
+      "http_status": 200,
+      "data": {
+        "rdapConformance": [
+          "icann_rdap_response_profile_1",
+          "icann_rdap_technical_implementation_guide_1",
+          "rdap_level_0"
+        ],
+        "lang": "en",
+        "objectClassName": "domain",
+        "handle": "D637359894-CNIC",
+        "ldhName": "pneustorebr.cfd",
+        "secureDNS": {
+          "delegationSigned": false
+        },
+        "entities": [
+          {
+            "objectClassName": "entity",
+            "handle": "472",
+            "roles": [
+              "registrar"
+            ],
+            "vcardArray": [
+              "vcard",
+              [
+                [
+                  "version",
+                  {},
+                  "text",
+                  "4.0"
+                ],
+                [
+                  "fn",
+                  {},
+                  "text",
+                  "Dynadot Inc"
+                ]
+              ]
+            ],
+            "links": [
+              {
+                "title": "Authoritative URL for this resource",
+                "rel": "self",
+                "type": "application/rdap+json",
+                "value": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd",
+                "href": "https://rdap.centralnic.com/cfd/entity/472"
+              },
+              {
+                "title": "Registrar's Website",
+                "rel": "about",
+                "value": "https://rdap.dynadot.com/",
+                "href": "http://www.dynadot.com"
+              }
+            ],
+            "entities": [
+              {
+                "objectClassName": "entity",
+                "handle": "not applicable",
+                "roles": [
+                  "abuse"
+                ],
+                "vcardArray": [
+                  "vcard",
+                  [
+                    [
+                      "version",
+                      {},
+                      "text",
+                      "4.0"
+                    ],
+                    [
+                      "fn",
+                      {},
+                      "text",
+                      "Abuse Contact"
+                    ],
+                    [
+                      "org",
+                      {},
+                      "text",
+                      "Dynadot Inc"
+                    ],
+                    [
+                      "email",
+                      {},
+                      "text",
+                      "abuse@dynadot.com"
+                    ],
+                    [
+                      "tel",
+                      {
+                        "type": "voice"
+                      },
+                      "uri",
+                      "tel:+1.6502620100"
+                    ]
+                  ]
+                ]
+              }
+            ],
+            "publicIds": [
+              {
+                "type": "IANA Registrar ID",
+                "identifier": "472"
+              }
+            ]
+          }
+        ],
+        "status": [
+          "server transfer prohibited",
+          "client hold",
+          "client transfer prohibited",
+          "inactive"
+        ],
+        "port43": "whois.nic.cfd",
+        "events": [
+          {
+            "eventAction": "registration",
+            "eventDate": "2026-09-04T03:47:46.0Z"
+          },
+          {
+            "eventAction": "expiration",
+            "eventDate": "2027-09-04T23:59:59.0Z"
+          },
+          {
+            "eventAction": "last update of RDAP database",
+            "eventDate": "2026-10-23T18:09:00.0Z"
+          },
+          {
+            "eventAction": "last changed",
+            "eventDate": "2026-10-17T08:05:11.0Z"
+          }
+        ],
+        "notices": [
+          {
+            "title": "Status Codes",
+            "description": [
+              "For more information on domain status codes, please visit https://icann.org/epp"
+            ],
+            "links": [
+              {
+                "title": "More information on domain status codes",
+                "rel": "glossary",
+                "value": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd",
+                "href": "https://icann.org/epp"
+              }
+            ]
+          },
+          {
+            "title": "Terms of Use",
+            "description": [
+              "For more information on Whois status codes, please visit https://icann.org/epp",
+              "",
+              "The registration data available in this service is limited. Additional",
+              "data may be available at https://lookup.icann.org",
+              "",
+              "The Whois and RDAP services are provided by CentralNic, and contain",
+              "information pertaining to Internet domain names registered by our",
+              "our customers. By using this service you are agreeing (1) not to use any",
+              "information presented here for any purpose other than determining",
+              "ownership of domain names, (2) not to store or reproduce this data in",
+              "any way, (3) not to use any high-volume, automated, electronic processes",
+              "to obtain data from this service. Abuse of this service is monitored and",
+              "actions in contravention of these terms will result in being permanently",
+              "blacklisted. All data is (c) CentralNic Ltd (https://www.centralnicregistry.com)",
+              "",
+              "Access to the Whois and RDAP services is rate limited. For more",
+              "information, visit https://centralnicregistry.com/policies/whois-guidance."
+            ],
+            "links": [
+              {
+                "title": "Terms of Use",
+                "rel": "terms-of-service",
+                "value": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd",
+                "href": "https://www.centralnicregistry.com/"
+              }
+            ]
+          },
+          {
+            "title": "RDDS Inaccuracy Complaint Form",
+            "description": [
+              "URL of the ICANN RDDS Inaccuracy Complaint Form: https://icann.org/wicf"
+            ],
+            "links": [
+              {
+                "title": "ICANN RDDS Inaccuracy Complaint Form",
+                "rel": "help",
+                "value": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd",
+                "href": "https://icann.org/wicf"
+              }
+            ]
+          }
+        ],
+        "links": [
+          {
+            "title": "Authoritative URL for this resource",
+            "rel": "self",
+            "type": "application/rdap+json",
+            "value": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd",
+            "href": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd"
+          },
+          {
+            "title": "RDAP Service Help",
+            "rel": "help",
+            "type": "text/html",
+            "value": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd",
+            "href": "https://whois.nic.cfd/rdap"
+          },
+          {
+            "title": "URL of Sponsoring Registrar's RDAP Record",
+            "rel": "related",
+            "type": "application/rdap+json",
+            "value": "https://rdap.centralnic.com/cfd/domain/pneustorebr.cfd",
+            "href": "https://rdap.dynadot.com/domain/pneustorebr.cfd"
+          }
+        ]
+      },
+      "message": null
+    },
+    {
+      "service": "DNS-over-HTTPS",
+      "indicator_type": "domain",
+      "indicator": "www.pneustorebr.cfd",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:09:03+00:00",
+      "endpoint": "https://cloudflare-dns.com/dns-query?name=www.pneustorebr.cfd&type=A | https://cloudflare-dns.com/dns-query?name=www.pneustorebr.cfd&type=AAAA | https://cloudflare-dns.com/dns-query?name=www.pneustorebr.cfd&type=CNAME | https://cloudflare-dns.com/dns-query?name=www.pneustorebr.cfd&type=NS | https://cloudflare-dns.com/dns-query?name=www.pneustorebr.cfd&type=MX | https://cloudflare-dns.com/dns-query?name=www.pneustorebr.cfd&type=TXT",
+      "http_status": 200,
+      "data": {
+        "queries": {
+          "A": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "www.pneustorebr.cfd",
+                "type": 1
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          },
+          "AAAA": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "www.pneustorebr.cfd",
+                "type": 28
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          },
+          "CNAME": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "www.pneustorebr.cfd",
+                "type": 5
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          },
+          "NS": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "www.pneustorebr.cfd",
+                "type": 2
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          },
+          "MX": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "www.pneustorebr.cfd",
+                "type": 15
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          },
+          "TXT": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "www.pneustorebr.cfd",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          }
+        },
+        "record_types": [
+          "A",
+          "AAAA",
+          "CNAME",
+          "NS",
+          "MX",
+          "TXT"
+        ]
+      },
+      "message": "El resolver no devolvi\u00f3 registros en los tipos consultados."
+    },
+    {
+      "service": "DNS-over-HTTPS",
+      "indicator_type": "domain",
+      "indicator": "pneustorebr.cfd",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:09:05+00:00",
+      "endpoint": "https://cloudflare-dns.com/dns-query?name=pneustorebr.cfd&type=NS | https://cloudflare-dns.com/dns-query?name=pneustorebr.cfd&type=MX | https://cloudflare-dns.com/dns-query?name=pneustorebr.cfd&type=TXT",
+      "http_status": 200,
+      "data": {
+        "queries": {
+          "NS": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "pneustorebr.cfd",
+                "type": 2
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          },
+          "MX": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "pneustorebr.cfd",
+                "type": 15
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          },
+          "TXT": {
+            "Status": 3,
+            "TC": false,
+            "RD": true,
+            "RA": true,
+            "AD": false,
+            "CD": false,
+            "Question": [
+              {
+                "name": "pneustorebr.cfd",
+                "type": 16
+              }
+            ],
+            "Authority": [
+              {
+                "name": "cfd",
+                "type": 6,
+                "TTL": 900,
+                "data": "ns0.centralnic.net. hostmaster.centralnic.net. 1792778786 900 1800 6048000 3600"
+              }
+            ]
+          }
+        },
+        "record_types": [
+          "NS",
+          "MX",
+          "TXT"
+        ]
+      },
+      "message": "El resolver no devolvi\u00f3 registros en los tipos consultados."
+    },
+    {
+      "service": "crt.sh",
+      "indicator_type": "domain",
+      "indicator": "pneustorebr.cfd",
+      "status": "found",
+      "queried_at": "2026-10-23T18:09:06+00:00",
+      "endpoint": "https://crt.sh/?q=pneustorebr.cfd&output=json",
+      "http_status": 200,
+      "data": [
+        {
+          "issuer_ca_id": 432477,
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR2",
+          "common_name": "pneustorebr.cfd",
+          "name_value": "pneustorebr.cfd",
+          "id": 29336333368,
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "057c495dd81ba43fee8e610c0fd38543577f",
+          "result_count": 2
+        },
+        {
+          "issuer_ca_id": 432477,
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR2",
+          "common_name": "pneustorebr.cfd",
+          "name_value": "pneustorebr.cfd",
+          "id": 29676156333,
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "057c495dd81ba43fee8e610c0fd38543577f",
+          "result_count": 2
+        },
+        {
+          "issuer_ca_id": 432476,
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR1",
+          "common_name": "www.pneustorebr.cfd",
+          "name_value": "www.pneustorebr.cfd",
+          "id": 29336334494,
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "06a15b6a4301e6ac318d626e5a0f93c46be2",
+          "result_count": 2
+        },
+        {
+          "issuer_ca_id": 432476,
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR1",
+          "common_name": "www.pneustorebr.cfd",
+          "name_value": "www.pneustorebr.cfd",
+          "id": 29808327070,
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "06a15b6a4301e6ac318d626e5a0f93c46be2",
+          "result_count": 2
+        }
+      ],
+      "message": null
+    },
+    {
+      "service": "urlscan.io",
+      "indicator_type": "domain",
+      "indicator": "www.pneustorebr.cfd",
+      "status": "found",
+      "queried_at": "2026-10-23T18:09:07+00:00",
+      "endpoint": "https://urlscan.io/api/v1/search/?q=page.domain%3Awww.pneustorebr.cfd&size=10",
+      "http_status": 200,
+      "data": {
+        "results": [
+          {
+            "submitter": {},
+            "canonical": {
+              "task": {
+                "url": "pneustorebr.cfd"
+              },
+              "page": {
+                "url": "pneustorebr.cfd"
+              }
+            },
+            "task": {
+              "visibility": "public",
+              "method": "api",
+              "domain": "www.pneustorebr.cfd",
+              "apexDomain": "pneustorebr.cfd",
+              "time": "2026-10-16T18:50:34.640Z",
+              "uuid": "01a1460d-11c6-71b9-9818-3caec90d10c7",
+              "url": "https://www.pneustorebr.cfd/"
+            },
+            "stats": {
+              "uniqIPs": 5,
+              "uniqCountries": 2,
+              "dataLength": 657806,
+              "encodedDataLength": 353280,
+              "requests": 14
+            },
+            "page": {
+              "country": "US",
+              "ip": "54.215.31.113",
+              "apexDomainAgeDays": 42,
+              "language": "en",
+              "mimeType": "text/html",
+              "title": "Domain registered | Dynadot",
+              "url": "https://www.pneustorebr.cfd/",
+              "tlsValidDays": 396,
+              "tlsAgeDays": 363,
+              "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com",
+              "domainAgeDays": 42,
+              "tlsValidFrom": "2025-10-18T00:00:00.000Z",
+              "domain": "www.pneustorebr.cfd",
+              "apexDomain": "pneustorebr.cfd",
+              "asnname": "AMAZON-02 - Amazon.com, Inc., US",
+              "asn": "AS16509",
+              "tlsIssuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+              "status": "404"
+            },
+            "labels": [],
+            "_id": "01a1460d-11c6-71b9-9818-3caec90d10c7",
+            "_score": null,
+            "sort": [
+              1792176634640,
+              "01a1460d-11c6-71b9-9818-3caec90d10c7"
+            ],
+            "result": "https://urlscan.io/api/v1/result/01a1460d-11c6-71b9-9818-3caec90d10c7/",
+            "screenshot": "https://urlscan.io/screenshots/01a1460d-11c6-71b9-9818-3caec90d10c7.png"
+          }
+        ],
+        "total": 1,
+        "took": 33,
+        "has_more": false,
+        "search_date_limit_days": 90
+      },
+      "message": "Se encontraron 1 resultados devueltos (total informado: 1)."
+    },
+    {
+      "service": "VirusTotal",
+      "indicator_type": "domain",
+      "indicator": "pneustorebr.cfd",
+      "status": "found",
+      "queried_at": "2026-10-23T18:09:12+00:00",
+      "endpoint": "https://www.virustotal.com/api/v3/domains/pneustorebr.cfd",
+      "http_status": 200,
+      "data": {
+        "data": {
+          "id": "pneustorebr.cfd",
+          "type": "domain",
+          "links": {
+            "self": "https://www.virustotal.com/api/v3/domains/pneustorebr.cfd"
+          },
+          "attributes": {
+            "registrar": "Dynadot Inc",
+            "last_analysis_stats": {
+              "malicious": 6,
+              "suspicious": 2,
+              "undetected": 37,
+              "harmless": 47,
+              "timeout": 0
+            },
+            "reputation": 0,
+            "popularity_ranks": {},
+            "last_modification_date": 1792497273,
+            "first_seen_date": 1788511532,
+            "tags": [],
+            "last_dns_records": [
+              {
+                "type": "SOA",
+                "ttl": 300,
+                "value": "ns1.dyna-ns.net",
+                "rname": "hostmaster.pneustorebr.cfd",
+                "serial": 2026090401,
+                "refresh": 16384,
+                "retry": 2048,
+                "expire": 1209600,
+                "minimum": 300
+              },
+              {
+                "type": "NS",
+                "ttl": 300,
+                "value": "ns1.dyna-ns.net"
+              },
+              {
+                "type": "A",
+                "ttl": 300,
+                "value": "216.198.79.1"
+              },
+              {
+                "type": "NS",
+                "ttl": 300,
+                "value": "ns2.dyna-ns.net"
+              }
+            ],
+            "whois": "Creation Date: 2026-09-04T03:47:46.0Z\nDNSSEC: unsigned\nDomain Name: PNEUSTOREBR.CFD\nDomain Status: clientTransferProhibited https://icann.org/epp#clientTransferProhibited\nDomain Status: serverTransferProhibited https://icann.org/epp#serverTransferProhibited\nName Server: NS1.DYNA-NS.NET\nName Server: NS2.DYNA-NS.NET\nRegistrar Abuse Contact Email: abuse@dynadot.com\nRegistrar Abuse Contact Phone: +1.6502620100\nRegistrar IANA ID: 472\nRegistrar URL: http://www.dynadot.com\nRegistrar WHOIS Server: whois.dynadot.com\nRegistrar: Dynadot Inc\nRegistry Domain ID: D637359894-CNIC\nRegistry Expiry Date: 2027-09-04T23:59:59.0Z\nUpdated Date: 2026-09-17T23:43:05.0Z",
+            "jarm": "3fd3fd00000000000043d43d00043dc3b2afa8a5ec09b510a8559aff7899fb",
+            "tld": "cfd",
+            "total_votes": {
+              "harmless": 0,
+              "malicious": 0
+            },
+            "whois_date": 1792183706,
+            "last_analysis_results": {
+              "Acronis": {
+                "method": "blacklist",
+                "engine_name": "Acronis",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "0xSI_f33d": {
+                "method": "blacklist",
+                "engine_name": "0xSI_f33d",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Abusix": {
+                "method": "blacklist",
+                "engine_name": "Abusix",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ADMINUSLabs": {
+                "method": "blacklist",
+                "engine_name": "ADMINUSLabs",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Axur": {
+                "method": "blacklist",
+                "engine_name": "Axur",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ChainPatrol": {
+                "method": "blacklist",
+                "engine_name": "ChainPatrol",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Criminal IP": {
+                "method": "blacklist",
+                "engine_name": "Criminal IP",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AILabs (MONITORAPP)": {
+                "method": "blacklist",
+                "engine_name": "AILabs (MONITORAPP)",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "AlienVault": {
+                "method": "blacklist",
+                "engine_name": "AlienVault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "alphaMountain.ai": {
+                "method": "blacklist",
+                "engine_name": "alphaMountain.ai",
+                "category": "suspicious",
+                "result": "suspicious"
+              },
+              "AlphaSOC": {
+                "method": "blacklist",
+                "engine_name": "AlphaSOC",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Antiy-AVL": {
+                "method": "blacklist",
+                "engine_name": "Antiy-AVL",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ArcSight Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "ArcSight Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "AutoShun": {
+                "method": "blacklist",
+                "engine_name": "AutoShun",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Bfore.Ai PreCrime": {
+                "method": "blacklist",
+                "engine_name": "Bfore.Ai PreCrime",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "BitDefender": {
+                "method": "blacklist",
+                "engine_name": "BitDefender",
+                "category": "malicious",
+                "result": "phishing"
+              },
+              "Bkav": {
+                "method": "blacklist",
+                "engine_name": "Bkav",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Blueliv": {
+                "method": "blacklist",
+                "engine_name": "Blueliv",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Certego": {
+                "method": "blacklist",
+                "engine_name": "Certego",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Chong Lua Dao": {
+                "method": "blacklist",
+                "engine_name": "Chong Lua Dao",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CINS Army": {
+                "method": "blacklist",
+                "engine_name": "CINS Army",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CRDF": {
+                "method": "blacklist",
+                "engine_name": "CRDF",
+                "category": "malicious",
+                "result": "malicious"
+              },
+              "CSIS Security Group": {
+                "method": "blacklist",
+                "engine_name": "CSIS Security Group",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Snort IP sample list": {
+                "method": "blacklist",
+                "engine_name": "Snort IP sample list",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CMC Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "CMC Threat Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "CTX AI": {
+                "method": "blacklist",
+                "engine_name": "CTX AI",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Cyan": {
+                "method": "blacklist",
+                "engine_name": "Cyan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Cyble": {
+                "method": "blacklist",
+                "engine_name": "Cyble",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "CyRadar": {
+                "method": "blacklist",
+                "engine_name": "CyRadar",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "DNS8": {
+                "method": "blacklist",
+                "engine_name": "DNS8",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Dr.Web": {
+                "method": "blacklist",
+                "engine_name": "Dr.Web",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Ermes": {
+                "method": "blacklist",
+                "engine_name": "Ermes",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ESET": {
+                "method": "blacklist",
+                "engine_name": "ESET",
+                "category": "malicious",
+                "result": "phishing"
+              },
+              "ESTsecurity": {
+                "method": "blacklist",
+                "engine_name": "ESTsecurity",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "EmergingThreats": {
+                "method": "blacklist",
+                "engine_name": "EmergingThreats",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Emsisoft": {
+                "method": "blacklist",
+                "engine_name": "Emsisoft",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Forcepoint ThreatSeeker": {
+                "method": "blacklist",
+                "engine_name": "Forcepoint ThreatSeeker",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Fortinet": {
+                "method": "blacklist",
+                "engine_name": "Fortinet",
+                "category": "malicious",
+                "result": "phishing"
+              },
+              "Fortra": {
+                "method": "blacklist",
+                "engine_name": "Fortra",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "G-Data": {
+                "method": "blacklist",
+                "engine_name": "G-Data",
+                "category": "malicious",
+                "result": "phishing"
+              },
+              "GCP Abuse Intelligence": {
+                "method": "blacklist",
+                "engine_name": "GCP Abuse Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Google Safe Browsing": {
+                "method": "blacklist",
+                "engine_name": "Google Safe Browsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GreenSnow": {
+                "method": "blacklist",
+                "engine_name": "GreenSnow",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "GreyNoise": {
+                "method": "blacklist",
+                "engine_name": "GreyNoise",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Gridinsoft": {
+                "method": "blacklist",
+                "engine_name": "Gridinsoft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Guardpot": {
+                "method": "blacklist",
+                "engine_name": "Guardpot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Heimdal Security": {
+                "method": "blacklist",
+                "engine_name": "Heimdal Security",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Hunt.io Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Hunt.io Intelligence",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "IPsum": {
+                "method": "blacklist",
+                "engine_name": "IPsum",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Juniper Networks": {
+                "method": "blacklist",
+                "engine_name": "Juniper Networks",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Kaspersky": {
+                "method": "blacklist",
+                "engine_name": "Kaspersky",
+                "category": "malicious",
+                "result": "phishing"
+              },
+              "LevelBlue": {
+                "method": "blacklist",
+                "engine_name": "LevelBlue",
+                "category": "suspicious",
+                "result": "suspicious"
+              },
+              "Lionic": {
+                "method": "blacklist",
+                "engine_name": "Lionic",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Lumu": {
+                "method": "blacklist",
+                "engine_name": "Lumu",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "MalwarePatrol": {
+                "method": "blacklist",
+                "engine_name": "MalwarePatrol",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "MalwareURL": {
+                "method": "blacklist",
+                "engine_name": "MalwareURL",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Malwared": {
+                "method": "blacklist",
+                "engine_name": "Malwared",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Mimecast": {
+                "method": "blacklist",
+                "engine_name": "Mimecast",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Netcraft": {
+                "method": "blacklist",
+                "engine_name": "Netcraft",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "OpenPhish": {
+                "method": "blacklist",
+                "engine_name": "OpenPhish",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Orcapot": {
+                "method": "blacklist",
+                "engine_name": "Orcapot",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishing Database": {
+                "method": "blacklist",
+                "engine_name": "Phishing Database",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PhishFort": {
+                "method": "blacklist",
+                "engine_name": "PhishFort",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Phishtank": {
+                "method": "blacklist",
+                "engine_name": "Phishtank",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PREBYTES": {
+                "method": "blacklist",
+                "engine_name": "PREBYTES",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "PrecisionSec": {
+                "method": "blacklist",
+                "engine_name": "PrecisionSec",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Quick Heal": {
+                "method": "blacklist",
+                "engine_name": "Quick Heal",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Quttera": {
+                "method": "blacklist",
+                "engine_name": "Quttera",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SafeToOpen": {
+                "method": "blacklist",
+                "engine_name": "SafeToOpen",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sansec eComscan": {
+                "method": "blacklist",
+                "engine_name": "Sansec eComscan",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Scantitan": {
+                "method": "blacklist",
+                "engine_name": "Scantitan",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SCUMWARE.org": {
+                "method": "blacklist",
+                "engine_name": "SCUMWARE.org",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Seclookup": {
+                "method": "blacklist",
+                "engine_name": "Seclookup",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "SecureBrain": {
+                "method": "blacklist",
+                "engine_name": "SecureBrain",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "SOCRadar": {
+                "method": "blacklist",
+                "engine_name": "SOCRadar",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Sophos": {
+                "method": "blacklist",
+                "engine_name": "Sophos",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "StopForumSpam": {
+                "method": "blacklist",
+                "engine_name": "StopForumSpam",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Sucuri SiteCheck": {
+                "method": "blacklist",
+                "engine_name": "Sucuri SiteCheck",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Synthient": {
+                "method": "blacklist",
+                "engine_name": "Synthient",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "ThreatHive": {
+                "method": "blacklist",
+                "engine_name": "ThreatHive",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLhaus": {
+                "method": "blacklist",
+                "engine_name": "URLhaus",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "URLQuery": {
+                "method": "blacklist",
+                "engine_name": "URLQuery",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "Viettel Threat Intelligence": {
+                "method": "blacklist",
+                "engine_name": "Viettel Threat Intelligence",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "VIPRE": {
+                "method": "blacklist",
+                "engine_name": "VIPRE",
+                "category": "undetected",
+                "result": "unrated"
+              },
+              "VX Vault": {
+                "method": "blacklist",
+                "engine_name": "VX Vault",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ViriBack": {
+                "method": "blacklist",
+                "engine_name": "ViriBack",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Webroot": {
+                "method": "blacklist",
+                "engine_name": "Webroot",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Yandex Safebrowsing": {
+                "method": "blacklist",
+                "engine_name": "Yandex Safebrowsing",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroCERT": {
+                "method": "blacklist",
+                "engine_name": "ZeroCERT",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "desenmascara.me": {
+                "method": "blacklist",
+                "engine_name": "desenmascara.me",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "Xcitium Verdict Cloud": {
+                "method": "blacklist",
+                "engine_name": "Xcitium Verdict Cloud",
+                "category": "harmless",
+                "result": "clean"
+              },
+              "ZeroFox": {
+                "method": "blacklist",
+                "engine_name": "ZeroFox",
+                "category": "undetected",
+                "result": "unrated"
+              }
+            },
+            "creation_date": 1788493666,
+            "categories": {},
+            "last_https_certificate": {
+              "cert_signature": {
+                "signature_algorithm": "sha256RSA",
+                "signature": "476becfd65bac2aadc1094036ea22881459330c6046c3b794984785104a9fd49bac1f2df1c1718969fc832449bdc589b8b2a13c300398de384db2eb331841add42d690882f28f5d5d5ce8a59207fce24cce31323b3e20b036aa06e1d5f5fa340ad25931c3da12b6821ef03ee2cb18e5cdbc41e583095a5634b8f525bfaeb3f285d10b02225754b1a2393138f568bd9060348420150b21f7523b744808d197342a8046d8cde216036cf5c2ad65f05a3d0302917ac75c7de4cfbacabc7a4970cddf7b12c8f208f44205e7142fba5ceedc69cf8f541cdfe792a752201bcbb0a43c9905a2e8cffdf6f72b193c797be38bf8461b8884a2be0b5e64c028f8ffd302991"
+              },
+              "extensions": {
+                "key_usage": [
+                  "digitalSignature",
+                  "keyEncipherment"
+                ],
+                "extended_key_usage": [
+                  "serverAuth"
+                ],
+                "CA": false,
+                "subject_key_identifier": "6c3ecf34f1f25de248126932064704a3fadce5f2",
+                "authority_key_identifier": {
+                  "keyid": "40152d2679ed32209edf9a721dd6321f810c810c"
+                },
+                "ca_information_access": {
+                  "CA Issuers": "http://yr2.i.lencr.org/"
+                },
+                "subject_alternative_name": [
+                  "pneustorebr.cfd"
+                ],
+                "certificate_policies": [
+                  "2.23.140.1.2.1"
+                ],
+                "crl_distribution_points": [
+                  "http://yr2.c.lencr.org/128.crl"
+                ],
+                "1.3.6.1.4.1.11129.2.4.2": "0481fa00f8007e001a8b9d6b0ffebf81b47939c6d2310a86d6d102d4f046e218"
+              },
+              "validity": {
+                "not_after": "2026-12-03 07:31:12",
+                "not_before": "2026-09-04 07:31:13"
+              },
+              "size": 1277,
+              "version": "V3",
+              "public_key": {
+                "algorithm": "RSA",
+                "rsa": {
+                  "modulus": "975ea49db5bd4362dbf025ff09f23f23c5b2c8a3da08aed966a155e261fa562cd99dfe9847a74a8af5d40de79ddc1ada12a526b047fb276c38b9905ed447f603d24a0dc591ea7055122ce287295b30bc6288eb6d8527643aba1c5a6348cd256f60236993ca90c7f5dde9cc886adb39efcd2942d2d10ce01db1a2a6b7902ca683e92916f0aa5adb3cdbabcd5045913f56a24752d95862e926ffa693cdfe075b6ee5eed7bdcf6483cb6ffee56e88aa3de4a59c350b9ea6c338025f6204784aa063341c1c98851b1be6542200e1052d6bb90a62ef39b2cb93ea8d0fb09a4e2f5cf106c3d352751d40feffa48a7869aeb7f594cde5706b2889d5e26c69b67d87881d",
+                  "exponent": "10001",
+                  "key_size": 2048
+                }
+              },
+              "thumbprint_sha256": "45536de5f922027fcbb92b8be2c0d592170eb81233b4dd7780d319fdabb63033",
+              "thumbprint": "4b69262a23fdacd8b4714280a19aa5b6682ac25c",
+              "serial_number": "57c495dd81ba43fee8e610c0fd38543577f",
+              "issuer": {
+                "C": "US",
+                "O": "Let's Encrypt",
+                "CN": "YR2"
+              },
+              "subject": {
+                "CN": "pneustorebr.cfd"
+              }
+            },
+            "last_analysis_date": 1792439924,
+            "expiration_date": 1820102399,
+            "last_https_certificate_date": 1792183706,
+            "last_dns_records_date": 1792183706,
+            "last_update_date": 1789688585
+          }
+        }
+      },
+      "message": null
+    }
+  ]
+}

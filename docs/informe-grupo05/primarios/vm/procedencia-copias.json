@@ -1,0 +1,44 @@
+[
+  {
+    "origen": "/home/fran/VMs/ciberseguridad-minima/grupo05-inventario-estatico.json",
+    "copia": "primarios/vm/grupo05-inventario-estatico.json",
+    "sha256": "5bb8fe21eb17ce505b5d1a7f9247b6e1e5c6716d9fe9ea4c09989ed42f954ebb",
+    "copiado_utc": "2026-10-23T17:54:35.092665+00:00"
+  },
+  {
+    "origen": "/home/fran/VMs/ciberseguridad-minima/grupo05-archivos-estaticos.json",
+    "copia": "primarios/vm/grupo05-archivos-estaticos.json",
+    "sha256": "18ecc4b1f61d4df452421b816812d2861d14b2b0a359ff61ce0e623ad0ba6447",
+    "copiado_utc": "2026-10-23T17:54:35.093180+00:00"
+  },
+  {
+    "origen": "/home/fran/VMs/ciberseguridad-minima/grupo05-entrada.json",
+    "copia": "primarios/vm/grupo05-entrada.json",
+    "sha256": "9f98b516410179bbffbd0f42127ee7eeeb3a206d811d61497da301cd079cff11",
+    "copiado_utc": "2026-10-23T17:54:35.093632+00:00"
+  },
+  {
+    "origen": "/home/fran/VMs/ciberseguridad-minima/grupo05-correos-verificados-consola.log",
+    "copia": "primarios/vm/grupo05-correos-verificados-consola.log",
+    "sha256": "e59523134e49a7bd30bd2cea5ff523ef093e8b376783857db7914fb3d9fc53fe",
+    "copiado_utc": "2026-10-23T17:54:35.096077+00:00"
+  },
+  {
+    "origen": "/home/fran/VMs/ciberseguridad-minima/grupo05-correos-html-consola.log",
+    "copia": "primarios/vm/grupo05-correos-html-consola.log",
+    "sha256": "1a5818411a59ed5a6bb43f4ca16a692c1ea0e9cd95ec86352e483f78ee4a4dac",
+    "copiado_utc": "2026-10-23T17:54:35.096676+00:00"
+  },
+  {
+    "origen": "/home/fran/VMs/ciberseguridad-minima/grupo05-aes-consola.log",
+    "copia": "primarios/vm/grupo05-aes-consola.log",
+    "sha256": "4ffbb8e2fe17406552530019917abe79923ec49434ad90870209fb1b0965f7b9",
+    "copiado_utc": "2026-10-23T17:54:35.097216+00:00"
+  },
+  {
+    "origen": "/home/fran/VMs/ciberseguridad-minima/aislamiento-qemu.json",
+    "copia": "primarios/vm/aislamiento-qemu.json",
+    "sha256": "ee37be25394476a3dda6437c1949b32e551c387c4e6c8d139938a8c32455c04d",
+    "copiado_utc": "2026-10-23T17:54:35.097649+00:00"
+  }
+]

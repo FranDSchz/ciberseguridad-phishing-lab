@@ -1,0 +1,539 @@
+﻿====================================================================================================
+ INFORME DE ANALISIS Y TRIAGE DE RECURSOS SOSPECHOSOS
+ Fundamentos de Ciberseguridad - UTN FRRe - Ciclo 2026 - Grupo 05
+====================================================================================================
+Identificador : Archivo-1
+Tipo          : Ejecutable / archivo (por hash)
+Recurso       : 6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba
+Fecha/hora    : 2026-10-23 01:52:39 -0300
+Herramienta   : triage_recursos.py v1.0
+
+Documento de evidencia tecnica. NO abrir enlaces ni ejecutar archivos.
+====================================================================================================
+
+
+====================================================================================================
+ 1. FICHA DE ANALISIS (SECCION 7 DEL ENUNCIADO)
+====================================================================================================
+
+Identificador del recurso:        Archivo-1
+Tipo:                             Ejecutable / archivo (por hash)
+Herramientas usadas:              VirusTotal API v3 (reputacion por hash, detecciones, sandboxes y
+                                  clasificacion); calculo local de MD5/SHA-1/SHA-256 (si se provee
+                                  archivo)
+Evidencia clave:                  VirusTotal: 47/68 motores detectan el archivo como malicioso;
+                                  Sandboxes de VirusTotal con veredicto malicioso: VMRay, Zenbox;
+                                  Clasificacion de la comunidad: trojan.xkcp/hack; Categorias:
+                                  adware, hacktool, trojan; Tags: 64bits, detect-debug-environment,
+                                  invalid-signature, long-sleeps, malware, overlay, pedll, signed;
+                                  Primera vez visto: 2026-10-14 04:02:51 -0300 (8 dias)
+Tipo de amenaza (si aplica):      Troyano (familia: ValleyRAT)
+Impacto C-I-A:                    Alto: el equipo queda bajo control del atacante o con capacidad de
+                                  descargar mas payloads.
+VEREDICTO:                        MALICIOSO
+Confianza:                        alta
+Medida usuario:                   No ejecutar el archivo. Aislar el equipo donde se intento abrir,
+                                  cambiar credenciales y reportar de inmediato al area de seguridad.
+Medida organizacion:              Bloquear el hash en EDR/antivirus y listas de aplicaciones; buscar
+                                  el hash en endpoints; aplicar cuarentena; revisar persistencia y
+                                  conexiones salientes; capacitacion sobre adjuntos.
+
+====================================================================================================
+ 2. DATOS DEL RECURSO
+====================================================================================================
+
+Hash aportado:                    6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba
+Tipo de hash:                     SHA-256
+SHA-256:                          6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba
+SHA-1:                            87b79ae55a56acde041fb7ee0677b89d967ec851
+MD5:                              cd22bb73046551dfbafcc7f4c3ed505f
+Tipo real:                        Win32 DLL
+Tamano:                           2264968 bytes
+Nombres conocidos:                Setup64.exe, 6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36
+                                  abedbb050ba.exe, libPdfCore.dll, gnps7ej.exe, hx8sh.exe
+
+====================================================================================================
+ 3. HERRAMIENTAS UTILIZADAS
+====================================================================================================
+
+  - VirusTotal API v3: reputacion por hash sin subir el archivo.
+  - Analisis de detecciones por motor, clasificacion de amenaza y veredictos de sandbox.
+  - El archivo NO se ejecuta ni se sube desde esta herramienta.
+
+====================================================================================================
+ 4. EVIDENCIA TECNICA (METODOLOGIA 5.3)
+====================================================================================================
+
+
+4.1 Huella del archivo (paso 1: hashes)
+----------------------------------------------------------------------------------------------------
+SHA-256:                          6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba
+SHA-1:                            87b79ae55a56acde041fb7ee0677b89d967ec851
+MD5:                              cd22bb73046551dfbafcc7f4c3ed505f
+  - El hash es la huella del archivo: permite buscarlo sin manipular la muestra.
+
+4.2 Reputacion por hash en VirusTotal (paso 2)
+----------------------------------------------------------------------------------------------------
+Detecciones:                      47/68 maliciosos, 0 sospechosos
+Metrica                    | Valor
+---------------------------+-----------------------------------------------------------------------
+Maliciosos                 | 47
+Sospechosos                | 0
+Harmless                   | 0
+Undetected                 | 21
+Timeout                    | 1
+Failure                    | 2
+Reputacion                 | -11
+Veces enviado              | 2
+Primera vez visto          | 2026-10-14 04:02:51 -0300
+Ultimo analisis            | 2026-10-22 10:15:48 -0300
+
+Detecciones por motor (maliciosas):
+Motor                          | Firma
+-------------------------------+-------------------------------------------------------------------
+AhnLab-V3                      | Trojan/Win.Generic.R800949
+Alibaba                        | Backdoor:Win64/MalwareX.f229cf75
+alibabacloud                   | Backdoor:Win/Xkcp.dsc
+ALYac                          | Application.Generic.37102404
+Antiy-AVL                      | Trojan/Win32.SwimSnake
+Arcabit                        | Application.Generic.D2362344
+Avast                          | Win64:MalwareX-gen [Hack]
+AVG                            | Win64:MalwareX-gen [Hack]
+Avira                          | TR/W64.MalwareX
+BitDefender                    | Application.Generic.37102404
+CAT-QuickHeal                  | Hacktool.Agent
+CrowdStrike                    | win/malicious_confidence_100% (W)
+CTX                            | dll.trojan.malwarex
+Cylance                        | Unsafe
+Elastic                        | malicious (high confidence)
+Emsisoft                       | Application.Generic.37102404 (B)
+ESET-NOD32                     | Win64/HackTool.Agent.FB trojan
+F-Secure                       | Trojan.TR/W64.MalwareX
+Fortinet                       | W64/Agent.FB!tr
+GData                          | Application.Generic.37102404
+Google                         | Detected
+huorong                        | Backdoor/Lotok.vc
+Ikarus                         | Backdoor.Rat.Valley
+K7AntiVirus                    | Hacktool ( 005ce32e1 )
+K7GW                           | Hacktool ( 005ce32e1 )
+Kingsoft                       | Win32.Hack.Xkcp.dxg
+Lionic                         | Trojan.Win32.Xkcp.m!c
+Malwarebytes                   | Trojan.ShellCode
+MaxSecure                      | Trojan.Malware.338148470.susgen
+McAfeeD                        | ti!6F9F663F832A
+Microsoft                      | Trojan:Win32/Egairtigado!rfn
+MicroWorld-eScan               | Application.Generic.37102404
+Paloalto                       | generic.ml
+Panda                          | Trj/PhxBzA.A
+Rising                         | Backdoor.Xkcp!8.18DDE (CLOUD)
+Sangfor                        | Trojan.Win32.Save.a
+Sophos                         | Generic Reputation PUA (PUA)
+Symantec                       | ML.Attribute.HighConfidence
+Tencent                        | Malware.Win32.Gencirc.10c4d209
+TrellixENS                     | Artemis!CD22BB730465
+TrendMicro                     | Backdoor.Win64.VALLEYRAT.YXGJNZ
+TrendMicro-HouseCall           | Backdoor.Win64.VALLEYRAT.YXGJNZ
+Varist                         | W64/ABTrojan.QNBA-7902
+VBA32                          | Backdoor.Pallas
+VIPRE                          | Application.Generic.37102404
+Webroot                        | W32.Adware.Gen
+Zillya                         | Backdoor.Xkcp.Win32.758
+
+Clasificacion de la comunidad:
+Etiqueta sugerida:                trojan.xkcp/hack
+Categorias:                       trojan (19), hacktool (4), adware (1)
+Nombres de familia:               xkcp (5), hack (3), valleyrat (2)
+Tags:                             overlay, long-sleeps, 64bits, malware, invalid-signature, signed,
+                                  pedll, detect-debug-environment
+Votos:                            maliciosos=1, harmless=0
+
+4.3 Comportamiento observado en sandboxes (paso 3)
+----------------------------------------------------------------------------------------------------
+Sandbox            | Categoria      | Clasificacion                                    | Confianza
+-------------------+----------------+--------------------------------------------------+-------------
+Zenbox             | malicious      | MALWARE, EVADER                                  | 68
+C2AE               | undetected     | UNKNOWN_VERDICT                                  | -
+VMRay              | malicious      | MALWARE                                          | -
+  - Estos veredictos provienen de los sandboxes integrados en VirusTotal; no se ejecuto la muestra
+    en el equipo local.
+
+4.4 Metadatos y tipo (paso 3)
+----------------------------------------------------------------------------------------------------
+Tipo:                             Win32 DLL
+Type tag:                         pedll
+Magic:                            PE32+ executable (DLL) (GUI) x86-64, for MS Windows
+Tamano:                           2264968 bytes
+Primera vez visto:                2026-10-14 04:02:51 -0300
+Ultimo envio:                     2026-10-14 09:08:18 -0300
+Ultimo analisis:                  2026-10-22 10:15:48 -0300
+Imphash:                          No disponible
+SSDeep:                           24576:QgYDt2FGIkb9LAYAf6i0HmF19r5BbkFGGumgdJjrG8XrJrD:Qft82TsL0HDr
+                                  0rJr
+Vhash:                            126076655d155d05655128z7b3z11z47z23z5ez3
+
+Firma digital:
+Product:                          Setup64
+Description:                      Setup
+Signers:                          Wondershare Technology Group Co.,Ltd
+Verified:                         A certificate chain processed, but terminated in a root
+                                  certificate which is not trusted by the trust provider.
+Signing date:                     06:23 AM 10/14/2026
+File version:                     1.0.0.1
+Original name:                    Setup64.exe
+
+Informacion PE:
+Machine type:                     34404
+Timestamp:                        2026-10-14 03:22:37 -0300
+Entry point:                      237552
+Secciones:                        7
+  - Para inspeccionar strings, imports, firma y macros se necesita la muestra en una VM aislada con
+    herramientas estaticas.
+
+4.5 Familia, relaciones e IoCs
+----------------------------------------------------------------------------------------------------
+Familia/etiqueta:                 trojan.xkcp/hack
+Nombres reportados por los motores:
+  - Setup64.exe
+  - 6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba.exe
+  - libPdfCore.dll
+  - gnps7ej.exe
+  - hx8sh.exe
+Tags de comportamiento:           overlay, long-sleeps, 64bits, malware, invalid-signature, signed,
+                                  pedll, detect-debug-environment
+  - Los nombres, tags y la clasificacion son IoCs de contexto; para IoCs de red y archivos creados
+    se requiere el analisis de comportamiento en sandbox.
+
+====================================================================================================
+ 5. TIPO DE AMENAZA
+====================================================================================================
+
+Clasificacion:                    Troyano (familia: ValleyRAT)
+
+
+====================================================================================================
+ 6. IMPACTO C-I-A
+====================================================================================================
+
+Resumen:                          Alto: el equipo queda bajo control del atacante o con capacidad de
+                                  descargar mas payloads.
+
+Dimension          | Impacto      | Justificacion
+-------------------+--------------+-----------------------------------------------------------------
+Confidencialidad   | Alto         | Acceso remoto, robo de informacion y credenciales.
+Integridad         | Alto         | Instalacion de componentes y modificacion del sistema.
+Disponibilidad     | Medio        | Puede degradar o bloquear el equipo.
+
+====================================================================================================
+ 7. VEREDICTO Y JUSTIFICACION
+====================================================================================================
+
+VEREDICTO:                        MALICIOSO
+Confianza:                        alta
+Puntaje heuristico:               12
+
+Evidencia que sostiene el veredicto:
+  - VirusTotal: 47/68 motores detectan el archivo como malicioso.
+  - Sandboxes de VirusTotal con veredicto malicioso: VMRay, Zenbox.
+  - Clasificacion de la comunidad: trojan.xkcp/hack.
+  - Categorias: adware, hacktool, trojan.
+  - Tags: 64bits, detect-debug-environment, invalid-signature, long-sleeps, malware, overlay, pedll,
+    signed.
+  - Primera vez visto: 2026-10-14 04:02:51 -0300 (8 dias).
+
+Criterio aplicado (anexo del enunciado):
+  - LIMPIO: autenticacion correcta y alineada, dominio con antiguedad y reputacion sanas, sin
+    detecciones ni comportamiento anormal.
+  - SOSPECHOSO: senales mixtas o insuficientes (pocas detecciones, dominio nuevo, cabecera
+    incoherente, sin confirmacion de payload).
+  - MALICIOSO: evidencia concluyente (multiples detecciones coincidentes, comportamiento malicioso,
+    phishing confirmado, hash en bases de malware).
+  - Recordatorio: la ausencia de senal no es prueba de inocencia; el veredicto surge de cruzar
+    herramientas.
+
+====================================================================================================
+ 8. MEDIDAS RECOMENDADAS
+====================================================================================================
+
+Accion inmediata del usuario:     No ejecutar el archivo. Aislar el equipo donde se intento abrir,
+                                  cambiar credenciales y reportar de inmediato al area de seguridad.
+Control organizacional:           Bloquear el hash en EDR/antivirus y listas de aplicaciones; buscar
+                                  el hash en endpoints; aplicar cuarentena; revisar persistencia y
+                                  conexiones salientes; capacitacion sobre adjuntos.
+
+====================================================================================================
+ 9. PASOS MANUALES Y CAPTURAS SUGERIDAS
+====================================================================================================
+
+  - Capturar el informe de VirusTotal del hash (pestanas Detection y Details).
+  - Si el hash no es conocido, analizarlo en Any.Run o Hybrid Analysis desde una VM aislada y
+    capturar procesos, red y archivos creados.
+  - No ejecutar el archivo en el equipo real ni en el de la facultad.
+  - Verificar la firma digital y el tipo real antes de cualquier uso.
+
+====================================================================================================
+ 10. ANEXO: REPRODUCIBILIDAD Y LIMITACIONES
+====================================================================================================
+
+Enlaces para capturas y verificacion manual:
+  - VirusTotal - archivo: https://www.virustotal.com/gui/file/6f9f663f832a06474913ec6bb0f94e3cca6e06
+    58396a68053ff36abedbb050ba
+  - VirusTotal - relaciones: https://www.virustotal.com/gui/file/6f9f663f832a06474913ec6bb0f94e3cca6
+    e0658396a68053ff36abedbb050ba/relations
+  - Any.Run: https://any.run/
+  - Hybrid Analysis: https://www.hybrid-analysis.com/
+
+Notas de ejecucion:
+  - Consultas realizadas en esta ejecucion: VirusTotal=0, urlscan.io=0.
+  - Cache local: C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+    Ciberseguridad\Practica\tp1\.triage_cache (evita repetir consultas).
+  - Los resultados de reputacion son una foto del momento de la consulta y pueden cambiar; los
+    enlaces permiten reproducirlos.
+
+  - Las consultas a VirusTotal y urlscan.io pueden variar con el tiempo; los enlaces permiten
+    reproducir el estado observado.
+  - No se abrieron enlaces, no se descargaron payloads y no se ejecutaron archivos.
+
+Anexo A - Evidencia estructurada (JSON resumido)
+----------------------------------------------------------------------------------------------------
+  {
+    "hash_aportado": "6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba",
+    "tipo_hash": "SHA-256",
+    "vt_file": {
+      "stats": {
+        "malicious": 47,
+        "suspicious": 0,
+        "undetected": 21,
+        "harmless": 0,
+        "timeout": 1,
+        "confirmed-timeout": 0,
+        "failure": 2,
+        "type-unsupported": 4
+      },
+      "reputation": -11,
+      "tags": [
+        "overlay",
+        "long-sleeps",
+        "64bits",
+        "malware",
+        "invalid-signature",
+        "signed",
+        "pedll",
+        "detect-debug-environment"
+      ],
+      "categories": null,
+      "type_description": "Win32 DLL",
+      "type_tag": "pedll",
+      "size": 2264968,
+      "names": [
+        "Setup64.exe",
+        "6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba.exe",
+        "libPdfCore.dll",
+        "gnps7ej.exe",
+        "hx8sh.exe"
+      ],
+      "creation_date": 1791958957,
+      "first_submission_date": 1791961371,
+      "last_analysis_date": 1792674948,
+      "threat": {
+        "suggested_threat_label": "trojan.xkcp/hack",
+        "popular_threat_name": [
+          {
+            "count": 5,
+            "value": "xkcp"
+          },
+          {
+            "count": 3,
+            "value": "hack"
+          },
+          {
+            "count": 2,
+            "value": "valleyrat"
+          }
+        ],
+        "popular_threat_category": [
+          {
+            "count": 19,
+            "value": "trojan"
+          },
+          {
+            "count": 4,
+            "value": "hacktool"
+          },
+          {
+            "count": 1,
+            "value": "adware"
+          }
+        ]
+      },
+      "detections": [
+        [
+          "AhnLab-V3",
+          "Trojan/Win.Generic.R800949"
+        ],
+        [
+          "Alibaba",
+          "Backdoor:Win64/MalwareX.f229cf75"
+        ],
+        [
+          "alibabacloud",
+          "Backdoor:Win/Xkcp.dsc"
+        ],
+        [
+          "ALYac",
+          "Application.Generic.37102404"
+        ],
+        [
+          "Antiy-AVL",
+          "Trojan/Win32.SwimSnake"
+        ],
+        [
+          "Arcabit",
+          "Application.Generic.D2362344"
+        ],
+        [
+          "Avast",
+          "Win64:MalwareX-gen [Hack]"
+        ],
+        [
+          "AVG",
+          "Win64:MalwareX-gen [Hack]"
+        ],
+        [
+          "Avira",
+          "TR/W64.MalwareX"
+        ],
+        [
+          "BitDefender",
+          "Application.Generic.37102404"
+        ],
+        [
+          "CAT-QuickHeal",
+          "Hacktool.Agent"
+        ],
+        [
+          "CrowdStrike",
+          "win/malicious_confidence_100% (W)"
+        ],
+        [
+          "CTX",
+          "dll.trojan.malwarex"
+        ],
+        [
+          "Cylance",
+          "Unsafe"
+        ],
+        [
+          "Elastic",
+          "malicious (high confidence)"
+        ],
+        [
+          "Emsisoft",
+          "Application.Generic.37102404 (B)"
+        ],
+        [
+          "ESET-NOD32",
+          "Win64/HackTool.Agent.FB trojan"
+        ],
+        [
+          "F-Secure",
+          "Trojan.TR/W64.MalwareX"
+        ],
+        [
+          "Fortinet",
+          "W64/Agent.FB!tr"
+        ],
+        [
+          "GData",
+          "Application.Generic.37102404"
+        ],
+        [
+          "Google",
+          "Detected"
+        ],
+        [
+          "huorong",
+          "Backdoor/Lotok.vc"
+        ],
+        [
+          "Ikarus",
+          "Backdoor.Rat.Valley"
+        ],
+        [
+          "K7AntiVirus",
+          "Hacktool ( 005ce32e1 )"
+        ],
+        [
+          "K7GW",
+          "Hacktool ( 005ce32e1 )"
+        ]
+      ],
+      "sandbox": {
+        "Zenbox": {
+          "category": "malicious",
+          "malware_classification": [
+            "MALWARE",
+            "EVADER"
+          ],
+          "sandbox_name": "Zenbox",
+          "confidence": 68
+        },
+        "C2AE": {
+          "category": "undetected",
+          "malware_classification": [
+            "UNKNOWN_VERDICT"
+          ],
+          "sandbox_name": "C2AE"
+        },
+        "VMRay": {
+          "category": "malicious",
+          "malware_classification": [
+            "MALWARE"
+          ],
+          "sandbox_name": "VMRay",
+          "malware_names": [
+            "ValleyRAT",
+            "App/Generic-IH",
+            "App/Generic-MB"
+          ]
+        }
+      },
+      "final_url": null,
+      "title": null,
+      "last_dns_records": []
+    },
+    "veredicto": {
+      "verdict": "MALICIOSO",
+      "confidence": "alta",
+      "score": 12,
+      "reasons": [
+        "VirusTotal: 47/68 motores detectan el archivo como malicioso.",
+        "Sandboxes de VirusTotal con veredicto malicioso: VMRay, Zenbox.",
+        "Clasificacion de la comunidad: trojan.xkcp/hack.",
+        "Categorias: adware, hacktool, trojan.",
+        "Tags: 64bits, detect-debug-environment, invalid-signature, long-sleeps, malware, overlay, pedll, signed.",
+        "Primera vez visto: 2026-10-14 04:02:51 -0300 (8 dias)."
+      ],
+      "threat": "Troyano (familia: ValleyRAT)",
+      "cia_summary": "Alto: el equipo queda bajo control del atacante o con capacidad de descargar mas payloads.",
+      "cia_rows": [
+        [
+          "Confidencialidad",
+          "Alto",
+          "Acceso remoto, robo de informacion y credenciales."
+        ],
+        [
+          "Integridad",
+          "Alto",
+          "Instalacion de componentes y modificacion del sistema."
+        ],
+        [
+          "Disponibilidad",
+          "Medio",
+          "Puede degradar o bloquear el equipo."
+        ]
+      ],
+      "user_action": "No ejecutar el archivo. Aislar el equipo donde se intento abrir, cambiar credenciales y reportar de inmediato al area de seguridad.",
+      "org_control": "Bloquear el hash en EDR/antivirus y listas de aplicaciones; buscar el hash en endpoints; aplicar cuarentena; revisar persistencia y conexiones salientes; capacitacion sobre adjuntos."
+    }
+  }
+

@@ -1,0 +1,28 @@
+[
+  {
+    "id": "F001",
+    "contenedor": "R001",
+    "nombre_original": "6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba.exe",
+    "ruta_invitado": "/casos/muestras/grupo05/archivos-desempaquetados/F001.bin",
+    "tamano_bytes": 2264968,
+    "sha256": "6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba",
+    "md5": "cd22bb73046551dfbafcc7f4c3ed505f",
+    "sha1": "87b79ae55a56acde041fb7ee0677b89d967ec851",
+    "hash_coincide_nombre": true,
+    "tipo_estatico": "PE32+ executable for MS Windows 6.00 (DLL), x86-64, 7 sections",
+    "ejecutado": false
+  },
+  {
+    "id": "F002",
+    "contenedor": "R002",
+    "nombre_original": "06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec.exe",
+    "ruta_invitado": "/casos/muestras/grupo05/archivos-desempaquetados/F002.bin",
+    "tamano_bytes": 1559216,
+    "sha256": "06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec",
+    "md5": "104c9a1a490d8c05966f46bbbc62028d",
+    "sha1": "b958aa7bd82263c37a9c520ef277db3f95fc1369",
+    "hash_coincide_nombre": true,
+    "tipo_estatico": "PE32+ executable for MS Windows 6.00 (GUI), x86-64, 7 sections",
+    "ejecutado": false
+  }
+]

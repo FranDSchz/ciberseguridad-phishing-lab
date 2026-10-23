@@ -1,0 +1,675 @@
+﻿====================================================================================================
+ INFORME DE ANALISIS Y TRIAGE DE RECURSOS SOSPECHOSOS
+ Fundamentos de Ciberseguridad - UTN FRRe - Ciclo 2026 - Grupo 05
+====================================================================================================
+Identificador : Enlace-3
+Tipo          : URL / dominio
+Recurso       : https://www.pneustorebr.cfd/
+Fecha/hora    : 2026-10-23 01:52:33 -0300
+Herramienta   : triage_recursos.py v1.0
+
+Documento de evidencia tecnica. NO abrir enlaces ni ejecutar archivos.
+====================================================================================================
+
+
+====================================================================================================
+ 1. FICHA DE ANALISIS (SECCION 7 DEL ENUNCIADO)
+====================================================================================================
+
+Identificador del recurso:        Enlace-3
+Tipo:                             URL / dominio
+Herramientas usadas:              VirusTotal API v3 (URL, dominio e IP); urlscan.io API; WHOIS/RDAP;
+                                  crt.sh; analisis heuristico local
+Evidencia clave:                  VirusTotal: 1 motor(es) marcan la URL como maliciosa; VirusTotal:
+                                  el dominio acumula 6 detecciones maliciosas; urlscan.io no marca
+                                  el sitio como malicioso; urlscan.io: el motor de machine learning
+                                  marca el sitio como malicioso (score 73); tags: urlscan-ml,
+                                  urlscan-ml-60c5e22; Dominio nuevo: 49 dias desde su creacion; La
+                                  IP resuelta acumula 3 detecciones en VirusTotal
+Tipo de amenaza (si aplica):      Phishing / robo de credenciales
+Impacto C-I-A:                    Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+VEREDICTO:                        MALICIOSO
+Confianza:                        media
+Medida usuario:                   No abrir la URL ni ingresar datos. Si ya se ingreso informacion,
+                                  cambiar credenciales y cerrar sesiones activas; reportar al area
+                                  de TI.
+Medida organizacion:              Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar
+                                  IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento
+                                  de phishing.
+
+====================================================================================================
+ 2. DATOS DEL RECURSO
+====================================================================================================
+
+URL original:                     https://www.pneustorebr.cfd/
+URL normalizada:                  https://www.pneustorebr.cfd/
+Version defangada:                hxxps://www[.]pneustorebr[.]cfd/
+Esquema:                          https
+Host:                             www.pneustorebr.cfd
+Puerto:                           por defecto
+Ruta:                             /
+Tipo de host:                     Nombre de dominio
+Dominio registrable:              pneustorebr.cfd
+
+====================================================================================================
+ 3. HERRAMIENTAS UTILIZADAS
+====================================================================================================
+
+  - VirusTotal API v3: reputacion de la URL, del dominio y de la IP.
+  - urlscan.io API: captura, redirecciones, IP/pais, dominios contactados y posibles formularios de
+    credenciales.
+  - WHOIS/RDAP: fecha de creacion, registrador y name servers.
+  - crt.sh: certificados y subdominios (Certificate Transparency).
+  - Analisis heuristico local: IP literal, acortador, punycode, TLD, extensiones, puertos y palabras
+    clave.
+
+====================================================================================================
+ 4. EVIDENCIA TECNICA (METODOLOGIA 5.2)
+====================================================================================================
+
+
+4.1 Reputacion en VirusTotal (paso 1)
+----------------------------------------------------------------------------------------------------
+VirusTotal - URL
+Detecciones:                      1/93 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=1, suspicious=0, harmless=57, undetected=35, timeout=0
+Reputacion:                       0
+Categorias:                       Forcepoint ThreatSeeker: newly registered websites, Google:
+                                  shopping
+Tags:                             trackers, external-resources
+Motores que detectan el recurso como malicioso:
+  - ESET: phishing
+Primera vez vista:                2026-10-16 17:47:16 -0300
+Veces enviada a VT:               1
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly93d3cucG5ldXN0b3JlYnI
+                                  uY2ZkLw
+
+VirusTotal - dominio
+Detecciones:                      6/92 maliciosos, 2 sospechosos
+Conteo por categoria:             malicious=6, suspicious=2, harmless=47, undetected=37, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - BitDefender: phishing
+  - CRDF: malicious
+  - ESET: phishing
+  - Fortinet: phishing
+  - G-Data: phishing
+  - Kaspersky: phishing
+Motores que lo marcan como sospechoso:
+  - alphaMountain.ai: suspicious
+  - LevelBlue: suspicious
+Creacion segun VT:                2026-09-04 00:47:46 -0300
+Antiguedad segun VT:              49 dias
+Enlace VT:                        https://www.virustotal.com/gui/domain/pneustorebr.cfd
+
+VirusTotal - IP
+Detecciones:                      3/92 maliciosos, 1 sospechosos
+Conteo por categoria:             malicious=3, suspicious=1, harmless=53, undetected=35, timeout=0
+Reputacion:                       -1
+Motores que detectan el recurso como malicioso:
+  - alphaMountain.ai: malicious
+  - CRDF: malicious
+  - Fortinet: malware
+Motores que lo marcan como sospechoso:
+  - Gridinsoft: suspicious
+Pais:                             US
+ASN / owner:                      16509 / Amazon.com, Inc.
+Red:                              54.212.0.0/14
+Enlace VT:                        https://www.virustotal.com/gui/ip-address/54.215.31.113
+
+4.2 Comportamiento en urlscan.io (paso 2)
+----------------------------------------------------------------------------------------------------
+Origen del dato:                  escaneo existente (task.url)
+Fecha del escaneo:                2026-10-16T18:50:34.640Z
+Visibilidad:                      public
+URL enviada:                      https://www.pneustorebr.cfd/
+URL final:                        https://www.pneustorebr.cfd/
+Veredicto:                        Sin veredicto malicioso
+Score:                            0
+Categorias:                       Ninguna
+Marcas afectadas:                 Ninguna
+Tags:                             Ninguno
+Motor ML de urlscan:              MALICIOSO (score 73); tags: urlscan-ml, urlscan-ml-60c5e22
+Formulario de credenciales:       No informado
+IP:                               54.215.31.113
+PTR:                              ec2-54-215-31-113.us-west-1.compute.amazonaws.com
+Pais:                             US
+Idioma:                           en
+ASN:                              AS16509 AMAZON-02 - Amazon.com, Inc., US
+Servidor:                         No disponible
+Titulo:                           Domain registered | Dynadot
+MIME:                             text/html
+HTTP status:                      404
+Antiguedad del dominio (urlscan): 42 dias
+Emisor TLS:                       GlobalSign GCC R6 AlphaSSL CA 2025
+Antiguedad del certificado:       363 dias (~11.9 meses)
+Solicitudes HTTP:                 14
+Dominios contactados:
+  - widget.trustpilot.com (IPs: 52.222.236.60, 52.222.236.94; pais: US; requests: 6)
+  - fonts.cdnfonts.com (IPs: 172.67.184.158; pais: -; requests: 5)
+  - www.pneustorebr.cfd (IPs: 54.215.31.113; pais: US; requests: 2)
+  - oss.dynadot.com (IPs: 52.222.236.112; pais: US; requests: 1)
+IPs contactadas:
+  - 52.222.236.94 (ASN -; pais -; requests: -)
+  - 52.222.236.112 (ASN -; pais -; requests: -)
+  - 52.222.236.60 (ASN -; pais -; requests: -)
+  - 172.67.184.158 (ASN -; pais -; requests: -)
+  - 54.215.31.113 (ASN -; pais -; requests: -)
+Dominios enlazados desde la pagina:
+  - www.dynadot.com
+  - www.icann.org
+  - www.namepros.com
+  - www.domaining.com
+  - www.trustpilot.com
+Captura:                          https://urlscan.io/screenshots/01a1460d-11c6-71b9-9818-3caec90d10c
+                                  7.png
+Reporte:                          https://urlscan.io/result/01a1460d-11c6-71b9-9818-3caec90d10c7/
+
+4.3 Antiguedad WHOIS / RDAP (paso 3)
+----------------------------------------------------------------------------------------------------
+Fecha de creacion:                2026-09-04T03:47:46.0Z
+Antiguedad:                       49 dias
+Vencimiento:                      2027-09-04T23:59:59.0Z
+Ultimo cambio:                    2026-10-17T08:05:11.0Z
+Registrador:                      Dynadot Inc
+Name servers:                     No informados
+Estados:                          server transfer prohibited, client hold, client transfer
+                                  prohibited, inactive
+DNSSEC:                           No
+Consulta:                         https://rdap.org/domain/pneustorebr.cfd
+
+4.4 Certificados y subdominios - crt.sh (paso 4)
+----------------------------------------------------------------------------------------------------
+Certificados observados:          4
+Subdominios unicos:               2
+Certificado mas antiguo:          2026-09-04T07:31:13
+Certificado mas reciente:         2026-09-04T07:31:13
+Emisores:                         YR1, YR2
+Subdominios detectados (muestra):
+  - pneustorebr.cfd
+  - www.pneustorebr.cfd
+Consulta crt.sh:                  https://crt.sh/?q=%25.pneustorebr.cfd&output=json
+
+4.5 Analisis heuristico de la URL
+----------------------------------------------------------------------------------------------------
+  - TLD frecuentemente abusado en campanas: .cfd
+
+Veredicto de la URL:              MALICIOSO
+Confianza:                        media
+
+====================================================================================================
+ 5. TIPO DE AMENAZA
+====================================================================================================
+
+Clasificacion:                    Phishing / robo de credenciales
+
+
+====================================================================================================
+ 6. IMPACTO C-I-A
+====================================================================================================
+
+Resumen:                          Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+
+Dimension          | Impacto      | Justificacion
+-------------------+--------------+-----------------------------------------------------------------
+Confidencialidad   | Alto         | Robo de credenciales y datos sensibles.
+Integridad         | Alto         | Uso de la cuenta para acciones no autorizadas.
+Disponibilidad     | Bajo         | Normalmente no interrumpe el servicio.
+
+====================================================================================================
+ 7. VEREDICTO Y JUSTIFICACION
+====================================================================================================
+
+VEREDICTO:                        MALICIOSO
+Confianza:                        media
+Puntaje heuristico:               12
+
+Evidencia que sostiene el veredicto:
+  - VirusTotal: 1 motor(es) marcan la URL como maliciosa.
+  - VirusTotal: el dominio acumula 6 detecciones maliciosas.
+  - urlscan.io no marca el sitio como malicioso.
+  - urlscan.io: el motor de machine learning marca el sitio como malicioso (score 73); tags:
+    urlscan-ml, urlscan-ml-60c5e22.
+  - La IP resuelta acumula 3 detecciones en VirusTotal.
+  - Dominio nuevo: 49 dias desde su creacion.
+  - TLD frecuentemente abusado en campanas: .cfd
+
+Criterio aplicado (anexo del enunciado):
+  - LIMPIO: autenticacion correcta y alineada, dominio con antiguedad y reputacion sanas, sin
+    detecciones ni comportamiento anormal.
+  - SOSPECHOSO: senales mixtas o insuficientes (pocas detecciones, dominio nuevo, cabecera
+    incoherente, sin confirmacion de payload).
+  - MALICIOSO: evidencia concluyente (multiples detecciones coincidentes, comportamiento malicioso,
+    phishing confirmado, hash en bases de malware).
+  - Recordatorio: la ausencia de senal no es prueba de inocencia; el veredicto surge de cruzar
+    herramientas.
+
+====================================================================================================
+ 8. MEDIDAS RECOMENDADAS
+====================================================================================================
+
+Accion inmediata del usuario:     No abrir la URL ni ingresar datos. Si ya se ingreso informacion,
+                                  cambiar credenciales y cerrar sesiones activas; reportar al area
+                                  de TI.
+Control organizacional:           Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar
+                                  IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento
+                                  de phishing.
+
+====================================================================================================
+ 9. PASOS MANUALES Y CAPTURAS SUGERIDAS
+====================================================================================================
+
+  - Capturar el reporte y la screenshot de urlscan.io.
+  - Capturar el detalle de VirusTotal de la URL y del dominio.
+  - Capturar el WHOIS/RDAP y la consulta crt.sh.
+  - No abrir la URL en el navegador del equipo real; usar solo las capturas del sandbox.
+
+====================================================================================================
+ 10. ANEXO: REPRODUCIBILIDAD Y LIMITACIONES
+====================================================================================================
+
+Enlaces para capturas y verificacion manual:
+  - VirusTotal - URL: https://www.virustotal.com/gui/url/aHR0cHM6Ly93d3cucG5ldXN0b3JlYnIuY2ZkLw
+  - urlscan - reporte: https://urlscan.io/result/01a1460d-11c6-71b9-9818-3caec90d10c7/
+  - urlscan - screenshot: https://urlscan.io/screenshots/01a1460d-11c6-71b9-9818-3caec90d10c7.png
+  - RDAP: https://rdap.org/domain/pneustorebr.cfd
+  - crt.sh: https://crt.sh/?q=%25.pneustorebr.cfd&output=json
+  - VirusTotal - dominio: https://www.virustotal.com/gui/domain/pneustorebr.cfd
+  - VirusTotal - IP: https://www.virustotal.com/gui/ip-address/54.215.31.113
+
+Notas de ejecucion:
+  - urlscan.io: la verificacion TLS local fallo (certificate has expired); se reintento la conexion
+    sin validar el certificado. Verificar el store de certificados del equipo.
+  - Consultas realizadas en esta ejecucion: VirusTotal=0, urlscan.io=24.
+  - Cache local: C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+    Ciberseguridad\Practica\tp1\.triage_cache (evita repetir consultas).
+  - Los resultados de reputacion son una foto del momento de la consulta y pueden cambiar; los
+    enlaces permiten reproducirlos.
+
+  - Las consultas a VirusTotal y urlscan.io pueden variar con el tiempo; los enlaces permiten
+    reproducir el estado observado.
+  - urlscan.io: los escaneos nuevos se enviaron con visibilidad 'unlisted'.
+  - No se abrieron enlaces, no se descargaron payloads y no se ejecutaron archivos.
+
+Anexo A - Evidencia estructurada (JSON resumido)
+----------------------------------------------------------------------------------------------------
+  {
+    "url": "https://www.pneustorebr.cfd/",
+    "host": "www.pneustorebr.cfd",
+    "domain": "pneustorebr.cfd",
+    "vt_url": {
+      "stats": {
+        "malicious": 1,
+        "suspicious": 0,
+        "undetected": 35,
+        "harmless": 57,
+        "timeout": 0
+      },
+      "reputation": 0,
+      "tags": [
+        "trackers",
+        "external-resources"
+      ],
+      "categories": {
+        "Forcepoint ThreatSeeker": "newly registered websites",
+        "Google": "shopping"
+      },
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": null,
+      "first_submission_date": 1792183636,
+      "last_analysis_date": 1792183636,
+      "threat": null,
+      "detections": [
+        [
+          "ESET",
+          "phishing"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": "",
+      "last_dns_records": []
+    },
+    "vt_dominio": {
+      "stats": {
+        "malicious": 6,
+        "suspicious": 2,
+        "undetected": 37,
+        "harmless": 47,
+        "timeout": 0
+      },
+      "reputation": 0,
+      "tags": [],
+      "categories": {},
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": 1788493666,
+      "first_submission_date": null,
+      "last_analysis_date": 1792439924,
+      "threat": null,
+      "detections": [
+        [
+          "BitDefender",
+          "phishing"
+        ],
+        [
+          "CRDF",
+          "malicious"
+        ],
+        [
+          "ESET",
+          "phishing"
+        ],
+        [
+          "Fortinet",
+          "phishing"
+        ],
+        [
+          "G-Data",
+          "phishing"
+        ],
+        [
+          "Kaspersky",
+          "phishing"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": null,
+      "last_dns_records": [
+        {
+          "type": "SOA",
+          "ttl": 300,
+          "value": "ns1.dyna-ns.net",
+          "rname": "hostmaster.pneustorebr.cfd",
+          "serial": 2026090401,
+          "refresh": 16384,
+          "retry": 2048,
+          "expire": 1209600,
+          "minimum": 300
+        },
+        {
+          "type": "NS",
+          "ttl": 300,
+          "value": "ns1.dyna-ns.net"
+        },
+        {
+          "type": "A",
+          "ttl": 300,
+          "value": "216.198.79.1"
+        },
+        {
+          "type": "NS",
+          "ttl": 300,
+          "value": "ns2.dyna-ns.net"
+        }
+      ]
+    },
+    "vt_ip": {
+      "stats": {
+        "malicious": 3,
+        "suspicious": 1,
+        "undetected": 35,
+        "harmless": 53,
+        "timeout": 0
+      },
+      "reputation": -1,
+      "tags": [],
+      "categories": null,
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": null,
+      "first_submission_date": null,
+      "last_analysis_date": 1792717977,
+      "threat": null,
+      "detections": [
+        [
+          "alphaMountain.ai",
+          "malicious"
+        ],
+        [
+          "CRDF",
+          "malicious"
+        ],
+        [
+          "Fortinet",
+          "malware"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": null,
+      "last_dns_records": []
+    },
+    "rdap": {
+      "ok": true,
+      "url": "https://rdap.org/domain/pneustorebr.cfd",
+      "handle": "D637359894-CNIC",
+      "name": "pneustorebr.cfd",
+      "status": [
+        "server transfer prohibited",
+        "client hold",
+        "client transfer prohibited",
+        "inactive"
+      ],
+      "creation": "2026-09-04T03:47:46.0Z",
+      "expiration": "2027-09-04T23:59:59.0Z",
+      "last_changed": "2026-10-17T08:05:11.0Z",
+      "registrar": "Dynadot Inc",
+      "registrars": [
+        "Dynadot Inc"
+      ],
+      "registrant": "",
+      "nameservers": [],
+      "secure_dns": {
+        "delegationSigned": false
+      },
+      "country": null,
+      "start_address": null,
+      "end_address": null,
+      "cached": true
+    },
+    "crtsh": {
+      "ok": true,
+      "url": "https://crt.sh/?q=%25.pneustorebr.cfd&output=json",
+      "entries": 4,
+      "subdomains": [
+        "pneustorebr.cfd",
+        "www.pneustorebr.cfd"
+      ],
+      "subdomain_count": 2,
+      "issuers": [
+        "YR1",
+        "YR2"
+      ],
+      "earliest_cert": "2026-09-04T07:31:13",
+      "latest_cert": "2026-09-04T07:31:13",
+      "cached": true
+    },
+    "urlscan": {
+      "ok": true,
+      "uuid": "01a1460d-11c6-71b9-9818-3caec90d10c7",
+      "report_url": "https://urlscan.io/result/01a1460d-11c6-71b9-9818-3caec90d10c7/",
+      "screenshot_url": "https://urlscan.io/screenshots/01a1460d-11c6-71b9-9818-3caec90d10c7.png",
+      "visibility": "public",
+      "scan_time": "2026-10-16T18:50:34.640Z",
+      "submitted_url": "https://www.pneustorebr.cfd/",
+      "final_url": "https://www.pneustorebr.cfd/",
+      "domain": "www.pneustorebr.cfd",
+      "ip": "54.215.31.113",
+      "asn": "AS16509",
+      "asn_name": "AMAZON-02 - Amazon.com, Inc., US",
+      "country": "US",
+      "city": "San Jose",
+      "server": null,
+      "title": "Domain registered | Dynadot",
+      "mime_type": "text/html",
+      "http_status": "404",
+      "apex_domain_age_days": 42,
+      "tls_valid_days": 396,
+      "tls_age_days": 363,
+      "tls_issuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+      "has_credentials": null,
+      "language": "en",
+      "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com",
+      "malicious": false,
+      "score": 0,
+      "categories": [],
+      "brands": [],
+      "tags": [],
+      "engines_malicious": true,
+      "engines_score": 73,
+      "engines_tags": [
+        "urlscan-ml",
+        "urlscan-ml-60c5e22"
+      ],
+      "community_malicious": false,
+      "stats": {
+        "malicious": 0,
+        "secure": null,
+        "unresponsive": null,
+        "requests": 14
+      },
+      "redirects": [],
+      "link_domains": [
+        "www.dynadot.com",
+        "www.icann.org",
+        "www.namepros.com",
+        "www.domaining.com",
+        "www.trustpilot.com"
+      ],
+      "domains": [
+        {
+          "domain": "widget.trustpilot.com",
+          "country": "US",
+          "ips": [
+            "52.222.236.60",
+            "52.222.236.94"
+          ],
+          "count": 6
+        },
+        {
+          "domain": "fonts.cdnfonts.com",
+          "country": "",
+          "ips": [
+            "172.67.184.158"
+          ],
+          "count": 5
+        },
+        {
+          "domain": "www.pneustorebr.cfd",
+          "country": "US",
+          "ips": [
+            "54.215.31.113"
+          ],
+          "count": 2
+        },
+        {
+          "domain": "oss.dynadot.com",
+          "country": "US",
+          "ips": [
+            "52.222.236.112"
+          ],
+          "count": 1
+        }
+      ],
+      "ips": [
+        {
+          "ip": "52.222.236.94",
+          "asn": "",
+          "country": "",
+          "count": ""
+        },
+        {
+          "ip": "52.222.236.112",
+          "asn": "",
+          "country": "",
+          "count": ""
+        },
+        {
+          "ip": "52.222.236.60",
+          "asn": "",
+          "country": "",
+          "count": ""
+        },
+        {
+          "ip": "172.67.184.158",
+          "asn": "",
+          "country": "",
+          "count": ""
+        },
+        {
+          "ip": "54.215.31.113",
+          "asn": "",
+          "country": "",
+          "count": ""
+        }
+      ],
+      "urls": [
+        "https://www.pneustorebr.cfd/",
+        "https://fonts.cdnfonts.com/css/switzer",
+        "https://fonts.cdnfonts.com/css/swansea",
+        "https://widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js",
+        "https://oss.dynadot.com/public/parkcloud/web-bg.webp",
+        "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/index.html?templateId=5419b637fa0340045cd0c936&businessunitId=5a73801679def00001e7f7d2",
+        "https://fonts.cdnfonts.com/s/20678/SWANSE_B.woff",
+        "https://fonts.cdnfonts.com/s/85792/Switzer-Regular.woff",
+        "https://fonts.cdnfonts.com/s/85792/Switzer-Medium.woff",
+        "https://widget.trustpilot.com/trustboxes/5419b637fa0340045cd0c936/main.js",
+        "https://widget.trustpilot.com/trustbox-data/5419b637fa0340045cd0c936?businessUnitId=5a73801679def00001e7f7d2&locale=en-US&random=UQ8pcntljVFQrXlq8E4z",
+        "https://widget.trustpilot.com/stats/TrustboxImpression?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+        "https://widget.trustpilot.com/stats/TrustboxView?locale=en-US&styleHeight=20px&styleWidth=100%25&token=a3b61e9d-8d62-440b-9837-2a21ace54021&url=https%3A%2F%2Fwww.pneustorebr.cfd%2F&referrer=&userAgent=Mozilla%2F5.0%20(iPhone%3B%20CPU%20iPhone%20OS%2018_7_8%20like%20Mac%20OS%20X)%20AppleWebKit%2F605.1.15%20(KHTML%2C%20like%20Gecko)%20Version%2F26.0%20Mobile%2F15E148%20Safari%2F604.1&language=de-DE&platform=iPhone&nosettings=1&businessUnitId=5a73801679def00001e7f7d2&widgetId=5419b637fa0340045cd0c936",
+        "https://www.pneustorebr.cfd/favicon.ico"
+      ],
+      "source": "escaneo existente (task.url)",
+      "cached": true
+    },
+    "heuristicas": [
+      "TLD frecuentemente abusado en campanas: .cfd"
+    ],
+    "veredicto": {
+      "verdict": "MALICIOSO",
+      "confidence": "media",
+      "score": 12,
+      "reasons": [
+        "VirusTotal: 1 motor(es) marcan la URL como maliciosa.",
+        "VirusTotal: el dominio acumula 6 detecciones maliciosas.",
+        "urlscan.io no marca el sitio como malicioso.",
+        "urlscan.io: el motor de machine learning marca el sitio como malicioso (score 73); tags: urlscan-ml, urlscan-ml-60c5e22.",
+        "La IP resuelta acumula 3 detecciones en VirusTotal.",
+        "Dominio nuevo: 49 dias desde su creacion.",
+        "TLD frecuentemente abusado en campanas: .cfd"
+      ],
+      "threat": "Phishing / robo de credenciales",
+      "cia_summary": "Alto sobre confidencialidad e integridad; bajo sobre disponibilidad.",
+      "cia_rows": [
+        [
+          "Confidencialidad",
+          "Alto",
+          "Robo de credenciales y datos sensibles."
+        ],
+        [
+          "Integridad",
+          "Alto",
+          "Uso de la cuenta para acciones no autorizadas."
+        ],
+        [
+          "Disponibilidad",
+          "Bajo",
+          "Normalmente no interrumpe el servicio."
+        ]
+      ],
+      "user_action": "No abrir la URL ni ingresar datos. Si ya se ingreso informacion, cambiar credenciales y cerrar sesiones activas; reportar al area de TI.",
+      "org_control": "Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento de phishing."
+    }
+  }
+

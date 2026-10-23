@@ -1,0 +1,502 @@
+﻿====================================================================================================
+ INFORME DE ANALISIS Y TRIAGE DE RECURSOS SOSPECHOSOS
+ Fundamentos de Ciberseguridad - UTN FRRe - Ciclo 2026 - Grupo 05
+====================================================================================================
+Identificador : Enlace-2
+Tipo          : URL / dominio
+Recurso       : http://221.15.173.51:41661/bin.sh
+Fecha/hora    : 2026-10-23 01:52:33 -0300
+Herramienta   : triage_recursos.py v1.0
+
+Documento de evidencia tecnica. NO abrir enlaces ni ejecutar archivos.
+====================================================================================================
+
+
+====================================================================================================
+ 1. FICHA DE ANALISIS (SECCION 7 DEL ENUNCIADO)
+====================================================================================================
+
+Identificador del recurso:        Enlace-2
+Tipo:                             URL / dominio
+Herramientas usadas:              VirusTotal API v3 (URL, dominio e IP); urlscan.io API; WHOIS/RDAP;
+                                  crt.sh; analisis heuristico local
+Evidencia clave:                  VirusTotal: 4/93 maliciosos, 3 sospechosos para la URL; urlscan.io
+                                  no marca el sitio como malicioso; urlscan.io: el motor de machine
+                                  learning marca el sitio como malicioso (score 39); tags:
+                                  urlscan-ml, urlscan-ml-60c5e22; La URL usa HTTP sin cifrar (no
+                                  HTTPS); El host es una direccion IP literal (sin dominio); La IP
+                                  resuelta acumula 8 detecciones en VirusTotal
+Tipo de amenaza (si aplica):      Distribucion de malware / sitio malicioso
+Impacto C-I-A:                    Alto: ejecucion de codigo no confiable.
+VEREDICTO:                        MALICIOSO
+Confianza:                        alta
+Medida usuario:                   No abrir la URL ni ingresar datos. Si ya se ingreso informacion,
+                                  cambiar credenciales y cerrar sesiones activas; reportar al area
+                                  de TI.
+Medida organizacion:              Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar
+                                  IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento
+                                  de phishing.
+
+====================================================================================================
+ 2. DATOS DEL RECURSO
+====================================================================================================
+
+URL original:                     http://221.15.173.51:41661/bin.sh
+URL normalizada:                  http://221.15.173.51:41661/bin.sh
+Version defangada:                hxxp://221[.]15[.]173[.]51:41661/bin[.]sh
+Esquema:                          http
+Host:                             221.15.173.51
+Puerto:                           41661
+Ruta:                             /bin.sh
+Tipo de host:                     Direccion IP
+
+====================================================================================================
+ 3. HERRAMIENTAS UTILIZADAS
+====================================================================================================
+
+  - VirusTotal API v3: reputacion de la URL, del dominio y de la IP.
+  - urlscan.io API: captura, redirecciones, IP/pais, dominios contactados y posibles formularios de
+    credenciales.
+  - WHOIS/RDAP: fecha de creacion, registrador y name servers.
+  - crt.sh: certificados y subdominios (Certificate Transparency).
+  - Analisis heuristico local: IP literal, acortador, punycode, TLD, extensiones, puertos y palabras
+    clave.
+
+====================================================================================================
+ 4. EVIDENCIA TECNICA (METODOLOGIA 5.2)
+====================================================================================================
+
+
+4.1 Reputacion en VirusTotal (paso 1)
+----------------------------------------------------------------------------------------------------
+VirusTotal - URL
+Detecciones:                      4/93 maliciosos, 3 sospechosos
+Conteo por categoria:             malicious=4, suspicious=3, harmless=53, undetected=33, timeout=0
+Reputacion:                       -11
+Categorias:                       alphaMountain.ai: Suspicious (alphaMountain.ai), Webroot: Malware
+                                  Sites
+Tags:                             ns-port, downloads-zip, downloads-elf, ip
+Motores que detectan el recurso como malicioso:
+  - Emsisoft: malware
+  - Fortinet: malware
+  - GreyNoise: malicious
+  - Webroot: malicious
+Motores que lo marcan como sospechoso:
+  - alphaMountain.ai: suspicious
+  - Gridinsoft: suspicious
+  - SOCRadar: suspicious
+Primera vez vista:                2026-10-16 16:48:07 -0300
+Veces enviada a VT:               1
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cDovLzIyMS4xNS4xNzMuNTE6NDE
+                                  2NjEvYmluLnNo
+
+VirusTotal - IP
+Detecciones:                      8/92 maliciosos, 2 sospechosos
+Conteo por categoria:             malicious=8, suspicious=2, harmless=48, undetected=34, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - Emsisoft: malware
+  - Fortinet: malware
+  - GreyNoise: malicious
+  - Kaspersky: malware
+  - MalwarePatrol: malicious
+  - MalwareURL: malware
+  - SOCRadar: malicious
+  - Webroot: malicious
+Motores que lo marcan como sospechoso:
+  - alphaMountain.ai: suspicious
+  - Gridinsoft: suspicious
+Pais:                             CN
+ASN / owner:                      4837 / CHINA UNICOM China169 Backbone
+Red:                              221.14.0.0/15
+Enlace VT:                        https://www.virustotal.com/gui/ip-address/221.15.173.51
+
+4.2 Comportamiento en urlscan.io (paso 2)
+----------------------------------------------------------------------------------------------------
+Origen del dato:                  escaneo existente (task.url)
+Fecha del escaneo:                2026-10-20T09:08:02.581Z
+Visibilidad:                      public
+URL enviada:                      http://221.15.173.51:41661/bin.sh
+URL final:                        http://221.15.173.51:41661/bin.sh
+Veredicto:                        Sin veredicto malicioso
+Score:                            0
+Categorias:                       Ninguna
+Marcas afectadas:                 Ninguna
+Tags:                             Ninguno
+Motor ML de urlscan:              MALICIOSO (score 39); tags: urlscan-ml, urlscan-ml-60c5e22
+Formulario de credenciales:       No informado
+IP:                               No disponible
+PTR:                              No disponible
+Pais:                             No disponible
+Idioma:                           No informado
+ASN:                              No disponible
+Servidor:                         No disponible
+Titulo:                           221.15.173.51
+MIME:                             No disponible
+HTTP status:                      No disponible
+Antiguedad del dominio (urlscan): No aplica (host IP)
+Solicitudes HTTP:                 6
+Dominios contactados:
+  - 221.15.173.51 (IPs: ; pais: -; requests: -)
+Captura:                          https://urlscan.io/screenshots/01a15891-2b89-70c5-a7d3-2b7efe264af
+                                  6.png
+Reporte:                          https://urlscan.io/result/01a15891-2b89-70c5-a7d3-2b7efe264af6/
+
+4.3 Antiguedad WHOIS / RDAP (paso 3)
+----------------------------------------------------------------------------------------------------
+Pais:                             CN
+Rango:                            221.13.128.0 - 221.15.255.255
+Handle:                           221.13.128.0 - 221.15.255.255
+Nombre:                           UNICOM-HA
+Consulta:                         https://rdap.org/ip/221.15.173.51
+
+4.4 Certificados y subdominios - crt.sh (paso 4)
+----------------------------------------------------------------------------------------------------
+Estado:                           No aplica: el host es una direccion IP.
+
+4.5 Analisis heuristico de la URL
+----------------------------------------------------------------------------------------------------
+  - La URL usa HTTP sin cifrar (no HTTPS).
+  - El host es una direccion IP literal (sin dominio).
+  - Puerto no estandar: 41661
+  - La ruta termina en una extension ejecutable/script/comprimida.
+
+Veredicto de la URL:              MALICIOSO
+Confianza:                        alta
+
+====================================================================================================
+ 5. TIPO DE AMENAZA
+====================================================================================================
+
+Clasificacion:                    Distribucion de malware / sitio malicioso
+
+
+====================================================================================================
+ 6. IMPACTO C-I-A
+====================================================================================================
+
+Resumen:                          Alto: ejecucion de codigo no confiable.
+
+Dimension          | Impacto      | Justificacion
+-------------------+--------------+-----------------------------------------------------------------
+Confidencialidad   | Alto         | Posible robo de informacion.
+Integridad         | Alto         | Posible modificacion del sistema.
+Disponibilidad     | Medio        | Posible interrupcion del servicio.
+
+====================================================================================================
+ 7. VEREDICTO Y JUSTIFICACION
+====================================================================================================
+
+VEREDICTO:                        MALICIOSO
+Confianza:                        alta
+Puntaje heuristico:               12
+
+Evidencia que sostiene el veredicto:
+  - VirusTotal: 4/93 maliciosos, 3 sospechosos para la URL.
+  - urlscan.io no marca el sitio como malicioso.
+  - urlscan.io: el motor de machine learning marca el sitio como malicioso (score 39); tags:
+    urlscan-ml, urlscan-ml-60c5e22.
+  - La IP resuelta acumula 8 detecciones en VirusTotal.
+  - La URL usa HTTP sin cifrar (no HTTPS).
+  - El host es una direccion IP literal (sin dominio).
+  - Puerto no estandar: 41661
+  - La ruta termina en una extension ejecutable/script/comprimida.
+
+Criterio aplicado (anexo del enunciado):
+  - LIMPIO: autenticacion correcta y alineada, dominio con antiguedad y reputacion sanas, sin
+    detecciones ni comportamiento anormal.
+  - SOSPECHOSO: senales mixtas o insuficientes (pocas detecciones, dominio nuevo, cabecera
+    incoherente, sin confirmacion de payload).
+  - MALICIOSO: evidencia concluyente (multiples detecciones coincidentes, comportamiento malicioso,
+    phishing confirmado, hash en bases de malware).
+  - Recordatorio: la ausencia de senal no es prueba de inocencia; el veredicto surge de cruzar
+    herramientas.
+
+====================================================================================================
+ 8. MEDIDAS RECOMENDADAS
+====================================================================================================
+
+Accion inmediata del usuario:     No abrir la URL ni ingresar datos. Si ya se ingreso informacion,
+                                  cambiar credenciales y cerrar sesiones activas; reportar al area
+                                  de TI.
+Control organizacional:           Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar
+                                  IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento
+                                  de phishing.
+
+====================================================================================================
+ 9. PASOS MANUALES Y CAPTURAS SUGERIDAS
+====================================================================================================
+
+  - Capturar el reporte y la screenshot de urlscan.io.
+  - Capturar el detalle de VirusTotal de la URL y del dominio.
+  - Capturar el WHOIS/RDAP y la consulta crt.sh.
+  - No abrir la URL en el navegador del equipo real; usar solo las capturas del sandbox.
+
+====================================================================================================
+ 10. ANEXO: REPRODUCIBILIDAD Y LIMITACIONES
+====================================================================================================
+
+Enlaces para capturas y verificacion manual:
+  - VirusTotal - URL:
+    https://www.virustotal.com/gui/url/aHR0cDovLzIyMS4xNS4xNzMuNTE6NDE2NjEvYmluLnNo
+  - urlscan - reporte: https://urlscan.io/result/01a15891-2b89-70c5-a7d3-2b7efe264af6/
+  - urlscan - screenshot: https://urlscan.io/screenshots/01a15891-2b89-70c5-a7d3-2b7efe264af6.png
+  - RDAP: https://rdap.org/ip/221.15.173.51
+  - VirusTotal - IP: https://www.virustotal.com/gui/ip-address/221.15.173.51
+
+Notas de ejecucion:
+  - urlscan.io: la verificacion TLS local fallo (certificate has expired); se reintento la conexion
+    sin validar el certificado. Verificar el store de certificados del equipo.
+  - Consultas realizadas en esta ejecucion: VirusTotal=0, urlscan.io=24.
+  - Cache local: C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+    Ciberseguridad\Practica\tp1\.triage_cache (evita repetir consultas).
+  - Los resultados de reputacion son una foto del momento de la consulta y pueden cambiar; los
+    enlaces permiten reproducirlos.
+
+  - Las consultas a VirusTotal y urlscan.io pueden variar con el tiempo; los enlaces permiten
+    reproducir el estado observado.
+  - urlscan.io: los escaneos nuevos se enviaron con visibilidad 'unlisted'.
+  - No se abrieron enlaces, no se descargaron payloads y no se ejecutaron archivos.
+
+Anexo A - Evidencia estructurada (JSON resumido)
+----------------------------------------------------------------------------------------------------
+  {
+    "url": "http://221.15.173.51:41661/bin.sh",
+    "host": "221.15.173.51",
+    "domain": "",
+    "vt_url": {
+      "stats": {
+        "malicious": 4,
+        "suspicious": 3,
+        "undetected": 33,
+        "harmless": 53,
+        "timeout": 0
+      },
+      "reputation": -11,
+      "tags": [
+        "ns-port",
+        "downloads-zip",
+        "downloads-elf",
+        "ip"
+      ],
+      "categories": {
+        "alphaMountain.ai": "Suspicious (alphaMountain.ai)",
+        "Webroot": "Malware Sites"
+      },
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": null,
+      "first_submission_date": 1792180087,
+      "last_analysis_date": 1792180087,
+      "threat": null,
+      "detections": [
+        [
+          "Emsisoft",
+          "malware"
+        ],
+        [
+          "Fortinet",
+          "malware"
+        ],
+        [
+          "GreyNoise",
+          "malicious"
+        ],
+        [
+          "Webroot",
+          "malicious"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": "",
+      "last_dns_records": []
+    },
+    "vt_dominio": {},
+    "vt_ip": {
+      "stats": {
+        "malicious": 8,
+        "suspicious": 2,
+        "undetected": 34,
+        "harmless": 48,
+        "timeout": 0
+      },
+      "reputation": 0,
+      "tags": [],
+      "categories": null,
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": null,
+      "first_submission_date": null,
+      "last_analysis_date": 1792184470,
+      "threat": null,
+      "detections": [
+        [
+          "Emsisoft",
+          "malware"
+        ],
+        [
+          "Fortinet",
+          "malware"
+        ],
+        [
+          "GreyNoise",
+          "malicious"
+        ],
+        [
+          "Kaspersky",
+          "malware"
+        ],
+        [
+          "MalwarePatrol",
+          "malicious"
+        ],
+        [
+          "MalwareURL",
+          "malware"
+        ],
+        [
+          "SOCRadar",
+          "malicious"
+        ],
+        [
+          "Webroot",
+          "malicious"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": null,
+      "last_dns_records": []
+    },
+    "rdap": {
+      "ok": true,
+      "url": "https://rdap.org/ip/221.15.173.51",
+      "handle": "221.13.128.0 - 221.15.255.255",
+      "name": "UNICOM-HA",
+      "status": [
+        "active"
+      ],
+      "creation": "2008-09-04T06:52:49Z",
+      "expiration": null,
+      "last_changed": "2023-10-21T03:35:17Z",
+      "registrar": "",
+      "registrars": [],
+      "registrant": "",
+      "nameservers": [],
+      "secure_dns": null,
+      "country": "CN",
+      "start_address": "221.13.128.0",
+      "end_address": "221.15.255.255",
+      "cached": true
+    },
+    "crtsh": null,
+    "urlscan": {
+      "ok": true,
+      "uuid": "01a15891-2b89-70c5-a7d3-2b7efe264af6",
+      "report_url": "https://urlscan.io/result/01a15891-2b89-70c5-a7d3-2b7efe264af6/",
+      "screenshot_url": "https://urlscan.io/screenshots/01a15891-2b89-70c5-a7d3-2b7efe264af6.png",
+      "visibility": "public",
+      "scan_time": "2026-10-20T09:08:02.581Z",
+      "submitted_url": "http://221.15.173.51:41661/bin.sh",
+      "final_url": "http://221.15.173.51:41661/bin.sh",
+      "domain": "221.15.173.51",
+      "ip": null,
+      "asn": null,
+      "asn_name": null,
+      "country": null,
+      "city": null,
+      "server": null,
+      "title": "221.15.173.51",
+      "mime_type": null,
+      "http_status": null,
+      "apex_domain_age_days": 0,
+      "tls_valid_days": null,
+      "tls_age_days": null,
+      "tls_issuer": null,
+      "has_credentials": null,
+      "language": null,
+      "ptr": null,
+      "malicious": false,
+      "score": 0,
+      "categories": [],
+      "brands": [],
+      "tags": [],
+      "engines_malicious": true,
+      "engines_score": 39,
+      "engines_tags": [
+        "urlscan-ml",
+        "urlscan-ml-60c5e22"
+      ],
+      "community_malicious": false,
+      "stats": {
+        "malicious": 0,
+        "secure": null,
+        "unresponsive": null,
+        "requests": 6
+      },
+      "redirects": [],
+      "link_domains": [],
+      "domains": [
+        {
+          "domain": "221.15.173.51",
+          "country": "",
+          "ips": [],
+          "count": 0
+        }
+      ],
+      "ips": [],
+      "urls": [
+        "http://221.15.173.51:41661/bin.sh"
+      ],
+      "source": "escaneo existente (task.url)",
+      "cached": true
+    },
+    "heuristicas": [
+      "La URL usa HTTP sin cifrar (no HTTPS).",
+      "El host es una direccion IP literal (sin dominio).",
+      "Puerto no estandar: 41661",
+      "La ruta termina en una extension ejecutable/script/comprimida."
+    ],
+    "veredicto": {
+      "verdict": "MALICIOSO",
+      "confidence": "alta",
+      "score": 12,
+      "reasons": [
+        "VirusTotal: 4/93 maliciosos, 3 sospechosos para la URL.",
+        "urlscan.io no marca el sitio como malicioso.",
+        "urlscan.io: el motor de machine learning marca el sitio como malicioso (score 39); tags: urlscan-ml, urlscan-ml-60c5e22.",
+        "La IP resuelta acumula 8 detecciones en VirusTotal.",
+        "La URL usa HTTP sin cifrar (no HTTPS).",
+        "El host es una direccion IP literal (sin dominio).",
+        "Puerto no estandar: 41661",
+        "La ruta termina en una extension ejecutable/script/comprimida."
+      ],
+      "threat": "Distribucion de malware / sitio malicioso",
+      "cia_summary": "Alto: ejecucion de codigo no confiable.",
+      "cia_rows": [
+        [
+          "Confidencialidad",
+          "Alto",
+          "Posible robo de informacion."
+        ],
+        [
+          "Integridad",
+          "Alto",
+          "Posible modificacion del sistema."
+        ],
+        [
+          "Disponibilidad",
+          "Medio",
+          "Posible interrupcion del servicio."
+        ]
+      ],
+      "user_action": "No abrir la URL ni ingresar datos. Si ya se ingreso informacion, cambiar credenciales y cerrar sesiones activas; reportar al area de TI.",
+      "org_control": "Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento de phishing."
+    }
+  }
+

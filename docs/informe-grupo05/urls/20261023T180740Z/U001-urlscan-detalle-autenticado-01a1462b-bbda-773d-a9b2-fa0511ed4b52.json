@@ -1,0 +1,1727 @@
+{
+  "service": "urlscan.io (detalle existente con clave)",
+  "indicator_type": "url",
+  "indicator": "https://g-comeceseuatendimenton.shop/",
+  "status": "found",
+  "queried_at": "2026-10-23T18:10:10+00:00",
+  "endpoint": "https://urlscan.io/api/v1/result/01a1462b-bbda-773d-a9b2-fa0511ed4b52/",
+  "http_status": 200,
+  "data": {
+    "data": {
+      "requests": [
+        {
+          "request": {
+            "requestId": "A325ED6E068548C4679E0431083EBF53",
+            "loaderId": "A325ED6E068548C4679E0431083EBF53",
+            "documentURL": "https://g-comeceseuatendimenton.shop/",
+            "request": {
+              "url": "https://g-comeceseuatendimenton.shop/",
+              "method": "GET",
+              "headers": {
+                "Upgrade-Insecure-Requests": "1",
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": true
+            },
+            "timestamp": 59310806.742389,
+            "wallTime": 1792178634.058424,
+            "initiator": {
+              "type": "other"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Document",
+            "frameId": "E23AB0955BCE5841E56E361077460423",
+            "hasUserGesture": false,
+            "primaryRequest": true
+          },
+          "response": {
+            "encodedDataLength": 5189,
+            "dataLength": 19070,
+            "requestId": "A325ED6E068548C4679E0431083EBF53",
+            "type": "Document",
+            "response": {
+              "url": "https://g-comeceseuatendimenton.shop/",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "accept-ranges": "bytes",
+                "content-encoding": "gzip",
+                "content-length": "5050",
+                "content-type": "text/html",
+                "date": "Fri, 16 Oct 2026 19:23:54 GMT",
+                "etag": "\"4a7e-657c54be433d2-gzip\"",
+                "last-modified": "Wed, 29 Jul 2026 19:52:33 GMT",
+                "server": "Apache",
+                "vary": "Accept-Encoding"
+              },
+              "mimeType": "text/html",
+              "charset": "",
+              "remoteIPAddress": "88.80.17.232",
+              "remotePort": 443,
+              "encodedDataLength": 5189,
+              "timing": {
+                "requestTime": 59310806.744663,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0,
+                "dnsEnd": 236.275,
+                "connectStart": 238.131,
+                "connectEnd": 363.155,
+                "sslStart": 279.608,
+                "sslEnd": 363.147,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 363.473,
+                "sendEnd": 363.525,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 406.692,
+                "receiveHeadersEnd": 407.816
+              },
+              "responseTime": 1792178634467.395,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519",
+                "cipher": "AES_256_GCM",
+                "certificateId": 0,
+                "subjectName": "g-comeceseuatendimenton.shop",
+                "sanList": [
+                  "g-comeceseuatendimenton.shop"
+                ],
+                "issuer": "YR1",
+                "validFrom": 1790375666,
+                "validTo": 1798151665,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Elephant2026h2'",
+                    "logId": "AF67883B57B04EDD8FA6D97EF62EA8EB810AC77160F0245E55D60C2FE785873A",
+                    "timestamp": 1790379176931,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304602210093EB0DB7A57D36FB6CC5D68DEF8358B6A7CB72278DFD4AEFEA6EB02ECC20B6F5022100801B3C32D4DF34B0C6C95137BE32D12543FD282F8C14C4A8E4F3F16FD5FF9951"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Let's Encrypt 'Sycamore2027h1'",
+                    "logId": "8ECA470BACDE6AF3A206B0A47A84B746FE1FC6BF953E25E69B4EE40248F3C6E8",
+                    "timestamp": 1790379176861,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A15A9021929B2DDEE724D91DD6F5BC48670E423D834C288A4EFA295C5223CD09022100D922EE4760FAE4ED9143372AAA364605E680AD92F62895901BF2C2A0040007C5"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              }
+            },
+            "hasExtraInfo": true,
+            "hash": "1cc73df217c103ad84c52d37d06fd705162b3704cb5dded48424d9696b1b621b",
+            "size": 18897,
+            "asn": {
+              "ip": "88.80.17.232",
+              "asn": "33837",
+              "country": "SE",
+              "description": "PRQ-AS Fredrik Holmqvist, SE",
+              "name": "PRQ-AS Fredrik Holmqvist",
+              "route": "88.80.16.0/20"
+            },
+            "geoip": {
+              "country": "SE",
+              "region": "",
+              "timezone": "Europe/Stockholm",
+              "city": "",
+              "ll": [
+                59.3247,
+                18.056
+              ],
+              "country_name": "Sweden",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "88.80.17.232",
+              "ptr": "lula"
+            }
+          }
+        },
+        {
+          "request": {
+            "requestId": "2300615.2",
+            "loaderId": "A325ED6E068548C4679E0431083EBF53",
+            "documentURL": "https://g-comeceseuatendimenton.shop/",
+            "request": {
+              "url": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://g-comeceseuatendimenton.shop/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 59310807.160814,
+            "wallTime": 1792178634.476887,
+            "initiator": {
+              "type": "parser",
+              "url": "https://g-comeceseuatendimenton.shop/",
+              "lineNumber": 6,
+              "columnNumber": 124
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Stylesheet",
+            "frameId": "E23AB0955BCE5841E56E361077460423",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "Blocking"
+          },
+          "response": {
+            "encodedDataLength": 1051,
+            "dataLength": 11082,
+            "requestId": "2300615.2",
+            "type": "Stylesheet",
+            "response": {
+              "url": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "strict-transport-security": "max-age=31536000",
+                "cache-control": "private, max-age=86400",
+                "timing-allow-origin": "*",
+                "content-encoding": "gzip",
+                "cross-origin-resource-policy": "cross-origin",
+                "x-content-type-options": "nosniff",
+                "expires": "Fri, 16 Oct 2026 19:23:54 GMT",
+                "access-control-allow-origin": "*",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                "date": "Fri, 16 Oct 2026 19:23:54 GMT",
+                "x-xss-protection": "0",
+                "content-type": "text/css; charset=utf-8",
+                "vary": "Sec-Fetch-Dest, Sec-Fetch-Mode, Sec-Fetch-Site",
+                "server": "ESF",
+                "x-frame-options": "SAMEORIGIN"
+              },
+              "mimeType": "text/css",
+              "charset": "utf-8",
+              "remoteIPAddress": "192.178.183.95",
+              "remotePort": 443,
+              "encodedDataLength": 1051,
+              "timing": {
+                "requestTime": 59310807.162012,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0.091,
+                "dnsEnd": 0.321,
+                "connectStart": 0.366,
+                "connectEnd": 143.323,
+                "sslStart": 66.377,
+                "sslEnd": 143.313,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 143.527,
+                "sendEnd": 143.609,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 232.812,
+                "receiveHeadersEnd": 233.123
+              },
+              "responseTime": 1792178634710.879,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_256_GCM",
+                "certificateId": 0,
+                "subjectName": "upload.video.google.com",
+                "sanList": [
+                  "upload.video.google.com",
+                  "*.clients.google.com",
+                  "*.docs.google.com",
+                  "*.drive.google.com",
+                  "*.gdata.youtube.com",
+                  "*.googleapis.com",
+                  "*.photos.google.com",
+                  "*.youtube-3rd-party.com",
+                  "upload.google.com",
+                  "*.upload.google.com",
+                  "upload.youtube.com",
+                  "*.upload.youtube.com",
+                  "uploads.stage.gdata.youtube.com",
+                  "bg-call-donation.goog",
+                  "bg-call-donation-alpha.goog",
+                  "bg-call-donation-canary.goog",
+                  "bg-call-donation-dev.goog"
+                ],
+                "issuer": "WE2",
+                "validFrom": 1790620812,
+                "validTo": 1797878411,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "DigiCert 'Sphinx2026h2'",
+                    "logId": "944E4387FAECC1EF81F3192426A8186501C7D35F3802013F72677D55372E19D8",
+                    "timestamp": 1790624413589,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022076CE7FA770D1DE0E8B884E18E0FAF54892664439B0B8A2B79EAFFB434A622937022100F944262CBE0CC7E14429939C2041BE8347CFBB575E5B3EA39C80705FFE9EE5D8"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2026h2' log",
+                    "logId": "D809553B944F7AFFC816196F944F85ABB0F8FC5E8755260F15D12E72BB454B14",
+                    "timestamp": 1790624413647,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022100FCE4CA84AA0FBC2710842B74011088831618AE87BBCA001EF101C89CD494A7F00220627CC8560E2112D14DB513FA4E846F325B10526FBBED75E5EA63C2091FDAEE89"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "Strict-Transport-Security",
+                  "value": "max-age=31536000"
+                },
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Frame-Options",
+                  "value": "SAMEORIGIN"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "0"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "d48a4432d88ebd139b367d55f6e689879a8416c908c957c3ca5e84cc00ff079e",
+            "size": 11082,
+            "asn": {
+              "ip": "192.178.183.95",
+              "asn": "15169",
+              "country": "US",
+              "description": "GOOGLE - Google LLC, US",
+              "name": "Google LLC",
+              "route": "192.178.0.0/15"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "192.178.183.95",
+              "ptr": "lcfraw-in-f95.1e100.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://g-comeceseuatendimenton.shop/",
+            "host": "g-comeceseuatendimenton.shop",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2300615.4",
+            "loaderId": "A325ED6E068548C4679E0431083EBF53",
+            "documentURL": "https://g-comeceseuatendimenton.shop/",
+            "request": {
+              "url": "https://ipapi.co/json/",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://g-comeceseuatendimenton.shop/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "High",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 59310807.39991,
+            "wallTime": 1792178634.715969,
+            "initiator": {
+              "type": "script",
+              "stack": {
+                "callFrames": [
+                  {
+                    "functionName": "",
+                    "scriptId": "7",
+                    "url": "https://g-comeceseuatendimenton.shop/",
+                    "lineNumber": 391,
+                    "columnNumber": 12
+                  },
+                  {
+                    "functionName": "",
+                    "scriptId": "7",
+                    "url": "https://g-comeceseuatendimenton.shop/",
+                    "lineNumber": 402,
+                    "columnNumber": 6
+                  }
+                ]
+              }
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Fetch",
+            "frameId": "E23AB0955BCE5841E56E361077460423",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 1653,
+            "dataLength": 766,
+            "requestId": "2300615.4",
+            "type": "Fetch",
+            "response": {
+              "url": "https://ipapi.co/json/",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "content-encoding": "br",
+                "cf-cache-status": "DYNAMIC",
+                "report-to": "{\"group\":\"cf-nel\",\"max_age\":604800,\"endpoints\":[{\"url\":\"https://a.nel.cloudflare.com/report/v4?s=EyD6bAbinE%2BQkV8j6QgpDEuI8KYOSgWYGoZ%2Fshj6MY0fBDjNx74Smz4Li%2BtWEA3UlxKYKsHZVkQt0bW2dalnYU4Idierkjf0sLuGUkhLpN8qjIdN5zVPe1l4\"}]}",
+                "x-content-type-options": "nosniff",
+                "date": "Fri, 16 Oct 2026 19:23:55 GMT",
+                "content-type": "application/json",
+                "vary": "Host, origin",
+                "x-frame-options": "DENY",
+                "nel": "{\"report_to\":\"cf-nel\",\"success_fraction\":0.0,\"max_age\":604800}",
+                "cross-origin-opener-policy": "same-origin",
+                "referrer-policy": "same-origin",
+                "allow": "OPTIONS, GET, HEAD, POST, OPTIONS",
+                "cf-ray": "a4b970d3cfd46ddd-ARN",
+                "content-security-policy-report-only": "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://*.stripe.com https://*.paddle.com https://www.google.com https://www.gstatic.com https://maps.gstatic.com https://maps.googleapis.com https://www.google.com/recaptcha/ https://www.gstatic.com/recaptcha/; style-src 'self' 'unsafe-inline' https://*.paddle.com https://fonts.gstatic.com https://fonts.googleapis.com; img-src 'self' data: https://ipapi.co https://maps.gstatic.com https://maps.googleapis.com https://*.stripe.com; font-src 'self' data: https://fonts.gstatic.com https://fonts.googleapis.com; frame-src 'self' https://www.google.com https://*.stripe.com https://*.paddle.com https://www.google.com/recaptcha/ https://recaptcha.google.com/recaptcha/ https://challenges.cloudflare.com/; connect-src 'self' https://ipapi.co/ https://*.paddle.com https://*.stripe.com https://maps.googleapis.com https://www.google.com/recaptcha/; object-src 'none'; frame-ancestors 'none'; base-uri 'self'; form-action 'self';",
+                "access-control-allow-origin": "https://g-comeceseuatendimenton.shop",
+                "server": "cloudflare"
+              },
+              "mimeType": "application/json",
+              "charset": "",
+              "remoteIPAddress": "104.26.8.44",
+              "remotePort": 443,
+              "encodedDataLength": 1653,
+              "timing": {
+                "requestTime": 59310807.402351,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0.159,
+                "dnsEnd": 14.607,
+                "connectStart": 15.55,
+                "connectEnd": 101.869,
+                "sslStart": 57.082,
+                "sslEnd": 101.86,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 102.076,
+                "sendEnd": 102.367,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 330.046,
+                "receiveHeadersEnd": 330.571
+              },
+              "responseTime": 1792178635048.45,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.2",
+                "keyExchange": "ECDHE_ECDSA",
+                "keyExchangeGroup": "X25519",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "ipapi.co",
+                "sanList": [
+                  "ipapi.co",
+                  "*.ipapi.co"
+                ],
+                "issuer": "WE1",
+                "validFrom": 1791718911,
+                "validTo": 1799498508,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "DigiCert 'sphinx2027h1'",
+                    "logId": "46A23967C60DB64687C66F3DF999947693A6A611208457D555E7E3D0A1D9B646",
+                    "timestamp": 1791722511713,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022100F3DA2447557692821C50222E9D4ADDDE7EA7C1183AA448CDD725948CDCB1E02A02204191C001DEDC903EC94EA3044C249151AFD89CFB686A1E0F52A5FF03982A1786"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "IPng Networks 'Halloumi2027h1'",
+                    "logId": "44E822FC2BAB0E92EED0E9FAD69664602776D01760E0890509C923A1B03FC37F",
+                    "timestamp": 1791722508808,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A6ECF4D265DB3A4D41F221DB2A46242C5DD1423E16B7B4553FDB32BE629BB54002210090CDBF5CA6127E86D14188985BE3742CCC0C7DA459CF844C942D4F8B0E301856"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Frame-Options",
+                  "value": "DENY"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "58c9f6adb5d0d4d341a264eb4a123c23abe128fa693b8d733cad1017966e41d9",
+            "size": 766,
+            "asn": {
+              "ip": "104.26.8.44",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "104.26.0.0/20"
+            },
+            "geoip": {
+              "country": "",
+              "region": "",
+              "timezone": "",
+              "city": "",
+              "ll": [
+                null,
+                null
+              ],
+              "country_name": "Ascension Island"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://g-comeceseuatendimenton.shop/",
+            "host": "g-comeceseuatendimenton.shop",
+            "type": "script"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2300615.9",
+            "loaderId": "A325ED6E068548C4679E0431083EBF53",
+            "documentURL": "https://g-comeceseuatendimenton.shop/",
+            "request": {
+              "url": "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Origin": "https://g-comeceseuatendimenton.shop",
+                "Referer": "https://fonts.googleapis.com/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "VeryHigh",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": false
+            },
+            "timestamp": 59310807.402126,
+            "wallTime": 1792178634.71817,
+            "initiator": {
+              "type": "parser",
+              "url": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Font",
+            "frameId": "E23AB0955BCE5841E56E361077460423",
+            "hasUserGesture": false,
+            "renderBlockingBehavior": "NonBlocking"
+          },
+          "response": {
+            "encodedDataLength": 39184,
+            "dataLength": 39152,
+            "requestId": "2300615.9",
+            "type": "Font",
+            "response": {
+              "url": "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "age": "157440",
+                "report-to": "{\"group\":\"apps-themes\",\"max_age\":2592000,\"endpoints\":[{\"url\":\"https://csp.withgoogle.com/csp/report-to/apps-themes\"}]}",
+                "x-content-type-options": "nosniff",
+                "expires": "Thu, 14 Oct 2027 23:39:54 GMT",
+                "alt-svc": "h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000",
+                "date": "Wed, 14 Oct 2026 23:39:54 GMT",
+                "last-modified": "Mon, 15 Sep 2025 17:03:48 GMT",
+                "content-type": "font/woff2",
+                "cache-control": "public, max-age=31536000",
+                "timing-allow-origin": "*",
+                "cross-origin-opener-policy": "same-origin; report-to=\"apps-themes\"",
+                "cross-origin-resource-policy": "cross-origin",
+                "content-security-policy-report-only": "require-trusted-types-for 'script'; report-uri https://csp.withgoogle.com/csp/apps-themes",
+                "accept-ranges": "bytes",
+                "access-control-allow-origin": "*",
+                "content-length": "39152",
+                "x-xss-protection": "0",
+                "server": "sffe"
+              },
+              "mimeType": "font/woff2",
+              "charset": "",
+              "remoteIPAddress": "142.251.14.94",
+              "remotePort": 443,
+              "encodedDataLength": 29,
+              "timing": {
+                "requestTime": 59310807.406219,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": 0.052,
+                "dnsEnd": 3.523,
+                "connectStart": 3.647,
+                "connectEnd": 87.153,
+                "sslStart": 3.647,
+                "sslEnd": 87.153,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 87.219,
+                "sendEnd": 87.298,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 167.471,
+                "receiveHeadersEnd": 167.96
+              },
+              "responseTime": 1792178634889.738,
+              "protocol": "h3",
+              "alternateProtocolUsage": "dnsAlpnH3JobWonRace",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "QUIC",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519MLKEM768",
+                "cipher": "AES_128_GCM",
+                "certificateId": 0,
+                "subjectName": "*.gstatic.com",
+                "sanList": [
+                  "*.gstatic.com",
+                  "gstatic.com",
+                  "*.metric.gstatic.com"
+                ],
+                "issuer": "WE2",
+                "validFrom": 1790620806,
+                "validTo": 1797878405,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Google 'Xenon2026h2' log",
+                    "logId": "D809553B944F7AFFC816196F944F85ABB0F8FC5E8755260F15D12E72BB454B14",
+                    "timestamp": 1790624407921,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022100FC532B160B4644B06B26FFA4425CA6058404E8904A440261B31F35C1A16BD20E0220351794F666AD0FE041E6FBD1CDCC436F9F7FEDEAD36377B84163B69B5CFD5E90"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Elephant2026h2'",
+                    "logId": "AF67883B57B04EDD8FA6D97EF62EA8EB810AC77160F0245E55D60C2FE785873A",
+                    "timestamp": 1790624408077,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3045022100C2225DB39FB085BACE7A75DCBB764AAA9259C29075FB1E995B98DEB09DCD8155022001097A795C59D04F760AF289F3654C4F195368D1364FCFD1A7F8F7C5861F9C91"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 1027,
+                "encryptedClientHello": false
+              },
+              "securityHeaders": [
+                {
+                  "name": "X-Content-Type-Options",
+                  "value": "nosniff"
+                },
+                {
+                  "name": "X-Xss-Protection",
+                  "value": "0"
+                }
+              ]
+            },
+            "hasExtraInfo": true,
+            "hash": "20fc9b6fc618e7c3c68d3ac750a2a5dfbceb8521675458d2cea580b5693e4798",
+            "size": 52204,
+            "asn": {
+              "ip": "142.251.14.94",
+              "asn": "15169",
+              "country": "US",
+              "description": "GOOGLE - Google LLC, US",
+              "name": "Google LLC",
+              "route": "142.250.0.0/15"
+            },
+            "geoip": {
+              "country": "US",
+              "region": "",
+              "timezone": "America/Chicago",
+              "city": "",
+              "ll": [
+                37.751,
+                -97.822
+              ],
+              "country_name": "United States",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "142.251.14.94",
+              "ptr": "pm-in-f94.1e100.net"
+            }
+          },
+          "initiatorInfo": {
+            "url": "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap",
+            "host": "fonts.googleapis.com",
+            "type": "parser"
+          }
+        },
+        {
+          "request": {
+            "requestId": "2300615.35",
+            "loaderId": "A325ED6E068548C4679E0431083EBF53",
+            "documentURL": "https://g-comeceseuatendimenton.shop/",
+            "request": {
+              "url": "https://g-comeceseuatendimenton.shop/favicon.ico",
+              "method": "GET",
+              "headers": {
+                "User-Agent": "Mozilla/5.0 (iPhone; CPU iPhone OS 18_7_8 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/26.0 Mobile/15E148 Safari/604.1",
+                "Referer": "https://g-comeceseuatendimenton.shop/"
+              },
+              "mixedContentType": "none",
+              "initialPriority": "High",
+              "referrerPolicy": "strict-origin-when-cross-origin",
+              "isSameSite": true
+            },
+            "timestamp": 59310807.641457,
+            "wallTime": 1792178634.957506,
+            "initiator": {
+              "type": "other"
+            },
+            "redirectHasExtraInfo": false,
+            "type": "Other",
+            "frameId": "E23AB0955BCE5841E56E361077460423",
+            "hasUserGesture": false
+          },
+          "response": {
+            "encodedDataLength": 38154,
+            "dataLength": 38494,
+            "requestId": "2300615.35",
+            "type": "Other",
+            "response": {
+              "url": "https://g-comeceseuatendimenton.shop/favicon.ico",
+              "status": 200,
+              "statusText": "",
+              "headers": {
+                "content-encoding": "gzip",
+                "etag": "\"965e-657a4fa4f0680-gzip\"",
+                "accept-ranges": "bytes",
+                "content-length": "38047",
+                "date": "Fri, 16 Oct 2026 19:23:54 GMT",
+                "last-modified": "Tue, 28 Jul 2026 05:19:06 GMT",
+                "vary": "Accept-Encoding",
+                "server": "Apache",
+                "content-type": "image/x-icon"
+              },
+              "mimeType": "image/x-icon",
+              "charset": "",
+              "remoteIPAddress": "88.80.17.232",
+              "remotePort": 443,
+              "encodedDataLength": 38154,
+              "timing": {
+                "requestTime": 59310807.641815,
+                "proxyStart": -1,
+                "proxyEnd": -1,
+                "dnsStart": -1,
+                "dnsEnd": -1,
+                "connectStart": -1,
+                "connectEnd": -1,
+                "sslStart": -1,
+                "sslEnd": -1,
+                "workerStart": -1,
+                "workerReady": -1,
+                "workerFetchStart": -1,
+                "workerRespondWithSettled": -1,
+                "sendStart": 0.311,
+                "sendEnd": 0.415,
+                "pushStart": 0,
+                "pushEnd": 0,
+                "receiveHeadersStart": 86.226,
+                "receiveHeadersEnd": 86.642
+              },
+              "responseTime": 1792178635044.078,
+              "protocol": "h2",
+              "alternateProtocolUsage": "unspecifiedReason",
+              "securityState": "secure",
+              "securityDetails": {
+                "protocol": "TLS 1.3",
+                "keyExchange": "",
+                "keyExchangeGroup": "X25519",
+                "cipher": "AES_256_GCM",
+                "certificateId": 0,
+                "subjectName": "g-comeceseuatendimenton.shop",
+                "sanList": [
+                  "g-comeceseuatendimenton.shop"
+                ],
+                "issuer": "YR1",
+                "validFrom": 1790375666,
+                "validTo": 1798151665,
+                "signedCertificateTimestampList": [
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Sectigo 'Elephant2026h2'",
+                    "logId": "AF67883B57B04EDD8FA6D97EF62EA8EB810AC77160F0245E55D60C2FE785873A",
+                    "timestamp": 1790379176931,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "304602210093EB0DB7A57D36FB6CC5D68DEF8358B6A7CB72278DFD4AEFEA6EB02ECC20B6F5022100801B3C32D4DF34B0C6C95137BE32D12543FD282F8C14C4A8E4F3F16FD5FF9951"
+                  },
+                  {
+                    "status": "Verified",
+                    "origin": "Embedded in certificate",
+                    "logDescription": "Let's Encrypt 'Sycamore2027h1'",
+                    "logId": "8ECA470BACDE6AF3A206B0A47A84B746FE1FC6BF953E25E69B4EE40248F3C6E8",
+                    "timestamp": 1790379176861,
+                    "hashAlgorithm": "SHA-256",
+                    "signatureAlgorithm": "ECDSA",
+                    "signatureData": "3046022100A15A9021929B2DDEE724D91DD6F5BC48670E423D834C288A4EFA295C5223CD09022100D922EE4760FAE4ED9143372AAA364605E680AD92F62895901BF2C2A0040007C5"
+                  }
+                ],
+                "certificateTransparencyCompliance": "compliant",
+                "serverSignatureAlgorithm": 2052,
+                "encryptedClientHello": false
+              }
+            },
+            "hasExtraInfo": true,
+            "hash": "e9050d6d446f201b82e303049ef067f631d4039d77322ef9788740f550a20e75",
+            "size": 51328,
+            "asn": {
+              "ip": "88.80.17.232",
+              "asn": "33837",
+              "country": "SE",
+              "description": "PRQ-AS Fredrik Holmqvist, SE",
+              "name": "PRQ-AS Fredrik Holmqvist",
+              "route": "88.80.16.0/20"
+            },
+            "geoip": {
+              "country": "SE",
+              "region": "",
+              "timezone": "Europe/Stockholm",
+              "city": "",
+              "ll": [
+                59.3247,
+                18.056
+              ],
+              "country_name": "Sweden",
+              "metro": 0
+            },
+            "rdns": {
+              "ip": "88.80.17.232",
+              "ptr": "lula"
+            }
+          }
+        }
+      ],
+      "cookies": [
+        {
+          "name": "_vtk",
+          "value": "wttvv4bvi5kmvbcvwt6",
+          "domain": "g-comeceseuatendimenton.shop",
+          "path": "/",
+          "expires": 1792783434,
+          "size": 23,
+          "httpOnly": false,
+          "secure": false,
+          "session": false,
+          "sameSite": "Lax",
+          "priority": "Medium",
+          "sourceScheme": "Secure",
+          "sourcePort": 443
+        },
+        {
+          "name": "_vck",
+          "value": "3e7rhps4",
+          "domain": "g-comeceseuatendimenton.shop",
+          "path": "/",
+          "expires": 1792783434,
+          "size": 12,
+          "httpOnly": false,
+          "secure": false,
+          "session": false,
+          "sameSite": "Lax",
+          "priority": "Medium",
+          "sourceScheme": "Secure",
+          "sourcePort": 443
+        }
+      ],
+      "console": [],
+      "links": [
+        {
+          "href": "https://feiraoaberto.netlify.app/login/",
+          "text": "Acessar orienta\u00e7\u00f5es \u2192",
+          "frameId": "E23AB0955BCE5841E56E361077460423"
+        }
+      ],
+      "timing": {
+        "beginNavigation": "2026-10-16T19:23:54.051Z",
+        "frameStartedLoading": "2026-10-16T19:23:54.058Z",
+        "frameNavigated": "2026-10-16T19:23:54.486Z",
+        "domContentEventFired": "2026-10-16T19:23:54.734Z",
+        "frameStoppedLoading": "2026-10-16T19:23:54.957Z"
+      },
+      "globals": [
+        {
+          "prop": "expandFaq",
+          "type": "function"
+        }
+      ],
+      "storages": [
+        {
+          "origin": "https://g-comeceseuatendimenton.shop",
+          "key": "_vsid",
+          "value": "wttvv4bvi5kmvbcvwt6",
+          "isLocalStorage": false
+        },
+        {
+          "origin": "https://g-comeceseuatendimenton.shop",
+          "key": "_vuid",
+          "value": "3e7rhps4",
+          "isLocalStorage": false
+        },
+        {
+          "origin": "https://g-comeceseuatendimenton.shop",
+          "key": "_vts",
+          "value": "1792178634714",
+          "isLocalStorage": false
+        }
+      ],
+      "websockets": [],
+      "clipboard": [],
+      "redirects": [],
+      "identifiers": [
+        "html-id",
+        "html-id.vt-clock",
+        "html-id.vt-geo",
+        "html-id.vt-counter"
+      ]
+    },
+    "labels": [],
+    "lists": {
+      "ips": [
+        "142.251.14.94",
+        "104.26.8.44",
+        "192.178.183.95",
+        "88.80.17.232"
+      ],
+      "countries": [
+        "US",
+        "SE"
+      ],
+      "asns": [
+        "15169",
+        "13335",
+        "33837"
+      ],
+      "domains": [
+        "g-comeceseuatendimenton.shop",
+        "fonts.gstatic.com",
+        "ipapi.co",
+        "fonts.googleapis.com"
+      ],
+      "servers": [
+        "Apache",
+        "sffe",
+        "cloudflare",
+        "ESF"
+      ],
+      "urls": [
+        "https://g-comeceseuatendimenton.shop/",
+        "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap",
+        "https://ipapi.co/json/",
+        "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2",
+        "https://g-comeceseuatendimenton.shop/favicon.ico"
+      ],
+      "linkDomains": [
+        "feiraoaberto.netlify.app"
+      ],
+      "certificates": [
+        {
+          "subjectName": "g-comeceseuatendimenton.shop",
+          "issuer": "YR1",
+          "validFrom": 1790375666,
+          "validTo": 1798151665
+        },
+        {
+          "subjectName": "upload.video.google.com",
+          "issuer": "WE2",
+          "validFrom": 1790620812,
+          "validTo": 1797878411
+        },
+        {
+          "subjectName": "ipapi.co",
+          "issuer": "WE1",
+          "validFrom": 1791718911,
+          "validTo": 1799498508
+        },
+        {
+          "subjectName": "*.gstatic.com",
+          "issuer": "WE2",
+          "validFrom": 1790620806,
+          "validTo": 1797878405
+        }
+      ],
+      "hashes": [
+        "1cc73df217c103ad84c52d37d06fd705162b3704cb5dded48424d9696b1b621b",
+        "d48a4432d88ebd139b367d55f6e689879a8416c908c957c3ca5e84cc00ff079e",
+        "58c9f6adb5d0d4d341a264eb4a123c23abe128fa693b8d733cad1017966e41d9",
+        "20fc9b6fc618e7c3c68d3ac750a2a5dfbceb8521675458d2cea580b5693e4798",
+        "e9050d6d446f201b82e303049ef067f631d4039d77322ef9788740f550a20e75"
+      ]
+    },
+    "meta": {
+      "processors": {
+        "umbrella": {
+          "data": [
+            {
+              "hostname": "fonts.googleapis.com",
+              "rank": 63
+            },
+            {
+              "hostname": "ipapi.co",
+              "rank": 11071
+            },
+            {
+              "hostname": "fonts.gstatic.com",
+              "rank": 49
+            }
+          ]
+        },
+        "geoip": {
+          "data": [
+            {
+              "ip": "88.80.17.232",
+              "geoip": {
+                "country": "SE",
+                "region": "",
+                "timezone": "Europe/Stockholm",
+                "city": "",
+                "ll": [
+                  59.3247,
+                  18.056
+                ],
+                "country_name": "Sweden",
+                "metro": 0
+              }
+            },
+            {
+              "ip": "192.178.183.95",
+              "geoip": {
+                "country": "US",
+                "region": "",
+                "timezone": "America/Chicago",
+                "city": "",
+                "ll": [
+                  37.751,
+                  -97.822
+                ],
+                "country_name": "United States",
+                "metro": 0
+              }
+            },
+            {
+              "ip": "104.26.8.44",
+              "geoip": {
+                "country": "",
+                "region": "",
+                "timezone": "",
+                "city": "",
+                "ll": [
+                  null,
+                  null
+                ],
+                "country_name": "Ascension Island"
+              }
+            },
+            {
+              "ip": "142.251.14.94",
+              "geoip": {
+                "country": "US",
+                "region": "",
+                "timezone": "America/Chicago",
+                "city": "",
+                "ll": [
+                  37.751,
+                  -97.822
+                ],
+                "country_name": "United States",
+                "metro": 0
+              }
+            }
+          ]
+        },
+        "asn": {
+          "data": [
+            {
+              "ip": "88.80.17.232",
+              "asn": "33837",
+              "country": "SE",
+              "description": "PRQ-AS Fredrik Holmqvist, SE",
+              "name": "PRQ-AS Fredrik Holmqvist",
+              "route": "88.80.16.0/20"
+            },
+            {
+              "ip": "192.178.183.95",
+              "asn": "15169",
+              "country": "US",
+              "description": "GOOGLE - Google LLC, US",
+              "name": "Google LLC",
+              "route": "192.178.0.0/15"
+            },
+            {
+              "ip": "104.26.8.44",
+              "asn": "13335",
+              "country": "US",
+              "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+              "name": "Cloudflare",
+              "route": "104.26.0.0/20"
+            },
+            {
+              "ip": "142.251.14.94",
+              "asn": "15169",
+              "country": "US",
+              "description": "GOOGLE - Google LLC, US",
+              "name": "Google LLC",
+              "route": "142.250.0.0/15"
+            }
+          ]
+        },
+        "rdns": {
+          "data": [
+            {
+              "ip": "88.80.17.232",
+              "ptr": "lula"
+            },
+            {
+              "ip": "192.178.183.95",
+              "ptr": "lcfraw-in-f95.1e100.net"
+            },
+            {
+              "ip": "142.251.14.94",
+              "ptr": "pm-in-f94.1e100.net"
+            }
+          ]
+        },
+        "wappa": {
+          "data": []
+        }
+      }
+    },
+    "page": {
+      "asn": "AS33837",
+      "asnname": "PRQ-AS Fredrik Holmqvist, SE",
+      "city": "",
+      "country": "SE",
+      "domain": "g-comeceseuatendimenton.shop",
+      "ip": "88.80.17.232",
+      "ptr": "lula",
+      "server": "Apache",
+      "url": "https://g-comeceseuatendimenton.shop/",
+      "apexDomainAgeDays": 78,
+      "language": "pt",
+      "mimeType": "text/html",
+      "title": "Consulta de Informa\u00e7\u00f5es Financeiras",
+      "tlsValidDays": 89,
+      "tlsAgeDays": 20,
+      "domainAgeDays": 78,
+      "tlsValidFrom": "2026-09-25T22:34:26.000Z",
+      "apexDomain": "g-comeceseuatendimenton.shop",
+      "tlsIssuer": "YR1",
+      "status": "200"
+    },
+    "scanner": {
+      "country": "se"
+    },
+    "stats": {
+      "IPv6Percentage": 0,
+      "adBlocked": 0,
+      "domainStats": [
+        {
+          "count": 2,
+          "ips": [
+            "88.80.17.232"
+          ],
+          "domain": "g-comeceseuatendimenton.shop",
+          "size": 57564,
+          "encodedSize": 43343,
+          "countries": [
+            "SE"
+          ],
+          "index": 0,
+          "initiators": [],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "142.251.14.94"
+          ],
+          "domain": "fonts.gstatic.com",
+          "size": 39152,
+          "encodedSize": 39184,
+          "countries": [
+            "US"
+          ],
+          "index": 3,
+          "initiators": [
+            "fonts.googleapis.com"
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "104.26.8.44"
+          ],
+          "domain": "ipapi.co",
+          "size": 766,
+          "encodedSize": 1653,
+          "countries": [],
+          "index": 2,
+          "initiators": [
+            "g-comeceseuatendimenton.shop"
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "192.178.183.95"
+          ],
+          "domain": "fonts.googleapis.com",
+          "size": 11082,
+          "encodedSize": 1051,
+          "countries": [
+            "US"
+          ],
+          "index": 1,
+          "initiators": [
+            "g-comeceseuatendimenton.shop"
+          ],
+          "redirects": 0
+        }
+      ],
+      "ipStats": [
+        {
+          "requests": 2,
+          "domains": [
+            "g-comeceseuatendimenton.shop"
+          ],
+          "ip": "88.80.17.232",
+          "asn": {
+            "ip": "88.80.17.232",
+            "asn": "33837",
+            "country": "SE",
+            "description": "PRQ-AS Fredrik Holmqvist, SE",
+            "name": "PRQ-AS Fredrik Holmqvist",
+            "route": "88.80.16.0/20"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "SE",
+            "region": "",
+            "timezone": "Europe/Stockholm",
+            "city": "",
+            "ll": [
+              59.3247,
+              18.056
+            ],
+            "country_name": "Sweden",
+            "metro": 0
+          },
+          "size": 57564,
+          "encodedSize": 43343,
+          "countries": [
+            "SE"
+          ],
+          "index": 0,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null,
+          "rdns": {
+            "ip": "88.80.17.232",
+            "ptr": "lula"
+          }
+        },
+        {
+          "requests": 1,
+          "domains": [
+            "fonts.googleapis.com"
+          ],
+          "ip": "192.178.183.95",
+          "asn": {
+            "ip": "192.178.183.95",
+            "asn": "15169",
+            "country": "US",
+            "description": "GOOGLE - Google LLC, US",
+            "name": "Google LLC",
+            "route": "192.178.0.0/15"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "US",
+            "region": "",
+            "timezone": "America/Chicago",
+            "city": "",
+            "ll": [
+              37.751,
+              -97.822
+            ],
+            "country_name": "United States",
+            "metro": 0
+          },
+          "size": 11082,
+          "encodedSize": 1051,
+          "countries": [
+            "US"
+          ],
+          "index": 1,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null,
+          "rdns": {
+            "ip": "192.178.183.95",
+            "ptr": "lcfraw-in-f95.1e100.net"
+          }
+        },
+        {
+          "requests": 1,
+          "domains": [
+            "ipapi.co"
+          ],
+          "ip": "104.26.8.44",
+          "asn": {
+            "ip": "104.26.8.44",
+            "asn": "13335",
+            "country": "US",
+            "description": "CLOUDFLARENET - Cloudflare, Inc., US",
+            "name": "Cloudflare",
+            "route": "104.26.0.0/20"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "",
+            "region": "",
+            "timezone": "",
+            "city": "",
+            "ll": [
+              null,
+              null
+            ],
+            "country_name": "Ascension Island"
+          },
+          "size": 766,
+          "encodedSize": 1653,
+          "countries": [],
+          "index": 2,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null
+        },
+        {
+          "requests": 1,
+          "domains": [
+            "fonts.gstatic.com"
+          ],
+          "ip": "142.251.14.94",
+          "asn": {
+            "ip": "142.251.14.94",
+            "asn": "15169",
+            "country": "US",
+            "description": "GOOGLE - Google LLC, US",
+            "name": "Google LLC",
+            "route": "142.250.0.0/15"
+          },
+          "dns": {},
+          "geoip": {
+            "country": "US",
+            "region": "",
+            "timezone": "America/Chicago",
+            "city": "",
+            "ll": [
+              37.751,
+              -97.822
+            ],
+            "country_name": "United States",
+            "metro": 0
+          },
+          "size": 39152,
+          "encodedSize": 39184,
+          "countries": [
+            "US"
+          ],
+          "index": 3,
+          "ipv6": false,
+          "redirects": 0,
+          "count": null,
+          "rdns": {
+            "ip": "142.251.14.94",
+            "ptr": "pm-in-f94.1e100.net"
+          }
+        }
+      ],
+      "malicious": 0,
+      "protocolStats": [
+        {
+          "count": 4,
+          "size": 69412,
+          "encodedSize": 46047,
+          "ips": [
+            "88.80.17.232",
+            "192.178.183.95",
+            "104.26.8.44"
+          ],
+          "countries": [
+            "SE",
+            "US"
+          ],
+          "securityState": {},
+          "protocol": "h2"
+        },
+        {
+          "count": 1,
+          "size": 39152,
+          "encodedSize": 39184,
+          "ips": [
+            "142.251.14.94"
+          ],
+          "countries": [
+            "US"
+          ],
+          "securityState": {},
+          "protocol": "h3"
+        }
+      ],
+      "regDomainStats": [
+        {
+          "count": 2,
+          "ips": [
+            "88.80.17.232"
+          ],
+          "regDomain": "g-comeceseuatendimenton.shop",
+          "size": 57564,
+          "encodedSize": 43343,
+          "countries": [],
+          "index": 0,
+          "subDomains": [
+            {
+              "domain": "",
+              "country": "SE"
+            }
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "142.251.14.94"
+          ],
+          "regDomain": "gstatic.com",
+          "size": 39152,
+          "encodedSize": 39184,
+          "countries": [],
+          "index": 3,
+          "subDomains": [
+            {
+              "domain": "fonts",
+              "country": "US"
+            }
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "104.26.8.44"
+          ],
+          "regDomain": "ipapi.co",
+          "size": 766,
+          "encodedSize": 1653,
+          "countries": [],
+          "index": 2,
+          "subDomains": [
+            {
+              "domain": "",
+              "country": ""
+            }
+          ],
+          "redirects": 0
+        },
+        {
+          "count": 1,
+          "ips": [
+            "192.178.183.95"
+          ],
+          "regDomain": "googleapis.com",
+          "size": 11082,
+          "encodedSize": 1051,
+          "countries": [],
+          "index": 1,
+          "subDomains": [
+            {
+              "domain": "fonts",
+              "country": "US"
+            }
+          ],
+          "redirects": 0
+        }
+      ],
+      "resourceStats": [
+        {
+          "count": 1,
+          "size": 38494,
+          "encodedSize": 38154,
+          "latency": 0,
+          "countries": [
+            "SE"
+          ],
+          "ips": [
+            "88.80.17.232"
+          ],
+          "type": "Other",
+          "compression": "1.0",
+          "percentage": 20
+        },
+        {
+          "count": 1,
+          "size": 39152,
+          "encodedSize": 39184,
+          "latency": 0,
+          "countries": [
+            "US"
+          ],
+          "ips": [
+            "142.251.14.94"
+          ],
+          "type": "Font",
+          "compression": "1.0",
+          "percentage": 20
+        },
+        {
+          "count": 1,
+          "size": 766,
+          "encodedSize": 1653,
+          "latency": 0,
+          "countries": [],
+          "ips": [
+            "104.26.8.44"
+          ],
+          "type": "Fetch",
+          "compression": "0.5",
+          "percentage": 20
+        },
+        {
+          "count": 1,
+          "size": 11082,
+          "encodedSize": 1051,
+          "latency": 0,
+          "countries": [
+            "US"
+          ],
+          "ips": [
+            "192.178.183.95"
+          ],
+          "type": "Stylesheet",
+          "compression": "10.5",
+          "percentage": 20
+        },
+        {
+          "count": 1,
+          "size": 19070,
+          "encodedSize": 5189,
+          "latency": 0,
+          "countries": [
+            "SE"
+          ],
+          "ips": [
+            "88.80.17.232"
+          ],
+          "type": "Document",
+          "compression": "3.7",
+          "percentage": 20
+        }
+      ],
+      "securePercentage": 100,
+      "secureRequests": 5,
+      "serverStats": [
+        {
+          "count": 2,
+          "size": 57564,
+          "encodedSize": 43343,
+          "ips": [
+            "88.80.17.232"
+          ],
+          "countries": [
+            "SE"
+          ],
+          "server": "Apache"
+        },
+        {
+          "count": 1,
+          "size": 39152,
+          "encodedSize": 39184,
+          "ips": [
+            "142.251.14.94"
+          ],
+          "countries": [
+            "US"
+          ],
+          "server": "sffe"
+        },
+        {
+          "count": 1,
+          "size": 766,
+          "encodedSize": 1653,
+          "ips": [
+            "104.26.8.44"
+          ],
+          "countries": [],
+          "server": "cloudflare"
+        },
+        {
+          "count": 1,
+          "size": 11082,
+          "encodedSize": 1051,
+          "ips": [
+            "192.178.183.95"
+          ],
+          "countries": [
+            "US"
+          ],
+          "server": "ESF"
+        }
+      ],
+      "tlsStats": [
+        {
+          "count": 5,
+          "size": 108564,
+          "encodedSize": 85231,
+          "ips": [
+            "88.80.17.232",
+            "192.178.183.95",
+            "104.26.8.44",
+            "142.251.14.94"
+          ],
+          "countries": [
+            "SE",
+            "US"
+          ],
+          "protocols": {
+            "TLS 1.3 /  / AES_256_GCM": 3,
+            "TLS 1.2 / ECDHE_ECDSA / AES_128_GCM": 1,
+            "QUIC /  / AES_128_GCM": 1
+          },
+          "securityState": "secure"
+        }
+      ],
+      "totalLinks": 1,
+      "uniqCountries": 3
+    },
+    "submitter": {
+      "country": "NO"
+    },
+    "task": {
+      "method": "api",
+      "source": "75a4b351",
+      "tags": [],
+      "time": "2026-10-16T19:24:00.159Z",
+      "url": "https://g-comeceseuatendimenton.shop/",
+      "uuid": "01a1462b-bbda-773d-a9b2-fa0511ed4b52",
+      "visibility": "public",
+      "reportURL": "https://urlscan.io/result/01a1462b-bbda-773d-a9b2-fa0511ed4b52/",
+      "screenshotURL": "https://urlscan.io/screenshots/01a1462b-bbda-773d-a9b2-fa0511ed4b52.png",
+      "domURL": "https://urlscan.io/dom/01a1462b-bbda-773d-a9b2-fa0511ed4b52/",
+      "domain": "g-comeceseuatendimenton.shop",
+      "apexDomain": "g-comeceseuatendimenton.shop"
+    },
+    "verdicts": {
+      "overall": {
+        "score": 0,
+        "categories": [],
+        "brands": [],
+        "tags": [],
+        "malicious": false,
+        "hasVerdicts": true
+      },
+      "urlscan": {
+        "score": 0,
+        "categories": [],
+        "brands": [],
+        "tags": [],
+        "malicious": false,
+        "hasVerdicts": false
+      },
+      "engines": {
+        "score": 90,
+        "malicious": true,
+        "categories": [],
+        "enginesTotal": 0,
+        "maliciousTotal": 0,
+        "benignTotal": 0,
+        "maliciousVerdicts": [],
+        "benignVerdicts": [],
+        "hasVerdicts": true,
+        "tags": [
+          "urlscan-ml",
+          "urlscan-ml-60c5e22"
+        ]
+      },
+      "community": {
+        "score": 0,
+        "categories": [],
+        "brands": [],
+        "votesTotal": 0,
+        "votesMalicious": 0,
+        "votesBenign": 0,
+        "malicious": false,
+        "hasVerdicts": false
+      }
+    },
+    "visible": {
+      "brandname": "Amsterdam"
+    }
+  },
+  "message": null
+}

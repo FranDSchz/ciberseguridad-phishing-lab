@@ -1,0 +1,102 @@
+[
+  {
+    "correo_id": "R004",
+    "consulta": {
+      "service": "urlscan.io (revisi\u00f3n exacta task.url.keyword)",
+      "indicator_type": "url",
+      "indicator": "https://shorturl.at/zEbf9",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:27:59+00:00",
+      "endpoint": "https://urlscan.io/api/v1/search/?q=task.url.keyword%3A%22https%3A%2F%2Fshorturl.at%2FzEbf9%22&size=10",
+      "http_status": 200,
+      "data": {
+        "results": [],
+        "total": 0,
+        "took": 16,
+        "has_more": false,
+        "search_date_limit_days": 90
+      },
+      "message": "La b\u00fasqueda exacta no devolvi\u00f3 hist\u00f3ricos en esta consulta."
+    }
+  },
+  {
+    "correo_id": "R004",
+    "consulta": {
+      "service": "urlscan.io (revisi\u00f3n exacta task.url.keyword)",
+      "indicator_type": "url",
+      "indicator": "https://shorturl.at/8IYrs",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:28:00+00:00",
+      "endpoint": "https://urlscan.io/api/v1/search/?q=task.url.keyword%3A%22https%3A%2F%2Fshorturl.at%2F8IYrs%22&size=10",
+      "http_status": 200,
+      "data": {
+        "results": [],
+        "total": 0,
+        "took": 81,
+        "has_more": false,
+        "search_date_limit_days": 90
+      },
+      "message": "La b\u00fasqueda exacta no devolvi\u00f3 hist\u00f3ricos en esta consulta."
+    }
+  },
+  {
+    "correo_id": "R005",
+    "consulta": {
+      "service": "urlscan.io (revisi\u00f3n exacta task.url.keyword)",
+      "indicator_type": "url",
+      "indicator": "https://woondsplay.com/4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCGUOKVN164627KZZL1612137Z5",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:28:01+00:00",
+      "endpoint": "https://urlscan.io/api/v1/search/?q=task.url.keyword%3A%22https%3A%2F%2Fwoondsplay.com%2F4IUDzk37160FhgK603hilnvxbkml205KDOCSQFWCGUOKVN164627KZZL1612137Z5%22&size=10",
+      "http_status": 200,
+      "data": {
+        "results": [],
+        "total": 0,
+        "took": 23,
+        "has_more": false,
+        "search_date_limit_days": 90
+      },
+      "message": "La b\u00fasqueda exacta no devolvi\u00f3 hist\u00f3ricos en esta consulta."
+    }
+  },
+  {
+    "correo_id": "R005",
+    "consulta": {
+      "service": "urlscan.io (revisi\u00f3n exacta task.url.keyword)",
+      "indicator_type": "url",
+      "indicator": "https://woondsplay.com/4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAWPQENN164627TBQU1612137E5",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:28:02+00:00",
+      "endpoint": "https://urlscan.io/api/v1/search/?q=task.url.keyword%3A%22https%3A%2F%2Fwoondsplay.com%2F4vDQaH37160PziR603tasvuvcjhf205XXZESOQVAWPQENN164627TBQU1612137E5%22&size=10",
+      "http_status": 200,
+      "data": {
+        "results": [],
+        "total": 0,
+        "took": 38,
+        "has_more": false,
+        "search_date_limit_days": 90
+      },
+      "message": "La b\u00fasqueda exacta no devolvi\u00f3 hist\u00f3ricos en esta consulta."
+    }
+  },
+  {
+    "correo_id": "R005",
+    "consulta": {
+      "service": "urlscan.io (revisi\u00f3n exacta task.url.keyword)",
+      "indicator_type": "url",
+      "indicator": "http://woondsplay.com/rd/5ZQTpy37160YuYr603hjzjpooxqx205YLIXVNUPZVSGGKP164627LZKH1612137L5",
+      "status": "no_results",
+      "queried_at": "2026-10-23T18:28:03+00:00",
+      "endpoint": "https://urlscan.io/api/v1/search/?q=task.url.keyword%3A%22http%3A%2F%2Fwoondsplay.com%2Frd%2F5ZQTpy37160YuYr603hjzjpooxqx205YLIXVNUPZVSGGKP164627LZKH1612137L5%22&size=10",
+      "http_status": 200,
+      "data": {
+        "results": [],
+        "total": 0,
+        "took": 52,
+        "has_more": false,
+        "search_date_limit_days": 90
+      },
+      "message": "La b\u00fasqueda exacta no devolvi\u00f3 hist\u00f3ricos en esta consulta."
+    }
+  }
+]

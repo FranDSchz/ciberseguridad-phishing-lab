@@ -1,0 +1,636 @@
+﻿====================================================================================================
+ INFORME DE ANALISIS Y TRIAGE DE RECURSOS SOSPECHOSOS
+ Fundamentos de Ciberseguridad - UTN FRRe - Ciclo 2026 - Grupo 05
+====================================================================================================
+Identificador : Enlace-1
+Tipo          : URL / dominio
+Recurso       : https://g-comeceseuatendimenton.shop/
+Fecha/hora    : 2026-10-23 01:52:33 -0300
+Herramienta   : triage_recursos.py v1.0
+
+Documento de evidencia tecnica. NO abrir enlaces ni ejecutar archivos.
+====================================================================================================
+
+
+====================================================================================================
+ 1. FICHA DE ANALISIS (SECCION 7 DEL ENUNCIADO)
+====================================================================================================
+
+Identificador del recurso:        Enlace-1
+Tipo:                             URL / dominio
+Herramientas usadas:              VirusTotal API v3 (URL, dominio e IP); urlscan.io API; WHOIS/RDAP;
+                                  crt.sh; analisis heuristico local
+Evidencia clave:                  VirusTotal: 2 motor(es) marcan la URL como maliciosa; VirusTotal:
+                                  el dominio tiene 2 deteccion(es) maliciosa(s); urlscan.io no marca
+                                  el sitio como malicioso; urlscan.io: el motor de machine learning
+                                  marca el sitio como malicioso (score 90); tags: urlscan-ml,
+                                  urlscan-ml-60c5e22; Dominio nuevo: 85 dias (~2.8 meses) desde su
+                                  creacion; La IP resuelta acumula 6 detecciones en VirusTotal
+Tipo de amenaza (si aplica):      Phishing / robo de credenciales
+Impacto C-I-A:                    Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+VEREDICTO:                        MALICIOSO
+Confianza:                        media
+Medida usuario:                   No abrir la URL ni ingresar datos. Si ya se ingreso informacion,
+                                  cambiar credenciales y cerrar sesiones activas; reportar al area
+                                  de TI.
+Medida organizacion:              Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar
+                                  IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento
+                                  de phishing.
+
+====================================================================================================
+ 2. DATOS DEL RECURSO
+====================================================================================================
+
+URL original:                     https://g-comeceseuatendimenton.shop/
+URL normalizada:                  https://g-comeceseuatendimenton.shop/
+Version defangada:                hxxps://g-comeceseuatendimenton[.]shop/
+Esquema:                          https
+Host:                             g-comeceseuatendimenton.shop
+Puerto:                           por defecto
+Ruta:                             /
+Tipo de host:                     Nombre de dominio
+Dominio registrable:              g-comeceseuatendimenton.shop
+
+====================================================================================================
+ 3. HERRAMIENTAS UTILIZADAS
+====================================================================================================
+
+  - VirusTotal API v3: reputacion de la URL, del dominio y de la IP.
+  - urlscan.io API: captura, redirecciones, IP/pais, dominios contactados y posibles formularios de
+    credenciales.
+  - WHOIS/RDAP: fecha de creacion, registrador y name servers.
+  - crt.sh: certificados y subdominios (Certificate Transparency).
+  - Analisis heuristico local: IP literal, acortador, punycode, TLD, extensiones, puertos y palabras
+    clave.
+
+====================================================================================================
+ 4. EVIDENCIA TECNICA (METODOLOGIA 5.2)
+====================================================================================================
+
+
+4.1 Reputacion en VirusTotal (paso 1)
+----------------------------------------------------------------------------------------------------
+VirusTotal - URL
+Detecciones:                      2/93 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=55, undetected=36, timeout=0
+Reputacion:                       0
+Tags:                             external-resources
+Motores que detectan el recurso como malicioso:
+  - ESET: phishing
+  - LevelBlue: phishing
+Titulo de la pagina (VT):         Consulta de Informações Financeiras
+Primera vez vista:                2026-10-16 17:33:02 -0300
+Veces enviada a VT:               1
+Enlace VT:                        https://www.virustotal.com/gui/url/aHR0cHM6Ly9nLWNvbWVjZXNldWF0ZW5
+                                  kaW1lbnRvbi5zaG9wLw
+
+VirusTotal - dominio
+Detecciones:                      2/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=2, suspicious=0, harmless=52, undetected=38, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - ESET: phishing
+  - LevelBlue: phishing
+Enlace VT:                        https://www.virustotal.com/gui/domain/g-comeceseuatendimenton.shop
+
+VirusTotal - IP
+Detecciones:                      6/92 maliciosos, 0 sospechosos
+Conteo por categoria:             malicious=6, suspicious=0, harmless=49, undetected=37, timeout=0
+Reputacion:                       0
+Motores que detectan el recurso como malicioso:
+  - alphaMountain.ai: phishing
+  - BitDefender: phishing
+  - CRDF: malicious
+  - ESET: phishing
+  - G-Data: phishing
+  - SOCRadar: phishing
+Pais:                             SE
+ASN / owner:                      33837 / Fredrik Holmqvist
+Red:                              88.80.16.0/20
+Enlace VT:                        https://www.virustotal.com/gui/ip-address/88.80.17.232
+
+4.2 Comportamiento en urlscan.io (paso 2)
+----------------------------------------------------------------------------------------------------
+Origen del dato:                  escaneo existente (task.url)
+Fecha del escaneo:                2026-10-16T19:24:00.159Z
+Visibilidad:                      public
+URL enviada:                      https://g-comeceseuatendimenton.shop/
+URL final:                        https://g-comeceseuatendimenton.shop/
+Veredicto:                        Sin veredicto malicioso
+Score:                            0
+Categorias:                       Ninguna
+Marcas afectadas:                 Ninguna
+Tags:                             Ninguno
+Motor ML de urlscan:              MALICIOSO (score 90); tags: urlscan-ml, urlscan-ml-60c5e22
+Formulario de credenciales:       No informado
+IP:                               88.80.17.232
+PTR:                              lula
+Pais:                             SE
+Idioma:                           pt
+ASN:                              AS33837 PRQ-AS Fredrik Holmqvist, SE
+Servidor:                         Apache
+Titulo:                           Consulta de Informações Financeiras
+MIME:                             text/html
+HTTP status:                      200
+Antiguedad del dominio (urlscan): 78 dias (~2.6 meses)
+Emisor TLS:                       YR1
+Antiguedad del certificado:       20 dias
+Solicitudes HTTP:                 5
+Dominios contactados:
+  - g-comeceseuatendimenton.shop (IPs: 88.80.17.232; pais: SE; requests: 2)
+  - fonts.gstatic.com (IPs: 142.251.14.94; pais: US; requests: 1)
+  - ipapi.co (IPs: 104.26.8.44; pais: -; requests: 1)
+  - fonts.googleapis.com (IPs: 192.178.183.95; pais: US; requests: 1)
+IPs contactadas:
+  - 142.251.14.94 (ASN -; pais -; requests: -)
+  - 104.26.8.44 (ASN -; pais -; requests: -)
+  - 192.178.183.95 (ASN -; pais -; requests: -)
+  - 88.80.17.232 (ASN -; pais -; requests: -)
+Dominios enlazados desde la pagina:
+  - feiraoaberto.netlify.app
+Captura:                          https://urlscan.io/screenshots/01a1462b-bbda-773d-a9b2-fa0511ed4b5
+                                  2.png
+Reporte:                          https://urlscan.io/result/01a1462b-bbda-773d-a9b2-fa0511ed4b52/
+
+4.3 Antiguedad WHOIS / RDAP (paso 3)
+----------------------------------------------------------------------------------------------------
+Fecha de creacion:                2026-07-29T13:23:01.0Z
+Antiguedad:                       85 dias (~2.8 meses)
+Vencimiento:                      2027-07-29T23:59:59.0Z
+Ultimo cambio:                    2026-10-19T13:46:01.0Z
+Registrador:                      Dynadot Inc.
+Name servers:                     ns1.dyna-ns.net, ns2.dyna-ns.net
+Estados:                          server hold, client transfer prohibited
+DNSSEC:                           No
+Consulta:                         https://rdap.org/domain/g-comeceseuatendimenton.shop
+
+4.4 Certificados y subdominios - crt.sh (paso 4)
+----------------------------------------------------------------------------------------------------
+Certificados observados:          2
+Subdominios unicos:               1
+Certificado mas antiguo:          2026-07-29T18:47:32
+Certificado mas reciente:         2026-07-29T18:47:32
+Emisores:                         YR2
+Subdominios detectados (muestra):
+  - g-comeceseuatendimenton.shop
+Consulta crt.sh:                  https://crt.sh/?q=%25.g-comeceseuatendimenton.shop&output=json
+
+4.5 Analisis heuristico de la URL
+----------------------------------------------------------------------------------------------------
+  - TLD frecuentemente abusado en campanas: .shop
+
+Veredicto de la URL:              MALICIOSO
+Confianza:                        media
+
+====================================================================================================
+ 5. TIPO DE AMENAZA
+====================================================================================================
+
+Clasificacion:                    Phishing / robo de credenciales
+
+
+====================================================================================================
+ 6. IMPACTO C-I-A
+====================================================================================================
+
+Resumen:                          Alto sobre confidencialidad e integridad; bajo sobre
+                                  disponibilidad.
+
+Dimension          | Impacto      | Justificacion
+-------------------+--------------+-----------------------------------------------------------------
+Confidencialidad   | Alto         | Robo de credenciales y datos sensibles.
+Integridad         | Alto         | Uso de la cuenta para acciones no autorizadas.
+Disponibilidad     | Bajo         | Normalmente no interrumpe el servicio.
+
+====================================================================================================
+ 7. VEREDICTO Y JUSTIFICACION
+====================================================================================================
+
+VEREDICTO:                        MALICIOSO
+Confianza:                        media
+Puntaje heuristico:               10
+
+Evidencia que sostiene el veredicto:
+  - VirusTotal: 2 motor(es) marcan la URL como maliciosa.
+  - VirusTotal: el dominio tiene 2 deteccion(es) maliciosa(s).
+  - urlscan.io no marca el sitio como malicioso.
+  - urlscan.io: el motor de machine learning marca el sitio como malicioso (score 90); tags:
+    urlscan-ml, urlscan-ml-60c5e22.
+  - La IP resuelta acumula 6 detecciones en VirusTotal.
+  - Dominio nuevo: 85 dias (~2.8 meses) desde su creacion.
+  - TLD frecuentemente abusado en campanas: .shop
+
+Criterio aplicado (anexo del enunciado):
+  - LIMPIO: autenticacion correcta y alineada, dominio con antiguedad y reputacion sanas, sin
+    detecciones ni comportamiento anormal.
+  - SOSPECHOSO: senales mixtas o insuficientes (pocas detecciones, dominio nuevo, cabecera
+    incoherente, sin confirmacion de payload).
+  - MALICIOSO: evidencia concluyente (multiples detecciones coincidentes, comportamiento malicioso,
+    phishing confirmado, hash en bases de malware).
+  - Recordatorio: la ausencia de senal no es prueba de inocencia; el veredicto surge de cruzar
+    herramientas.
+
+====================================================================================================
+ 8. MEDIDAS RECOMENDADAS
+====================================================================================================
+
+Accion inmediata del usuario:     No abrir la URL ni ingresar datos. Si ya se ingreso informacion,
+                                  cambiar credenciales y cerrar sesiones activas; reportar al area
+                                  de TI.
+Control organizacional:           Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar
+                                  IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento
+                                  de phishing.
+
+====================================================================================================
+ 9. PASOS MANUALES Y CAPTURAS SUGERIDAS
+====================================================================================================
+
+  - Capturar el reporte y la screenshot de urlscan.io.
+  - Capturar el detalle de VirusTotal de la URL y del dominio.
+  - Capturar el WHOIS/RDAP y la consulta crt.sh.
+  - No abrir la URL en el navegador del equipo real; usar solo las capturas del sandbox.
+
+====================================================================================================
+ 10. ANEXO: REPRODUCIBILIDAD Y LIMITACIONES
+====================================================================================================
+
+Enlaces para capturas y verificacion manual:
+  - VirusTotal - URL:
+    https://www.virustotal.com/gui/url/aHR0cHM6Ly9nLWNvbWVjZXNldWF0ZW5kaW1lbnRvbi5zaG9wLw
+  - urlscan - reporte: https://urlscan.io/result/01a1462b-bbda-773d-a9b2-fa0511ed4b52/
+  - urlscan - screenshot: https://urlscan.io/screenshots/01a1462b-bbda-773d-a9b2-fa0511ed4b52.png
+  - RDAP: https://rdap.org/domain/g-comeceseuatendimenton.shop
+  - crt.sh: https://crt.sh/?q=%25.g-comeceseuatendimenton.shop&output=json
+  - VirusTotal - dominio: https://www.virustotal.com/gui/domain/g-comeceseuatendimenton.shop
+  - VirusTotal - IP: https://www.virustotal.com/gui/ip-address/88.80.17.232
+
+Notas de ejecucion:
+  - urlscan.io: la verificacion TLS local fallo (certificate has expired); se reintento la conexion
+    sin validar el certificado. Verificar el store de certificados del equipo.
+  - Consultas realizadas en esta ejecucion: VirusTotal=0, urlscan.io=24.
+  - Cache local: C:\Users\Bangho\Desktop\Facultad\Fundamentos de
+    Ciberseguridad\Practica\tp1\.triage_cache (evita repetir consultas).
+  - Los resultados de reputacion son una foto del momento de la consulta y pueden cambiar; los
+    enlaces permiten reproducirlos.
+
+  - Las consultas a VirusTotal y urlscan.io pueden variar con el tiempo; los enlaces permiten
+    reproducir el estado observado.
+  - urlscan.io: los escaneos nuevos se enviaron con visibilidad 'unlisted'.
+  - No se abrieron enlaces, no se descargaron payloads y no se ejecutaron archivos.
+
+Anexo A - Evidencia estructurada (JSON resumido)
+----------------------------------------------------------------------------------------------------
+  {
+    "url": "https://g-comeceseuatendimenton.shop/",
+    "host": "g-comeceseuatendimenton.shop",
+    "domain": "g-comeceseuatendimenton.shop",
+    "vt_url": {
+      "stats": {
+        "malicious": 2,
+        "suspicious": 0,
+        "undetected": 36,
+        "harmless": 55,
+        "timeout": 0
+      },
+      "reputation": 0,
+      "tags": [
+        "external-resources"
+      ],
+      "categories": {},
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": null,
+      "first_submission_date": 1792182782,
+      "last_analysis_date": 1792182782,
+      "threat": null,
+      "detections": [
+        [
+          "ESET",
+          "phishing"
+        ],
+        [
+          "LevelBlue",
+          "phishing"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": "Consulta de Informações Financeiras",
+      "last_dns_records": []
+    },
+    "vt_dominio": {
+      "stats": {
+        "malicious": 2,
+        "suspicious": 0,
+        "undetected": 38,
+        "harmless": 52,
+        "timeout": 0
+      },
+      "reputation": 0,
+      "tags": [],
+      "categories": {},
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": null,
+      "first_submission_date": null,
+      "last_analysis_date": 1792182782,
+      "threat": null,
+      "detections": [
+        [
+          "ESET",
+          "phishing"
+        ],
+        [
+          "LevelBlue",
+          "phishing"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": null,
+      "last_dns_records": [
+        {
+          "type": "NS",
+          "ttl": 300,
+          "value": "ns2.dyna-ns.net"
+        },
+        {
+          "type": "NS",
+          "ttl": 300,
+          "value": "ns1.dyna-ns.net"
+        },
+        {
+          "type": "A",
+          "ttl": 300,
+          "value": "88.80.17.232"
+        },
+        {
+          "type": "SOA",
+          "ttl": 300,
+          "value": "ns1.dyna-ns.net",
+          "rname": "hostmaster.g-comeceseuatendimenton.shop",
+          "serial": 2026072902,
+          "refresh": 16384,
+          "retry": 2048,
+          "expire": 1209600,
+          "minimum": 300
+        }
+      ]
+    },
+    "vt_ip": {
+      "stats": {
+        "malicious": 6,
+        "suspicious": 0,
+        "undetected": 37,
+        "harmless": 49,
+        "timeout": 0
+      },
+      "reputation": 0,
+      "tags": [],
+      "categories": null,
+      "type_description": null,
+      "type_tag": null,
+      "size": null,
+      "names": [],
+      "creation_date": null,
+      "first_submission_date": null,
+      "last_analysis_date": 1792591834,
+      "threat": null,
+      "detections": [
+        [
+          "alphaMountain.ai",
+          "phishing"
+        ],
+        [
+          "BitDefender",
+          "phishing"
+        ],
+        [
+          "CRDF",
+          "malicious"
+        ],
+        [
+          "ESET",
+          "phishing"
+        ],
+        [
+          "G-Data",
+          "phishing"
+        ],
+        [
+          "SOCRadar",
+          "phishing"
+        ]
+      ],
+      "sandbox": null,
+      "final_url": null,
+      "title": null,
+      "last_dns_records": []
+    },
+    "rdap": {
+      "ok": true,
+      "url": "https://rdap.org/domain/g-comeceseuatendimenton.shop",
+      "handle": "DO18409908-GMO",
+      "name": "g-comeceseuatendimenton.shop",
+      "status": [
+        "server hold",
+        "client transfer prohibited"
+      ],
+      "creation": "2026-07-29T13:23:01.0Z",
+      "expiration": "2027-07-29T23:59:59.0Z",
+      "last_changed": "2026-10-19T13:46:01.0Z",
+      "registrar": "Dynadot Inc.",
+      "registrars": [
+        "Dynadot Inc."
+      ],
+      "registrant": "",
+      "nameservers": [
+        "ns1.dyna-ns.net",
+        "ns2.dyna-ns.net"
+      ],
+      "secure_dns": {
+        "delegationSigned": false
+      },
+      "country": null,
+      "start_address": null,
+      "end_address": null,
+      "cached": true
+    },
+    "crtsh": {
+      "ok": true,
+      "url": "https://crt.sh/?q=%25.g-comeceseuatendimenton.shop&output=json",
+      "entries": 2,
+      "subdomains": [
+        "g-comeceseuatendimenton.shop"
+      ],
+      "subdomain_count": 1,
+      "issuers": [
+        "YR2"
+      ],
+      "earliest_cert": "2026-07-29T18:47:32",
+      "latest_cert": "2026-07-29T18:47:32",
+      "cached": true
+    },
+    "urlscan": {
+      "ok": true,
+      "uuid": "01a1462b-bbda-773d-a9b2-fa0511ed4b52",
+      "report_url": "https://urlscan.io/result/01a1462b-bbda-773d-a9b2-fa0511ed4b52/",
+      "screenshot_url": "https://urlscan.io/screenshots/01a1462b-bbda-773d-a9b2-fa0511ed4b52.png",
+      "visibility": "public",
+      "scan_time": "2026-10-16T19:24:00.159Z",
+      "submitted_url": "https://g-comeceseuatendimenton.shop/",
+      "final_url": "https://g-comeceseuatendimenton.shop/",
+      "domain": "g-comeceseuatendimenton.shop",
+      "ip": "88.80.17.232",
+      "asn": "AS33837",
+      "asn_name": "PRQ-AS Fredrik Holmqvist, SE",
+      "country": "SE",
+      "city": "",
+      "server": "Apache",
+      "title": "Consulta de Informações Financeiras",
+      "mime_type": "text/html",
+      "http_status": "200",
+      "apex_domain_age_days": 78,
+      "tls_valid_days": 89,
+      "tls_age_days": 20,
+      "tls_issuer": "YR1",
+      "has_credentials": null,
+      "language": "pt",
+      "ptr": "lula",
+      "malicious": false,
+      "score": 0,
+      "categories": [],
+      "brands": [],
+      "tags": [],
+      "engines_malicious": true,
+      "engines_score": 90,
+      "engines_tags": [
+        "urlscan-ml",
+        "urlscan-ml-60c5e22"
+      ],
+      "community_malicious": false,
+      "stats": {
+        "malicious": 0,
+        "secure": null,
+        "unresponsive": null,
+        "requests": 5
+      },
+      "redirects": [],
+      "link_domains": [
+        "feiraoaberto.netlify.app"
+      ],
+      "domains": [
+        {
+          "domain": "g-comeceseuatendimenton.shop",
+          "country": "SE",
+          "ips": [
+            "88.80.17.232"
+          ],
+          "count": 2
+        },
+        {
+          "domain": "fonts.gstatic.com",
+          "country": "US",
+          "ips": [
+            "142.251.14.94"
+          ],
+          "count": 1
+        },
+        {
+          "domain": "ipapi.co",
+          "country": "",
+          "ips": [
+            "104.26.8.44"
+          ],
+          "count": 1
+        },
+        {
+          "domain": "fonts.googleapis.com",
+          "country": "US",
+          "ips": [
+            "192.178.183.95"
+          ],
+          "count": 1
+        }
+      ],
+      "ips": [
+        {
+          "ip": "142.251.14.94",
+          "asn": "",
+          "country": "",
+          "count": ""
+        },
+        {
+          "ip": "104.26.8.44",
+          "asn": "",
+          "country": "",
+          "count": ""
+        },
+        {
+          "ip": "192.178.183.95",
+          "asn": "",
+          "country": "",
+          "count": ""
+        },
+        {
+          "ip": "88.80.17.232",
+          "asn": "",
+          "country": "",
+          "count": ""
+        }
+      ],
+      "urls": [
+        "https://g-comeceseuatendimenton.shop/",
+        "https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800;900&display=swap",
+        "https://ipapi.co/json/",
+        "https://fonts.gstatic.com/s/nunito/v32/XRXV3I6Li01BKofINeaBTMnFcQ.woff2",
+        "https://g-comeceseuatendimenton.shop/favicon.ico"
+      ],
+      "source": "escaneo existente (task.url)",
+      "cached": true
+    },
+    "heuristicas": [
+      "TLD frecuentemente abusado en campanas: .shop"
+    ],
+    "veredicto": {
+      "verdict": "MALICIOSO",
+      "confidence": "media",
+      "score": 10,
+      "reasons": [
+        "VirusTotal: 2 motor(es) marcan la URL como maliciosa.",
+        "VirusTotal: el dominio tiene 2 deteccion(es) maliciosa(s).",
+        "urlscan.io no marca el sitio como malicioso.",
+        "urlscan.io: el motor de machine learning marca el sitio como malicioso (score 90); tags: urlscan-ml, urlscan-ml-60c5e22.",
+        "La IP resuelta acumula 6 detecciones en VirusTotal.",
+        "Dominio nuevo: 85 dias (~2.8 meses) desde su creacion.",
+        "TLD frecuentemente abusado en campanas: .shop"
+      ],
+      "threat": "Phishing / robo de credenciales",
+      "cia_summary": "Alto sobre confidencialidad e integridad; bajo sobre disponibilidad.",
+      "cia_rows": [
+        [
+          "Confidencialidad",
+          "Alto",
+          "Robo de credenciales y datos sensibles."
+        ],
+        [
+          "Integridad",
+          "Alto",
+          "Uso de la cuenta para acciones no autorizadas."
+        ],
+        [
+          "Disponibilidad",
+          "Bajo",
+          "Normalmente no interrumpe el servicio."
+        ]
+      ],
+      "user_action": "No abrir la URL ni ingresar datos. Si ya se ingreso informacion, cambiar credenciales y cerrar sesiones activas; reportar al area de TI.",
+      "org_control": "Bloquear URL/dominio/IP en proxy, DNS y filtro de correo; agregar IoCs al EDR/SIEM; monitorear accesos; capacitar en reconocimiento de phishing."
+    }
+  }
+

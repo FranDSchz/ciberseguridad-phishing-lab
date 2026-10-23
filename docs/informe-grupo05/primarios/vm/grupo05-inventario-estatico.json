@@ -1,0 +1,84 @@
+{
+  "recursos": [
+    {
+      "id": "R001",
+      "nombre_original": "Grupo_05/file_1.zip",
+      "archivo_local": "R001.bin",
+      "tamano_bytes": 890109,
+      "sha256": "8ac16f25f688db5a95713e07b6d2ed655b1bf34bc79359bcaf754067387c2e43",
+      "md5": "587b34dc78c244b8948091c52f05c1e3",
+      "sha1": "99be823c16c8d744540b4f87ece2c7523fb704c5",
+      "tipo_estatico": "Zip archive data, made by v6.3 UNIX, extract using at least v5.1, last modified Oct 16 2026 21:22:44, uncompressed size 2264968, method=AES Encrypted",
+      "zip_interno": [
+        {
+          "nombre": "6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba.exe",
+          "bytes": 2264968,
+          "cifrado": true,
+          "metodo": 99,
+          "directorio": false
+        }
+      ]
+    },
+    {
+      "id": "R002",
+      "nombre_original": "Grupo_05/file_2.zip",
+      "archivo_local": "R002.bin",
+      "tamano_bytes": 706774,
+      "sha256": "919f3c06f1ba739c85b4d24fea6290fff5821e95b057060dad9bd69ca98b1203",
+      "md5": "25a235aeee0b8838bd5c554c55c93990",
+      "sha1": "c582484456efcc25104b1635c73b3130065bfe64",
+      "tipo_estatico": "Zip archive data, made by v6.3 UNIX, extract using at least v5.1, last modified Oct 16 2026 21:22:56, uncompressed size 1559216, method=AES Encrypted",
+      "zip_interno": [
+        {
+          "nombre": "06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec.exe",
+          "bytes": 1559216,
+          "cifrado": true,
+          "metodo": 99,
+          "directorio": false
+        }
+      ]
+    },
+    {
+      "id": "R003",
+      "nombre_original": "Grupo_05/nota.txt",
+      "archivo_local": "R003.bin",
+      "tamano_bytes": 27,
+      "sha256": "746350501859177e865bb826e062f1d52d73de60e9c14e379a36b87dc92ee7c3",
+      "md5": "ff2c0f09f3d1c8798e45e434df802e69",
+      "sha1": "6da1b4863bfe0ad673ea8fbba4411786a2c6d9a7",
+      "tipo_estatico": "Unicode text, UTF-8 text, with CRLF line terminators",
+      "nota_texto": "Contrase\u00f1a zip: infected\n"
+    },
+    {
+      "id": "R004",
+      "nombre_original": "Grupo_05/sample-10070.eml",
+      "archivo_local": "R004.bin",
+      "tamano_bytes": 12294,
+      "sha256": "511e3e59b9ca1947df591e15da12aed9813b811ace03e7a28aa70e116de878e4",
+      "md5": "6f67d861f68328504fc8fe10859dde98",
+      "sha1": "f3896d7ef15586eabc1d5f99e41104a6ff096e8f",
+      "tipo_estatico": "RFC 822 mail, ASCII text, with very long lines (419), with CRLF line terminators"
+    },
+    {
+      "id": "R005",
+      "nombre_original": "Grupo_05/sample-10071.eml",
+      "archivo_local": "R005.bin",
+      "tamano_bytes": 465737,
+      "sha256": "43cbe639b7ce04294b5f11ef5daf2a5acf8d7b5e2a057fe699e071251a4f0fb8",
+      "md5": "09831e7fb7b600104d0c3a6aae054379",
+      "sha1": "114537dded5d8ada673a8efef5de874a846064a1",
+      "tipo_estatico": "RFC 822 mail, ASCII text, with very long lines (347), with CRLF line terminators"
+    },
+    {
+      "id": "R006",
+      "nombre_original": "Grupo_05/url.txt",
+      "archivo_local": "R006.bin",
+      "tamano_bytes": 106,
+      "sha256": "972f6f2322a6bce4e1adfdfea8fde8d0d76f357a8855c064e8cc0c734cd91125",
+      "md5": "841555c18d0e4b13024e4c79c03203e7",
+      "sha1": "579a492a1ee1ef8c313d8e209275cd6b7a104da3",
+      "tipo_estatico": "ASCII text, with CRLF line terminators",
+      "indicadores_texto_defang": "hxxps://g-comeceseuatendimenton[.]shop/\nhxxp://221[.]15[.]173[.]51:41661/bin[.]sh\nhxxps://www[.]pneustorebr[.]cfd/\n\n"
+    }
+  ]
+}

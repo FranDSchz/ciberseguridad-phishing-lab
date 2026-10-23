@@ -1,0 +1,711 @@
+[
+  {
+    "id": "U001",
+    "url": "https://g-comeceseuatendimenton.shop/",
+    "adquisicion_utc": "2026-10-23T18:07:40.710075+00:00",
+    "fuente_consultas": "urls/20261023T180740Z/U001.json",
+    "fuente_detalle": "urls/20261023T180740Z/U001-urlscan-detalle-autenticado-01a1462b-bbda-773d-a9b2-fa0511ed4b52.json",
+    "veredicto_propuesto": "SOSPECHOSO",
+    "confianza": "Media",
+    "vt_url": {
+      "stats": {
+        "malicious": 2,
+        "suspicious": 0,
+        "undetected": 36,
+        "harmless": 55,
+        "timeout": 0
+      },
+      "ultimo_analisis_utc": "2026-10-16T20:33:02+00:00",
+      "titulo": "Consulta de Informações Financeiras",
+      "url_final_informada": "https://g-comeceseuatendimenton.shop/",
+      "redirecciones_informadas": null,
+      "codigo_http_historico": 200,
+      "hash_contenido_historico": "1cc73df217c103ad84c52d37d06fd705162b3704cb5dded48424d9696b1b621b",
+      "alertas": [
+        {
+          "engine_name": "ESET",
+          "category": "malicious",
+          "result": "phishing"
+        },
+        {
+          "engine_name": "LevelBlue",
+          "category": "malicious",
+          "result": "phishing"
+        }
+      ]
+    },
+    "rdap": {
+      "registro": "2026-07-29T13:23:01.0Z",
+      "antiguedad_dias_a_la_consulta": 86,
+      "registrar": "Dynadot Inc.",
+      "estados": [
+        "server hold",
+        "client transfer prohibited"
+      ],
+      "nameservers": [
+        "ns1.dyna-ns.net",
+        "ns2.dyna-ns.net"
+      ],
+      "bloque_ip": null
+    },
+    "dns": [
+      {
+        "indicador": "g-comeceseuatendimenton.shop",
+        "estado": "no_results",
+        "rcodes": {
+          "A": 3,
+          "AAAA": 3,
+          "CNAME": 3,
+          "NS": 3,
+          "MX": 3,
+          "TXT": 3
+        }
+      }
+    ],
+    "crtsh": {
+      "consultas": [
+        {
+          "estado": "timeout",
+          "fecha": "2026-10-23T18:08:04+00:00",
+          "endpoint": "https://crt.sh/?q=g-comeceseuatendimenton.shop&output=json"
+        },
+        {
+          "estado": "found",
+          "fecha": "2026-10-23T18:10:24+00:00",
+          "endpoint": "https://crt.sh/?q=%25.g-comeceseuatendimenton.shop&output=json"
+        }
+      ],
+      "certificados": [
+        {
+          "id": 28359107479,
+          "common_name": "g-comeceseuatendimenton.shop",
+          "name_value": "g-comeceseuatendimenton.shop",
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR2",
+          "not_before": "2026-07-29T18:47:32",
+          "not_after": "2026-10-27T18:47:31",
+          "serial_number": "05b4a8667a4ba792bad5cc37aadd795aadc7"
+        },
+        {
+          "id": 28359104673,
+          "common_name": "g-comeceseuatendimenton.shop",
+          "name_value": "g-comeceseuatendimenton.shop",
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR2",
+          "not_before": "2026-07-29T18:47:32",
+          "not_after": "2026-10-27T18:47:31",
+          "serial_number": "05b4a8667a4ba792bad5cc37aadd795aadc7"
+        }
+      ],
+      "nombres_observados": [
+        "g-comeceseuatendimenton.shop"
+      ]
+    },
+    "urlscan": {
+      "uuid": "01a1462b-bbda-773d-a9b2-fa0511ed4b52",
+      "fecha_historico": "2026-10-16T19:24:00.159Z",
+      "page": {
+        "asn": "AS33837",
+        "asnname": "PRQ-AS Fredrik Holmqvist, SE",
+        "city": "",
+        "country": "SE",
+        "domain": "g-comeceseuatendimenton.shop",
+        "ip": "88.80.17.232",
+        "ptr": "lula",
+        "server": "Apache",
+        "url": "https://g-comeceseuatendimenton.shop/",
+        "apexDomainAgeDays": 78,
+        "language": "pt",
+        "mimeType": "text/html",
+        "title": "Consulta de Informações Financeiras",
+        "tlsValidDays": 89,
+        "tlsAgeDays": 20,
+        "domainAgeDays": 78,
+        "tlsValidFrom": "2026-09-25T22:34:26.000Z",
+        "apexDomain": "g-comeceseuatendimenton.shop",
+        "tlsIssuer": "YR1",
+        "status": "200"
+      },
+      "dominios_contactados": [
+        "g-comeceseuatendimenton.shop",
+        "fonts.gstatic.com",
+        "ipapi.co",
+        "fonts.googleapis.com"
+      ],
+      "ips_contactadas": [
+        "142.251.14.94",
+        "104.26.8.44",
+        "192.178.183.95",
+        "88.80.17.232"
+      ],
+      "redirecciones": [],
+      "enlaces_salientes": [
+        {
+          "href": "https://feiraoaberto.netlify.app/login/",
+          "text": "Acessar orientações →",
+          "frameId": "E23AB0955BCE5841E56E361077460423"
+        }
+      ],
+      "veredictos": {
+        "overall": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "tags": [],
+          "malicious": false,
+          "hasVerdicts": true
+        },
+        "urlscan": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "tags": [],
+          "malicious": false,
+          "hasVerdicts": false
+        },
+        "engines": {
+          "score": 90,
+          "malicious": true,
+          "categories": [],
+          "enginesTotal": 0,
+          "maliciousTotal": 0,
+          "benignTotal": 0,
+          "maliciousVerdicts": [],
+          "benignVerdicts": [],
+          "hasVerdicts": true,
+          "tags": [
+            "urlscan-ml",
+            "urlscan-ml-60c5e22"
+          ]
+        },
+        "community": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "votesTotal": 0,
+          "votesMalicious": 0,
+          "votesBenign": 0,
+          "malicious": false,
+          "hasVerdicts": false
+        }
+      },
+      "certificados_historicos": [
+        {
+          "subjectName": "g-comeceseuatendimenton.shop",
+          "issuer": "YR1",
+          "validFrom": 1790375666,
+          "validTo": 1798151665
+        },
+        {
+          "subjectName": "upload.video.google.com",
+          "issuer": "WE2",
+          "validFrom": 1790620812,
+          "validTo": 1797878411
+        },
+        {
+          "subjectName": "ipapi.co",
+          "issuer": "WE1",
+          "validFrom": 1791718911,
+          "validTo": 1799498508
+        },
+        {
+          "subjectName": "*.gstatic.com",
+          "issuer": "WE2",
+          "validFrom": 1790620806,
+          "validTo": 1797878405
+        }
+      ],
+      "descargas_informadas": []
+    }
+  },
+  {
+    "id": "U002",
+    "url": "http://221.15.173.51:41661/bin.sh",
+    "adquisicion_utc": "2026-10-23T18:08:05.447916+00:00",
+    "fuente_consultas": "urls/20261023T180740Z/U002.json",
+    "fuente_detalle": "urls/20261023T180740Z/U002-urlscan-detalle-autenticado-01a1464c-f4e2-70ba-8c0c-131c9851a684.json",
+    "veredicto_propuesto": "MALICIOSO",
+    "confianza": "Alta en reputación y asociación histórica al binario; sin ejecución propia",
+    "vt_url": {
+      "stats": {
+        "malicious": 4,
+        "suspicious": 3,
+        "undetected": 33,
+        "harmless": 53,
+        "timeout": 0
+      },
+      "ultimo_analisis_utc": "2026-10-16T19:48:07+00:00",
+      "titulo": "",
+      "url_final_informada": "http://221.15.173.51:41661/bin.sh",
+      "redirecciones_informadas": null,
+      "codigo_http_historico": 200,
+      "hash_contenido_historico": "f6c97b1e2ed02578ca1066c8235ba4f991e645f89012406c639dbccc6582eec8",
+      "alertas": [
+        {
+          "engine_name": "alphaMountain.ai",
+          "category": "suspicious",
+          "result": "suspicious"
+        },
+        {
+          "engine_name": "Emsisoft",
+          "category": "malicious",
+          "result": "malware"
+        },
+        {
+          "engine_name": "Fortinet",
+          "category": "malicious",
+          "result": "malware"
+        },
+        {
+          "engine_name": "GreyNoise",
+          "category": "malicious",
+          "result": "malicious"
+        },
+        {
+          "engine_name": "Gridinsoft",
+          "category": "suspicious",
+          "result": "suspicious"
+        },
+        {
+          "engine_name": "SOCRadar",
+          "category": "suspicious",
+          "result": "suspicious"
+        },
+        {
+          "engine_name": "Webroot",
+          "category": "malicious",
+          "result": "malicious"
+        }
+      ]
+    },
+    "rdap": {
+      "registro": "2008-09-04T06:52:49Z",
+      "antiguedad_dias_a_la_consulta": null,
+      "registrar": null,
+      "estados": [
+        "active"
+      ],
+      "nameservers": [],
+      "bloque_ip": {
+        "name": "UNICOM-HA",
+        "country": "CN",
+        "startAddress": "221.13.128.0",
+        "endAddress": "221.15.255.255"
+      }
+    },
+    "dns": [],
+    "crtsh": {
+      "consultas": [],
+      "certificados": [],
+      "nombres_observados": []
+    },
+    "urlscan": {
+      "uuid": "01a1464c-f4e2-70ba-8c0c-131c9851a684",
+      "fecha_historico": "2026-10-16T20:00:43.057Z",
+      "page": {
+        "asn": "AS4837",
+        "asnname": "CHINA169-Backbone - CHINA UNICOM China169 Backbone, CN",
+        "city": "",
+        "country": "CN",
+        "domain": "221.15.173.51",
+        "ip": "221.15.173.51",
+        "ptr": "hn.kd.jz.adsl",
+        "server": "nginx",
+        "url": "http://221.15.173.51:41661/bin.sh",
+        "domainAgeDays": 0,
+        "apexDomainAgeDays": 0,
+        "mimeType": "application/zip",
+        "status": "200"
+      },
+      "dominios_contactados": [],
+      "ips_contactadas": [
+        "221.15.173.51"
+      ],
+      "redirecciones": [],
+      "enlaces_salientes": [],
+      "veredictos": {
+        "overall": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "tags": [],
+          "malicious": false,
+          "hasVerdicts": true
+        },
+        "urlscan": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "tags": [],
+          "malicious": false,
+          "hasVerdicts": false
+        },
+        "engines": {
+          "score": -72,
+          "malicious": false,
+          "categories": [],
+          "enginesTotal": 0,
+          "maliciousTotal": 0,
+          "benignTotal": 0,
+          "maliciousVerdicts": [],
+          "benignVerdicts": [],
+          "hasVerdicts": true,
+          "tags": [
+            "urlscan-ml",
+            "urlscan-ml-60c5e22"
+          ]
+        },
+        "community": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "votesTotal": 0,
+          "votesMalicious": 0,
+          "votesBenign": 0,
+          "malicious": false,
+          "hasVerdicts": false
+        }
+      },
+      "certificados_historicos": [],
+      "descargas_informadas": [
+        {
+          "filename": "bin.sh",
+          "filesize": 137480,
+          "receivedBytes": 137480,
+          "url": "http://221.15.173.51:41661/bin.sh",
+          "startedAt": "2026-10-16T20:00:11.710Z",
+          "state": "completed",
+          "mimeType": "application/x-executable",
+          "mimeDescription": "ELF 32-bit LSB executable, MIPS, MIPS-I version 1 (SYSV), statically linked, stripped",
+          "sha256": "f6c97b1e2ed02578ca1066c8235ba4f991e645f89012406c639dbccc6582eec8",
+          "finishedAt": "2026-10-16T20:00:12.558Z"
+        }
+      ]
+    },
+    "archivo_asociado": {
+      "sha256": "f6c97b1e2ed02578ca1066c8235ba4f991e645f89012406c639dbccc6582eec8",
+      "tamaño_bytes": 137480,
+      "tipo_vt": "ELF",
+      "stats": {
+        "malicious": 50,
+        "suspicious": 0,
+        "undetected": 13,
+        "harmless": 0,
+        "timeout": 0,
+        "confirmed-timeout": 0,
+        "failure": 0,
+        "type-unsupported": 12
+      },
+      "clasificacion_popular": {
+        "popular_threat_name": [
+          {
+            "count": 18,
+            "value": "mirai"
+          },
+          {
+            "count": 8,
+            "value": "mozi"
+          },
+          {
+            "count": 3,
+            "value": "ddos"
+          }
+        ],
+        "suggested_threat_label": "trojan.mirai/mozi",
+        "popular_threat_category": [
+          {
+            "count": 29,
+            "value": "trojan"
+          },
+          {
+            "count": 1,
+            "value": "pua"
+          },
+          {
+            "count": 1,
+            "value": "worm"
+          }
+        ]
+      },
+      "ultimo_analisis_utc": "2026-10-13T21:17:41+00:00",
+      "nota": "Identidad histórica corroborada entre dos servicios; binario no descargado ni calculado localmente."
+    }
+  },
+  {
+    "id": "U003",
+    "url": "https://www.pneustorebr.cfd/",
+    "adquisicion_utc": "2026-10-23T18:08:38.818631+00:00",
+    "fuente_consultas": "urls/20261023T180740Z/U003.json",
+    "fuente_detalle": "urls/20261023T180740Z/U003-urlscan-detalle-autenticado-01a1460d-11c6-71b9-9818-3caec90d10c7.json",
+    "veredicto_propuesto": "SOSPECHOSO",
+    "confianza": "Media",
+    "vt_url": {
+      "stats": {
+        "malicious": 1,
+        "suspicious": 0,
+        "undetected": 35,
+        "harmless": 57,
+        "timeout": 0
+      },
+      "ultimo_analisis_utc": "2026-10-16T20:47:16+00:00",
+      "titulo": "",
+      "url_final_informada": "https://www.pneustorebr.cfd/",
+      "redirecciones_informadas": null,
+      "codigo_http_historico": 200,
+      "hash_contenido_historico": "e9d3f9218639e0ba4f126c4cc0f8f571fdd9ee66edf8faa55face8217d5c377e",
+      "alertas": [
+        {
+          "engine_name": "ESET",
+          "category": "malicious",
+          "result": "phishing"
+        }
+      ]
+    },
+    "rdap": {
+      "registro": "2026-09-04T03:47:46.0Z",
+      "antiguedad_dias_a_la_consulta": 49,
+      "registrar": "Dynadot Inc",
+      "estados": [
+        "server transfer prohibited",
+        "client hold",
+        "client transfer prohibited",
+        "inactive"
+      ],
+      "nameservers": [],
+      "bloque_ip": null
+    },
+    "dns": [
+      {
+        "indicador": "www.pneustorebr.cfd",
+        "estado": "no_results",
+        "rcodes": {
+          "A": 3,
+          "AAAA": 3,
+          "CNAME": 3,
+          "NS": 3,
+          "MX": 3,
+          "TXT": 3
+        }
+      },
+      {
+        "indicador": "pneustorebr.cfd",
+        "estado": "no_results",
+        "rcodes": {
+          "NS": 3,
+          "MX": 3,
+          "TXT": 3
+        }
+      }
+    ],
+    "crtsh": {
+      "consultas": [
+        {
+          "estado": "found",
+          "fecha": "2026-10-23T18:09:06+00:00",
+          "endpoint": "https://crt.sh/?q=pneustorebr.cfd&output=json"
+        }
+      ],
+      "certificados": [
+        {
+          "id": 29336333368,
+          "common_name": "pneustorebr.cfd",
+          "name_value": "pneustorebr.cfd",
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR2",
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "057c495dd81ba43fee8e610c0fd38543577f"
+        },
+        {
+          "id": 29676156333,
+          "common_name": "pneustorebr.cfd",
+          "name_value": "pneustorebr.cfd",
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR2",
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "057c495dd81ba43fee8e610c0fd38543577f"
+        },
+        {
+          "id": 29336334494,
+          "common_name": "www.pneustorebr.cfd",
+          "name_value": "www.pneustorebr.cfd",
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR1",
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "06a15b6a4301e6ac318d626e5a0f93c46be2"
+        },
+        {
+          "id": 29808327070,
+          "common_name": "www.pneustorebr.cfd",
+          "name_value": "www.pneustorebr.cfd",
+          "issuer_name": "C=US, O=Let's Encrypt, CN=YR1",
+          "not_before": "2026-09-04T07:31:13",
+          "not_after": "2026-12-03T07:31:12",
+          "serial_number": "06a15b6a4301e6ac318d626e5a0f93c46be2"
+        }
+      ],
+      "nombres_observados": [
+        "pneustorebr.cfd",
+        "www.pneustorebr.cfd"
+      ]
+    },
+    "urlscan": {
+      "uuid": "01a1460d-11c6-71b9-9818-3caec90d10c7",
+      "fecha_historico": "2026-10-16T18:50:34.640Z",
+      "page": {
+        "asn": "AS16509",
+        "asnname": "AMAZON-02 - Amazon.com, Inc., US",
+        "city": "San Jose",
+        "country": "US",
+        "domain": "www.pneustorebr.cfd",
+        "ip": "54.215.31.113",
+        "ptr": "ec2-54-215-31-113.us-west-1.compute.amazonaws.com",
+        "url": "https://www.pneustorebr.cfd/",
+        "apexDomainAgeDays": 42,
+        "language": "en",
+        "mimeType": "text/html",
+        "title": "Domain registered | Dynadot",
+        "tlsValidDays": 396,
+        "tlsAgeDays": 363,
+        "domainAgeDays": 42,
+        "tlsValidFrom": "2025-10-18T00:00:00.000Z",
+        "apexDomain": "pneustorebr.cfd",
+        "tlsIssuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+        "status": "404"
+      },
+      "dominios_contactados": [
+        "widget.trustpilot.com",
+        "fonts.cdnfonts.com",
+        "www.pneustorebr.cfd",
+        "oss.dynadot.com"
+      ],
+      "ips_contactadas": [
+        "52.222.236.94",
+        "52.222.236.112",
+        "52.222.236.60",
+        "172.67.184.158",
+        "54.215.31.113"
+      ],
+      "redirecciones": [],
+      "enlaces_salientes": [
+        {
+          "href": "https://www.dynadot.com/",
+          "text": "",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/domain/search?domain=pneustorebr.cfd",
+          "text": "Get this domain",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/community/contact",
+          "text": "Customer Support team",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/privacy",
+          "text": "Privacy Policy",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.dynadot.com/terms",
+          "text": "Terms of Use",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.icann.org/resources/pages/benefits-2013-09-16-en",
+          "text": "Registrant Educational Information",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.icann.org/resources/pages/approved-with-specs-2013-09-17-en#registrant",
+          "text": "Registrant Benefits and Responsibilities",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.namepros.com/",
+          "text": "",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.domaining.com/",
+          "text": "",
+          "frameId": "0CEF618D6A9C380AA8A1C0D83569013A"
+        },
+        {
+          "href": "https://www.trustpilot.com/review/dynadot.com?utm_medium=trustbox&utm_source=MicroTrustScore",
+          "text": "Excellent 4.5 out of 5 Trustpilot",
+          "frameId": "466E18FF6E53B6FFF4690D23B827FF79"
+        }
+      ],
+      "veredictos": {
+        "overall": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "tags": [],
+          "malicious": false,
+          "hasVerdicts": true
+        },
+        "urlscan": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "tags": [],
+          "malicious": false,
+          "hasVerdicts": false
+        },
+        "engines": {
+          "score": 73,
+          "malicious": true,
+          "categories": [],
+          "enginesTotal": 0,
+          "maliciousTotal": 0,
+          "benignTotal": 0,
+          "maliciousVerdicts": [],
+          "benignVerdicts": [],
+          "hasVerdicts": true,
+          "tags": [
+            "urlscan-ml",
+            "urlscan-ml-60c5e22"
+          ]
+        },
+        "community": {
+          "score": 0,
+          "categories": [],
+          "brands": [],
+          "votesTotal": 0,
+          "votesMalicious": 0,
+          "votesBenign": 0,
+          "malicious": false,
+          "hasVerdicts": false
+        }
+      },
+      "certificados_historicos": [
+        {
+          "subjectName": "*.dynadot.com",
+          "issuer": "GlobalSign GCC R6 AlphaSSL CA 2025",
+          "validFrom": 1760745600,
+          "validTo": 1795046399
+        },
+        {
+          "subjectName": "cdnfonts.com",
+          "issuer": "WE1",
+          "validFrom": 1788030031,
+          "validTo": 1795809533
+        },
+        {
+          "subjectName": "*.trustpilot.com",
+          "issuer": "Amazon RSA 2048 M01",
+          "validFrom": 1790985600,
+          "validTo": 1808092799
+        },
+        {
+          "subjectName": "oss.dynadot.com",
+          "issuer": "Amazon RSA 2048 M04",
+          "validFrom": 1791849600,
+          "validTo": 1808956799
+        }
+      ],
+      "descargas_informadas": []
+    }
+  }
+]
