@@ -1,6 +1,6 @@
 {
-  "version": 5,
-  "creado_utc": "2026-10-23T19:20:59.382359+00:00",
+  "version": 6,
+  "creado_utc": "2026-10-23T19:38:03.300222+00:00",
   "tipo": "Registro local de integridad, rutas relativas; no firmado",
   "archivos": [
     {
@@ -15,13 +15,18 @@
     },
     {
       "ruta": "INFORME-CONSOLIDADO.md",
-      "bytes": 57641,
-      "sha256": "6d87ac766e9f149d0df592606ae4845f7233972a80896a0ba759d5492d953cb7"
+      "bytes": 16204,
+      "sha256": "7d7c00eadbdbe19a231de3d41b57ce3b7eba31c02434b32b41811609f16151ef"
+    },
+    {
+      "ruta": "INFORME-TECNICO.md",
+      "bytes": 16204,
+      "sha256": "7d7c00eadbdbe19a231de3d41b57ce3b7eba31c02434b32b41811609f16151ef"
     },
     {
       "ruta": "README.md",
-      "bytes": 57641,
-      "sha256": "6d87ac766e9f149d0df592606ae4845f7233972a80896a0ba759d5492d953cb7"
+      "bytes": 16293,
+      "sha256": "8e9ee05027b4d60c0306e5539395234aaa555aec337bfeca3e67dd60b7545b43"
     },
     {
       "ruta": "archivos-reputacion.json",
@@ -234,6 +239,11 @@
       "sha256": "071cdb93689e65e1b2167882376664462a55df983d3c8b091c75b61a7dca2cca"
     },
     {
+      "ruta": "capturas/registro-capturas-informe.json",
+      "bytes": 25019,
+      "sha256": "9e3e6e5f24385821d8a5e9b7f4e1ad397a0612109c037ce1c7efaeff43488258"
+    },
+    {
       "ruta": "capturas/registro-capturas.json",
       "bytes": 25855,
       "sha256": "62464278d86fe66e653892a1311724539070a1456b95debadf7d2fe7777dba16"
@@ -242,6 +252,11 @@
       "ruta": "cierre/R004-mxtoolbox-texto.txt",
       "bytes": 19949,
       "sha256": "bca5f69278fc92d808162f13b62e05ec6efc62d3d1723b5e8889de61d68c58b8"
+    },
+    {
+      "ruta": "cierre/R004-pnreap-verificacion.json",
+      "bytes": 75156,
+      "sha256": "c41737d9d74417572bc7d12e7d9f82da7bfb0d6a986f6db85ba6561f87eafc76"
     },
     {
       "ruta": "cierre/R005-mxtoolbox-texto.txt",
@@ -409,9 +424,19 @@
       "sha256": "8ae182883d696759171a4209a78f58c82b2c0ead0d131d484a3bd175e888da1a"
     },
     {
+      "ruta": "entrega/Grupo_05_Informe_Tecnico.docx",
+      "bytes": 471205,
+      "sha256": "267c38024798e5d9845a5e308e5444545a6b461e667ce1c2cc30cc96cf22d37c"
+    },
+    {
       "ruta": "entrega/Grupo_05_Presentacion_Consolidada.pptx",
       "bytes": 424089,
       "sha256": "10f74573e9e6d9d9f6acf8483426a9cd4408e87134459e459f5617c67963a5fd"
+    },
+    {
+      "ruta": "entrega/README.md",
+      "bytes": 437,
+      "sha256": "fa3ee58332032394de611942b676a8594cca8cc98dbe777bedbc7b522abf53d6"
     },
     {
       "ruta": "fichas-urls.md",

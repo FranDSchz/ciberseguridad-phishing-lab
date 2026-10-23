@@ -1,0 +1,472 @@
+[
+  {
+    "archivo": "capturas/F001-virustotal-detecciones.jpg",
+    "url_fuente": "https://www.virustotal.com/gui/file/6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba",
+    "fecha_guardado_utc": "2026-10-23T17:43:03.381326+00:00",
+    "metodo": "Captura real del navegador mediante cua.getScreenshot; JPEG sin edición",
+    "alcance": "Informe ya existente; sin subir muestra ni pulsar Reanalyze",
+    "recurso": "F001",
+    "tipo": "captura externa real",
+    "formato_real": "JPEG",
+    "sha256_imagen": "c18b823df3f77c4d25e3ee5a4e99e6668e1986979be4c3b26077bf93d7663fc6"
+  },
+  {
+    "archivo": "capturas/F001-virustotal-propiedades.jpg",
+    "url_fuente": "https://www.virustotal.com/gui/file/6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba/details",
+    "fecha_guardado_utc": "2026-10-23T17:43:22.805301+00:00",
+    "metodo": "Captura real del navegador mediante cua.getScreenshot; JPEG sin edición",
+    "alcance": "Informe ya existente; sin subir muestra ni pulsar Reanalyze",
+    "recurso": "F001",
+    "tipo": "captura externa real",
+    "formato_real": "JPEG",
+    "sha256_imagen": "9eebdc66b246e3be6dc61f342507631abee852820106e795c1d10aaa824e61b5"
+  },
+  {
+    "archivo": "capturas/F002-virustotal-detecciones.jpg",
+    "url_fuente": "https://www.virustotal.com/gui/file/06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec",
+    "fecha_guardado_utc": "2026-10-23T17:43:52.974256+00:00",
+    "metodo": "Captura real del navegador mediante cua.getScreenshot; JPEG sin edición",
+    "alcance": "Informe ya existente; sin subir muestra ni pulsar Reanalyze",
+    "recurso": "F002",
+    "tipo": "captura externa real",
+    "formato_real": "JPEG",
+    "sha256_imagen": "5edcbc48e6e76fd6957109cf334ac969b0c12b93fa3ba0db5d61546aeb627afa"
+  },
+  {
+    "archivo": "capturas/F002-virustotal-historial.jpg",
+    "recurso": "F002",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/file/06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec/details",
+    "observacion": "Fechas y nombres observados",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T17:51:34.953140+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "9a93de09701082a7b6a983d61225bc7d15b8979f80470ed8859b6baf5b0f0a41"
+  },
+  {
+    "archivo": "capturas/F002-virustotal-propiedades.jpg",
+    "recurso": "F002",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/file/06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec/details",
+    "observacion": "Huellas, tipo, tamaño y fechas",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T17:51:43.833273+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "0e93759d4ccd5cfde9825ed12d2bdb20649b014491526ff85aaa6df85432dba2"
+  },
+  {
+    "archivo": "capturas/R004-cabeceras-local.jpg",
+    "recurso": "R004",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/R004-cabeceras.html",
+    "url_en_captura": "http://127.0.0.1:8766/R004-cabeceras.html",
+    "metodo": "Captura real del navegador de una vista local generada desde JSON; no es consola original ni interfaz de proveedor",
+    "alcance": "Texto escapado y enlaces neutralizados; no se renderizó el HTML del EML ni se cargaron imágenes remotas",
+    "fuentes_json": [
+      "correos-estaticos.json"
+    ],
+    "fecha_guardado_utc": "2026-10-23T17:52:53.927069+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "c5a6fc7e920a64d19527a29723f78109036cac8900fc00660fed68023204cc95"
+  },
+  {
+    "archivo": "capturas/R004-consultas-local-continuacion.jpg",
+    "recurso": "R004",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/R004-consultas.html",
+    "url_en_captura": "http://127.0.0.1:8766/R004-consultas.html",
+    "metodo": "Captura real del navegador de una vista local generada desde JSON; no es consola original ni interfaz de proveedor",
+    "alcance": "Texto escapado y enlaces neutralizados; no se renderizó el HTML del EML ni se cargaron imágenes remotas",
+    "fuentes_json": [
+      "correos-reputacion.json",
+      "enlaces-correo-reputacion.json"
+    ],
+    "fecha_guardado_utc": "2026-10-23T17:53:40.365556+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "9714f382f899fd581756635ab69af79334a28d68a570f15d7ebe9ce2064a6cf8"
+  },
+  {
+    "archivo": "capturas/R004-consultas-local.jpg",
+    "recurso": "R004",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/R004-consultas.html",
+    "url_en_captura": "http://127.0.0.1:8766/R004-consultas.html",
+    "metodo": "Captura real del navegador de una vista local generada desde JSON; no es consola original ni interfaz de proveedor",
+    "alcance": "Texto escapado y enlaces neutralizados; no se renderizó el HTML del EML ni se cargaron imágenes remotas",
+    "fuentes_json": [
+      "correos-reputacion.json",
+      "enlaces-correo-reputacion.json"
+    ],
+    "fecha_guardado_utc": "2026-10-23T17:53:16.610290+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "b357320f636662d09bfea473a0d8d52a90b914620b1d7f444971988b1e8d5e22"
+  },
+  {
+    "archivo": "capturas/R004-enlace-1-virustotal.jpg",
+    "recurso": "R004",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/url/32fa281b97318221aeb6694dc2b72af77f1b05374f9401991f6eb25f641edd76",
+    "observacion": "Primer enlace acortado: dos alertas",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T17:53:14.370364+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "15d68b96d8cb38edb142a9ef8d3c6280db966279d9272893c9ff3f80880ea6f2"
+  },
+  {
+    "archivo": "capturas/R004-enlace-2-virustotal.jpg",
+    "recurso": "R004",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/url/4da9b145130a03cdeb465dde2638c20f0d566aa8d66eacf1b28a703be7e926ca",
+    "observacion": "Segundo enlace acortado: dos alertas",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T17:53:37.833630+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "aa331cd639a00019a536764b12e5199df865c41ee6cbeef7eb319fad642cc8e7"
+  },
+  {
+    "archivo": "capturas/R004-ip-entrega-virustotal.jpg",
+    "recurso": "R004",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/ip-address/20.169.217.199",
+    "observacion": "IP de entrega; sin detecciones, no demuestra legitimidad",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T17:54:44.635928+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "1e3a03c28efd078725e6665bc10c55caf8b7bf86f46c528f7bb58c6b06aaf58c"
+  },
+  {
+    "archivo": "capturas/R004-mime-enlaces-local.jpg",
+    "recurso": "R004",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/R004-mime-enlaces.html",
+    "url_en_captura": "http://127.0.0.1:8766/R004-mime-enlaces.html",
+    "metodo": "Captura real del navegador de una vista local generada desde JSON; no es consola original ni interfaz de proveedor",
+    "alcance": "Texto escapado y enlaces neutralizados; no se renderizó el HTML del EML ni se cargaron imágenes remotas",
+    "fuentes_json": [
+      "correos-estaticos.json",
+      "correos-html-resumen.json"
+    ],
+    "fecha_guardado_utc": "2026-10-23T17:52:54.555047+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "89d0bc223006b6491e1f713d0f0895e22dd404d8441dfb9fa11500c68bb6d36a"
+  },
+  {
+    "archivo": "capturas/R004-remitente-virustotal.jpg",
+    "recurso": "R004",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/domain/ginnybedellphotography.com",
+    "observacion": "Reputación del dominio remitente: una detección",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T17:54:12.524680+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "1f8fbf34403f69f3d1856325a540039d1206edafeaf0bf6a1447b53255beba5d"
+  },
+  {
+    "archivo": "capturas/R005-cabeceras-local.jpg",
+    "recurso": "R005",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/R005-cabeceras.html",
+    "url_en_captura": "http://127.0.0.1:8766/R005-cabeceras.html",
+    "metodo": "Captura real del navegador de una vista local generada desde JSON; no es consola original ni interfaz de proveedor",
+    "alcance": "Texto escapado y enlaces neutralizados; no se renderizó el HTML del EML ni se cargaron imágenes remotas",
+    "fuentes_json": [
+      "correos-estaticos.json"
+    ],
+    "fecha_guardado_utc": "2026-10-23T17:52:54.283056+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "86f583c62b2fa6da125ec191678e6eb42bb209c7639926e74311fc6e5b9c52b5"
+  },
+  {
+    "archivo": "capturas/R005-consultas-local.jpg",
+    "recurso": "R005",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/R005-consultas.html",
+    "url_en_captura": "http://127.0.0.1:8766/R005-consultas.html",
+    "metodo": "Captura real del navegador de una vista local generada desde JSON; no es consola original ni interfaz de proveedor",
+    "alcance": "Texto escapado y enlaces neutralizados; no se renderizó el HTML del EML ni se cargaron imágenes remotas",
+    "fuentes_json": [
+      "correos-reputacion.json",
+      "enlaces-correo-reputacion.json"
+    ],
+    "fecha_guardado_utc": "2026-10-23T17:53:16.982278+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "23247d0f4ec31e476427e11b82119fd120d125cbfa61852129d6f9257cae9d5b"
+  },
+  {
+    "archivo": "capturas/R005-dominio-enlaces-virustotal.jpg",
+    "recurso": "R005",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/domain/woondsplay.com",
+    "observacion": "Dominio de los enlaces: detecciones maliciosas y sospechosas",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T17:52:33.487842+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "1f544a6d1b7b7d660308dc2e0d15aa09a1aac246d611b0f558bb3571c8ae6da9"
+  },
+  {
+    "archivo": "capturas/R005-ip-entrega-virustotal.jpg",
+    "recurso": "R005",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/ip-address/209.85.167.46",
+    "observacion": "IP de entrega; sin detecciones, no demuestra legitimidad",
+    "metodo": "Captura real de navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo informe existente; sin Reanalyze, descargas de muestras ni acceso a los destinos investigados",
+    "fecha_guardado_utc": "2026-10-23T18:03:46.849621+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "e6ff8743636728275ea88b3f96e2e3977903db8261f15eca48145179af0a0285"
+  },
+  {
+    "archivo": "capturas/R005-mime-enlaces-local.jpg",
+    "recurso": "R005",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/R005-mime-enlaces.html",
+    "url_en_captura": "http://127.0.0.1:8766/R005-mime-enlaces.html",
+    "metodo": "Captura real del navegador de una vista local generada desde JSON; no es consola original ni interfaz de proveedor",
+    "alcance": "Texto escapado y enlaces neutralizados; no se renderizó el HTML del EML ni se cargaron imágenes remotas",
+    "fuentes_json": [
+      "correos-estaticos.json",
+      "correos-html-resumen.json"
+    ],
+    "fecha_guardado_utc": "2026-10-23T17:52:54.823037+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "0400a8b39fd92d3c278eecee9f5252e48cffceabb9af32013e20773ba47807db"
+  },
+  {
+    "archivo": "capturas/U001-certificados-local.jpg",
+    "recurso": "U001",
+    "fecha_guardado_utc": "2026-10-23T18:15:49.369277+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "62cfcf5f19408ee348fee7e1b1cc548c790b9ebb1f19e0af4c60302d492c715b",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/U001-certificados.html",
+    "url_en_captura": "http://127.0.0.1:8766/U001-certificados.html",
+    "fuentes_json": [
+      "urls/20261023T180740Z/U001.json",
+      "urls/20261023T180740Z/U001-crtsh-subdominios.json"
+    ]
+  },
+  {
+    "archivo": "capturas/U001-registro-dns-local.jpg",
+    "recurso": "U001",
+    "fecha_guardado_utc": "2026-10-23T18:15:48.813274+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "5b84e9cef70367260d890fd1bc26e1aed7fdfdb49af7e4ad54b23a724efafe19",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/U001-registro-dns.html",
+    "url_en_captura": "http://127.0.0.1:8766/U001-registro-dns.html",
+    "fuentes_json": [
+      "urls/20261023T180740Z/U001.json"
+    ]
+  },
+  {
+    "archivo": "capturas/U001-urlscan-imagen-archivada.jpg",
+    "recurso": "U001",
+    "fecha_guardado_utc": "2026-10-23T18:10:20.158327+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "2f3a8e3e1cd0a80b9427e5fd238e4a8680a4c015e84100bf40779444bb44b33f",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura de imagen histórica de tercero",
+    "url_fuente": "https://urlscan.io/screenshots/01a1462b-bbda-773d-a9b2-fa0511ed4b52.png",
+    "fecha_historico": "2026-10-16; consultar task.time en el JSON de detalle"
+  },
+  {
+    "archivo": "capturas/U001-urlscan-resumen.jpg",
+    "recurso": "U001",
+    "fecha_guardado_utc": "2026-10-23T18:09:43.386198+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "4d70ffbebec3b5e59764e4b3b7ab9bc55dd719e66b5120c8bedd09180b139c77",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://urlscan.io/result/01a1462b-bbda-773d-a9b2-fa0511ed4b52/"
+  },
+  {
+    "archivo": "capturas/U001-virustotal-url.jpg",
+    "recurso": "U001",
+    "fecha_guardado_utc": "2026-10-23T18:09:05.390073+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "cedf14570d4f5d152081286f63f905757b5f25e27abcb4ba68b3ce4f020dc40f",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/url/d2490e0d14072a015be21f7fa3f2fec65fc4453074223475727eb1198aa4e0fe"
+  },
+  {
+    "archivo": "capturas/U002-registro-ip-local.jpg",
+    "recurso": "U002",
+    "fecha_guardado_utc": "2026-10-23T18:16:30.826627+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "7ea92a363376e34e63643b5b521f77159342ec7477da29a70a533c7856f7d8d5",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/U002-registro-dns.html",
+    "url_en_captura": "http://127.0.0.1:8766/U002-registro-dns.html",
+    "fuentes_json": [
+      "urls/20261023T180740Z/U002.json"
+    ]
+  },
+  {
+    "archivo": "capturas/U002-urlscan-descarga-detalle.jpg",
+    "recurso": "U002",
+    "fecha_guardado_utc": "2026-10-23T18:12:57.786950+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "823882b515427bc9a468d47b5374c86b2de4317a5e8e252b20d6e7bf18d75a70",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://urlscan.io/result/01a1464c-f4e2-70ba-8c0c-131c9851a684/"
+  },
+  {
+    "archivo": "capturas/U002-urlscan-descarga.jpg",
+    "recurso": "U002",
+    "fecha_guardado_utc": "2026-10-23T18:11:21.878559+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "1e53fcc2541b512878e4f0d47771cf9c04f9b0aab8cdc1840479c1312c57cb4d",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://urlscan.io/result/01a1464c-f4e2-70ba-8c0c-131c9851a684/"
+  },
+  {
+    "archivo": "capturas/U002-virustotal-hash-descarga.jpg",
+    "recurso": "U002",
+    "fecha_guardado_utc": "2026-10-23T18:12:55.714941+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "dd4973248876da9deefa66f2446dfa5f74f0e4da7cb4accfef603f6c0821e0b8",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/file/f6c97b1e2ed02578ca1066c8235ba4f991e645f89012406c639dbccc6582eec8"
+  },
+  {
+    "archivo": "capturas/U002-virustotal-url.jpg",
+    "recurso": "U002",
+    "fecha_guardado_utc": "2026-10-23T18:11:14.990532+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "972f7da8576da860ad6e35352bc59c22a57cb1ba4c96f62a5668bfa541aa9e8f",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/url/9f66b53434eadafd8106dfae2543a24e7cb86d4afc6cf00c10b0e2b0d4bfefee"
+  },
+  {
+    "archivo": "capturas/U003-certificados-local.jpg",
+    "recurso": "U003",
+    "fecha_guardado_utc": "2026-10-23T18:15:50.221281+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "6887553663cb39ff15cafa89e4e0874c4e65239ee03ac08aa1888920b3d077d6",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/U003-certificados.html",
+    "url_en_captura": "http://127.0.0.1:8766/U003-certificados.html",
+    "fuentes_json": [
+      "urls/20261023T180740Z/U003.json"
+    ]
+  },
+  {
+    "archivo": "capturas/U003-registro-dns-local.jpg",
+    "recurso": "U003",
+    "fecha_guardado_utc": "2026-10-23T18:15:49.937280+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "8ab189905c67db2246c48ef2e7fd0141f76bf29724d709281aeac56319f19e2c",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura de vista local derivada",
+    "fuente_local": "vistas/U003-registro-dns.html",
+    "url_en_captura": "http://127.0.0.1:8766/U003-registro-dns.html",
+    "fuentes_json": [
+      "urls/20261023T180740Z/U003.json"
+    ]
+  },
+  {
+    "archivo": "capturas/U003-urlscan-imagen-archivada.jpg",
+    "recurso": "U003",
+    "fecha_guardado_utc": "2026-10-23T18:12:18.842788+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "9405a4cac878823cf54d8be9639f5fc338737ff81db08ff5763988e4f1bbbecc",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura de imagen histórica de tercero",
+    "url_fuente": "https://urlscan.io/screenshots/01a1460d-11c6-71b9-9818-3caec90d10c7.png",
+    "fecha_historico": "2026-10-16; consultar task.time en el JSON de detalle"
+  },
+  {
+    "archivo": "capturas/U003-urlscan-resumen.jpg",
+    "recurso": "U003",
+    "fecha_guardado_utc": "2026-10-23T18:12:18.466786+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "739c7674d6cafe9f19848190ab48a2a7bddda30ae3810b532f7460b5eabcb25c",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://urlscan.io/result/01a1460d-11c6-71b9-9818-3caec90d10c7/"
+  },
+  {
+    "archivo": "capturas/U003-virustotal-dominio.jpg",
+    "recurso": "U003",
+    "fecha_guardado_utc": "2026-10-23T18:17:10.546679+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "dd3f19b4beba129c75a7a984f23265320ceb5a60c73de14d43ed211d34c7a6f1",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/domain/pneustorebr.cfd"
+  },
+  {
+    "archivo": "capturas/U003-virustotal-url.jpg",
+    "recurso": "U003",
+    "fecha_guardado_utc": "2026-10-23T18:12:07.194740+00:00",
+    "formato_real": "JPEG",
+    "sha256_imagen": "071cdb93689e65e1b2167882376664462a55df983d3c8b091c75b61a7dca2cca",
+    "metodo": "Captura real del navegador con cua.getScreenshot; JPEG sin edición",
+    "alcance": "Solo proveedores e imágenes históricas ya existentes; sin visitar la URL investigada ni solicitar un nuevo escaneo",
+    "tipo": "captura externa real",
+    "url_fuente": "https://www.virustotal.com/gui/url/830e581ef5afdf890eeda034a2f8c8855700caede3d222765fc02423043b7c1f"
+  },
+  {
+    "archivo": "capturas/R004-mxtoolbox-blacklist.jpg",
+    "recurso": "R004",
+    "tipo": "captura externa real",
+    "url_fuente": "https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a20.169.217.199&run=toolpage",
+    "fecha_guardado_utc": "2026-10-23T18:25:46.160232+00:00",
+    "metodo": "Captura real del navegador; sin edición",
+    "formato_real": "JPEG",
+    "sha256_imagen": "626fd6ca2f986cf071db680c8c75a2cd5e20741fb2b788e6f56275a87e7c231a",
+    "observacion": "MXToolbox: 0 listados; 1 timeout(s); 60 listas informadas. Resultado actual, no histórico del envío."
+  },
+  {
+    "archivo": "capturas/R005-mxtoolbox-blacklist.jpg",
+    "recurso": "R005",
+    "tipo": "captura externa real",
+    "url_fuente": "https://mxtoolbox.com/SuperTool.aspx?action=blacklist%3a209.85.167.46&run=toolpage",
+    "fecha_guardado_utc": "2026-10-23T18:27:12.016146+00:00",
+    "metodo": "Captura real del navegador; sin edición",
+    "formato_real": "JPEG",
+    "sha256_imagen": "79ff4e981dcdd88f44bf5de7468d4702f8981386707a69eaf10add6cd156996a",
+    "observacion": "MXToolbox: 0 listados; 0 timeout(s); 60 listas informadas. Resultado actual, no histórico del envío."
+  },
+  {
+    "archivo": "capturas/R004-pnreap-verificado.jpg",
+    "recurso": "R004",
+    "sha256_imagen": "1417980527b60f7dc8d35fea6cbe92caec1f1ce6d13ff87c5247fe4d6efc4143",
+    "formato_real": "JPEG",
+    "url_fuente": "https://www.virustotal.com/gui/url/b5964327810a7c813ae6a17ec150228e0f3c1bc77fa5dba775f7eaae5eda674d",
+    "fecha_guardado_utc": "2026-10-23T19:12:50.373696+00:00",
+    "metodo": "Captura real del navegador; JPEG sin edición",
+    "alcance": "GET de informe existente; sin cargar el píxel ni solicitar reanálisis"
+  }
+]
