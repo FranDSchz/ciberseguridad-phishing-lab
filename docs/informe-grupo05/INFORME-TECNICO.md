@@ -1,18 +1,20 @@
 # Análisis y triage de recursos sospechosos
 
-UTN FRRe · Fundamentos de Ciberseguridad · Trabajo práctico 2 · Grupo 05 · 23/10/2026
+UTN FRRe · Fundamentos de Ciberseguridad · Trabajo práctico 2 · Grupo 05 · 23/10/2026 · Evidencia adicional: 29/10/2026
 
 Integrantes: Benetucci Ignacio; Maurel Garcete Philippe; Rodas Sebastián; Sánchez Franco.
 
 ## Resumen ejecutivo
 
-Analizamos siete recursos: dos archivos Windows, dos correos y tres URLs. Clasificamos cuatro como maliciosos y tres como sospechosos; ninguno se acreditó como limpio. La evidencia más sólida combina huellas coincidentes y reputación: 47 motores para cada binario Windows y 50 para el ELF asociado a U002. R004 incorpora una URL remota exacta con 12 detecciones. Los restantes casos presentan señales mixtas. Estos resultados no demuestran infección de un equipo.
+Analizamos siete recursos: dos archivos Windows, dos correos y tres URLs. Clasificamos cuatro como maliciosos y tres como sospechosos; ninguno se acreditó como limpio. F001 y F002 conservan el veredicto MALICIOSO: a las huellas coincidentes y 47 detecciones de VirusTotal por binario se agregan dos reportes de ejecución de ANY.RUN, que clasifican ambas muestras como «Malicious activity». El ELF asociado a U002 tiene 50 detecciones. R004 incorpora una URL remota exacta con 12 detecciones. Los restantes casos presentan señales mixtas. La ejecución en el sandbox de ANY.RUN no demuestra infección de un equipo fuera de ese entorno.
 
 ## Metodología y entorno
 
-Priorizamos análisis estático y reputación. El ZIP se preservó con su SHA-256; los archivos y correos se extrajeron como datos en una VM mínima derivada de Kali, sin red, sin integración con el host y con montajes noexec. La recuperación usa una base limpia y disco diferencial; no acredita un snapshot formal del hipervisor. No ejecutamos muestras, cargamos HTML ni visitamos destinos sospechosos. Para archivos conocidos consultamos hashes en VirusTotal; para URLs revisamos informes históricos de urlscan. Completamos cabeceras, MXToolbox, RDAP, DNS y crt.sh. Los registros conservan consultas y estados de cada adquisición.
+La fase inicial priorizó análisis estático y reputación. El ZIP se preservó con su SHA-256; los archivos y correos se extrajeron como datos en una VM mínima derivada de Kali, sin red, sin integración con el host y con montajes noexec. La recuperación usa una base limpia y disco diferencial; no acredita un snapshot formal del hipervisor. En esa fase no se ejecutaron muestras, cargaron HTML ni visitaron destinos sospechosos. Para archivos conocidos consultamos hashes en VirusTotal; para URLs revisamos informes históricos de urlscan. Completamos cabeceras, MXToolbox, RDAP, DNS y crt.sh. Los registros conservan consultas y estados de cada adquisición.
 
-Las cabeceras de correo declaran resultados de autenticación; no revalidamos DKIM criptográficamente ni reconstruimos SPF histórico. Las consultas y capturas se adquirieron el 23/10/2026; los históricos web principales corresponden al 16/10. Las familias de malware son atribuciones de terceros. Una URL sin informe, un dominio aparcado o una IP no listada no acreditan legitimidad.
+El 29/10/2026 se añadieron reportes PDF de ejecuciones de F001 y F002 en ANY.RUN, en Windows 10 Professional de 64 bits con red. La identidad de cada objeto se vincula por su SHA-256 con el archivo inventariado y consultado en VirusTotal. Los PDF conservan el veredicto del proveedor, un resumen automático, indicadores y detecciones de comportamiento; no incluyen un volcado de eventos o tráfico suficiente para validar de forma independiente todas las relaciones entre procesos, persistencia y comunicaciones que afirma el resumen automático. Las recomendaciones del reporte son contenido generado por el proveedor, no acciones realizadas por el grupo.
+
+Las cabeceras de correo declaran resultados de autenticación; no revalidamos DKIM criptográficamente ni reconstruimos SPF histórico. Las consultas y capturas iniciales se adquirieron el 23/10/2026; los históricos web principales corresponden al 16/10 y los reportes ANY.RUN al 29/10. Las etiquetas de familia (ValleyRAT, SilverFox, Winos) son atribuciones automáticas del proveedor, no una identificación independiente. Las IP listadas por ANY.RUN no se tratan como C2 confirmados ni como indicadores para bloqueo sin revisar el tráfico y su relación con el proceso. Una URL sin informe, un dominio aparcado o una IP no listada no acreditan legitimidad.
 
 ## F001 Archivo 1
 
@@ -20,12 +22,12 @@ Las cabeceras de correo declaran resultados de autenticación; no revalidamos DK
 | :--- | :--- |
 | Identificador del recurso | F001 · Archivo 1 · file_1.zip |
 | Tipo | DLL Windows PE32+ x64, 2.264.968 bytes. Recurso independiente del ZIP. |
-| Herramientas usadas | file, 7-Zip y hashes en VM; VirusTotal por hash. |
-| Evidencia clave | Los SHA-256, SHA-1 y MD5 y el tamaño coinciden con VT. 47 motores maliciosos. Primera observación en VT: 14/10/2026. Nombres históricos: Setup64.exe y libPdfCore.dll; el tipo real es DLL. |
-| Tipo de amenaza si aplica | Troyano o acceso remoto. ValleyRAT es una atribución de terceros; no determinamos la familia mediante ejecución. |
-| Impacto C-I-A | C: posible acceso a información. I: posibles cambios no autorizados. A: efecto concreto sin determinar. Impactos potenciales, no observados. |
+| Herramientas usadas | file, 7-Zip y hashes en VM; VirusTotal por hash; reporte de ejecución ANY.RUN. |
+| Evidencia clave | Los SHA-256, SHA-1 y MD5 y el tamaño coinciden con VT. 47 motores maliciosos. Primera observación en VT: 14/10/2026. Nombres históricos: Setup64.exe y libPdfCore.dll; el tipo real es DLL. ANY.RUN analizó el mismo SHA-256 y calificó la actividad como maliciosa; su tabla de detecciones incluye ejecución mediante rundll32/cmd, búsqueda de software y cambio de autorun (T1547.001). El resumen automático atribuye comunicación a 204[.]194[.]49[.]108, sin prueba de C2 o exfiltración verificable en este PDF. |
+| Tipo de amenaza si aplica | Troyano o herramienta de acceso remoto según reputación y análisis de ANY.RUN. ValleyRAT/SilverFox/Winos son etiquetas del proveedor; no se confirmó una familia por análisis independiente. |
+| Impacto C-I-A | C: posible acceso a información. I: posibles cambios no autorizados; ANY.RUN señala un cambio de autorun dentro del sandbox. A: efecto concreto sin determinar. No se demuestra impacto en un equipo externo. |
 | VEREDICTO | MALICIOSO |
-| Confianza | Alta en identidad y reputación. |
+| Confianza | Alta en identidad y clasificación maliciosa; comportamiento específico sujeto a los límites del reporte PDF. |
 | Medida usuario / organización | Usuario: mantener aislado y no ejecutar. Organización: bloquear el hash y buscar coincidencias en EDR; investigar si hay indicios de ejecución. |
 
 SHA-256: `6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba`.
@@ -34,7 +36,7 @@ SHA-256: `6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba`.
 
 Captura original: 2026-10-23T17:43:03.381326+00:00.
 
-Fuentes: [VirusTotal](https://www.virustotal.com/gui/file/6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba) · [Huellas y tipo](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/primarios/vm/grupo05-archivos-estaticos.json) · [Respuesta de VT](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/archivos-reputacion.json).
+Fuentes: [VirusTotal](https://www.virustotal.com/gui/file/6f9f663f832a06474913ec6bb0f94e3cca6e0658396a68053ff36abedbb050ba) · [Huellas y tipo](primarios/vm/grupo05-archivos-estaticos.json) · [Respuesta de VT](archivos-reputacion.json) · [PDF ANY.RUN F001](primarios/anyrun/F001-ANYRUN-20261029.pdf) · [Tarea interactiva](https://app.any.run/tasks/53d8309d-8070-42b7-b134-2eee1f815e1b).
 
 ## F002 Archivo 2
 
@@ -42,12 +44,12 @@ Fuentes: [VirusTotal](https://www.virustotal.com/gui/file/6f9f663f832a06474913ec
 | :--- | :--- |
 | Identificador del recurso | F002 · Archivo 2 · file_2.zip |
 | Tipo | Ejecutable Windows PE32+ GUI x64, 1.559.216 bytes. Recurso independiente del ZIP. |
-| Herramientas usadas | file, 7-Zip y hashes en VM; VirusTotal por hash. |
-| Evidencia clave | Los SHA-256, SHA-1 y MD5 y el tamaño coinciden con VT. 47 motores maliciosos. Primera observación en VT: 12/10/2026. Nombres históricos: Setup64.exe y WinCombo.exe. |
-| Tipo de amenaza si aplica | Troyano o acceso remoto. Las etiquetas ValleyRAT, backdoor y stealer provienen de motores y reportes de terceros. |
-| Impacto C-I-A | C: posible acceso a datos. I: posibles alteraciones del equipo. A: sin efecto determinado. No se observó infección ni persistencia propia. |
+| Herramientas usadas | file, 7-Zip y hashes en VM; VirusTotal por hash; reporte de ejecución ANY.RUN. |
+| Evidencia clave | Los SHA-256, SHA-1 y MD5 y el tamaño coinciden con VT. 47 motores maliciosos. Primera observación en VT: 12/10/2026. Nombres históricos: Setup64.exe y WinCombo.exe. ANY.RUN analizó el mismo SHA-256 y calificó la actividad como maliciosa; su tabla de detecciones incluye ejecución de cmd.exe y búsqueda de software. El resumen automático atribuye una configuración hacia 202[.]61[.]157[.]33, pero el PDF no confirma una conexión C2 ni exfiltración; tampoco registra persistencia. |
+| Tipo de amenaza si aplica | Troyano o herramienta de acceso remoto según reputación y análisis de ANY.RUN. ValleyRAT/SilverFox/Winos, backdoor y stealer son etiquetas de terceros; no se confirmó una familia por análisis independiente. |
+| Impacto C-I-A | C: posible acceso a datos. I: posibles alteraciones del equipo. A: sin efecto determinado. No se observó infección de un equipo externo ni persistencia confirmada en este reporte. |
 | VEREDICTO | MALICIOSO |
-| Confianza | Alta en identidad y reputación. |
+| Confianza | Alta en identidad y clasificación maliciosa; comportamiento específico sujeto a los límites del reporte PDF. |
 | Medida usuario / organización | Usuario: no ejecutar y reportar su procedencia. Organización: bloquear el hash y revisar telemetría de endpoints antes de declarar un incidente. |
 
 SHA-256: `06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec`.
@@ -56,7 +58,7 @@ SHA-256: `06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec`.
 
 Captura original: 2026-10-23T17:43:52.974256+00:00.
 
-Fuentes: [VirusTotal](https://www.virustotal.com/gui/file/06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec) · [Huellas y tipo](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/primarios/vm/grupo05-archivos-estaticos.json) · [Respuesta de VT](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/archivos-reputacion.json).
+Fuentes: [VirusTotal](https://www.virustotal.com/gui/file/06af7db1507c685154f7a291c862b0bfe5649c989de4e7acbeff23fd3252e4ec) · [Huellas y tipo](primarios/vm/grupo05-archivos-estaticos.json) · [Respuesta de VT](archivos-reputacion.json) · [PDF ANY.RUN F002](primarios/anyrun/F002-ANYRUN-20261029.pdf) · [Tarea interactiva](https://app.any.run/tasks/ce5eebef-5d93-4667-9ac7-747ea8c5d165).
 
 ## R004 Correo 1
 
@@ -162,7 +164,7 @@ Fuentes: [urlscan histórico](https://urlscan.io/result/01a1460d-11c6-71b9-9818-
 
 ## Conclusiones
 
-F001, F002, R004 y U002: maliciosos. R005, U001 y U003: sospechosos. No se acreditó infección de un equipo ni un recurso legítimo. Conservar aislado, reportar y aplicar controles sobre indicadores confirmados con revisión de telemetría.
+F001, F002, R004 y U002: maliciosos. R005, U001 y U003: sospechosos. Los reportes ANY.RUN agregan comportamiento en sandbox para F001 y F002 y refuerzan su veredicto, sin cambiar la clasificación de los siete recursos. No se acreditó infección de un equipo fuera del sandbox ni un recurso legítimo. Conservar aislado, reportar y aplicar controles sobre indicadores confirmados con revisión de telemetría.
 
 ## Anexo de evidencia verificable
 
@@ -173,6 +175,8 @@ F001, F002, R004 y U002: maliciosos. R005, U001 y U003: sospechosos. No se acred
 - [Salidas de archivos y hashes](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/primarios/vm/grupo05-archivos-estaticos.json)
 
 - [VirusTotal de archivos](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/archivos-reputacion.json)
+
+- [Reportes originales ANY.RUN F001 y F002](primarios/anyrun/) e [integridad de ambos PDF](primarios/anyrun/SHA256SUMS)
 
 - [Cabeceras y enlaces de correos](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/correos-estaticos.json)
 
