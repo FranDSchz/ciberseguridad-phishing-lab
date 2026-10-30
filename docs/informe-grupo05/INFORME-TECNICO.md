@@ -162,9 +162,32 @@ Captura original: 2026-10-23T18:12:18.466786+00:00.
 
 Fuentes: [urlscan histórico](https://urlscan.io/result/01a1460d-11c6-71b9-9818-3caec90d10c7/) · [VirusTotal del dominio](https://www.virustotal.com/gui/domain/pneustorebr.cfd) · [VT, RDAP, DNS y CT](https://github.com/FranDSchz/ciberseguridad-phishing-lab/blob/main/docs/informe-grupo05/urls/20261023T180740Z/U003.json) · [Certificados CT](https://crt.sh/?q=%25.pneustorebr.cfd).
 
+## Análisis dinámico de F001 y F002
+
+**Entorno.** ANY.RUN, plan gratuito, Windows 10 Professional 64 bits con red, 29/10/2026, unos 60 segundos por ejecución. Las tareas son públicas. MD5, SHA-1 y SHA-256 de cada ejecución coinciden con los calculados en la fase estática, por lo que se trata de los mismos archivos. Los resultados se ordenan por las cuatro preguntas del análisis dinámico.
+
+| Pregunta | F001 · DLL | F002 · EXE |
+| :--- | :--- | :--- |
+| Procesos | explorer.exe → rundll32.exe carga la DLL desde %TEMP% (T1218.011) → cmd.exe → Setup64.exe. WinCombo.exe se inicia desde dllhost.exe, es decir, vía COM. | dllhost.exe (COM) → la muestra desde %TEMP% → cmd.exe (6 veces) → gpupdate /force y WinCombo.exe. Aparece consent.exe: pedido de elevación UAC. |
+| Archivos | Crea %TEMP%\Setup64.exe y, en C:\ProgramData\MicroPoint\, WinCombo.exe, una copia de la DLL y erasecode.dat. | Crea en C:\ProgramData\MicroPoint\ WinCombo.exe y erasecode.dat. |
+| Registro | Cambia un valor de autorun: **persistencia** (T1547.001). Lee nombre del equipo, GUID, idiomas y software instalado (T1082, T1012, T1518). | Mismas lecturas de reconocimiento. **No se observó persistencia** en 60 s. |
+| Red | IP 204[.]194[.]49[.]108 y consulta a hackmyip[.]com/api/v1/ip, que devuelve la IP pública del equipo. | IP 202[.]61[.]157[.]33. Sin dominios propios. |
+
+**Ruido descartado.** La cadena wininit → services → svchost es el arranque normal de Windows. WaaSMedicAgent.exe pertenece a Windows Update. El tráfico OCSP/CRL de DigiCert y Microsoft, settings-win, activation, login.live y Bing es propio del sistema. ANY.RUN clasifica todos sus indicadores de red como «Unknown», no como maliciosos. La técnica T1562.001 (desactivar Defender) es heurística: no se observó PowerShell ni cambios en Defender, por lo que esas recomendaciones no se adoptan.
+
+**Relación entre muestras.** Las dos dejan los mismos artefactos en la misma carpeta: C:\ProgramData\MicroPoint\WinCombo.exe y erasecode.dat. F001 se comporta como cargador: se ejecuta con rundll32, deja Setup64.exe y termina lanzando WinCombo.exe. Setup64.exe y WinCombo.exe son justamente los nombres históricos de F002 en VirusTotal. Es un indicio fuerte de que pertenecen a la misma cadena de infección, pero no lo confirmamos: no comparamos el hash del archivo creado con el de F002. Los nombres que imitan software legítimo corresponden a T1036.005.
+
+**Límites.** Con 60 s de ejecución se puede perder comportamiento tardío; la ausencia de persistencia en F002 puede deberse a eso. Las IP figuran en el resumen automático y en la configuración extraída, pero sin el tráfico capturado no se confirma que sean C2 ni que hubiera exfiltración. El texto «AI Summary» del reporte se usó solo como guía y cada afirmación de esta sección se contrastó con las tablas de detecciones, archivos e indicadores del mismo reporte. Un análisis en Triage (5 min, Windows 10 y 11, con PCAP) permitiría confirmar la red y la persistencia.
+
+**Resultado.** El análisis dinámico confirma el veredicto estático: F001 y F002 son MALICIOSOS, con confianza alta. Muestran comportamiento de cargador y RAT: ejecución encubierta mediante binarios del sistema, archivos en ProgramData, reconocimiento del equipo, persistencia en F001 y destinos de red externos. Ningún comportamiento se observó fuera del sandbox.
+
+**Medidas.** Bloquear los hashes de F001 y F002. Buscar en los equipos la carpeta C:\ProgramData\MicroPoint\, WinCombo.exe y valores de autorun que apunten a ella. Alertar cuando rundll32 cargue DLL desde %TEMP%. Revisar en la telemetría propia las conexiones a las dos IP antes de bloquearlas.
+
+Fuentes: [PDF ANY.RUN F001](primarios/anyrun/F001-ANYRUN-20261029.pdf) · [Tarea F001](https://app.any.run/tasks/53d8309d-8070-42b7-b134-2eee1f815e1b) · [PDF ANY.RUN F002](primarios/anyrun/F002-ANYRUN-20261029.pdf) · [Tarea F002](https://app.any.run/tasks/ce5eebef-5d93-4667-9ac7-747ea8c5d165) · [Hashes estáticos](primarios/vm/grupo05-archivos-estaticos.json).
+
 ## Conclusiones
 
-F001, F002, R004 y U002: maliciosos. R005, U001 y U003: sospechosos. Los reportes ANY.RUN agregan comportamiento en sandbox para F001 y F002 y refuerzan su veredicto, sin cambiar la clasificación de los siete recursos. No se acreditó infección de un equipo fuera del sandbox ni un recurso legítimo. Conservar aislado, reportar y aplicar controles sobre indicadores confirmados con revisión de telemetría.
+F001, F002, R004 y U002: maliciosos. R005, U001 y U003: sospechosos. El análisis dinámico en ANY.RUN muestra para F001 y F002 comportamiento de cargador y RAT (persistencia en F001, archivos en ProgramData, reconocimiento y destinos de red externos) y refuerza su veredicto, sin cambiar la clasificación de los siete recursos. No se acreditó infección de un equipo fuera del sandbox ni un recurso legítimo. Conservar aislado, reportar y aplicar controles sobre indicadores confirmados con revisión de telemetría.
 
 ## Anexo de evidencia verificable
 

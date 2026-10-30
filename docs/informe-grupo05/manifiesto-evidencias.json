@@ -1,6 +1,6 @@
 {
   "version": 8,
-  "creado_utc": "2026-10-29T20:02:54.569896+00:00",
+  "creado_utc": "2026-10-30T18:57:22.973907+00:00",
   "tipo": "Registro local de integridad, rutas relativas; no firmado",
   "archivos": [
     {
@@ -10,8 +10,8 @@
     },
     {
       "ruta": "GUION-EXPOSICION.md",
-      "bytes": 6348,
-      "sha256": "9d4d9957b88386ebbbbccd47b963cf6990188001249a8e036268d40c96a627ed"
+      "bytes": 8609,
+      "sha256": "d5648deb8bd50e4f3194b1f01b42ab97cd99001520b1c81836eaf2de99564b68"
     },
     {
       "ruta": "INDICE-EVIDENCIAS.md",
@@ -20,18 +20,18 @@
     },
     {
       "ruta": "INFORME-CONSOLIDADO.md",
-      "bytes": 18766,
-      "sha256": "8c8b298c2502f489c84831802744e0a2761aad6fe0eada57f9268aee0f4ce35d"
+      "bytes": 22937,
+      "sha256": "639fffbcdc5289cfadf5bcdd1dfd9a24b5a856c39216de52078908ce5d42e291"
     },
     {
       "ruta": "INFORME-TECNICO.md",
-      "bytes": 18766,
-      "sha256": "8c8b298c2502f489c84831802744e0a2761aad6fe0eada57f9268aee0f4ce35d"
+      "bytes": 22937,
+      "sha256": "639fffbcdc5289cfadf5bcdd1dfd9a24b5a856c39216de52078908ce5d42e291"
     },
     {
       "ruta": "README.md",
-      "bytes": 18905,
-      "sha256": "e2cb51d62ec2620a437339dbe54919c0d127421646d698debf9001961da6844b"
+      "bytes": 22498,
+      "sha256": "5fb50c9498ff09ba70518006d8abccb2c1b3956e9d4e10a660d755fb1ad15887"
     },
     {
       "ruta": "archivos-reputacion.json",
@@ -430,8 +430,8 @@
     },
     {
       "ruta": "entrega/Grupo_05_Informe_Tecnico.docx",
-      "bytes": 471205,
-      "sha256": "267c38024798e5d9845a5e308e5444545a6b461e667ce1c2cc30cc96cf22d37c"
+      "bytes": 473919,
+      "sha256": "a259351345fbdcfac3d2baf00c79f7bb19d615d3b577793c488915ea7db70597"
     },
     {
       "ruta": "entrega/Grupo_05_Presentacion_Consolidada.pptx",
